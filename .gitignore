@@ -1,0 +1,15 @@
+# Build artifacts
+build/
+*.o
+*.elf
+*.bin
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+.env.*
+secrets.h
