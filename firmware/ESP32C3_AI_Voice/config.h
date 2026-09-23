@@ -7,7 +7,7 @@
 //
 // WiFi 凭据、服务器地址、设备 ID 不在这个文件里,见 secrets.h(已 gitignore)。
 
-#define FW_VERSION  "0.2"          // 随 {"t":"hello"} 上报,服务器日志里能看到
+#define FW_VERSION  "0.3"          // 0.3 = Stage 11:服务器驱动的等待音效          // 随 {"t":"hello"} 上报,服务器日志里能看到
 
 // ---------------------------------------------------------------- GPIO
 #define PIN_I2S_BCLK    4    // 共享:INMP441 SCK + MAX98357A BCLK

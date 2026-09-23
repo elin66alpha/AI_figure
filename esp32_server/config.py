@@ -66,11 +66,16 @@ MAX_WS_FRAME = 16384
 # 真的爬到这个数说明要么 PSK 泄了,要么有 bug 在疯狂重连。
 MAX_CONNECTIONS = int(os.getenv("ESP32_SERVER_MAX_CONN", "8"))
 
-# ---------------------------------------------------------------- 开关
-# 回合开始时下发 {"t":"cue","name":"thinking"}。
-# Stage 7 的设备还不处理服务器驱动的 cue(会按 AGENT.md §5.2 静默忽略未知消息),
-# 打开它可以顺带验证"设备能忽略不认识的消息"这条。Stage 11 才真正用。
-SEND_CUE = os.getenv("ESP32_SERVER_CUE", "0") == "1"
+# ---------------------------------------------------------------- 开关(Stage 11)
+# 收到 turn_end 立刻下发 {"t":"cue","name":"thinking"},设备在 WAITING 期间
+# 循环播"咕噜咕噜"的等待音效,直到回复的音频接上(固件 bubble.*,fw >= 0.3)。
+# 老固件(0.2)收到会打一行日志然后忽略,所以默认开着没有副作用。
+CUE_THINKING = os.getenv("ESP32_SERVER_CUE", "1") == "1"
+
+# chat 模式下 turn_start 就开 TTS 连接(跨洋建连 ~1.4 s,藏进用户说话的时间)。
+# 百炼 TTS 连接空闲 65 s 仍可用(2026-09-22 实测),单回合最长 30 s,够。
+# 万一预热的连接到用的时候已经断了,ali_tts 会自动重连一次。
+TTS_PREWARM = os.getenv("TTS_PREWARM", "1") == "1"
 
 # ---------------------------------------------------------------- 厂商选择
 # ASR / TTS / LLM 各自独立选,分派在 asr.py / tts.py / llm.py,session.py 不关心是哪家。

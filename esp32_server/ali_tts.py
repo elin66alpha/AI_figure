@@ -43,6 +43,7 @@ import logging
 import time
 
 from websockets.asyncio.client import connect
+from websockets.protocol import State
 
 import config
 
@@ -153,6 +154,13 @@ class AliTtsSession:
         """异步生成器,逐块产出这一句的裸 PCM。出错抛 TTSError。"""
         self.start()
         await self._ready                     # 建连失败的异常在这里抛出
+        if self.ws is None or self.ws.state is not State.OPEN:
+            # turn_start 预热的连接,用户说得久了可能被对端关掉(实测空闲 65 s 还活着,
+            # 这里只是兜底)。重连一次,代价就是这一回合多等一个建连。
+            log.warning("TTS 预热的连接已经断了,重连")
+            self.ws = None
+            self._ready = asyncio.get_running_loop().create_task(self._open())
+            await self._ready
         ws = self.ws
         t0 = time.monotonic()
         deadline = t0 + config.ALI_TTS_TIMEOUT_S

@@ -2,6 +2,7 @@
 #include "config.h"
 #include "secrets.h"
 #include "audio_io.h"
+#include "bubble.h"
 #include "button.h"
 #include "cue.h"
 #include "led.h"
@@ -23,6 +24,11 @@ static int32_t  s_seq        = -1;      // 当前回合号(AGENT.md §5.3a)
 static bool     s_audioEnded = false;   // 本回合的 audio_end 到了吗
 static bool     s_playStarted = false;  // 预缓冲攒够、功放已开
 static uint32_t s_waitStart  = 0;
+
+// Stage 11:服务器驱动的等待音效。onText 在 wsPoll 的回调里,不能在那里开播放
+// (audioStartPlayback 要推静音、等功放唤醒,会阻塞)—— 攒个标记,回到 doWaiting 再开。
+static bool     s_bubbleReq  = false;   // 收到 cue thinking,该开始冒泡了
+static bool     s_waitFail   = false;   // WAITING 时服务器报错:不用干等 8 s 超时
 
 // 上行组包:攒够 100 ms 才发一帧
 static int16_t  s_up16[NET_CHUNK_SAMPLES];
@@ -100,13 +106,21 @@ static void onText(const char *json, size_t len) {
       break;
 
     case MsgType::CUE:
-      // Stage 11 才真正按 name 播不同的音。现在打出来确认链路通。
-      Serial.printf("[SESS] cue name=%s (Stage 11 才处理)\n", m.name);
+      // thinking = 服务器收到 turn_end 了,在识别/想/合成。只在 WAITING 时认 ——
+      // 打断时序下晚到的 cue 不该在录音或播放中间冒泡。
+      if (strcmp(m.name, "thinking") == 0) {
+        if (s_st == VoiceState::WAITING) s_bubbleReq = true;
+      } else {
+        // 必须静默忽略不认识的 cue 名,好让服务器先行加新音效
+        Serial.printf("[SESS] 不认识的 cue name=%s,忽略\n", m.name);
+      }
       break;
 
     case MsgType::ERROR_MSG:
       Serial.printf("[SESS] 服务器报错 code=%s: %.*s\n", m.name, (int)len, json);
       s_cue = PendingCue::ERR;
+      // 还没开始播就报错(ASR 失败之类)= 这一回合不会有声音了,不用等超时
+      if (s_st == VoiceState::WAITING) s_waitFail = true;
       break;
 
     default:
@@ -117,6 +131,9 @@ static void onText(const char *json, size_t len) {
 
 // ---------------------------------------------------------------- 内部动作
 static void stopAudioAll() {
+  bubbleStop();
+  s_bubbleReq = false;
+  s_waitFail  = false;
   if (audioIsCapturing()) audioStopCapture();
   if (audioIsPlaying())   audioStopPlayback();
   ringReset();
@@ -191,17 +208,40 @@ static void doRecording() {
     if (!wsSendText(PROTO_TURN_END)) { enterError("turn_end 发不出去"); return; }
     s_st = VoiceState::WAITING;
     s_waitStart = millis();
+    s_bubbleReq = false;
+    s_waitFail  = false;
     ledSet(LedMode::BLINK_FAST);
     Serial.println("[SESS] turn_end —— 等服务器");
   }
 }
 
 static void doWaiting() {
+  if (s_waitFail) {
+    Serial.println("[SESS] 服务器报错,这一回合没有回复了");
+    stopAudioAll();
+    s_st = VoiceState::IDLE;               // 错误音 onText 已经挂上了
+    return;
+  }
   if (millis() - s_waitStart > WAITING_TIMEOUT_MS) {
     Serial.printf("[SESS] 等了 %d ms 没等到 audio_begin,放弃\n", WAITING_TIMEOUT_MS);
-    wsSendText(PROTO_ABORT);
+    wsSendText(PROTO_ABORT);               // 先发 abort(§8),再停本地声音
+    stopAudioAll();
     s_st = VoiceState::IDLE;
     s_cue = PendingCue::ERR;
+    return;
+  }
+
+  // ---- 等待音效(Stage 11)----
+  if (s_bubbleReq && !bubbleActive()) {
+    s_bubbleReq = false;
+    if (audioStartPlayback(true)) bubbleStart();
+  }
+  if (bubbleActive()) {
+    // 和 PLAYING 一样:audioWrite 阻塞到 DMA 腾出空间(~20 ms),这就是节拍器;
+    // 两次之间 loop 照常 wsPoll,audio_begin 来了立刻能收到。
+    static int16_t frame[FRAME_SAMPLES];
+    bubbleFill(frame, FRAME_SAMPLES);
+    audioWrite(frame, FRAME_SAMPLES, 60);
   }
 }
 
@@ -211,7 +251,22 @@ static void doPlaying() {
   if (!s_playStarted) {
     // 攒够预缓冲再起播(AGENT.md §4)。回复很短、没攒够就收到 audio_end 的话,
     // 也得起播,否则会一直等一个永远不来的字节。
-    if (ringUsed() >= PREBUFFER_BYTES || s_audioEnded) {
+    const bool ready = ringUsed() >= PREBUFFER_BYTES || s_audioEnded;
+
+    // 等待音效还在响:预缓冲攒够之前**接着冒泡**,不留一段死寂;
+    // 攒够了也要等到两个气泡之间的空隙再切,否则在气泡中间硬切会"啪"一声。
+    // 功放和 I2S 一直开着,正式回复是无缝接上去的(audioStartPlayback 已在播时直接返回)。
+    if (bubbleActive()) {
+      if (ready && bubbleInGap()) {
+        bubbleStop();
+      } else {
+        bubbleFill(frame, FRAME_SAMPLES);
+        audioWrite(frame, FRAME_SAMPLES, 60);
+        return;
+      }
+    }
+
+    if (ready) {
       if (!audioStartPlayback(true)) { enterError("播放启动失败"); return; }
       s_playStarted = true;
       ledSet(LedMode::ON);
@@ -255,6 +310,7 @@ void sessionUpdate() {
   if (s_cue != PendingCue::NONE) {
     PendingCue c = s_cue;
     s_cue = PendingCue::NONE;
+    bubbleStop();                          // 提示音要独占 I2S,冒泡先停
     if      (c == PendingCue::LINK_UP)   cueLinkUp();
     else if (c == PendingCue::LINK_DOWN) cueLinkDown();
     else                                 cueError();

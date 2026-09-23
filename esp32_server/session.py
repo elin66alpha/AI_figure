@@ -61,6 +61,7 @@ class EchoSession:
         self.first_frame_logged = False
         self.mode = config.REPLY_MODE
         self.asr = None          # 本回合的 ASR 流(asr 模式下 turn_start 就开)
+        self.tts_pre = None      # 本回合预热的 TTS 会话(chat 模式下 turn_start 就开,Stage 11)
 
     # ------------------------------------------------------------ 出口
     async def send_json(self, **obj):
@@ -129,6 +130,11 @@ class EchoSession:
                 except ValueError as e:
                     await self.send_json(t="error", code="asr_failed", msg=str(e))
                     self.mode = "echo"
+            if self.mode == "chat" and config.TTS_PREWARM:
+                try:
+                    self.tts_pre = tts.open_session(self.dev)
+                except ValueError as e:
+                    log.warning("[%s] TTS 预热失败: %s", self.sid, e)
             log.info("[%s] turn_start mode=%s", self.sid, self.mode)
 
         elif t == "turn_end":
@@ -137,13 +143,22 @@ class EchoSession:
             ms = len(self.buf) * 1000 // (config.SAMPLE_RATE * config.BYTES_PER_SAMPLE)
             log.info("[%s] turn_end — 收到 %d 字节 (%d ms)", self.sid, len(self.buf), ms)
             stream, self.asr = self.asr, None
+            ts, self.tts_pre = self.tts_pre, None
             if not self.buf:
                 if stream:
                     await stream.cancel()
+                if ts:
+                    ts.close()
                 await self.send_json(t="error", code="empty_turn", msg="没有收到任何音频")
-            elif stream:
-                self.task = asyncio.create_task(self._asr_turn(stream))
+                return
+            if config.CUE_THINKING:
+                # 越早越好:设备一松手就能听到"我在想"。服务器此刻还不知道要等多久。
+                await self.send_json(t="cue", name="thinking")
+            if stream:
+                self.task = asyncio.create_task(self._asr_turn(stream, ts))
             else:
+                if ts:
+                    ts.close()
                 self.task = asyncio.create_task(self._echo_turn(bytes(self.buf)))
 
         elif t == "abort":
@@ -175,15 +190,19 @@ class EchoSession:
             yield pcm
         await self._reply(once(), "回声")
 
-    async def _asr_turn(self, stream):
+    async def _asr_turn(self, stream, ts=None):
         """ASR 最终文本 -> {"t":"asr"} -> 按 mode 回复。
 
         asr   念"我听到的是:…"(Stage 9)
-        chat  LLM -> 切句 -> TTS(Stage 10)。TTS 连接**在等 ASR 收尾之前就开始建**,
-              和 ASR 收尾(~0.5 s)、LLM 首句(~0.8 s)并行,把 ~0.9 s 的建连藏起来
+        chat  LLM -> 切句 -> TTS(Stage 10)。ts 是 turn_start 时预热好的 TTS 会话
+              (Stage 11);没开预热就在这里开,和 ASR 收尾 / LLM 首句并行
         """
         mode = self.mode
-        ts = tts.open_session(self.dev) if mode == "chat" else None
+        if mode == "chat" and ts is None:
+            ts = tts.open_session(self.dev)
+        elif mode != "chat" and ts is not None:
+            ts.close()
+            ts = None
         try:
             text = await stream.finish()
         except asyncio.CancelledError:
@@ -237,8 +256,6 @@ class EchoSession:
         seq = self.seq
         began = False
         try:
-            if config.SEND_CUE:
-                await self.send_json(t="cue", name="thinking")
             it = source.__aiter__()
             try:
                 first = await it.__anext__()
@@ -282,6 +299,9 @@ class EchoSession:
         stream, self.asr = self.asr, None
         if stream:
             await stream.cancel()       # 录音中途被打断/断线:别让到厂商的连接挂着
+        ts, self.tts_pre = self.tts_pre, None
+        if ts:
+            ts.close()
         t = self.task
         if t and not t.done():
             log.info("[%s] 取消在途音频 (%s)", self.sid, why)

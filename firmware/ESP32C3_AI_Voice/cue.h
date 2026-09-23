@@ -22,6 +22,8 @@ struct CueNote {
 
 void cueBegin();                                  // 建表。setup() 里调一次
 void cuePlay(const CueNote *notes, uint8_t count);
+// 256 点正弦表(Q15),给 bubble.* 共用。索引 = Q32 相位 >> 24。
+const int16_t *cueSineTable();
 
 // 四种预定义音
 void cueBoot();       // 上电:升调两声

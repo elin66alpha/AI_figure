@@ -22,6 +22,11 @@ void cueBegin() {
   s_ready = true;
 }
 
+const int16_t *cueSineTable() {
+  cueBegin();
+  return s_lut;
+}
+
 void cuePlay(const CueNote *notes, uint8_t count) {
   if (!notes || count == 0) return;
   cueBegin();

@@ -1,11 +1,12 @@
-// ESP32-C3 AI Voice — Stage 6 + 7
+// ESP32-C3 AI Voice — Stage 6 + 7 + 11
 //
 // 开发板: MakerGO ESP32 C3 SuperMini   (核心 3.3.12 / IDF 5.5.5)
 // 规格:   ../../AGENT.md   服务器: ../../SERVER.md
 //
 // 烧进去就自己跑,**没有串口菜单**:
 //   上电 -> 开机音 -> 连 WiFi -> 连服务器 -> 收到 ready -> 连上音 -> IDLE
-//   按住按键说话 -> 松开 -> 听到服务器回送的音频
+//   按住按键说话 -> 松开 -> "咕噜咕噜"等待音效 -> 听到服务器的回复
+//   (回声 / 对话由服务器的 REPLY_MODE 决定,设备不用管)
 //   任何一环断了 -> 错误音 + LED 慢闪 -> 自动重连(按按键可跳过退避)
 //
 // 串口 115200 是**纯日志输出**,不接收任何输入。
@@ -55,8 +56,9 @@ static void telemetry() {
 
   // 录音/播放中就推迟 —— 串口没人读时 USB CDC 的写有可能阻塞,
   // 而这两个状态跑在 16 kHz 的实时路径上,赌不起。
+  // Stage 11 起 WAITING 里也可能在放等待音效,同样算实时路径 —— 看 audioIsPlaying()。
   const VoiceState st = sessionState();
-  if (st == VoiceState::RECORDING || st == VoiceState::PLAYING) return;
+  if (st == VoiceState::RECORDING || st == VoiceState::PLAYING || audioIsPlaying()) return;
   last = millis();
 
   multi_heap_info_t h;
@@ -89,7 +91,7 @@ void setup() {
   Serial.begin(115200);
   delay(400);                              // 等 USB CDC 枚举
 
-  Serial.println("\n\n[BOOT] ESP32-C3 AI Voice — Stage 6+7 (WiFi + WS + 回声)");
+  Serial.println("\n\n[BOOT] ESP32-C3 AI Voice — Stage 11 (WiFi + WS + 对话 + 等待音效)");
   Serial.printf("[BOOT] fw=%s  核心 %s  CPU %u MHz\n",
                 FW_VERSION, ESP.getSdkVersion(), (unsigned)getCpuFrequencyMhz());
   Serial.printf("[BOOT] 服务器 %s://%s:%d%s   设备 %s\n",
