@@ -13,3 +13,15 @@ Thumbs.db
 *.env
 .env.*
 secrets.h
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 部署密钥(PSK 即设备身份,泄了等于设备被人冒充 —— AGENT.md §7.4)
+psk.secrets
+
+# 部署用 SSH 私钥
+assets/ssh/

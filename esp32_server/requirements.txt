@@ -1,0 +1,2 @@
+# Stage 6.5 只需要这一个。Stage 8~10 再加 aiohttp。
+websockets>=14.0
