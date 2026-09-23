@@ -13,6 +13,8 @@
     echo  原样送回(Stage 7)
     asr   turn_start 就开 ASR 流、边收边转发;turn_end 拿最终文本 -> {"t":"asr","text"}
           -> TTS 念"我听到的是:…"(Stage 9)。设备会静默忽略 {"t":"asr"}(AGENT.md §5.2)
+    chat  同上拿到文本 -> LLM 边生成边切句 -> 每句 {"t":"reply","text"} + TTS -> 下行(Stage 10)
+          流水线见 pipeline.py。对话历史按设备 ID 存,断线重连后还在
 
 这样设备侧 Stage 7 写的就是**最终代码**,Stage 11 传输层一行不用改;
 服务器侧 Stage 8~10 只是把下面 `_echo_turn()` 里"原样送回"换成
@@ -21,13 +23,29 @@
 import asyncio
 import json
 import logging
+import time
 
 import asr
 import config
+import llm
 import pacer
+import pipeline
 import tts
 
 log = logging.getLogger("session")
+
+MODES = ("echo", "asr", "chat")
+
+# 对话历史按设备自报的 ID 存,活得比连接久:设备断线重连后接着聊。
+# 进程重启就没了 —— 开发阶段不持久化(SERVER.md §5)。
+_chats = {}
+
+
+def chat_for(dev: str) -> llm.Chat:
+    c = _chats.get(dev)
+    if c is None:
+        c = _chats[dev] = llm.Chat()
+    return c
 
 
 class EchoSession:
@@ -101,7 +119,7 @@ class EchoSession:
             self.recording = True
             self.first_frame_logged = False
             self.mode = m.get("mode") or config.REPLY_MODE
-            if self.mode not in ("echo", "asr"):
+            if self.mode not in MODES:
                 log.warning("[%s] 未知 mode=%r,按 echo 处理", self.sid, self.mode)
                 self.mode = "echo"
             if self.mode != "echo":
@@ -115,6 +133,7 @@ class EchoSession:
 
         elif t == "turn_end":
             self.recording = False
+            self.t_end = time.monotonic()
             ms = len(self.buf) * 1000 // (config.SAMPLE_RATE * config.BYTES_PER_SAMPLE)
             log.info("[%s] turn_end — 收到 %d 字节 (%d ms)", self.sid, len(self.buf), ms)
             stream, self.asr = self.asr, None
@@ -157,22 +176,54 @@ class EchoSession:
         await self._reply(once(), "回声")
 
     async def _asr_turn(self, stream):
-        """Stage 9:ASR 最终文本 -> {"t":"asr"} -> TTS 念回去。Stage 10 在这里接 LLM。"""
+        """ASR 最终文本 -> {"t":"asr"} -> 按 mode 回复。
+
+        asr   念"我听到的是:…"(Stage 9)
+        chat  LLM -> 切句 -> TTS(Stage 10)。TTS 连接**在等 ASR 收尾之前就开始建**,
+              和 ASR 收尾(~0.5 s)、LLM 首句(~0.8 s)并行,把 ~0.9 s 的建连藏起来
+        """
+        mode = self.mode
+        ts = tts.open_session(self.dev) if mode == "chat" else None
         try:
             text = await stream.finish()
         except asyncio.CancelledError:
             await stream.cancel()
+            if ts:
+                ts.close()
             raise
         except Exception as e:
+            if ts:
+                ts.close()
             log.warning("[%s] ASR 失败: %s", self.sid, e)
             await self.send_json(t="error", code="asr_failed", msg=str(e)[:200])
             return
-        log.info("[%s] ASR: %r", self.sid, text)
+        t_asr = time.monotonic()
+        log.info("[%s] ASR(%.0f ms): %r", self.sid, (t_asr - self.t_end) * 1000, text)
         await self.send_json(t="asr", text=text)
-        if not text.strip():
-            await self.send_json(t="error", code="asr_empty", msg="没听清")
+
+        if mode == "asr":
+            if not text.strip():
+                await self.send_json(t="error", code="asr_empty", msg="没听清")
+                return
+            await self._reply(tts.synthesize("我听到的是:" + text, uid=self.dev), "tts")
             return
-        await self._reply(tts.synthesize("我听到的是:" + text, uid=self.dev), "tts")
+
+        # ---- chat
+        if not text.strip():
+            # 没听清也要出声,别让设备干等到 WAITING 超时
+            await self._reply(pipeline.one_sentence(config.NOT_HEARD_TEXT, ts), "chat")
+            return
+
+        async def on_sentence(sent):
+            await self.send_json(t="reply", text=sent)
+
+        stats = {}
+        await self._reply(pipeline.chat_audio(text, chat_for(self.dev), ts,
+                                              on_sentence=on_sentence, stats=stats), "chat")
+        # 延迟分解:turn_end 为 0 点。设备真正出声还要再加设备侧预缓冲(~300 ms)
+        ms = lambda k: "%.0f" % ((stats[k] - self.t_end) * 1000) if k in stats else "-"
+        log.info("[%s] 延迟(ms,turn_end 起) ASR=%.0f  LLM首句=%s  TTS首包=%s",
+                 self.sid, (t_asr - self.t_end) * 1000, ms("llm_first"), ms("tts_first"))
 
     async def _reply(self, source, what: str):
         """一次下行回复:audio_begin(seq) -> 整形后的 PCM -> audio_end(seq)。
@@ -217,6 +268,14 @@ class EchoSession:
             except Exception:
                 pass                    # 连接已经没了
         finally:
+            # 显式关掉 source:abort 时 pacer 可能正停在两包之间,source 挂在 yield 上,
+            # 不 aclose 的话它的 finally(取消 LLM/TTS、关厂商连接)要等 GC 才跑。
+            aclose = getattr(source, "aclose", None)
+            if aclose:
+                try:
+                    await aclose()
+                except BaseException:
+                    pass
             self.task = None
 
     async def _cancel_turn(self, why: str):

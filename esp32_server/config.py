@@ -86,7 +86,12 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "qwen")
 # turn_start 里带 "mode" 临时覆盖(调试用)。
 #   echo  把录音原样送回(Stage 7)
 #   asr   ASR 出文字 -> 下发 {"t":"asr"} -> TTS 念"我听到的是:…"(Stage 9,设备上也能听出识别对不对)
+#   chat  ASR -> LLM 切句 -> TTS,真正的对话(Stage 10)。Stage 11 起改成默认
 REPLY_MODE = os.getenv("REPLY_MODE", "echo")
+
+# chat 模式的兜底台词。出声总比让设备干等到 WAITING 超时(8 s)好。
+NOT_HEARD_TEXT = os.getenv("NOT_HEARD_TEXT", "没听清,能再说一遍吗?")
+LLM_FAIL_TEXT = os.getenv("LLM_FAIL_TEXT", "我脑子有点卡住了,等一下再问我吧。")
 
 # ---------------------------------------------------------------- 阿里云百炼
 # 规格见 SERVER.md §4.6。密钥只从环境变量读,不进 git。

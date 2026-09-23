@@ -103,6 +103,28 @@ async def synthesize(text: str, *, uid: str = "esp32"):
         raise TTSError("合成成功但没有音频 —— 文本是不是全是标点?")
 
 
+class VolcTtsSession:
+    """和 ali_tts.AliTtsSession 同一个接口。
+
+    火山的单向流式接口一条连接只合成一段文本,所以这里每句各开一条 ——
+    句间会多一个建连(~0.3 s 国内 / ~1 s 跨洋)。要省掉得换 bidirection 接口(§4.2),
+    火山目前只是备选,先不做。
+    """
+
+    def __init__(self, uid: str = "esp32"):
+        self.uid = uid
+        self.chars = 0
+
+    def start(self):
+        return self
+
+    def synth(self, text: str):
+        return synthesize(text, uid=self.uid)
+
+    def close(self):
+        pass
+
+
 # ---------------------------------------------------------------- 自测
 async def _main(text, out):
     import wave

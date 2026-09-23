@@ -11,6 +11,9 @@ Stage 8~10 全部用它调通,ESP32 一次都不用烧。设备侧实现有歧�
 
     # Stage 9:同上,但让服务器走 ASR,打印识别文本,回复是"我听到的是:…"
     python tools/pc_client.py turn input.wav --mode asr
+
+    # Stage 10:真正的对话,打印识别文本和每一句回复。多跑几次 = 多轮(历史按 --dev 存)
+    python tools/pc_client.py turn question.wav --mode chat
     python tools/pc_client.py turn input.wav --abort-after 500     # 收到 500 ms 就打断
 
 连线上 VPS:Python 只听环回口,先开隧道再跑(不用 PSK):
@@ -119,6 +122,8 @@ async def collect_reply(ws, t_req, abort_after_ms=None):
             return bytes(pcm), True
         elif t == "asr":
             print("   ASR:%s(turn_end 后 %.0f ms)" % (m.get("text"), (now - t_req) * 1000))
+        elif t == "reply":
+            print("   回复:%s(turn_end 后 %.0f ms)" % (m.get("text"), (now - t_req) * 1000))
         elif t == "error":
             print("   !! error %s: %s" % (m.get("code"), m.get("msg")))
             if seq is None:                  # 出声之前就失败,不会再有 audio_end
@@ -180,7 +185,7 @@ def main():
     p = sub.add_parser("turn", help="wav -> 完整回合")
     p.add_argument("wav")
     p.add_argument("--fast", action="store_true", help="不按实时速率上送")
-    p.add_argument("--mode", choices=("echo", "asr"),
+    p.add_argument("--mode", choices=("echo", "asr", "chat"),
                    help="覆盖服务器的 REPLY_MODE(设备不发这个字段)")
 
     for p in sub.choices.values():

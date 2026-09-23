@@ -64,7 +64,8 @@ esp32_server/
   tts.py              # TTS 厂商分派(TTS_PROVIDER=ali/volc)         [Stage 8 ✓]
   ali_tts.py          # 百炼 TTS 客户端(默认);单独跑可自测密钥/音色  [Stage 8 ✓]
   volc_tts.py         # 火山 TTS 客户端(备选)                        [Stage 8 ✓]
-  llm.py              # Qwen / DeepSeek,stream=True,切句,对话历史    [Stage 10 模块 ✓,未接入回合]
+  llm.py              # Qwen / DeepSeek,stream=True,切句,对话历史    [Stage 10 ✓]
+  pipeline.py         # 句级流水线:LLM -> TTS -> 下行,三段解耦       [Stage 10 ✓]
   tools/
     smoke_echo.py     # 不用 ESP32 的服务器自测,见 §7.5 第 2 行       [Stage 6.5 ✓]
     pc_client.py      # ★ PC 端假设备,见 §6                          [Stage 8 ✓]
@@ -392,6 +393,42 @@ ASR 就绪 ~1.0 s(藏在说话时间里),**turn_end → 最终文本 0.51 s**,tu
 (其中 TTS 建连 0.86 s —— Stage 11 做 TTS 预热后能再砍掉)。
 
 火山 ASR 客户端也写了,帧格式和 200 ms 合包用 mock 验过,没真连。
+
+### 6.3 Stage 10 —— 全链路对话(2026-09-22 ✓ 真连百炼)
+
+`REPLY_MODE=chat`(或 pc_client `--mode chat`):
+
+```
+turn_start  -> 开 ASR 流
+turn_end    -> 同时:ASR 收尾 + 开 TTS 连接(和 ASR/LLM 并行,藏建连)
+            -> {"t":"asr"} -> LLM 流式生成、切句 -> 每句 {"t":"reply"} + append/commit 给同一条 TTS 连接
+            -> pacer -> audio_begin / PCM / audio_end
+```
+
+**三段用队列解耦(`pipeline.py`)**,这是不断顿的关键:pacer 按 1x 实时拿数据,如果 TTS 直接挂在
+pacer 下面,它也只能 1x 实时前进,念完一句才去 commit 下一句,而 commit -> 首包要 ~0.35 s,
+比 pacer 留的 300 ms 余量还长,句间就会断。拆开后 TTS 以 ~5x 实时一直往前合成。
+**一条 TTS 连接念整个回复**:百炼 commit 模式支持同一连接多次 commit(真连实测,顺序不乱)。
+
+兜底:ASR 空文本 -> 念 `NOT_HEARD_TEXT`;LLM 一个字都没出就失败 -> 念 `LLM_FAIL_TEXT`;
+LLM 出过声后中途断 -> 已出的照常念完、正常收尾。**任何情况都出声**,不让设备干等到 8 s 超时。
+abort:`_reply` 显式 `aclose()` 流水线,LLM 的 HTTP 流和 TTS 连接 50 ms 内切断(mock 验过),
+被打断那轮已生成的半句照样记进历史。对话历史按设备 ID 存,断线重连后还在,进程重启清空。
+
+**实测(美国 VPS -> 新加坡,qwen3.5-flash-2026-02-23,两轮对话)**:
+
+| turn_end 起 | 第 1 轮(LLM 冷) | 第 2 轮(LLM 热) |
+|---|---|---|
+| ASR 最终文本 | 521 ms | 595 ms |
+| LLM 第一句切出 | 1878 ms | 1000 ms |
+| TTS 首包 = 设备开始收音频 | **2225 ms** | **1834 ms** |
+
+- 第二轮答出了"你叫小明",历史正常;两轮都**无断顿**(9128 ms 音频收了 8830 ms,正好超前 300 ms)
+- **现在的瓶颈是 TTS 建连**:第 2 轮 TTS 就绪要 1426 ms,LLM 第一句 1000 ms 就好了,干等了 ~0.4 s。
+  Stage 11 把 TTS 建连挪到 `turn_start`,预计首包降到 ~1.4 s
+- 设备真正出声还要再加设备侧预缓冲 ~300 ms
+
+`{"t":"reply"}` 和 `{"t":"asr"}` 一样,设备静默忽略 —— VPS 上改 `REPLY_MODE=chat` **不用重烧固件**就能在真机上对话。
 
 ---
 
