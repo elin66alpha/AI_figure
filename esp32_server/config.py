@@ -71,3 +71,101 @@ MAX_CONNECTIONS = int(os.getenv("ESP32_SERVER_MAX_CONN", "8"))
 # Stage 7 的设备还不处理服务器驱动的 cue(会按 AGENT.md §5.2 静默忽略未知消息),
 # 打开它可以顺带验证"设备能忽略不认识的消息"这条。Stage 11 才真正用。
 SEND_CUE = os.getenv("ESP32_SERVER_CUE", "0") == "1"
+
+# ---------------------------------------------------------------- 厂商选择
+# ASR / TTS / LLM 各自独立选,分派在 asr.py / tts.py / llm.py,session.py 不关心是哪家。
+#   ASR:ali = 百炼 qwen-audio-3.1-asr-flash-streaming(默认) / volc = 火山流式识别
+#   TTS:ali = 百炼 qwen3-tts-flash-realtime(默认)          / volc = 火山语音合成
+#   LLM:qwen = 百炼 Qwen(默认)                             / deepseek = DeepSeek
+# 2026-09-22 默认全换到百炼:免费额度够调通 Stage 8~10。
+ASR_PROVIDER = os.getenv("ASR_PROVIDER", "ali")
+TTS_PROVIDER = os.getenv("TTS_PROVIDER", "ali")
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "qwen")
+
+# 回合结束后服务器回什么。设备不带 mode,用这个默认值;pc_client 可以在
+# turn_start 里带 "mode" 临时覆盖(调试用)。
+#   echo  把录音原样送回(Stage 7)
+#   asr   ASR 出文字 -> 下发 {"t":"asr"} -> TTS 念"我听到的是:…"(Stage 9,设备上也能听出识别对不对)
+REPLY_MODE = os.getenv("REPLY_MODE", "echo")
+
+# ---------------------------------------------------------------- 阿里云百炼
+# 规格见 SERVER.md §4.6。密钥只从环境变量读,不进 git。
+DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
+# ⚠️ 地域和 API Key 是绑定的:北京控制台的 key 只能连北京,国际站(新加坡)同理,
+# 连错了握手就 401。下面三个 URL 都由它推出来,单独设环境变量可以逐个覆盖。
+#   cn   = 北京       dashscope.aliyuncs.com
+#   intl = 新加坡     dashscope-intl.aliyuncs.com
+DASHSCOPE_REGION = os.getenv("DASHSCOPE_REGION", "cn")
+_DS_HOST = "dashscope-intl.aliyuncs.com" if DASHSCOPE_REGION == "intl" else "dashscope.aliyuncs.com"
+ALI_REALTIME_URL = os.getenv("ALI_REALTIME_URL", "wss://%s/api-ws/v1/realtime" % _DS_HOST)    # TTS
+ALI_INFERENCE_URL = os.getenv("ALI_INFERENCE_URL", "wss://%s/api-ws/v1/inference" % _DS_HOST)  # ASR
+QWEN_BASE_URL = os.getenv("QWEN_BASE_URL", "https://%s/compatible-mode/v1" % _DS_HOST)        # LLM
+
+ALI_ASR_MODEL = os.getenv("ALI_ASR_MODEL", "qwen-audio-3.1-asr-flash-streaming")
+
+ALI_TTS_MODEL = os.getenv("ALI_TTS_MODEL", "qwen3-tts-flash-realtime")
+# 音色。Cherry(芊悦)是文档默认音色,中文可用。其他音色见百炼控制台的音色列表。
+ALI_TTS_VOICE = os.getenv("ALI_TTS_VOICE", "Cherry")
+ALI_TTS_TIMEOUT_S = float(os.getenv("ALI_TTS_TIMEOUT_S", "15"))
+
+# ---------------------------------------------------------------- 火山 ASR(备选)
+VOLC_ASR_URL = os.getenv(
+    "VOLC_ASR_URL", "wss://openspeech.bytedance.com/api/v3/sauc/bigmodel_async")
+# 流式语音识别 2.0 小时版。按并发买的填 volc.seedasr.sauc.concurrent;
+# 1.0 是 volc.bigasr.sauc.duration。⚠️ 和 TTS 的 Resource-Id 不同(SERVER.md §4.5)
+VOLC_ASR_RESOURCE_ID = os.getenv("VOLC_ASR_RESOURCE_ID", "volc.seedasr.sauc.duration")
+
+# ---------------------------------------------------------------- 火山 TTS(备选)
+# 规格见 SERVER.md §4.2。密钥**只从环境变量读**,不进 git。
+# VPS 上放 /etc/esp32-server.env(600),由 systemd 的 EnvironmentFile 注入;
+# 本机调试直接 export。模板见 env.example。
+#
+# 鉴权两种写法,火山控制台新旧版各一种,填其一即可:
+#   新版:VOLC_API_KEY                           -> X-Api-Key
+#   旧版:VOLC_APP_ID + VOLC_ACCESS_KEY          -> X-Api-App-Id / X-Api-Access-Key
+VOLC_API_KEY = os.getenv("VOLC_API_KEY", "")
+VOLC_APP_ID = os.getenv("VOLC_APP_ID", "")
+VOLC_ACCESS_KEY = os.getenv("VOLC_ACCESS_KEY", "")
+
+VOLC_TTS_URL = os.getenv(
+    "VOLC_TTS_URL", "wss://openspeech.bytedance.com/api/v3/tts/unidirectional/stream")
+# ⚠️ 和 ASR 的 Resource-Id **不同**(SERVER.md §4.5)。
+# seed-tts-2.0 = 豆包语音合成模型 2.0(控制台开通的就是这个);1.0 填 seed-tts-1.0。
+VOLC_TTS_RESOURCE_ID = os.getenv("VOLC_TTS_RESOURCE_ID", "seed-tts-2.0")
+# 发音人。必须是 Resource-Id 对应模型下有权限的音色,否则报 45000xxx。
+# ⚠️ 下面这个默认值是 1.0 的音色,开的是 2.0 就一定要在 env 里换成 2.0 列表里的。
+VOLC_TTS_SPEAKER = os.getenv("VOLC_TTS_SPEAKER", "zh_female_shuangkuaisisi_moon_bigtts")
+
+# 单次合成的超时:从发出请求到 SessionFinished。一两句话正常 1~3 s。
+VOLC_TTS_TIMEOUT_S = float(os.getenv("VOLC_TTS_TIMEOUT_S", "15"))
+
+# ---------------------------------------------------------------- 调试消息
+# {"t":"say","text":"..."} —— 让服务器把一段文本 TTS 后按正常回合下发。
+# 设备从来不发这条,它是 tools/pc_client.py 的 Stage 8 入口。
+# 能走到这里的连接都过了 PSK(见上面"监听"),所以默认开着;
+# 但它会花 TTS 额度,不放心就关掉。
+ALLOW_SAY = os.getenv("ESP32_SERVER_ALLOW_SAY", "1") == "1"
+MAX_SAY_CHARS = 300
+
+# ---------------------------------------------------------------- ASR 公共
+# turn_end 之后等最终文本的上限。实测百炼 ~0.6 s(美国 VPS -> 新加坡)。
+ASR_FINISH_TIMEOUT_S = float(os.getenv("ASR_FINISH_TIMEOUT_S", "8"))
+
+# ---------------------------------------------------------------- LLM(Stage 10 接入回合)
+# 两家都是 OpenAI 兼容的 /chat/completions,llm.py 一套代码,只换地址/密钥/模型。
+QWEN_API_KEY = os.getenv("QWEN_API_KEY", "") or DASHSCOPE_API_KEY    # 默认和 ASR/TTS 共用
+QWEN_MODEL = os.getenv("QWEN_MODEL", "qwen3.5-flash-2026-02-23")  # 也可 qwen-flash / qwen-turbo / qwen-plus
+
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-flash")
+
+# ⚠️ 两家的模型最大输出都很长(DeepSeek 384K),必须压小,否则 TTS 念不完(SERVER.md §5)
+LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "150"))
+LLM_TIMEOUT_S = float(os.getenv("LLM_TIMEOUT_S", "20"))
+# 保留最近几轮对话(一问一答算一轮)。system prompt 永远置顶,不参与截断。
+LLM_HISTORY_TURNS = int(os.getenv("LLM_HISTORY_TURNS", "10"))
+LLM_SYSTEM_PROMPT = os.getenv("LLM_SYSTEM_PROMPT", (
+    "你是一个桌面小玩偶里的语音助手。用户是在按住按键对你说话,你的回答会被念出来。"
+    "用口语回答,一到两句话,不超过六十个字。不要用列表、标题、表情符号或 Markdown,"
+    "数字和符号写成念得出来的样子。"))

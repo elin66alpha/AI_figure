@@ -36,35 +36,61 @@ def _bytes_to_seconds(n: int) -> float:
 
 
 async def pace_pcm(send, pcm: bytes, *, on_progress=None) -> int:
-    """把 pcm 按实时速率喂给 send(bytes)。返回实际发出的字节数。
+    """把一整段 pcm 按实时速率喂给 send(bytes)。返回实际发出的字节数。
 
     send 必须是 awaitable(websockets 的 ws.send)。被 cancel 时直接抛
     CancelledError —— abort 路径靠这个立刻停掉在途音频。
     """
-    if not pcm:
-        return 0
+    async def one():
+        yield pcm
+    return await pace_stream(send, one(), on_progress=on_progress)
 
-    total = len(pcm)
+
+async def pace_stream(send, source, *, on_progress=None) -> int:
+    """同上,但 pcm 来自异步迭代器(TTS 边合成边给)。Stage 8 起的主路径。
+
+    源给得比实时快(常态):按不变量整形,和 pace_pcm 完全一样。
+    源给得比实时慢(TTS 卡顿):有多少发多少,设备那边会欠载一下;
+    源恢复后按绝对时间基准最多补回 BURST_MS 的超前量,不会更多 —— 不变量照样成立。
+
+    首包要攒满 BURST_MS 才发(或者源已经结束),否则设备的预缓冲攒不够,
+    刚开播就欠载。TTS 首包到这 300 ms 的音频通常只差几十 ms。
+    """
+    burst_bytes = config.SAMPLE_RATE * config.BYTES_PER_SAMPLE * config.BURST_MS // 1000
     burst_s = config.BURST_MS / 1000.0
-    t0 = time.monotonic()
+    buf = bytearray()
     sent = 0
+    t0 = None
 
-    while sent < total:
-        # 首包突发:一次把 BURST_MS 推出去。之后每次一个 CHUNK_BYTES。
-        n = (config.SAMPLE_RATE * config.BYTES_PER_SAMPLE * config.BURST_MS // 1000
-             if sent == 0 else config.CHUNK_BYTES)
-        chunk = pcm[sent:sent + n]
-
+    async def emit(chunk):
+        nonlocal sent, t0
+        if t0 is None:
+            t0 = time.monotonic()
         # 发出这一包之后,总共就发了 sent+len(chunk) 字节的音频。
         # 不变量要求这个时长不超过 (已过去时间 + burst)。
         ready_at = t0 + _bytes_to_seconds(sent + len(chunk)) - burst_s
         wait = ready_at - time.monotonic()
         if wait > 0:
             await asyncio.sleep(wait)
-
         await send(chunk)
         sent += len(chunk)
         if on_progress:
-            on_progress(sent, total)
+            on_progress(sent, None)
 
+    async for data in source:
+        buf += data
+        # 首包突发:一次把 BURST_MS 推出去。之后每次一个 CHUNK_BYTES。
+        while len(buf) >= (burst_bytes if sent == 0 else config.CHUNK_BYTES):
+            n = burst_bytes if sent == 0 else config.CHUNK_BYTES
+            chunk = bytes(buf[:n])
+            del buf[:n]
+            await emit(chunk)
+
+    # 尾巴。PCM16 必须偶数字节,奇数说明源有问题,丢掉最后那一个字节保对齐。
+    if len(buf) & 1:
+        del buf[-1]
+    while buf:
+        chunk = bytes(buf[:config.CHUNK_BYTES])
+        del buf[:config.CHUNK_BYTES]
+        await emit(chunk)
     return sent

@@ -21,8 +21,9 @@ Environment=PYTHONUNBUFFERED=1
 # **不要**改成 0.0.0.0 —— 这个端口零鉴权,鉴权全在 stunnel 的 PSK 握手上。
 Environment=ESP32_SERVER_HOST=127.0.0.1
 Environment=ESP32_SERVER_PORT=8765
-# Stage 8 起在这里加 .env(火山/DeepSeek 密钥),文件权限记得 600:
-# EnvironmentFile=-/etc/esp32-server.env
+# Stage 8 起火山/DeepSeek 密钥从这里注入。模板是 env.example,文件权限 600。
+# 前缀 `-` = 文件不存在也照常启动(只是 say/TTS 会报"没配密钥")。
+EnvironmentFile=-/etc/esp32-server.env
 ExecStart=/opt/esp32_server/.venv/bin/python main.py
 
 Restart=always
@@ -37,7 +38,9 @@ ProtectHome=yes
 ProtectKernelTunables=yes
 ProtectKernelModules=yes
 ProtectControlGroups=yes
-RestrictAddressFamilies=AF_INET AF_INET6
+# AF_UNIX:Stage 8 起要解析 openspeech.bytedance.com,
+# nsswitch 走 systemd-resolved 时 glibc 会用 unix socket 问它,不给就解析失败。
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
 RestrictNamespaces=yes
 LockPersonality=yes
 MemoryDenyWriteExecute=yes

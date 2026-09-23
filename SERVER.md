@@ -4,6 +4,8 @@
 > 本文件只管交界**以上**:厂商协议、会话编排、对话历史、密钥。
 > 最后更新:2026-09-22(rev.5 — 部署迁到公网 VPS;TLS-PSK 由 stunnel 终结并落地;
 > Python 改为只监听环回口。Stage 6.5 回声骨架已实现)
+> 2026-09-22 追加:**TTS / ASR / LLM 默认都走阿里云百炼**,火山和 DeepSeek 留作备选,
+> 各自一个开关(`TTS_PROVIDER` / `ASR_PROVIDER` / `LLM_PROVIDER`)。见 §4.6 / §4.7 / §5
 
 ---
 
@@ -39,6 +41,9 @@
 | HTTP 客户端 | `aiohttp` | 连接池常驻,DeepSeek 调用无握手开销 |
 | TLS 终结 | **stunnel(TLS 1.2 + 纯 PSK)** | 见 §7.2。设备侧 mbedTLS 缓冲编译期钉死,CA 方案余量太薄 |
 | 部署 | **公网 VPS + systemd**,Python 只听 `127.0.0.1` | 见 §7.1,操作步骤在 `esp32_server/deploy/README.md` |
+| TTS | **阿里云百炼 `qwen3-tts-flash-realtime`**(默认);火山留作备选 | 有免费额度,够调通 Stage 8~10。换厂商 = 改 `TTS_PROVIDER`,见 §4.6 |
+| ASR | **百炼 `qwen-audio-3.1-asr-flash-streaming`**(默认);火山留作备选 | 免费额度最大、有效期到 12/20。换厂商 = 改 `ASR_PROVIDER`,见 §4.7 |
+| LLM | **百炼 Qwen `qwen3.5-flash-2026-02-23`**(默认);DeepSeek `deepseek-flash` 备选 | 两家都是 OpenAI 兼容接口,`llm.py` 一套代码。换 = 改 `LLM_PROVIDER`,见 §5 |
 | 密钥 | 环境变量 / `.env`,**不进 git**;PSK 在 `/etc/stunnel/psk.secrets` | |
 
 ---
@@ -49,15 +54,20 @@
 esp32_server/
   main.py             # websockets.serve,每连接一个 Session          [Stage 6.5 ✓]
   session.py          # 回合状态机 + 对话历史 + seq 管理              [Stage 6.5 ✓ 回声版]
-  pacer.py            # 下行音频速率整形                              [Stage 6.5 ✓]
-  config.py           # 监听地址/端口,从环境变量读密钥                [Stage 6.5 ✓]
-  volc_proto.py       # 火山二进制帧的编解码(ASR/TTS 共用)           [Stage 8/9]
-  volc_asr.py         # ASR WS 客户端                                 [Stage 9]
-  volc_tts.py         # TTS WS 客户端                                 [Stage 8]
-  llm.py              # DeepSeek,stream=True,句子切分                [Stage 10]
+  pacer.py            # 下行音频速率整形;Stage 8 起支持流式源        [Stage 8 ✓]
+  config.py           # 监听地址/端口,从环境变量读密钥                [Stage 8 ✓]
+  env.example         # 密钥模板 -> /etc/esp32-server.env              [Stage 8 ✓]
+  volc_proto.py       # 火山二进制帧的编解码(ASR/TTS 共用)           [Stage 8 ✓]
+  asr.py              # ASR 厂商分派 + 流式外壳;单独跑可自测          [Stage 9 ✓]
+  ali_asr.py          # 百炼 ASR 客户端(默认)                        [Stage 9 ✓]
+  volc_asr.py         # 火山 ASR 客户端(备选,只用 mock 验过)          [Stage 9 ✓]
+  tts.py              # TTS 厂商分派(TTS_PROVIDER=ali/volc)         [Stage 8 ✓]
+  ali_tts.py          # 百炼 TTS 客户端(默认);单独跑可自测密钥/音色  [Stage 8 ✓]
+  volc_tts.py         # 火山 TTS 客户端(备选)                        [Stage 8 ✓]
+  llm.py              # Qwen / DeepSeek,stream=True,切句,对话历史    [Stage 10 模块 ✓,未接入回合]
   tools/
     smoke_echo.py     # 不用 ESP32 的服务器自测,见 §7.5 第 2 行       [Stage 6.5 ✓]
-    pc_client.py      # ★ PC 端假设备,见 §6                          [Stage 8]
+    pc_client.py      # ★ PC 端假设备,见 §6                          [Stage 8 ✓]
   deploy/             # 公网 VPS 部署,见 §7.1                        [rev.5 ✓]
     README.md               # 操作步骤(这是唯一要照着敲的一份)
     esp32-server.service    # systemd unit:Python 本体
@@ -221,9 +231,64 @@ TTS 生成通常快于实时播放。一次性推下去会打爆设备的 16 KB 
 
 ASR 和 TTS 的 `X-Api-Resource-Id` **不同**,不要混用。
 
+### 4.6 阿里云百炼 TTS(2026-09-22 起为默认)
+
+换过来的理由很实际:百炼账号里有免费额度,够把 Stage 8~10 调通;火山要另外开通付费。
+厂商这一层只有 `ali_tts.py` 一个文件,`session.py`/`pacer.py`/固件都不知道换了。
+
+从官方文档核实过的要点(Qwen-TTS-Realtime WebSocket API):
+
+- 端点:`wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model=qwen3-tts-flash-realtime`(北京)。
+  国际站是 `dashscope-intl.aliyuncs.com`。**API Key 和地域绑定**,北京的 key 连新加坡会 401
+- 鉴权:握手头 `Authorization: Bearer <DASHSCOPE_API_KEY>`
+- 协议是 OpenAI Realtime 风格:**全是 JSON 文本帧,音频是 base64**,不像火山那样是二进制帧
+- `session.update` 里必须写 `"response_format":"pcm", "sample_rate":16000` ——
+  **默认是 24000**,不写就会在设备上快放变调。支持 8000/16000/24000。
+  `ali_tts.py` 会核对 `session.updated` 回来的采样率,不对直接报错,不会带病下发
+- 用 `commit` 模式:`append(text)` → `commit` → 一串 `response.audio.delta` → `response.done`。
+  Stage 10 的句级流水线同样是每句 append + commit
+- `response.audio.delta` 的 `delta` 是 base64 **字符串**。解出来不保证偶数字节,`ali_tts.py` 会把落单的那个字节留到下一块
+- 默认音色 `Cherry`
+
+免费额度大多 **2026-10-01 到期**,TTS 只有 10K(约 250 句回复)。开通时打开"免费额度用完即停"。
+
+### 4.7 阿里云百炼 ASR(2026-09-22 起为默认)
+
+模型 `qwen-audio-3.1-asr-flash-streaming`。协议是 DashScope 的 **inference WS**,
+和 TTS 的 realtime WS 不是一套(真连核实过):
+
+- 端点 `wss://dashscope[-intl].aliyuncs.com/api-ws/v1/inference`,鉴权 `Authorization: Bearer`
+- `run-task`(JSON,`parameters: {format:"pcm", sample_rate:16000}`)→ 等 `task-started`
+  → **直接转发设备的 100 ms 包**(不用像火山那样两两合并)→ `finish-task` → `task-finished`
+- `result-generated` 里同一个 `sentence_id` 会反复下发,`text` 是**这一句到目前的全文**,不是增量;
+  一段话可能被切成多句,最终文本按 `sentence_id` 拼。`heartbeat:true` 的包跳过
+- 失败是 `task-failed`,错误在 `header.error_code / error_message`
+- 服务端空闲超时 23 s —— 所以**不能**在 IDLE 时就预开一条挂着等下一回合
+
+**`turn_start` 就建连**,不等 `turn_end`:建连 + `run-task` 实测 ~1.0 s(美国 → 新加坡),
+正好藏进用户说话的时间里。建连期间到的音频先进队列,连上后一次补发。
+
 ---
 
-## 5. DeepSeek 要点
+## 5. LLM 要点(Qwen / DeepSeek 二选一)
+
+`LLM_PROVIDER=qwen`(默认)或 `deepseek`。两家都是 OpenAI 兼容的 `/chat/completions` + SSE,
+`llm.py` 一套代码,只换地址 / 密钥 / 模型:
+
+| | Qwen(百炼) | DeepSeek |
+|---|---|---|
+| 地址 | `https://dashscope[-intl].aliyuncs.com/compatible-mode/v1` | `https://api.deepseek.com` |
+| 密钥 | `DASHSCOPE_API_KEY`(和 ASR/TTS 共用) | `DEEPSEEK_API_KEY` |
+| 模型 | `qwen3.5-flash-2026-02-23`(2026-09-22 起默认;`qwen-flash` / `qwen-turbo` / `qwen-plus` / `qwen3.5-flash` 在国际站也都实测可用) | `deepseek-flash` |
+| 特殊字段 | `enable_thinking: false` —— Qwen3 是混合思考模型,不关会先"想"再说,首字延迟翻倍 | 无;只取 `delta.content`,`reasoning_content` 丢弃 |
+
+**实测(2026-09-22,美国 VPS → 新加坡,`qwen-flash`)**:首 token 冷启动 ~1.0 s(含 TLS),
+**连接池热了之后 ~0.3 s**。三轮对话历史正常(第二轮能答出第一轮说的名字和年龄)。
+**换成 `qwen3.5-flash-2026-02-23` 后**:首 token 冷 ~1.5 s / 热 ~0.8 s,比 `qwen-flash` 慢约 0.5 s;
+`enable_thinking:false` 对它同样生效,历史正常。嫌慢可以 `QWEN_MODEL=qwen-flash` 切回。
+DeepSeek 还没有 key,没真连过。
+
+### 5.1 DeepSeek 细节
 
 - `POST https://api.deepseek.com/chat/completions`,OpenAI 兼容格式
 - `"model": "deepseek-flash"`
@@ -249,6 +314,84 @@ ASR 和 TTS 的 `X-Api-Resource-Id` **不同**,不要混用。
 
 **Stage 8~10 全部用它调通,ESP32 一次都不用烧。** 改一行服务器代码立刻能测,而不是等一轮烧录。
 它同时也是协议的可执行文档——设备侧实现有歧义时,以它的行为为准。
+
+### 6.1 Stage 8 —— TTS 单通(2026-09-22 代码完成,百炼 + 火山两套)
+
+设备协议里没有"文本"这个概念,所以加了一条**调试消息** `{"t":"say","text":"..."}`:
+服务器把文本送火山 TTS,出来的 PCM 走**和回声完全同一条**下行路径
+(`session._reply()` → `pacer.pace_stream()` → `audio_begin/…/audio_end`)。
+设备从不发这条;`ESP32_SERVER_ALLOW_SAY=0` 可关。
+
+下行路径在 Stage 8 顺手定了两条语义,Stage 11 直接沿用:
+
+- **拿到第一块音频才发 `audio_begin`。** 上游出声前就失败 → 设备只收到 `{"t":"error"}`,
+  不会有空回合;出声后才失败 → 照常 `audio_end` 收尾再报 `error`,设备不会卡在 PLAYING
+- **pacer 改成吃异步迭代器**,首包仍攒满 `BURST_MS` 再突发,之后 1× 实时。
+  TTS 帧长不对齐(甚至奇数字节)没关系,pacer 重新切成 3200 B
+
+验收分三步,前一步不过别往下走:
+
+| # | 命令 | 验什么 |
+|---|---|---|
+| 1 | `python ali_tts.py "你好" out.wav`(火山:`volc_tts.py`) | 只验密钥 / 地域 / 音色 / 网络,不经过 main.py |
+| 2 | `python main.py` + `python tools/pc_client.py say "你好,今天天气怎么样?"` | 整条下行:整形、seq、wav 能听 |
+| 3 | 同上加 `--abort-after 500` | 打断:服务器立刻停,不发 `audio_end`,且到火山的 WS 被关掉(不再计费) |
+
+**已做**:百炼和火山各写了一个本地 mock 服务器,1/2/3 三步都跑通,外加 TTS 报错路径和 `smoke_echo.py` 回归。
+mock 故意用奇数字节的音频帧,验了 base64 落单字节和 pacer 的重新切片 —— 设备收到的和 mock 发出的逐字节一致。
+**未做**:真连厂商 —— 还没有密钥。百炼第 1 步的常见报错:握手 401/403 = key 错或地域不对;
+`invalid_value` 多半是音色名写错。火山的常见报错:
+`45000xxx` 多半是音色不在该 Resource-Id 的授权范围里;握手 401/403 是密钥或 Resource-Id 填错
+(TTS 和 ASR 的 Resource-Id 不同,§4.5)。
+
+**✅ 实测(2026-09-22,美国 VPS → 百炼新加坡,`DASHSCOPE_API_KEY` 是国际站 key)**:
+三步全过。一句 16 字的回复:
+
+| 段 | 耗时 | 说明 |
+|---|---|---|
+| WS 建连(TLS) | 0.8 ~ 1.1 s | **大头**。美国到新加坡的跨洋握手 |
+| `session.update` 往返 | ~0.25 s | |
+| commit → 首个音频 | ~0.4 s | 合成本身 |
+| 生成 3.2 s 音频 | ~0.6 s | 5× 实时,pacer 喂得动 |
+| **请求 → 设备收到首包** | **1.4 ~ 1.8 s** | |
+
+计费:这句 16 字(含标点)记了 `characters: 29` —— **汉字大约按 2 个字符计**,
+10K 免费额度实际约 5000 汉字 ≈ 170 句回复。
+
+踩到的一个坑已修:最初在生成器里同步做 `session.finish` + 关连接,
+最后不满一包的尾巴和 `audio_end` 都要等那两个跨洋来回,拖了 ~1 s。
+现在 `response.done` 一到生成器就结束,关连接丢到后台。
+
+**降首包延迟的两条路**(都不急,Stage 11 再说):
+(1) 在 `turn_start` 时就**预热**百炼连接,把建连的 1 s 藏进用户说话的时间里 ——
+这一条收益最大且不花钱;(2) VPS 换到新加坡/国内,和百炼同区域。
+
+⚠️ 当前 VPS 在美国,第 1 步测出的首包延迟会比 §3.3 的预算高一个跨太平洋 RTT。
+这是**已知的部署问题**,不是 TTS 客户端的问题 —— 功能验证在美国做就行,延迟要等换国内服务器再量。
+
+### 6.2 Stage 9 —— ASR 单通(2026-09-22 ✓ 真连百炼)
+
+`REPLY_MODE=asr`(或 pc_client 在 `turn_start` 里带 `"mode":"asr"`)时,一个回合是:
+
+```
+turn_start  -> 立刻开 ASR 流(和用户说话并行建连)
+binary      -> 攒进缓冲的同时转发给 ASR
+turn_end    -> finish -> 最终文本 -> {"t":"asr","text":...} -> TTS 念"我听到的是:…"
+```
+
+`{"t":"asr"}` 设备会静默忽略(固件 `session.cpp` 的 `default:` 分支,AGENT.md §5.2),
+所以把 VPS 的 `REPLY_MODE` 改成 `asr`,**不用重烧固件**就能在真机上听识别结果。
+
+```bash
+python asr.py input.wav                                   # 只验 ASR
+python tools/pc_client.py turn input.wav --mode asr      # 整条
+```
+
+**实测**(用 Stage 8 合成的"你好,我是小助手,今天天气不错。"当输入):识别一字不差、标点正确;
+ASR 就绪 ~1.0 s(藏在说话时间里),**turn_end → 最终文本 0.51 s**,turn_end → 设备收到首包 1.94 s
+(其中 TTS 建连 0.86 s —— Stage 11 做 TTS 预热后能再砍掉)。
+
+火山 ASR 客户端也写了,帧格式和 200 ms 合包用 mock 验过,没真连。
 
 ---
 
