@@ -76,23 +76,6 @@ class AsrStream:
         raise NotImplementedError
 
 
-_closing = set()                          # 后台关连接的 task,留引用防止被 GC
-
-
-def close_ws_in_background(ws, last_words=None):
-    """关 WS 放后台,不挡回合(跨洋 close 握手一个来回 ~200 ms)。"""
-    async def go():
-        try:
-            if last_words is not None:
-                await ws.send(last_words)
-            await asyncio.wait_for(ws.close(), 3)
-        except Exception:
-            pass
-    t = asyncio.get_running_loop().create_task(go())
-    _closing.add(t)
-    t.add_done_callback(_closing.discard)
-
-
 def open_stream(uid: str = "esp32") -> AsrStream:
     if config.ASR_PROVIDER == "ali":
         import ali_asr

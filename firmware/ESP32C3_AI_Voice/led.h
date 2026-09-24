@@ -17,5 +17,4 @@ enum class LedMode : uint8_t {
 
 void ledBegin();
 void ledSet(LedMode m);
-LedMode ledGet();
 void ledUpdate();     // 每次 loop 都调一次

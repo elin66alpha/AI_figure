@@ -30,7 +30,7 @@ const int16_t *cueSineTable() {
 void cuePlay(const CueNote *notes, uint8_t count) {
   if (!notes || count == 0) return;
   cueBegin();
-  if (!audioStartPlayback(true)) return;
+  if (!audioStartPlayback()) return;
 
   static int16_t buf[FRAME_SAMPLES];
 

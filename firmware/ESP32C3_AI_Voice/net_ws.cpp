@@ -51,7 +51,7 @@ static uint8_t  s_ctl[128];         // 控制帧 payload <= 125
 static size_t   s_ctlLen = 0;
 
 static bool     s_acceptAudio = false;
-static uint32_t s_rxAudio = 0, s_dropAudio = 0;
+static uint32_t s_rxAudio = 0;
 
 static uint32_t s_lastPingSent = 0;
 static uint32_t s_lastPong     = 0;
@@ -61,9 +61,7 @@ static uint8_t  s_tx[8 + NET_CHUNK_BYTES];
 
 void wsSetTextHandler(WsTextHandler h) { s_onText = h; }
 void wsSetAudioAccept(bool on)         { s_acceptAudio = on; }
-bool wsAudioAccept()                   { return s_acceptAudio; }
 uint32_t wsRxAudioBytes()              { return s_rxAudio; }
-uint32_t wsDroppedAudioBytes()         { return s_dropAudio; }
 bool wsIsConnected()                   { return s_up && s_cli.connected(); }
 
 // ---------------------------------------------------------------- 工具
@@ -404,8 +402,8 @@ void wsPoll() {
       memcpy(s_ctl + s_ctlLen, tmp, cp);
       s_ctlLen += cp;
     } else if (isBin) {
-      if (s_acceptAudio) s_rxAudio   += ringWrite(tmp, got);
-      else               s_dropAudio += got;      // 读掉但丢弃,保住帧边界
+      // 不收音频时读掉但丢弃,保住帧边界
+      if (s_acceptAudio) s_rxAudio += ringWrite(tmp, got);
     } else {
       size_t room = (WS_TEXT_MAX - 1) - s_textLen;
       if ((size_t)got > room) s_textOverflow = true;

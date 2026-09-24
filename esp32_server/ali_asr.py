@@ -25,7 +25,8 @@ import uuid
 from websockets.asyncio.client import connect
 
 import config
-from asr import ASRError, AsrStream, close_ws_in_background
+from aioutil import close_ws_in_background
+from asr import ASRError, AsrStream
 
 log = logging.getLogger("asr")
 

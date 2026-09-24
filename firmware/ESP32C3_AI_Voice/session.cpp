@@ -36,6 +36,9 @@ static size_t   s_upFill = 0;
 static uint32_t s_upDrops = 0, s_upDropStreak = 0;
 static uint32_t s_underruns = 0;
 
+// WAITING(冒泡)和 PLAYING 的一帧播放暂存。两个状态互斥,共用一块。
+static int16_t  s_frame[FRAME_SAMPLES];
+
 // cue 是阻塞的,不能在 wsPoll 的回调里放 —— 攒个标记,回到 sessionUpdate 再播
 enum class PendingCue : uint8_t { NONE, LINK_UP, LINK_DOWN, ERR };
 static PendingCue s_cue = PendingCue::NONE;
@@ -191,15 +194,11 @@ static bool flushUplink() {
 
 // ---------------------------------------------------------------- 各状态
 static void doRecording() {
-  static int16_t frame[FRAME_SAMPLES];
-
   // audioRead 阻塞 ~20 ms,这就是 RECORDING 状态的节拍器。
-  size_t got = audioRead(frame, FRAME_SAMPLES, 25);
-  for (size_t i = 0; i < got; i++) {
-    s_up16[s_upFill++] = frame[i];
-    if (s_upFill >= NET_CHUNK_SAMPLES) {
-      if (!flushUplink()) { wsClose("上行持续失败"); return; }
-    }
+  // 直接读进上行包的空位里;maxSamples 限到剩余空位,所以永远不会写过 100 ms 的包尾。
+  s_upFill += audioRead(s_up16 + s_upFill, NET_CHUNK_SAMPLES - s_upFill, 25);
+  if (s_upFill >= NET_CHUNK_SAMPLES) {
+    if (!flushUplink()) { wsClose("上行持续失败"); return; }
   }
 
   if (s_btn.tookRelease()) {
@@ -234,20 +233,17 @@ static void doWaiting() {
   // ---- 等待音效(Stage 11)----
   if (s_bubbleReq && !bubbleActive()) {
     s_bubbleReq = false;
-    if (audioStartPlayback(true)) bubbleStart();
+    if (audioStartPlayback()) bubbleStart();
   }
   if (bubbleActive()) {
     // 和 PLAYING 一样:audioWrite 阻塞到 DMA 腾出空间(~20 ms),这就是节拍器;
     // 两次之间 loop 照常 wsPoll,audio_begin 来了立刻能收到。
-    static int16_t frame[FRAME_SAMPLES];
-    bubbleFill(frame, FRAME_SAMPLES);
-    audioWrite(frame, FRAME_SAMPLES, 60);
+    bubbleFill(s_frame, FRAME_SAMPLES);
+    audioWrite(s_frame, FRAME_SAMPLES, 60);
   }
 }
 
 static void doPlaying() {
-  static int16_t frame[FRAME_SAMPLES];
-
   if (!s_playStarted) {
     // 攒够预缓冲再起播(AGENT.md §4)。回复很短、没攒够就收到 audio_end 的话,
     // 也得起播,否则会一直等一个永远不来的字节。
@@ -260,14 +256,14 @@ static void doPlaying() {
       if (ready && bubbleInGap()) {
         bubbleStop();
       } else {
-        bubbleFill(frame, FRAME_SAMPLES);
-        audioWrite(frame, FRAME_SAMPLES, 60);
+        bubbleFill(s_frame, FRAME_SAMPLES);
+        audioWrite(s_frame, FRAME_SAMPLES, 60);
         return;
       }
     }
 
     if (ready) {
-      if (!audioStartPlayback(true)) { enterError("播放启动失败"); return; }
+      if (!audioStartPlayback()) { enterError("播放启动失败"); return; }
       s_playStarted = true;
       ledSet(LedMode::ON);
       Serial.printf("[SESS] 起播,预缓冲 %u 字节 (%u ms)\n",
@@ -277,10 +273,10 @@ static void doPlaying() {
     return;
   }
 
-  size_t n = ringRead((uint8_t *)frame, sizeof(frame));
+  size_t n = ringRead((uint8_t *)s_frame, sizeof(s_frame));
   if (n > 0) {
     // audioWrite 阻塞到 DMA 腾出空间,这是 PLAYING 状态的节拍器。
-    audioWrite(frame, n / sizeof(int16_t), 60);
+    audioWrite(s_frame, n / sizeof(int16_t), 60);
   } else if (s_audioEnded) {
     audioStopPlayback();                  // 内含补静音 -> drain -> 关功放
     wsSetAudioAccept(false);

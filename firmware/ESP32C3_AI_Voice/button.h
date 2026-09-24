@@ -8,8 +8,7 @@ public:
   void begin(uint8_t pin, uint16_t debounceMs);
   void update();                                   // 在主循环里高频调用
 
-  bool isDown() const { return _stable == LOW; }
-  bool tookPress();                                // 消费一次"按下"事件
+  bool tookPress();                               // 消费一次"按下"事件
   bool tookRelease();                              // 消费一次"松开"事件
   void clearEvents() { _press = _release = false; }
 

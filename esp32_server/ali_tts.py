@@ -46,35 +46,15 @@ from websockets.asyncio.client import connect
 from websockets.protocol import State
 
 import config
+from aioutil import close_ws_in_background
 
 log = logging.getLogger("tts")
+
+_SESSION_FINISH = json.dumps({"type": "session.finish"})
 
 
 class TTSError(Exception):
     pass
-
-
-_closing = set()                 # 后台关连接的 task,留引用防止被 GC
-
-
-async def _close_quietly(ws):
-    """session.finish + 关 WS。放后台做,**不挡下行**。
-
-    美国 VPS 到新加坡一个来回 ~200 ms,close 握手还要再等一个来回。
-    在生成器里同步做的话,最后不满一包的尾巴和 audio_end 都要等它 ——
-    2026-09-22 实测因此拖了 ~1 s。
-    """
-    try:
-        await ws.send(json.dumps({"type": "session.finish"}))
-        await asyncio.wait_for(ws.close(), 3)
-    except Exception:
-        pass
-
-
-def _close_in_background(ws):
-    t = asyncio.get_running_loop().create_task(_close_quietly(ws))
-    _closing.add(t)
-    t.add_done_callback(_closing.discard)
 
 
 async def _recv_event(ws, timeout):
@@ -220,7 +200,7 @@ class AliTtsSession:
         elif r is not None and not r.cancelled():
             r.exception()                     # 取走异常,免得 asyncio 报 "never retrieved"
         if self.ws is not None:
-            _close_in_background(self.ws)
+            close_ws_in_background(self.ws, _SESSION_FINISH)   # 不挡下行
             self.ws = None
 
 

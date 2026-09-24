@@ -17,8 +17,6 @@ void ledSet(LedMode m) {
   s_phase0 = millis();
 }
 
-LedMode ledGet() { return s_mode; }
-
 void ledUpdate() {
   const uint32_t t = millis() - s_phase0;
   bool on = false;

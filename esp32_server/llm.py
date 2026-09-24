@@ -33,28 +33,65 @@ class LLMError(Exception):
 
 # ---------------------------------------------------------------- 厂商
 def _endpoint():
-    """-> (url, api_key, model, 额外请求字段)"""
+    """-> (base_url, api_key, model, 额外请求字段)"""
     p = config.LLM_PROVIDER
     if p == "qwen":
         # Qwen3 系列是混合思考模型;不关的话会先"想"一段才出字,首字延迟翻倍
-        return (config.QWEN_BASE_URL.rstrip("/") + "/chat/completions",
+        return (config.QWEN_BASE_URL.rstrip("/"),
                 config.QWEN_API_KEY, config.QWEN_MODEL, {"enable_thinking": False})
     if p == "deepseek":
-        return (config.DEEPSEEK_BASE_URL.rstrip("/") + "/chat/completions",
+        return (config.DEEPSEEK_BASE_URL.rstrip("/"),
                 config.DEEPSEEK_API_KEY, config.DEEPSEEK_MODEL, {})
     raise LLMError("未知 LLM_PROVIDER=%r(可选 qwen / deepseek)" % p)
 
 
-# aiohttp 连接池全局常驻:keep-alive 省掉每回合的 TLS 握手(SERVER.md §3.4)
+# aiohttp 连接池全局常驻:keep-alive 省掉每回合的 TLS 握手(SERVER.md §3.4)。
+#
+# ⚠️ aiohttp 默认只让空闲连接活 15 s。真机上"上一次 LLM 请求结束 -> 放完回复 -> 用户想 ->
+# 按键说完"通常超过 15 s,连接早被关了,每回合都要重新跨洋 TCP+TLS 握手(~2 RTT)。
+# 所以:空闲超时拉长 + turn_start 时 prewarm(),把建连藏进用户说话的时间里。
 _http = None
+_warming = None                           # prewarm 的后台 task,留引用防止被 GC
 
 
 def _session():
     global _http
     if _http is None or _http.closed:
-        _http = aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(
-            total=None, sock_connect=5, sock_read=config.LLM_TIMEOUT_S))
+        _http = aiohttp.ClientSession(
+            connector=aiohttp.TCPConnector(keepalive_timeout=config.LLM_KEEPALIVE_S),
+            timeout=aiohttp.ClientTimeout(
+                total=None, sock_connect=5, sock_read=config.LLM_TIMEOUT_S))
     return _http
+
+
+def prewarm():
+    """turn_start 时调(chat 模式):后台把到 LLM 的连接建好,不耗 token。
+
+    发一个 HEAD /models —— 状态码是什么都无所谓(200 / 401 / 405 都行),
+    要的只是它留在连接池里的那条 TCP+TLS 连接。连接本来就热的话只花 1 个 RTT,
+    顺带刷新了空闲计时。失败静默:大不了 turn_end 时照旧现场建连,和没预热一样。
+    """
+    global _warming
+    if not config.LLM_PREWARM or (_warming is not None and not _warming.done()):
+        return
+    try:
+        base, key, _, _ = _endpoint()
+    except LLMError:
+        return
+    if not key:
+        return
+    _warming = asyncio.get_running_loop().create_task(_warm(base + "/models", key))
+
+
+async def _warm(url, key):
+    t0 = time.monotonic()
+    try:
+        async with _session().head(url, headers={"Authorization": "Bearer " + key}) as r:
+            pass                          # HEAD 没有 body,退出 with 连接就回到池里
+        log.info("%s 连接预热 %.0f ms(HTTP %d)", config.LLM_PROVIDER,
+                 (time.monotonic() - t0) * 1000, r.status)
+    except Exception as e:
+        log.info("%s 连接预热失败(不影响回合): %r", config.LLM_PROVIDER, e)
 
 
 async def close():
@@ -64,7 +101,8 @@ async def close():
 
 async def stream_tokens(messages):
     """异步逐段产出模型生成的文本(delta.content)。"""
-    url, key, model, extra = _endpoint()
+    base, key, model, extra = _endpoint()
+    url = base + "/chat/completions"
     if not key:
         raise LLMError("没配 %s 的 API Key" % config.LLM_PROVIDER)
     body = {

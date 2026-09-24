@@ -66,6 +66,7 @@ esp32_server/
   volc_tts.py         # 火山 TTS 客户端(备选)                        [Stage 8 ✓]
   llm.py              # Qwen / DeepSeek,stream=True,切句,对话历史    [Stage 10 ✓]
   pipeline.py         # 句级流水线:LLM -> TTS -> 下行,三段解耦       [Stage 10 ✓]
+  aioutil.py          # 厂商 WS 后台关闭(ASR/TTS 共用)
   tools/
     smoke_echo.py     # 不用 ESP32 的服务器自测,见 §7.5 第 2 行       [Stage 6.5 ✓]
     pc_client.py      # ★ PC 端假设备,见 §6                          [Stage 8 ✓]
@@ -142,6 +143,9 @@ rev.5 之后这张表才真正成立 —— 服务器就在公网 VPS 上。
 ### 3.4 连接复用
 
 - **DeepSeek**:`aiohttp.ClientSession` 全局常驻,keep-alive。这一项在 rev.1 里是最贵的(每回合 1.5~3.0 s,含握手),复用后降到 0.3~0.6 s
+  - **2026-09-24 补**:aiohttp 默认空闲连接只留 15 s,真机上一问一答的间隔通常更长,连接早被关了,
+    等于每回合都冷启动。现在 `LLM_KEEPALIVE_S=60`,并且 chat 模式在 `turn_start` 时 `llm.prewarm()`
+    发一个 `HEAD /models`(不耗 token)把连接建好 —— 和 ASR/TTS 一样,建连藏进用户说话的时间里
 - **ASR / TTS**:两者同在 `openspeech.bytedance.com`,TLS session 可复用。火山的 session 是绑回合的,但底层 TCP/TLS 连接可以预热
 - 可以在 `IDLE` 期间预热下一回合的 ASR 连接,把 0.3~0.5 s 里的握手部分也吃掉
 
@@ -584,6 +588,9 @@ stunnel 那条在 Pi 上同样适用,而且正是当初选它的理由。
 想验配置只能直接起服务看 journal。
 
 ## 8. 参考
+
+- `ROADMAP.md` — 后续计划:App 按设备配置 ASR/TTS/LLM 订阅、音量/电量中转。
+  **别删备选厂商代码**(`volc_*.py`),它们以后是 App 里的可选项
 
 - [大模型流式语音识别 API — 豆包语音](https://docs.volcengine.com/docs/6561/1354869)
 - [WebSocket 单向流式-V3(语音合成) — 豆包语音](https://docs.volcengine.com/docs/DoubaoVoice/WebSocketUnidirectionalStreaming-V3?lang=zh)

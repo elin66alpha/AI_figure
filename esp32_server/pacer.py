@@ -35,21 +35,13 @@ def _bytes_to_seconds(n: int) -> float:
     return n / float(config.SAMPLE_RATE * config.BYTES_PER_SAMPLE)
 
 
-async def pace_pcm(send, pcm: bytes, *, on_progress=None) -> int:
-    """把一整段 pcm 按实时速率喂给 send(bytes)。返回实际发出的字节数。
+async def pace_stream(send, source) -> int:
+    """把异步迭代器 source 给出的 pcm 按实时速率喂给 send(bytes)。返回实际发出的字节数。
 
     send 必须是 awaitable(websockets 的 ws.send)。被 cancel 时直接抛
     CancelledError —— abort 路径靠这个立刻停掉在途音频。
-    """
-    async def one():
-        yield pcm
-    return await pace_stream(send, one(), on_progress=on_progress)
 
-
-async def pace_stream(send, source, *, on_progress=None) -> int:
-    """同上,但 pcm 来自异步迭代器(TTS 边合成边给)。Stage 8 起的主路径。
-
-    源给得比实时快(常态):按不变量整形,和 pace_pcm 完全一样。
+    源给得比实时快(常态,回声也是):按不变量整形。
     源给得比实时慢(TTS 卡顿):有多少发多少,设备那边会欠载一下;
     源恢复后按绝对时间基准最多补回 BURST_MS 的超前量,不会更多 —— 不变量照样成立。
 
@@ -74,8 +66,6 @@ async def pace_stream(send, source, *, on_progress=None) -> int:
             await asyncio.sleep(wait)
         await send(chunk)
         sent += len(chunk)
-        if on_progress:
-            on_progress(sent, None)
 
     async for data in source:
         buf += data
