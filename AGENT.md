@@ -159,7 +159,7 @@ GPIO4/GPIO5 上的 BCLK/WS 由 **TX 模块**产生,RX 从 TX 内部取时钟。
 
 **正确做法(已落实到 `audio_io.cpp`):**
 
-- TX 在 `audioBegin()` 里 enable,之后**永不 disable**(直到 `audioEnd`),它是整条总线的时钟源
+- TX 在 `audioBegin()` 里 enable,之后**永不 disable**,它是整条总线的时钟源
 - 不播放时靠 `auto_clear` 自动输出零,不需要人喂数据
 - RX 照常 enable/disable,不影响时钟
 - **"半双工"由功放 SD 脚 + RX 的 enable/disable 保证,不靠关时钟**
@@ -680,9 +680,17 @@ Stage 8~10 全部在 PC 上用它调通,ESP32 一次都不用烧。改一行服�
 
 ---
 
+### 后续计划
+
+手机 App(蓝牙配网、配服务器、配 ASR/TTS/大模型订阅、调音量、看电量)和电量检测硬件
+记在 **`ROADMAP.md`**。其中 §3 列了对现有代码的约束 —— **改固件或服务器之前先看一眼**。
+
+---
+
 ## 11. 参考
 
 厂商 API 文档已移到 `SERVER.md`——设备侧不需要它们。
 
 - `SERVER.md` — 服务器侧规格
+- `ROADMAP.md` — 后续计划(App、电量)及其对现有代码的约束
 - `ESP32_C3_AI_Voice_MVP.md` — 最初设想稿。硬件部分有效;§9 的网络层设想在 rev.2 下重新生效

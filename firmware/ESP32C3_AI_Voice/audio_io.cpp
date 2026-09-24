@@ -6,13 +6,10 @@
 static i2s_chan_handle_t s_tx = nullptr;
 static i2s_chan_handle_t s_rx = nullptr;
 static bool s_capturing = false;
-static bool s_playing   = false;   // 逻辑状态:是否在送真实音频。TX 硬件一直在跑。
-static bool s_ampOn     = false;
+static bool s_playing   = false;   // 逻辑状态:是否在送真实音频(功放开着)。TX 硬件一直在跑。
 static bool s_ready     = false;
 
-static uint8_t  s_micShift  = MIC_SHIFT_DEFAULT;
-static uint16_t s_outGain   = OUTPUT_GAIN_DEFAULT;
-static bool     s_dcBlocker = DC_BLOCKER_DEFAULT;
+static uint16_t s_outGain   = OUTPUT_GAIN_DEFAULT;   // 运行期可调,见 audio_io.h
 
 static volatile uint32_t s_txUnderruns = 0;
 
@@ -39,13 +36,15 @@ static bool onTxQueueOverflow(i2s_chan_handle_t, i2s_event_data_t *, void *) {
   return false;
 }
 
+// 功放 (MAX98357A SD / GPIO10)
+static inline void ampSet(bool on) { digitalWrite(PIN_AMP_SD, on ? HIGH : LOW); }
+
 // ---------------------------------------------------------------- 初始化
 bool audioBegin() {
   if (s_ready) return true;
 
   pinMode(PIN_AMP_SD, OUTPUT);
-  digitalWrite(PIN_AMP_SD, LOW);   // 上电先关断功放
-  s_ampOn = false;
+  ampSet(false);                   // 上电先关断功放
 
   i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_0, I2S_ROLE_MASTER);
   chan_cfg.dma_desc_num  = DMA_DESC_NUM;
@@ -94,7 +93,7 @@ bool audioBegin() {
   // 全双工下 BCLK/WS 归 TX 模块所有。i2s_channel_enable 的文档原话:
   //   "It will start outputting BCLK and WS signal."
   // TX 一停,INMP441 这个纯从机就没有时钟,i2s_channel_read 只会一路超时返回 0。
-  // 所以从这里开始 TX 就不再 disable 了(直到 audioEnd)。
+  // 所以从这里开始 TX 就不再 disable 了。
   // DMA 缓冲是 calloc 出来的,首次输出即静音;功放此刻也还关着,不会有"啪"声。
   if (i2s_channel_enable(s_tx) != ESP_OK) {
     Serial.println("[AUDIO] TX enable 失败");
@@ -107,27 +106,8 @@ bool audioBegin() {
   return true;
 }
 
-void audioEnd() {
-  if (!s_ready) return;
-  if (s_playing)   audioStopPlayback();
-  if (s_capturing) audioStopCapture();
-  i2s_channel_disable(s_tx);
-  i2s_del_channel(s_tx);
-  i2s_del_channel(s_rx);
-  s_tx = s_rx = nullptr;
-  s_ready = false;
-}
-
-// ---------------------------------------------------------------- 功放
-void ampSet(bool on) {
-  digitalWrite(PIN_AMP_SD, on ? HIGH : LOW);
-  s_ampOn = on;
-}
-bool ampIsOn() { return s_ampOn; }
-
 // ---------------------------------------------------------------- 统计
 uint32_t audioTxUnderruns()  { return s_txUnderruns; }
-void     audioResetTxStats() { s_txUnderruns = 0; }
 
 // ---------------------------------------------------------------- 录音
 bool audioStartCapture() {
@@ -166,9 +146,9 @@ size_t audioRead(int16_t *dst, size_t maxSamples, uint32_t timeoutMs) {
   size_t frames = got / (2 * sizeof(int32_t));
   for (size_t i = 0; i < frames; i++) {
     // INMP441 的 L/R 接 GND => 数据在左时隙。右时隙是高阻/垃圾,丢掉。
-    int32_t v = s_scratch[i * 2] >> s_micShift;
+    int32_t v = s_scratch[i * 2] >> MIC_SHIFT;
 
-    if (s_dcBlocker) {
+    if (DC_BLOCKER_ON) {                     // 编译期常量,分支被编译器折掉
       int32_t y = v - s_dcX1 + (int32_t)(((int64_t)s_dcY1 * 2036) >> 11); // a≈0.9941
       s_dcX1 = v;
       s_dcY1 = y;
@@ -180,7 +160,7 @@ size_t audioRead(int16_t *dst, size_t maxSamples, uint32_t timeoutMs) {
 }
 
 // ---------------------------------------------------------------- 播放
-bool audioStartPlayback(bool enableAmp) {
+bool audioStartPlayback() {
   if (!s_ready) return false;
   if (s_playing) return true;
   if (s_capturing) audioStopCapture();       // 半双工
@@ -193,18 +173,13 @@ bool audioStartPlayback(bool enableAmp) {
   audioWrite(s_silence16, FRAME_SAMPLES, 200);
   audioWrite(s_silence16, FRAME_SAMPLES, 200);
 
-  if (enableAmp) {
-    ampSet(true);
-    delay(AMP_WAKE_MS);                      // MAX98357A 离开 shutdown 需要几 ms
-  }
+  ampSet(true);
+  delay(AMP_WAKE_MS);                        // MAX98357A 离开 shutdown 需要几 ms
   return true;
 }
 
 void audioStopPlayback() {
   if (!s_playing) return;
-
-  // 功放本来就没开(Stage 4 那种静音压测),没有尾音要保护,直接收。
-  if (!s_ampOn) { s_playing = false; return; }
 
   // 补一整个 DMA 长度的静音。i2s_channel_write 会阻塞到 DMA 腾出空间,
   // 所以这些静音被接受时,真正的音频尾巴已经被时钟推出去了。
@@ -245,10 +220,6 @@ size_t audioWrite(const int16_t *src, size_t samples, uint32_t timeoutMs) {
   return done;
 }
 
-// ---------------------------------------------------------------- 可调参数
-void     setMicShift(uint8_t s)     { if (s >= 8 && s <= 20) s_micShift = s; }
-uint8_t  getMicShift()              { return s_micShift; }
+// ---------------------------------------------------------------- 输出音量
 void     setOutputGain(uint16_t g)  { s_outGain = (g > 256) ? 256 : g; }
 uint16_t getOutputGain()            { return s_outGain; }
-void     setDcBlocker(bool on)      { s_dcBlocker = on; s_dcX1 = s_dcY1 = 0; }
-bool     getDcBlocker()             { return s_dcBlocker; }

@@ -173,6 +173,10 @@ DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-flash")
 # ⚠️ 两家的模型最大输出都很长(DeepSeek 384K),必须压小,否则 TTS 念不完(SERVER.md §5)
 LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "150"))
 LLM_TIMEOUT_S = float(os.getenv("LLM_TIMEOUT_S", "20"))
+# chat 模式 turn_start 时后台预热到 LLM 的连接(HEAD /models,不耗 token),见 llm.prewarm()。
+LLM_PREWARM = os.getenv("LLM_PREWARM", "1") == "1"
+# 连接池里空闲连接的保留时长。aiohttp 默认 15 s,对"一问一答间隔十几秒"的对话太短。
+LLM_KEEPALIVE_S = float(os.getenv("LLM_KEEPALIVE_S", "60"))
 # 保留最近几轮对话(一问一答算一轮)。system prompt 永远置顶,不参与截断。
 LLM_HISTORY_TURNS = int(os.getenv("LLM_HISTORY_TURNS", "10"))
 LLM_SYSTEM_PROMPT = os.getenv("LLM_SYSTEM_PROMPT", (

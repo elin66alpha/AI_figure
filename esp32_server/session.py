@@ -55,7 +55,8 @@ class EchoSession:
         self.dev = "?"           # 设备自报的 ID,仅用于日志
         self.seq = 0             # 回合号。AGENT.md §5.3(a)
         self.recording = False
-        self.buf = bytearray()
+        self.buf = bytearray()   # 本回合录音,只有 echo 模式要攒(要原样送回)
+        self.nbytes = 0          # 本回合收到的音频字节数,所有模式都记
         self.task = None         # 在途的回送任务
         self.dropped = 0         # 非录音期收到的 binary 帧数
         self.first_frame_logged = False
@@ -95,9 +96,11 @@ class EchoSession:
             mark = "ok" if len(data) == config.CHUNK_BYTES else "!! 期望 %d" % config.CHUNK_BYTES
             log.info("[%s] 首个音频帧 %d 字节 (%s)", self.sid, len(data), mark)
 
-        if len(self.buf) + len(data) > config.MAX_TURN_BYTES:
+        if self.nbytes + len(data) > config.MAX_TURN_BYTES:
             return                      # 超长回合,静默截断
-        self.buf += data
+        self.nbytes += len(data)
+        if self.mode == "echo":
+            self.buf += data            # asr/chat 模式直接流给 ASR,不必再攒一份(最长 ~960 KB)
         if self.asr:
             self.asr.feed(data)
 
@@ -117,6 +120,7 @@ class EchoSession:
         elif t == "turn_start":
             await self._cancel_turn("新回合开始")
             self.buf = bytearray()
+            self.nbytes = 0
             self.recording = True
             self.first_frame_logged = False
             self.mode = m.get("mode") or config.REPLY_MODE
@@ -130,21 +134,23 @@ class EchoSession:
                 except ValueError as e:
                     await self.send_json(t="error", code="asr_failed", msg=str(e))
                     self.mode = "echo"
-            if self.mode == "chat" and config.TTS_PREWARM:
-                try:
-                    self.tts_pre = tts.open_session(self.dev)
-                except ValueError as e:
-                    log.warning("[%s] TTS 预热失败: %s", self.sid, e)
+            if self.mode == "chat":
+                llm.prewarm()           # 到 LLM 的连接同理,藏进用户说话的时间里
+                if config.TTS_PREWARM:
+                    try:
+                        self.tts_pre = tts.open_session(self.dev)
+                    except ValueError as e:
+                        log.warning("[%s] TTS 预热失败: %s", self.sid, e)
             log.info("[%s] turn_start mode=%s", self.sid, self.mode)
 
         elif t == "turn_end":
             self.recording = False
             self.t_end = time.monotonic()
-            ms = len(self.buf) * 1000 // (config.SAMPLE_RATE * config.BYTES_PER_SAMPLE)
-            log.info("[%s] turn_end — 收到 %d 字节 (%d ms)", self.sid, len(self.buf), ms)
+            ms = self.nbytes * 1000 // (config.SAMPLE_RATE * config.BYTES_PER_SAMPLE)
+            log.info("[%s] turn_end — 收到 %d 字节 (%d ms)", self.sid, self.nbytes, ms)
             stream, self.asr = self.asr, None
             ts, self.tts_pre = self.tts_pre, None
-            if not self.buf:
+            if not self.nbytes:
                 if stream:
                     await stream.cancel()
                 if ts:
@@ -200,9 +206,6 @@ class EchoSession:
         mode = self.mode
         if mode == "chat" and ts is None:
             ts = tts.open_session(self.dev)
-        elif mode != "chat" and ts is not None:
-            ts.close()
-            ts = None
         try:
             text = await stream.finish()
         except asyncio.CancelledError:
