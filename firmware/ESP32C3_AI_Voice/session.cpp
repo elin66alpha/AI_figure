@@ -30,8 +30,9 @@ static uint32_t s_waitStart  = 0;
 static bool     s_bubbleReq  = false;   // 收到 cue thinking,该开始冒泡了
 static bool     s_waitFail   = false;   // WAITING 时服务器报错:不用干等 8 s 超时
 
-// 上行组包:攒够 100 ms 才发一帧
-static int16_t  s_up16[NET_CHUNK_SAMPLES];
+// 上行组包:攒够 100 ms 才发一帧。
+// 缓冲就是 net_ws 的上行帧 payload 区(wsAudioTxBuf):录音直接写进去,发送时原地加掩码,不再多拷一遍。
+static int16_t *s_up16   = nullptr;     // sessionBegin 里取
 static size_t   s_upFill = 0;
 static uint32_t s_upDrops = 0, s_upDropStreak = 0;
 static uint32_t s_underruns = 0;
@@ -133,12 +134,16 @@ static void onText(const char *json, size_t len) {
 }
 
 // ---------------------------------------------------------------- 内部动作
-static void stopAudioAll() {
+// cut=true:打断用,不保护尾音、不阻塞(audioCutPlayback);其余情况照常补静音收尾。
+static void stopAudioAll(bool cut = false) {
   bubbleStop();
   s_bubbleReq = false;
   s_waitFail  = false;
   if (audioIsCapturing()) audioStopCapture();
-  if (audioIsPlaying())   audioStopPlayback();
+  if (audioIsPlaying()) {
+    if (cut) audioCutPlayback();
+    else     audioStopPlayback();
+  }
   ringReset();
   wsSetAudioAccept(false);
   s_upFill = 0;
@@ -167,9 +172,10 @@ static void startRecording() {
 
 // 打断。AGENT.md §8:**先发 abort 再关功放** ——
 // abort 是上行,不受下行缓冲拥塞影响,越早发服务器越早停止烧 token。
+// 功放直接掐(cut),不等被打断的回复播完尾巴:紧接着就要开麦,用户已经在说话了。
 static void bargeIn() {
   wsSendText(PROTO_ABORT);
-  stopAudioAll();
+  stopAudioAll(true);
   s_seq = -1;                 // 到下一个 audio_begin 之前的 binary 帧全丢
   Serial.println("[SESS] abort(打断)");
 }
@@ -269,6 +275,10 @@ static void doPlaying() {
       Serial.printf("[SESS] 起播,预缓冲 %u 字节 (%u ms)\n",
                     (unsigned)ringUsed(),
                     (unsigned)(ringUsed() * 1000 / (SAMPLE_RATE_HZ * 2)));
+    } else {
+      // 没冒泡、预缓冲也没攒够:这时没有 audioWrite 当节拍器,loop 会全速空转
+      // (PLAYING 下 loop 不 delay)。歇 1 ms,wsPoll 照样每毫秒收一次。
+      delay(1);
     }
     return;
   }
@@ -294,6 +304,7 @@ static void doPlaying() {
 // ---------------------------------------------------------------- 对外
 void sessionBegin() {
   s_btn.begin(PIN_PTT_BUTTON, BUTTON_DEBOUNCE_MS);
+  s_up16 = wsAudioTxBuf();
   wsSetTextHandler(onText);
   s_st = VoiceState::ERROR_STATE;
   s_wsRetryAt = 0;
