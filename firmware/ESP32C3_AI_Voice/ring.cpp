@@ -11,19 +11,16 @@ size_t ringUsed()     { return s_used; }
 size_t ringFree()     { return RING_BYTES - s_used; }
 size_t ringCapacity() { return RING_BYTES; }
 
-size_t ringWrite(const uint8_t *src, size_t n) {
-  if (!src) return 0;
-  size_t space = RING_BYTES - s_used;
-  if (n > space) n = space;
+size_t ringWriteSpan(uint8_t **p) {
+  *p = s_buf + s_head;
+  const size_t space = RING_BYTES - s_used;
+  const size_t tail  = RING_BYTES - s_head;       // 到数组末尾还有多少
+  return space < tail ? space : tail;
+}
 
-  size_t first = RING_BYTES - s_head;
-  if (first > n) first = n;
-  memcpy(s_buf + s_head, src, first);
-  if (n > first) memcpy(s_buf, src + first, n - first);
-
+void ringCommit(size_t n) {
   s_head = (s_head + n) % RING_BYTES;
   s_used += n;
-  return n;
 }
 
 size_t ringRead(uint8_t *dst, size_t n) {

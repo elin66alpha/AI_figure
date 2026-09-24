@@ -31,6 +31,11 @@ void wsPoll();                     // 每次 loop 调。推进接收状态机 + 
 bool wsSendText(const char *s);
 bool wsSendBinary(const uint8_t *data, size_t n);
 
+// 上行音频帧的 payload 区(NET_CHUNK_SAMPLES 个样本)。录音直接写进这里,
+// 再 wsSendBinary(本指针, 字节数) —— 走零拷贝路径,原地加掩码发出。
+// 发送之后这块内容已被掩码改写,只能重新填,不能再读。
+int16_t *wsAudioTxBuf();
+
 // seq 门控(AGENT.md §5.3a):关掉之后 binary 帧照读不误(否则帧边界就乱了),
 // 但读完直接丢弃,不进 ring。abort 之后到下一个 audio_begin 之间就靠它。
 void wsSetAudioAccept(bool on);

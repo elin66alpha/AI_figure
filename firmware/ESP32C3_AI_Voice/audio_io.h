@@ -29,8 +29,11 @@ size_t audioRead(int16_t *dst, size_t maxSamples, uint32_t timeoutMs);
 // ---- 播放 ----
 // 推两帧静音对齐管线 -> 开功放 -> 等功放唤醒。
 bool  audioStartPlayback();
-// 补静音 -> 等 DMA 放完 -> 关功放。TX 本身保持运行。
+// 补静音 -> 等 DMA 放完 -> 关功放。TX 本身保持运行。阻塞 ~60 ms(尾音在这段时间里播完)。
 void  audioStopPlayback();
+// 打断(barge-in)专用:不保护尾音,立刻关功放,不阻塞。
+// DMA 里残留的旧音频留给下一次 audioStartPlayback 冲掉。
+void  audioCutPlayback();
 bool  audioIsPlaying();
 size_t audioWrite(const int16_t *src, size_t samples, uint32_t timeoutMs);
 

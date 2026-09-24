@@ -21,6 +21,11 @@ size_t ringUsed();
 size_t ringFree();
 size_t ringCapacity();
 
-// 返回实际写入/读出的字节数。写满了就少写,不阻塞、不丢已有数据。
-size_t ringWrite(const uint8_t *src, size_t n);
+// 零拷贝写入(net_ws 直接从 socket 读进来):
+//   p = 写指针,返回值 = 从 p 起**连续**可写的字节数(绕回之前那一段,可能小于 ringFree())
+//   往 p 里写 n 字节(n <= 返回值)之后调 ringCommit(n)
+size_t ringWriteSpan(uint8_t **p);
+void   ringCommit(size_t n);
+
+// 返回实际读出的字节数(偶数)。
 size_t ringRead(uint8_t *dst, size_t n);

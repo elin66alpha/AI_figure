@@ -22,6 +22,13 @@ static int32_t s_scratch[FRAME_SAMPLES * 2];
 // 补尾用的静音(.bss,自动清零)
 static int16_t s_silence16[FRAME_SAMPLES];
 
+// 写满整个 DMA 需要几帧:ceil(4*240 / 320) = 3 帧 = 7680 B = 正好 4 个描述符。
+static const int DMA_FLUSH_FRAMES = (DMA_DESC_NUM * DMA_FRAME_NUM + FRAME_SAMPLES - 1) / FRAME_SAMPLES;
+
+// audioCutPlayback() 掐断后,DMA 里还躺着被打断那一轮的音频(最多 DMA_TOTAL_MS)。
+// 功放关着听不见,但下次开播前得先冲干净,否则开功放那一下会漏出旧回复的尾巴。
+static bool s_txDirty = false;
+
 static inline int16_t sat16(int32_t v) {
   if (v >  32767) return  32767;
   if (v < -32768) return -32768;
@@ -170,8 +177,10 @@ bool audioStartPlayback() {
 
   // TX 一直在跑,DMA 里可能还留着上一轮的游标。先推两帧静音把管线对齐,
   // 再开功放 —— 功放唤醒时面对的是确定的零信号,不会"啪"一声。
-  audioWrite(s_silence16, FRAME_SAMPLES, 200);
-  audioWrite(s_silence16, FRAME_SAMPLES, 200);
+  // 刚被掐断过(s_txDirty)就多推:冲满整个 DMA 再加一帧余量,把旧音频全部顶出去(原理见 audioStopPlayback)。
+  const int n = s_txDirty ? DMA_FLUSH_FRAMES + 1 : 2;
+  for (int i = 0; i < n; i++) audioWrite(s_silence16, FRAME_SAMPLES, 200);
+  s_txDirty = false;
 
   ampSet(true);
   delay(AMP_WAKE_MS);                        // MAX98357A 离开 shutdown 需要几 ms
@@ -181,16 +190,32 @@ bool audioStartPlayback() {
 void audioStopPlayback() {
   if (!s_playing) return;
 
-  // 补一整个 DMA 长度的静音。i2s_channel_write 会阻塞到 DMA 腾出空间,
-  // 所以这些静音被接受时,真正的音频尾巴已经被时钟推出去了。
-  const int frames = (DMA_TOTAL_MS * SAMPLE_RATE_HZ / 1000 + FRAME_SAMPLES - 1) / FRAME_SAMPLES;
-  for (int i = 0; i < frames; i++) audioWrite(s_silence16, FRAME_SAMPLES, 200);
-  delay(DMA_TOTAL_MS + 10);                  // 让最后一个描述符真的出引脚
+  // 补一整个 DMA 长度的静音(DMA_FLUSH_FRAMES 帧 = 4 个描述符)。
+  //
+  // 为什么写完这些就说明尾音已经出去了:i2s_channel_write 只能拿到 DMA **已经播完**
+  // (EOF 中断回收)的描述符来写。装着真实音频的描述符,要被我们拿来写静音,
+  // 就必须先被 DMA 播完一遍。4 个描述符全部写完 = 所有装着真实音频的描述符都播过了。
+  // (最后一个描述符只写了一半的情况也成立:那一半要写满,还得再等它 EOF 一次。)
+  //
+  // 2026-09-24 之前这里还有一个 delay(DMA_TOTAL_MS + 10) = 70 ms —— 那等的是
+  // 刚写进去的静音,纯属白等,每次停播(提示音、回复结束、出错)都付一遍。
+  // 现在只留 AMP_TAIL_MS,给 I2S TX FIFO 里最后几个样本出引脚。
+  for (int i = 0; i < DMA_FLUSH_FRAMES; i++) audioWrite(s_silence16, FRAME_SAMPLES, 200);
+  delay(AMP_TAIL_MS);
 
   ampSet(false);
   s_playing = false;
   // TX 不 disable:它是全双工下的时钟源,关了麦克风就聋了。
   // auto_clear 会让它继续输出零,功放已关,无声。
+}
+
+void audioCutPlayback() {
+  if (!s_playing) return;
+  // 打断专用。被打断的回复反正要扔,不必花 ~60 ms 把它的尾巴播完 —— 那段时间用户
+  // 已经开口了,录音晚开一截就吃掉第一个字。MAX98357A 的 SD 关断自带防爆音。
+  ampSet(false);
+  s_playing = false;
+  s_txDirty = true;                          // DMA 里的旧音频由下次 audioStartPlayback 冲掉
 }
 
 bool audioIsPlaying() { return s_playing; }
