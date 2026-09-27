@@ -86,6 +86,11 @@ void cueLinkDown() {
   cuePlay(n, 2);
 }
 
+void cueProv() {
+  static const CueNote n[] = { {523, 90, CUE_AMP}, {659, 90, CUE_AMP}, {784, 140, CUE_AMP} };
+  cuePlay(n, 3);
+}
+
 void cueError() {
   static const CueNote n[] = {
     {330, 110, CUE_AMP}, {0, 70, 0},

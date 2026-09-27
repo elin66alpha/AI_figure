@@ -11,7 +11,8 @@
 // 0.3 = Stage 11:服务器驱动的等待音效
 // 0.3.1 = 冗余清理(删标定期遗留接口、合并缓冲),行为与 0.3 相同
 // 0.3.2 = 停播少等 66 ms、打断立刻关功放、wsPoll 少做 TLS 查询、上行零拷贝(AGENT.md §9.4)
-#define FW_VERSION  "0.3.2"
+// 0.4.0 = BLE 配网(微信小程序),WiFi 凭据改存 NVS。分区表须选 Minimal SPIFFS(AGENT.md §5.7)
+#define FW_VERSION  "0.4.0"
 
 // ---------------------------------------------------------------- GPIO
 #define PIN_I2S_BCLK    4    // 共享:INMP441 SCK + MAX98357A BCLK
@@ -97,6 +98,17 @@
 // WiFi modem sleep 会给收发引入几十 ms 的抖动。音频流受不了,关掉。
 // 代价是功耗上升 —— 这台设备是 USB 供电的,无所谓。
 #define WIFI_SLEEP_OFF      true
+
+// ---------------------------------------------------------------- BLE 配网(微信小程序)
+// 协议是乐鑫 network_provisioning(Security 1),小程序端见 ../../miniprogram/README.md。
+// 下面两项是**和小程序共用的常量**,改一边就得改另一边。
+//
+// 服务 UUID 10624c9a-f2aa-4ca8-8594-9cd3cc78db3f,按 NimBLE 的要求 LSB 在前。
+// 各端点特征的 UUID 由它派生(第一段的第 5~8 位换成 FF4F/FF50/FF51/FF52/FF53)。
+#define PROV_SERVICE_UUID   { 0x3f, 0xdb, 0x78, 0xcc, 0xd3, 0x9c, 0x94, 0x85, \
+                              0xa8, 0x4c, 0xaa, 0xf2, 0x9a, 0x4c, 0x62, 0x10 }
+#define PROV_NAME_PREFIX    "AIFIG_"      // 广播名 = 前缀 + MAC 后 3 字节
+#define PROV_HOLD_MS        3000          // 上电时按住按键这么久 = 重新配网
 
 // ---------------------------------------------------------------- WebSocket
 //

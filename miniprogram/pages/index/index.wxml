@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="card">
+    <view class="title">① 填家里的 WiFi</view>
+    <view class="hint">玩偶只能连 2.4G WiFi,名字里带 5G 的一般不行</view>
+    <view class="field">
+      <text class="label">名称</text>
+      <input class="input" value="{{ssid}}" bindinput="onSsid" placeholder="WiFi 名称" disabled="{{phase === 'busy'}}" />
+    </view>
+    <view class="field">
+      <text class="label">密码</text>
+      <input class="input" value="{{password}}" password="{{!showPwd}}" bindinput="onPwd" placeholder="没有密码就留空" disabled="{{phase === 'busy'}}" />
+      <text class="eye" bindtap="togglePwd">{{showPwd ? '隐藏' : '显示'}}</text>
+    </view>
+    <view wx:if="{{wifiHint}}" class="warn">{{wifiHint}}</view>
+  </view>
+
+  <view class="card" wx:if="{{phase === 'scan'}}">
+    <view class="title">② 点你的玩偶</view>
+    <view class="hint">玩偶要先进配网模式:按住按键再上电、保持 3 秒;从没配过网的玩偶会自己进</view>
+    <view wx:if="{{scanErr}}" class="error">
+      <view>{{scanErr}}</view>
+      <button class="btn" size="mini" bindtap="startScan">重试</button>
+    </view>
+    <view wx:elif="{{!devices.length}}" class="hint">正在找附近的玩偶…</view>
+    <view wx:for="{{devices}}" wx:key="deviceId" class="device" data-id="{{item.deviceId}}" bindtap="onPick">
+      <text>{{item.name}}</text>
+      <text class="rssi">信号 {{item.RSSI}} dBm</text>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{phase === 'busy'}}">
+    <view class="title">配网中,请稍候</view>
+    <view class="step">{{step}}</view>
+  </view>
+
+  <view class="card ok" wx:if="{{phase === 'ok'}}">
+    <view class="title">配网成功</view>
+    <view>玩偶的 IP:{{ip || '(未知)'}}</view>
+    <view class="hint">玩偶会自动重启,听到"已连接"的提示音就可以用了。</view>
+    <button class="btn" bindtap="startScan">再配一个</button>
+  </view>
+
+  <view class="card" wx:if="{{phase === 'fail'}}">
+    <view class="title">没成功</view>
+    <view class="error">{{msg}}</view>
+    <button wx:if="{{canRetry}}" class="btn primary" bindtap="onRetry">改好了,重试</button>
+    <button class="btn" bindtap="startScan">重新扫描</button>
+  </view>
+</view>

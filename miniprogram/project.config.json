@@ -1,0 +1,18 @@
+{
+  "appid": "touristappid",
+  "projectname": "aifig-provision",
+  "compileType": "miniprogram",
+  "libVersion": "3.0.0",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "urlCheck": false
+  },
+  "packOptions": {
+    "ignore": [
+      { "type": "folder", "value": "test" },
+      { "type": "file", "value": "README.md" }
+    ]
+  }
+}

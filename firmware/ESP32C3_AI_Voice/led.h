@@ -13,6 +13,7 @@ enum class LedMode : uint8_t {
   HEARTBEAT,    // 每 3 s 闪一下 —— IDLE,一切正常
   BLINK_SLOW,   // 500 ms      —— ERROR:WiFi 或 WS 断了,正在重连
   BLINK_FAST,   // 120 ms      —— 连接过程中 / WAITING 等服务器
+  DOUBLE,       // 每 1.5 s 双闪 —— BLE 配网模式,等微信小程序
 };
 
 void ledBegin();

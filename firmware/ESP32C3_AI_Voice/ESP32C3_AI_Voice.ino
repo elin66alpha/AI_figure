@@ -1,9 +1,11 @@
-// ESP32-C3 AI Voice — Stage 6 + 7 + 11
+// ESP32-C3 AI Voice — Stage 6 + 7 + 11 + BLE 配网
 //
 // 开发板: MakerGO ESP32 C3 SuperMini   (核心 3.3.12 / IDF 5.5.5)
-// 规格:   ../../AGENT.md   服务器: ../../SERVER.md
+//         分区表必须选 Minimal SPIFFS (1.9MB APP with OTA) —— BLE 协议栈放不进默认分区
+// 规格:   ../../AGENT.md   服务器: ../../SERVER.md   配网小程序: ../../miniprogram/
 //
 // 烧进去就自己跑,**没有串口菜单**:
+//   没配过网 / 上电时按住按键 3 s -> BLE 配网模式(LED 双闪)-> 小程序配好后自动重启
 //   上电 -> 开机音 -> 连 WiFi -> 连服务器 -> 收到 ready -> 连上音 -> IDLE
 //   按住按键说话 -> 松开 -> "咕噜咕噜"等待音效 -> 听到服务器的回复
 //   (回声 / 对话由服务器的 REPLY_MODE 决定,设备不用管)
@@ -20,6 +22,7 @@
 #include "audio_io.h"
 #include "cue.h"
 #include "led.h"
+#include "net_prov.h"
 #include "net_wifi.h"
 #include "net_ws.h"
 #include "ring.h"
@@ -122,6 +125,8 @@ void setup() {
   cueBegin();
   cueBoot();
 
+  if (provWanted()) provRun();             // 不返回:配完网自己重启
+
   netWifiBegin();
   sessionBegin();
   printHeap("net begin");
@@ -129,7 +134,7 @@ void setup() {
   Serial.printf("[BOOT] 输出增益 %u/256(电容已焊,可上调;同一路 5V 上还有 "
                 "WiFi 发射的 ~350 mA 峰值)\n", getOutputGain());
   Serial.println("[BOOT] 串口是纯日志,不接收输入。LED:快闪=连接中 慢闪=错误 "
-                 "心跳=空闲 常亮=录音/播放");
+                 "心跳=空闲 常亮=录音/播放 双闪=配网");
 }
 
 // ---------------------------------------------------------------- loop

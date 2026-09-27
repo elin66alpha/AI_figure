@@ -284,7 +284,8 @@ rev.1 §6 第 6 条写的"直接 `client.stop()` 掐断"在有服务器之后是
 led.h/.cpp       板载 LED(GPIO8,低电平点亮)状态指示,非阻塞
 cue.h/.cpp       本地提示音。256 点正弦表 + Q16 定点相位累加器,任意频率,零浮点
 ring.h/.cpp      播放环形缓冲,静态数组 **16 KB(512 ms)**,绝不 malloc
-net_wifi.h/.cpp  WiFi 连接 + 指数退避重连 + RSSI/状态查询
+net_wifi.h/.cpp  WiFi 连接 + 指数退避重连 + RSSI/状态查询;凭据读 NVS,回落 secrets.h
+net_prov.h/.cpp  BLE 配网模式(fw 0.4,§5.7),给微信小程序 miniprogram/ 用
 net_ws.h/.cpp    极简 WS 客户端:握手、帧解析、掩码、ping/pong、**边读边写进 ring**
 proto.h/.cpp     控制消息编解码。消息就这几种,**手写字符串匹配,不引 ArduinoJson**
 session.h/.cpp   设备状态机,见 §8
@@ -429,6 +430,32 @@ rev.5 在 `wsConnect()` 握手成功处加打一行 —— 上面那组实测数
 **一次性代码一行都没写**。rev.3 原计划的探针如果真写了,到今天已经是死代码。
 
 `ring` 16 KB → 12 KB 那个备用旋钮**没用上,也不用留着惦记**:实测余量 3.8 倍。
+
+### 5.7 BLE 配网模式(fw 0.4.0)
+
+WiFi 凭据不再写死:用**微信小程序**(`miniprogram/`,协议细节见它的 README)通过 BLE 下发。
+
+- **协议不自己写**:核心自带的 `WiFiProv`(乐鑫 network_provisioning 1.0.2,NimBLE),
+  **Security 1**(X25519 + AES-256-CTR),WiFi 密码在空中是加密的。**必须显式传 `NETWORK_PROV_SECURITY_1`** ——
+  `WiFiProv` 的默认值是 Security 0 明文。
+- **没有 PoP**(2026-09-26 决定):玩偶没屏幕,贴纸/二维码徒增成本。兜底是物理动作 ——
+  只有"没配过网"或"上电按住按键 3 s"才进配网,平时 BLE 根本不开。
+- **独立开机模式**:`setup()` 里 `provWanted()` 为真就 `provRun()`,**不返回**。这次开机只有 BLE + WiFi 验证,
+  不碰 WS/TLS;小程序读到"已连接"约 1 s 后 WiFiProv 收尾,设备重启进正常模式。BLE 和 TLS 从不同时占堆。
+- **凭据**:连通之后才写 NVS 命名空间 `net`(`ssid`/`pass`),所以放弃配网直接断电,旧凭据不受影响。
+  正常模式 `net_wifi` 先读 NVS,空才用 `secrets.h` 的 `WIFI_SSID`(开发板兜底;量产留空)。
+  WiFiProv 自己也会往 esp_wifi 的 NVS 里存一份,我们不用它,下次进配网时 `reset_provisioned=true` 会清掉。
+- **失败不重启**:密码错 / 找不到 AP 时设备放一声降调,等小程序在同一连接里 ctrl reset 后重发。
+- **提示**:LED 每 1.5 s 双闪;进入时上行三声 `cueProv()`;连上 WiFi 时 `cueLinkUp()`。
+- **和小程序共用的常量**在 `config.h`:`PROV_SERVICE_UUID`(`10624c9a-f2aa-4ca8-8594-9cd3cc78db3f`)、
+  `PROV_NAME_PREFIX`(`AIFIG_`)。改一边必须改另一边。
+- **代价(2026-09-27 实测,`min_spiffs` 分区)**:flash 1089159 -> 1460383 B(**+371 KB**),
+  静态 RAM 62988 -> 65236 B(+2.2 KB)。正常模式不初始化 BLE,运行期堆不受影响。
+  **默认分区(1.31 MB)装不下 —— Arduino IDE 里「Partition Scheme」必须选
+  `Minimal SPIFFS (1.9MB APP with OTA/128KB SPIFFS)`**(命令行 `PartitionScheme=min_spiffs`),
+  还顺带留了以后 OTA 的位置。换分区表后第一次烧录会重写分区表,NVS 位置不变(0x9000)。
+
+---
 
 ## 6. 对原 MVP 文档的逐条修正
 
@@ -662,6 +689,23 @@ Stage 8~10 全部在 PC 上用它调通,ESP32 一次都不用烧。改一行服�
 | 6 | §9.3 的 1~7 项全部重跑 | 同 §9.3 | |
 | 7 | 连问 10 轮 + 拔一次路由器 | `[TLM]` 的 `maxAlloc` 不持续下降、`under` 不涨、断线后能自己连回来 | |
 
+### 9.5 fw 0.4.0 BLE 配网真机验收清单(**待测**)
+
+前提:分区选 `Minimal SPIFFS`;小程序用测试号 AppID 在微信开发者工具里「真机调试」(见 `miniprogram/README.md`)。
+先用乐鑫官方 App「ESP BLE Provisioning」测一遍固件(Security 1、无 PoP),固件没问题再测小程序 —— 这样出错能分清是哪一端。
+
+| # | 做什么 | 应该看到/听到 | 结果 |
+|---|---|---|---|
+| 1 | `secrets.h` 删掉 WIFI_SSID 两行,烧录 | 串口 `没有 WiFi 凭据 -> 配网模式`、`BLE 广播 "AIFIG_xxxxxx"`;LED 双闪,上行三声 | |
+| 2 | 乐鑫官方 App 配网(App 设置里把设备名前缀 `PROV_` 改成 `AIFIG_`,否则扫不到) | 配成功;串口 `凭据已存 NVS`、`配网结束,重启`;重启后 `凭据来自 NVS`,正常连上服务器 | |
+| 3 | 按住按键上电 3 s | 进配网模式(串口 `上电时按住了按键`) | |
+| 4 | 小程序配网(安卓) | 扫到 `AIFIG_xxxxxx`,约 10 s 显示成功和 IP,玩偶重启后听到连上音 | |
+| 5 | 小程序配网(iPhone),**用 32 字节 SSID + 63 位密码** | 同上。这一项验证微信在 iOS 上的长写,是整条链路最大的未知 | |
+| 6 | 故意输错密码 | 小程序提示「密码错误」,设备降调一声;改对后点重试,不断蓝牙就能成功 | |
+| 7 | 填一个不存在的 SSID / 5G SSID | 小程序提示「找不到这个 WiFi」 | |
+| 8 | 进配网后不配,直接断电再上电(之前配过网) | 用旧凭据正常连上 —— 放弃配网不丢旧 WiFi | |
+| 9 | 配网后正常对话 + §9.4 第 7 项 | `[TLM]` 的 `free/maxAlloc` 与 fw 0.3.2 相当(正常模式没开 BLE) | |
+
 ---
 
 ## 10. 待办 / 未决
@@ -690,7 +734,8 @@ Stage 8~10 全部在 PC 上用它调通,ESP32 一次都不用烧。改一行服�
 - [x] ~~编译后看固件大小~~ → Stage 6+7 实测 **988723 B / 1310720 B = 75%**,静态内存 65852 B。
       rev.5 打开 TLS-PSK 后实测 **1088201 B = 83%**,静态内存 66396 B ——
       **TLS 的代价是 +99478 B flash / +544 B 静态 RAM**,还剩 222519 B 余量。
-      **默认分区 `Default 4MB with spiffs` 够用,不用换。**
+      ~~默认分区 `Default 4MB with spiffs` 够用,不用换。~~ **fw 0.4 加了 BLE 配网后 1460383 B,
+      默认分区装不下,改用 `Minimal SPIFFS (1.9MB APP with OTA)`**(§5.7)。
       (注:这是**静态**开销。§5.6 那张表算的是**运行期堆**峰值 ~67 KB,
       要等真机握手时 `wsConnect()` 打的那行 maxAlloc 才有实测值。)
 
@@ -709,8 +754,8 @@ Stage 8~10 全部在 PC 上用它调通,ESP32 一次都不用烧。改一行服�
 
 ### 后续计划
 
-手机 App(蓝牙配网、配服务器、配 ASR/TTS/大模型订阅、调音量、看电量)和电量检测硬件
-记在 **`ROADMAP.md`**。其中 §3 列了对现有代码的约束 —— **改固件或服务器之前先看一眼**。
+手机端(2026-09-26 起改为**微信小程序**,不做原生 App):蓝牙配网(fw 0.4 已写,待真机验收,§5.7)、
+用户系统、订阅付费、调音量、看电量,以及电量检测硬件,记在 **`ROADMAP.md`**。其中 §3 列了对现有代码的约束 —— **改固件或服务器之前先看一眼**。
 
 ---
 
