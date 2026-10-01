@@ -1,0 +1,14 @@
+playbook "grid-testpoints" — 12 step(s), project=8c5d0d86032348a0a6c85102fe97607e
+  [1/12] s0               run     sch prim-delete [confirm]
+  [2/12] s1               run     sch no-connect
+  [3/12] s2               run     sch modify
+  [4/12] s3               run     sch wire
+  [5/12] s4               run     sch wire
+  [6/12] s5               run     sch no-connect
+  [7/12] s6               run     sch place
+  [8/12] s7               run     sch place
+  [9/12] s8               run     sch place
+  [10/12] s9               run     sch place
+  [11/12] s10              run     sch place
+  [12/12] s11              run     sch place
+dry-run: preflight passed, nothing executed

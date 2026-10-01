@@ -1,0 +1,16 @@
+{
+  "snapshot": "single-sheet-final-read.json",
+  "parts": 63,
+  "pins": 190,
+  "expectedParts": 63,
+  "passed": true,
+  "errors": [],
+  "internalNetAliases": {
+    "LED_ANODE": "$1N170",
+    "XTAL_P_CRYSTAL": "$1N128",
+    "RF_OUT": "$1N177",
+    "CHG_ISET": "$1N189",
+    "CHG_SW": "$1N181",
+    "VBUS_FUSED": "$1N222"
+  }
+}

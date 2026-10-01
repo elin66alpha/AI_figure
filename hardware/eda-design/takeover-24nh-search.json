@@ -1,0 +1,86 @@
+{
+  "id": "req_55",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T23:10:55.5537269Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "电感值:24nH;精度:±3%;额定电流:350mA;饱和电流(Isat):-;直流电阻(DCR):430mΩ;",
+        "footprintName": "L0402",
+        "lcsc": "C275275",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TDK",
+        "manufacturerId": "MLG1005S24NHT000",
+        "name": "MLG1005S24NHT000",
+        "score": 5,
+        "symbolName": "MLG1005S24NHT000",
+        "uuid": "cfc4a52048954cc7b5ba2148a959261d",
+        "value": "24nH"
+      },
+      {
+        "description": "电感值:24nH;精度:±3%;额定电流:140mA;饱和电流(Isat):-;直流电阻(DCR):1.17Ω;",
+        "footprintName": "L0201",
+        "lcsc": "C404587",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TDK",
+        "manufacturerId": "MLG0603P24NHTD25",
+        "name": "MLG0603P24NHTD25",
+        "score": 3,
+        "symbolName": "MLG0603P24NHTD25",
+        "uuid": "410778177ee446f392ed967298d4124c",
+        "value": "24nH"
+      },
+      {
+        "description": "CPU内核:ARM Cortex-M7;CPU最大主频:160MHz;CPU位数:32 Bit;",
+        "footprintName": "QFP-172_L16.0-W16.0-P0.65-LS19.0-TL",
+        "lcsc": "C20234361",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "NXP(恩智浦)",
+        "manufacturerId": "S32K324NHT1MPBIT",
+        "name": "S32K324NHT1MPBIT",
+        "score": 3,
+        "symbolName": "S32K324NHT1MPBIT",
+        "uuid": "178954e08280443aad3e49deb6a4dc49"
+      },
+      {
+        "description": "电感值:24nH;精度:±3%;额定电流:-;饱和电流(Isat):-;直流电阻(DCR):-;",
+        "footprintName": "L0201-RD",
+        "lcsc": "C279820",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "Sunlord(顺络)",
+        "manufacturerId": "SDCL0603Q24NHT02",
+        "name": "SDCL0603Q24NHT02",
+        "score": 3,
+        "symbolName": "SDCL0603Q24NHT02",
+        "uuid": "fe3607df31d742ef9426493f4621c81e",
+        "value": "24nH"
+      },
+      {
+        "description": "电感值:24nH;精度:±3%;额定电流:140mA;饱和电流(Isat):-;直流电阻(DCR):2.3Ω;",
+        "footprintName": "L0201",
+        "lcsc": "C206441",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "muRata(村田)",
+        "manufacturerId": "LQP03TN24NH02D",
+        "name": "LQP03TN24NH02D",
+        "score": 3,
+        "symbolName": "LQP03TN24NH02D",
+        "uuid": "5c5fec02f8c04e388c52e7f01cf59fa5",
+        "value": "24nH"
+      }
+    ],
+    "count": 5,
+    "query": "24nH 0402"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 674,
+  "seqAbandoned": 0
+}

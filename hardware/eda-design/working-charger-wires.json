@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "meta": {
+    "project": "8c5d0d86032348a0a6c85102fe97607e",
+    "name": "ETA6002 charger functional wiring"
+  },
+  "steps": [
+    {
+      "id": "switching-loop-in",
+      "run": "sch wire",
+      "flags": {
+        "net": "CHG_SW",
+        "points": "[[255,660],[220,660],[220,750],[280,750]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "switching-loop-out",
+      "run": "sch wire",
+      "flags": {
+        "net": "SYS",
+        "points": "[[320,750],[400,750],[400,650],[345,650]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "sys-cap",
+      "run": "sch wire",
+      "flags": {
+        "net": "SYS",
+        "points": "[[400,650],[530,650]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "sys-cap-ground",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[570,650],[600,650]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "sys-ground",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 90,
+        "x": 600,
+        "y": 650,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "sys-output",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "rotation": 0,
+        "x": 400,
+        "y": 750,
+        "doc": "2a0b6c4d73111128",
+        "net": "SYS"
+      }
+    },
+    {
+      "id": "input-stub",
+      "run": "sch wire",
+      "flags": {
+        "net": "VBUS_CHG",
+        "points": "[[345,660],[380,660]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "input-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "rotation": 180,
+        "x": 380,
+        "y": 660,
+        "doc": "2a0b6c4d73111128",
+        "net": "VBUS_CHG"
+      }
+    },
+    {
+      "id": "input-cap-in",
+      "run": "sch wire",
+      "flags": {
+        "net": "VBUS_CHG",
+        "points": "[[530,710],[500,710]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "input-cap-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "rotation": 0,
+        "x": 500,
+        "y": 710,
+        "doc": "2a0b6c4d73111128",
+        "net": "VBUS_CHG"
+      }
+    },
+    {
+      "id": "input-cap-ground",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[570,710],[600,710]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "input-ground",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 90,
+        "x": 600,
+        "y": 710,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "battery-stub",
+      "run": "sch wire",
+      "flags": {
+        "net": "VBAT",
+        "points": "[[345,640],[440,640]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "battery-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "rotation": 180,
+        "x": 440,
+        "y": 640,
+        "doc": "2a0b6c4d73111128",
+        "net": "VBAT"
+      }
+    },
+    {
+      "id": "battery-cap-in",
+      "run": "sch wire",
+      "flags": {
+        "net": "VBAT",
+        "points": "[[530,590],[500,590]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "battery-cap-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "rotation": 0,
+        "x": 500,
+        "y": 590,
+        "doc": "2a0b6c4d73111128",
+        "net": "VBAT"
+      }
+    },
+    {
+      "id": "battery-cap-ground",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[570,590],[600,590]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "battery-ground",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 90,
+        "x": 600,
+        "y": 590,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "iset-resistor",
+      "run": "sch wire",
+      "flags": {
+        "net": "CHG_ISET",
+        "points": "[[345,630],[380,630],[380,560],[410,560]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "iset-ground",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[450,560],[470,560]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "iset-ground-flag",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 90,
+        "x": 470,
+        "y": 560,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "pgnd",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[255,650],[235,650],[235,610]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "ntc-disable",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[255,640],[235,640]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "pgnd-flag",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 0,
+        "x": 235,
+        "y": 610,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "agnd",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[345,670],[360,670],[360,720]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "agnd-flag",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 180,
+        "x": 360,
+        "y": 720,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "battery-connector-vbat",
+      "run": "sch wire",
+      "flags": {
+        "net": "VBAT",
+        "points": "[[760,705],[710,705]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "battery-connector-positive",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "rotation": 0,
+        "x": 710,
+        "y": 705,
+        "doc": "2a0b6c4d73111128",
+        "net": "VBAT"
+      }
+    },
+    {
+      "id": "battery-connector-ground",
+      "run": "sch wire",
+      "flags": {
+        "net": "GND",
+        "points": "[[760,695],[730,695],[730,665]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "battery-connector-negative",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "gnd",
+        "rotation": 0,
+        "x": 730,
+        "y": 665,
+        "doc": "2a0b6c4d73111128",
+        "net": "GND"
+      }
+    },
+    {
+      "id": "switch-input",
+      "run": "sch wire",
+      "flags": {
+        "net": "SYS",
+        "points": "[[900,686],[900,660],[870,660]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "switch-input-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "rotation": 0,
+        "x": 870,
+        "y": 660,
+        "doc": "2a0b6c4d73111128",
+        "net": "SYS"
+      }
+    },
+    {
+      "id": "switch-output",
+      "run": "sch wire",
+      "flags": {
+        "net": "SYS_SW",
+        "points": "[[890,686],[890,675],[830,675]]",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "switch-output-port",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "rotation": 0,
+        "x": 830,
+        "y": 675,
+        "doc": "2a0b6c4d73111128",
+        "net": "SYS_SW"
+      }
+    },
+    {
+      "id": "stat-unused",
+      "run": "sch no-connect",
+      "flags": {
+        "designator": "U2",
+        "pin": "4",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "switch-off-unused",
+      "run": "sch no-connect",
+      "flags": {
+        "designator": "SW1",
+        "pin": "3",
+        "doc": "2a0b6c4d73111128"
+      }
+    },
+    {
+      "id": "save",
+      "run": "sch save",
+      "flags": {
+        "doc": "2a0b6c4d73111128"
+      }
+    }
+  ]
+}

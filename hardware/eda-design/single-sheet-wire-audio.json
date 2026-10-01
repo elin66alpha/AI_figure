@@ -1,0 +1,513 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "single-sheet-wire-audio",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "s1",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[385, 880], [365, 880], [365, 900], [250, 900]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s2",
+      "run": "sch netflag",
+      "flags": {
+        "net": "I2S_WS",
+        "x": 250,
+        "y": 900,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s3",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[385, 870], [350, 870], [350, 810]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s4",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[385, 860], [350, 860]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s5",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 350,
+        "y": 810,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s6",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[455, 870], [490, 870], [490, 900], [580, 900]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s7",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[490, 900], [490, 940]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s8",
+      "run": "sch netflag",
+      "flags": {
+        "net": "3V3",
+        "x": 490,
+        "y": 940,
+        "rotation": 180,
+        "kind": "power",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s9",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[620, 900], [660, 900], [660, 870]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s10",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 660,
+        "y": 870,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s11",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[455, 860], [480, 860], [480, 830], [720, 830]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s12",
+      "run": "sch netflag",
+      "flags": {
+        "net": "I2S_BCLK",
+        "x": 720,
+        "y": 830,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s13",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[455, 880], [470, 880], [470, 960], [710, 960], [710, 800], [620, 800]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s14",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[710, 960], [750, 960]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s15",
+      "run": "sch netflag",
+      "flags": {
+        "net": "MIC_SD",
+        "x": 750,
+        "y": 960,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s16",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[580, 800], [540, 800], [540, 770]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s17",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 540,
+        "y": 770,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s18",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1005, 870], [985, 870], [985, 960], [900, 960]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s19",
+      "run": "sch netflag",
+      "flags": {
+        "net": "AMP_CTRL",
+        "x": 900,
+        "y": 960,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s20",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1005, 860], [975, 860], [975, 940], [900, 940]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s21",
+      "run": "sch netflag",
+      "flags": {
+        "net": "I2S_WS",
+        "x": 900,
+        "y": 940,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s22",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1005, 850], [965, 850], [965, 920], [900, 920]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s23",
+      "run": "sch netflag",
+      "flags": {
+        "net": "I2S_BCLK",
+        "x": 900,
+        "y": 920,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s24",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1005, 840], [955, 840], [955, 900], [900, 900]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s25",
+      "run": "sch netflag",
+      "flags": {
+        "net": "AMP_DIN",
+        "x": 900,
+        "y": 900,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s26",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1095, 840], [1115, 840], [1115, 800], [1160, 800]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s27",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SPK_N",
+        "x": 1160,
+        "y": 800,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s28",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1095, 850], [1125, 850], [1125, 820], [1160, 820]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s29",
+      "run": "sch netflag",
+      "flags": {
+        "net": "3V3",
+        "x": 1160,
+        "y": 820,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s30",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1095, 860], [1135, 860], [1135, 840], [1160, 840]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s31",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1160,
+        "y": 840,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s32",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1095, 870], [1145, 870], [1145, 860], [1160, 860]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s33",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SPK_P",
+        "x": 1160,
+        "y": 860,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s34",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1095, 880], [1155, 880], [1160, 880]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s35",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1160,
+        "y": 880,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s36",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1180, 920], [1150, 920], [1150, 950]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s37",
+      "run": "sch netflag",
+      "flags": {
+        "net": "3V3",
+        "x": 1150,
+        "y": 950,
+        "rotation": 180,
+        "kind": "power",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s38",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1220, 920], [1270, 920], [1270, 890]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s39",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1270,
+        "y": 890,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s40",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1180, 750], [1150, 750], [1150, 780]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s41",
+      "run": "sch netflag",
+      "flags": {
+        "net": "3V3",
+        "x": 1150,
+        "y": 780,
+        "rotation": 180,
+        "kind": "power",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s42",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1220, 750], [1270, 750], [1270, 720]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s43",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1270,
+        "y": 720,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s44",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[930, 760], [860, 760]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s45",
+      "run": "sch netflag",
+      "flags": {
+        "net": "AMP_CTRL",
+        "x": 860,
+        "y": 760,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s46",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[970, 760], [1000, 760], [1000, 730]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s47",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1000,
+        "y": 730,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s48",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1260, 685], [1240, 685], [1240, 705], [1180, 705]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s49",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SPK_P",
+        "x": 1180,
+        "y": 705,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s50",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1260, 675], [1240, 675], [1240, 655], [1180, 655]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s51",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SPK_N",
+        "x": 1180,
+        "y": 655,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

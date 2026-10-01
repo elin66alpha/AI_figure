@@ -1,0 +1,78 @@
+{
+  "status": "found",
+  "host": "127.0.0.1",
+  "ports": "60832-60841",
+  "found": {
+    "port": 60832,
+    "service": "easyeda-agent",
+    "raw": {
+      "pid": 22060,
+      "service": "easyeda-agent",
+      "version": "v1.8.1",
+      "status": "ok",
+      "port": 60832,
+      "windows": [
+        {
+          "windowId": "dc50ee36-2522-4951-bcff-724cfced235a",
+          "connectorVersion": "1.8.0",
+          "easyedaVersion": "4.1.60",
+          "capabilities": [
+            "schematic.v1",
+            "pcb.v1"
+          ],
+          "context": {
+            "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+            "projectName": "AI_figure",
+            "documentUuid": "98cfe13509bc1f5c",
+            "documentType": "schematic",
+            "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+          },
+          "connectedAt": "2026-09-30T00:40:28.1236386Z",
+          "lastSeen": "2026-09-30T00:40:28.1300904Z",
+          "connectorVersionOk": true
+        }
+      ]
+    }
+  },
+  "versionGate": {
+    "cli": "v1.8.1",
+    "daemon": "v1.8.1",
+    "connectors": [
+      "1.8.0"
+    ],
+    "verdict": "ok",
+    "findings": [
+      {
+        "component": "daemon",
+        "version": "v1.8.1",
+        "severity": "ok",
+        "reason": "与 CLI 同版 v1.8.1"
+      },
+      {
+        "component": "connector",
+        "version": "1.8.0",
+        "severity": "ok",
+        "reason": "CLI v1.8.1 与 connector v1.8.0 同属 major.minor 兼容线;patch 发布不要求升级插件市场版本"
+      }
+    ]
+  },
+  "hostCompatibility": {
+    "baseline": "4.0.0",
+    "recommended": "4.1.60",
+    "verdict": "ok",
+    "findings": [
+      {
+        "windowId": "dc50ee36-2522-4951-bcff-724cfced235a",
+        "version": "4.1.60",
+        "severity": "ok",
+        "reason": "EasyEDA Pro 4.1.60 满足 V4 主线基线"
+      }
+    ]
+  },
+  "checked": [
+    {
+      "port": 60832,
+      "status": "ok"
+    }
+  ]
+}

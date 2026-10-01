@@ -1,0 +1,41 @@
+{
+  "id": "req_356",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T23:40:36.20555Z",
+  "ok": false,
+  "result": {
+    "degraded": {
+      "consecutiveFailures": 1,
+      "degraded": true,
+      "degradedActions": [
+        "schematic.component.modify",
+        "schematic.power.connect_pin"
+      ],
+      "fakeFailures": 0,
+      "fakeSuccesses": 0,
+      "recentFailureRate": 0.25,
+      "recentSamples": 20,
+      "verifiedSamples": 0
+    }
+  },
+  "warnings": [
+    "connector looks DEGRADED under load (recent EFFECT failure rate 25%, 1 consecutive failures) — this write may have LANDED despite the failure (假失败定律): verify with a light read before resending, and do NOT blind-retry. Worst road(s): schematic.component.modify, schematic.power.connect_pin"
+  ],
+  "error": {
+    "code": "EDA_CALL_FAILED",
+    "message": "Failed to modify component.",
+    "detail": "Cannot destructure property 'cmdKey' of 'i' as it is undefined."
+  },
+  "seq": 1068,
+  "seqAbandoned": 7,
+  "abandonedIds": [
+    "req_186",
+    "req_227",
+    "req_241",
+    "req_247",
+    "req_319",
+    "req_324",
+    "req_334"
+  ]
+}

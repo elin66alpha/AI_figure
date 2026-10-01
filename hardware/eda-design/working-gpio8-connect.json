@@ -1,0 +1,2 @@
+autoconnect: 1 connection(s), mode=connect — 1 new, 0 already-connected, 0 conflict
+  ✗ U1:14 → LED_GPIO8 [netport]: --strict:落点带痕(score=102):stub runs close to a pin fanout channel; offset cost —— 建议挪件腾位后重连(未落地)

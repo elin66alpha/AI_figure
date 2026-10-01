@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "name": "ESP32 cross-page links and speaker connector",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "usb-dm-wire",
+      "flags": {
+        "net": "USB_DM",
+        "points": "[[360,695],[480,695]]",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch wire"
+    },
+    {
+      "id": "usb-dm-port",
+      "flags": {
+        "y": 695,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c",
+        "net": "USB_DM",
+        "kind": "netport",
+        "x": 480
+      },
+      "run": "sch netflag"
+    },
+    {
+      "id": "usb-dp-wire",
+      "flags": {
+        "net": "USB_DP",
+        "points": "[[360,705],[480,705]]",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch wire"
+    },
+    {
+      "id": "usb-dp-port",
+      "flags": {
+        "y": 705,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c",
+        "net": "USB_DP",
+        "kind": "netport",
+        "x": 480
+      },
+      "run": "sch netflag"
+    },
+    {
+      "id": "uart-rx-wire",
+      "flags": {
+        "net": "UART_RX",
+        "points": "[[360,715],[480,715]]",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch wire"
+    },
+    {
+      "id": "uart-rx-port",
+      "flags": {
+        "y": 715,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c",
+        "net": "UART_RX",
+        "kind": "netport",
+        "x": 480
+      },
+      "run": "sch netflag"
+    },
+    {
+      "id": "uart-tx-wire",
+      "flags": {
+        "net": "UART_TX",
+        "points": "[[360,725],[480,725]]",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch wire"
+    },
+    {
+      "id": "uart-tx-port",
+      "flags": {
+        "y": 725,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c",
+        "net": "UART_TX",
+        "kind": "netport",
+        "x": 480
+      },
+      "run": "sch netflag"
+    },
+    {
+      "id": "adc-wire",
+      "flags": {
+        "net": "SYS_ADC",
+        "points": "[[210,725],[120,725]]",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch wire"
+    },
+    {
+      "id": "adc-port",
+      "flags": {
+        "y": 725,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c",
+        "net": "SYS_ADC",
+        "kind": "netport",
+        "x": 120
+      },
+      "run": "sch netflag"
+    },
+    {
+      "id": "internal-flash-reserved",
+      "flags": {
+        "designator": "U1",
+        "pin": "4,19,20,21,22,23,24",
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch no-connect"
+    },
+    {
+      "id": "speaker-jack",
+      "flags": {
+        "y": 700,
+        "designator": "J3",
+        "doc": "98cfe13509bc1f5c",
+        "uuid": "69e4b19dd0f04f0588bb0497a73650d2",
+        "lib": "0819f05c4eef4c71ace90d822a990e87",
+        "x": 1100
+      },
+      "run": "sch place"
+    },
+    {
+      "id": "save",
+      "flags": {
+        "doc": "98cfe13509bc1f5c"
+      },
+      "run": "sch save"
+    }
+  ],
+  "version": 1
+}

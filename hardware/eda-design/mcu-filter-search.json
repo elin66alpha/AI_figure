@@ -1,0 +1,61 @@
+{
+  "id": "req_521",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T22:49:42.1660336Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "电感值:12nH;精度:±3%;额定电流:140mA;直流电阻(DCR):2.4Ω;",
+        "footprintName": "IND-SMD_L0.4-W0.2_MLG0402Q22NHT000",
+        "lcsc": "C6908588",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TDK",
+        "manufacturerId": "MLG0402Q12NHT000",
+        "name": "MLG0402Q12NHT000",
+        "score": 6,
+        "symbolName": "MLG0402Q12NHT000",
+        "uuid": "a087996967d14e63aaff897522016339",
+        "value": "12nH"
+      },
+      {
+        "description": "电感值:12nH;精度:±3%;额定电流:140mA;饱和电流(Isat):-;直流电阻(DCR):1.64Ω;",
+        "footprintName": "L01005",
+        "lcsc": "C1333086",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TDK",
+        "manufacturerId": "MLG0402P12NHT000",
+        "name": "MLG0402P12NHT000",
+        "score": 6,
+        "symbolName": "MLG0402P12NHT000",
+        "uuid": "3a612be35e52402abc8ab5aecf13f55e",
+        "value": "12nH"
+      },
+      {
+        "description": "电感值:12nH;精度:±3%;额定电流:130mA;饱和电流(Isat):-;直流电阻(DCR):1.35Ω;",
+        "footprintName": "L01005",
+        "lcsc": "C2043807",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TDK",
+        "manufacturerId": "MHQ0402PSA12NHT000",
+        "name": "MHQ0402PSA12NHT000",
+        "score": 6,
+        "symbolName": "MHQ0402PSA12NHT000",
+        "uuid": "104348f04a154058a4d0b481a3dd3a76",
+        "value": "12nH"
+      }
+    ],
+    "count": 3,
+    "query": "2nH 0402 500mA"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "2a0b6c4d73111128",
+    "documentType": "schematic",
+    "tabId": "2a0b6c4d73111128@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 595,
+  "seqAbandoned": 0
+}

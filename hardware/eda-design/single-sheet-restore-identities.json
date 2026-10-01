@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "restore-identities",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "id-U2",
+      "run": "sch modify",
+      "flags": {
+        "id": "cc87c73e7fac61db",
+        "patch": "{\"uniqueId\": \"gge15\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-L1",
+      "run": "sch modify",
+      "flags": {
+        "id": "1bea6c0c7d0e9b31",
+        "patch": "{\"uniqueId\": \"gge16\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-C6",
+      "run": "sch modify",
+      "flags": {
+        "id": "af4232326479ce97",
+        "patch": "{\"uniqueId\": \"gge17\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-C7",
+      "run": "sch modify",
+      "flags": {
+        "id": "d9d758f9517e2692",
+        "patch": "{\"uniqueId\": \"gge18\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-C8",
+      "run": "sch modify",
+      "flags": {
+        "id": "285b4bf0d4af2a93",
+        "patch": "{\"uniqueId\": \"gge19\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R3",
+      "run": "sch modify",
+      "flags": {
+        "id": "109f5640b5a15a77",
+        "patch": "{\"uniqueId\": \"gge20\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-J2",
+      "run": "sch modify",
+      "flags": {
+        "id": "77cfc7d81ff8aa31",
+        "patch": "{\"uniqueId\": \"gge21\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-SW1",
+      "run": "sch modify",
+      "flags": {
+        "id": "b6a2b2bb05139bea",
+        "patch": "{\"uniqueId\": \"gge22\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-J1",
+      "run": "sch modify",
+      "flags": {
+        "id": "e1cb549294114ff4",
+        "patch": "{\"uniqueId\": \"gge23\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R4",
+      "run": "sch modify",
+      "flags": {
+        "id": "08bcc1efccc7c9c2",
+        "patch": "{\"uniqueId\": \"gge24\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R5",
+      "run": "sch modify",
+      "flags": {
+        "id": "8082e59de936b98b",
+        "patch": "{\"uniqueId\": \"gge25\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R6",
+      "run": "sch modify",
+      "flags": {
+        "id": "8d88e86c0ff0bb07",
+        "patch": "{\"uniqueId\": \"gge26\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R7",
+      "run": "sch modify",
+      "flags": {
+        "id": "0de939a0ebdcde3d",
+        "patch": "{\"uniqueId\": \"gge27\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-D1",
+      "run": "sch modify",
+      "flags": {
+        "id": "89251044d563a1e4",
+        "patch": "{\"uniqueId\": \"gge28\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-D2",
+      "run": "sch modify",
+      "flags": {
+        "id": "6bfa2a1a6939e951",
+        "patch": "{\"uniqueId\": \"gge29\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-F1",
+      "run": "sch modify",
+      "flags": {
+        "id": "8d93f62bfa367f88",
+        "patch": "{\"uniqueId\": \"gge30\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R8",
+      "run": "sch modify",
+      "flags": {
+        "id": "3383fbd10fd326e8",
+        "patch": "{\"uniqueId\": \"gge31\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R14",
+      "run": "sch modify",
+      "flags": {
+        "id": "2d10930325d8a41f",
+        "patch": "{\"uniqueId\": \"gge52\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-R15",
+      "run": "sch modify",
+      "flags": {
+        "id": "b893d84b4250e76f",
+        "patch": "{\"uniqueId\": \"gge53\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "id-C19",
+      "run": "sch modify",
+      "flags": {
+        "id": "cde5ce076b57543e",
+        "patch": "{\"uniqueId\": \"gge54\"}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

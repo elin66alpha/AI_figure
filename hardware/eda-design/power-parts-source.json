@@ -1,0 +1,310 @@
+{
+  "rows": [
+    [
+      "U2",
+      "C7436031"
+    ],
+    [
+      "L1",
+      "C41406997"
+    ],
+    [
+      "C6",
+      "C15850"
+    ],
+    [
+      "C7",
+      "C503482"
+    ],
+    [
+      "C8",
+      "C89188"
+    ],
+    [
+      "R3",
+      "C22908"
+    ],
+    [
+      "J2",
+      "C173752"
+    ],
+    [
+      "SW1",
+      "C7431054"
+    ],
+    [
+      "J1",
+      "C165948"
+    ],
+    [
+      "R4",
+      "C23186"
+    ],
+    [
+      "R5",
+      "C23186"
+    ],
+    [
+      "R6",
+      "C23140"
+    ],
+    [
+      "R7",
+      "C23140"
+    ],
+    [
+      "D1",
+      "C42400191"
+    ],
+    [
+      "D2",
+      "C42400191"
+    ],
+    [
+      "F1",
+      "C910830"
+    ],
+    [
+      "R8",
+      "C21189"
+    ]
+  ],
+  "library": {
+    "C165948": {
+      "footprintName": "USB-C_SMD-TYPE-C-31-M-12_1",
+      "lcsc": "C165948",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "\u97e9\u56fd\u97e9\u8363",
+      "manufacturerId": "TYPE-C-31-M-12",
+      "uuid": "74d31c19993b4b9581f3175a7da4b280"
+    },
+    "C2858491": {
+      "footprintName": "QFN-32_L5.0-W5.0-P0.50-TL-EP3.7",
+      "lcsc": "C2858491",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "ESPRESSIF(\u4e50\u946b)",
+      "manufacturerId": "ESP32-C3FH4",
+      "uuid": "b0f5c7f94afd4c96bc29bb504fcc996d"
+    },
+    "C5261245": {
+      "footprintName": "CRYSTAL-SMD_4P-L3.2-W2.5-BL",
+      "lcsc": "C5261245",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "Lucki(\u84dd\u6676)",
+      "manufacturerId": "L327S400H11L",
+      "uuid": "e6027fcbca274028b528cf14626207f5",
+      "value": "40MHz"
+    },
+    "C5656610": {
+      "footprintName": "MIC-SMD_6P-L3.5-W2.7-P0.90-BL",
+      "lcsc": "C5656610",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "TDK InvenSense(\u5e94\u7f8e\u76db)",
+      "manufacturerId": "ICS-43434",
+      "uuid": "690ced618d6440b481eddb3b2a7dea1e"
+    },
+    "C7436031": {
+      "footprintName": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP-1",
+      "lcsc": "C7436031",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "ETA(\u94b0\u6cf0)",
+      "manufacturerId": "ETA6002E8A",
+      "uuid": "94d943a9c23e462fba23e4484244eabb"
+    },
+    "C7465551": {
+      "footprintName": "SOT-89-5_L4.5-W2.5-P1.50-LS4.6-BL",
+      "lcsc": "C7465551",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "ETA(\u94b0\u6cf0)",
+      "manufacturerId": "ETA5060V330S8F",
+      "uuid": "695fdfd2bb434cb78768d65bb6d49e72"
+    },
+    "C910588": {
+      "footprintName": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP",
+      "lcsc": "C910588",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "Nsiway(\u7eb3\u82af\u5a01)",
+      "manufacturerId": "NS4168",
+      "uuid": "99449cc6029d4df2a83a0ec13caf5dda"
+    },
+    "C15850": {
+      "footprintName": "C0805",
+      "lcsc": "C15850",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "SAMSUNG(\u4e09\u661f)",
+      "manufacturerId": "CL21A106KAYNNNE",
+      "uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+      "value": "10uF"
+    },
+    "C1591": {
+      "footprintName": "C0603",
+      "lcsc": "C1591",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "SAMSUNG(\u4e09\u661f)",
+      "manufacturerId": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "value": "100nF"
+    },
+    "C173752": {
+      "footprintName": "CONN-TH_S2B-PH-K-S-LF-SN",
+      "lcsc": "C173752",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "JST",
+      "manufacturerId": "S2B-PH-K-S(LF)(SN)",
+      "uuid": "69e4b19dd0f04f0588bb0497a73650d2"
+    },
+    "C25804": {
+      "footprintName": "R0603",
+      "lcsc": "C25804",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF1002T5E",
+      "uuid": "b948db94476e4027ac8953235755ec96",
+      "value": "10k\u03a9"
+    },
+    "C2986060": {
+      "footprintName": "LED0603-R-FD",
+      "lcsc": "C2986060",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "EVERLIGHT(\u4ebf\u5149)",
+      "manufacturerId": "19-217/R6C-AL1M2VY/6T",
+      "uuid": "8c9677ef4e1a4b5694f3702f40340296"
+    },
+    "C42400191": {
+      "footprintName": "DFN0603-2L-BI",
+      "lcsc": "C42400191",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "ElecSuper(\u9759\u82af)",
+      "manufacturerId": "SEUCS2X3V1B",
+      "uuid": "4e8799c5fee24da4be6d6a8b11265079"
+    },
+    "C49233126": {
+      "footprintName": "CAP-SMD_BD5.0-L5.3-W5.3-LS6.0-FD-H5.4",
+      "lcsc": "C49233126",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "JIERR(\u6377\u800c\u745e)",
+      "manufacturerId": "RVT6.3V100M5X5",
+      "uuid": "587eb6d7f8814bde87b1485f18195f87",
+      "value": "100uF"
+    },
+    "C49234236": {
+      "footprintName": "SW-TH_CPG151101D05",
+      "lcsc": "C49234236",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "HanElectricity(\u701a\u6e90)",
+      "manufacturerId": "CPG151101D05",
+      "uuid": "42e9e0ab2ea04ba0a3a7a481df6ea0b3"
+    },
+    "C503482": {
+      "footprintName": "C0805",
+      "lcsc": "C503482",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "FH(\u98ce\u534e)",
+      "manufacturerId": "0805X226M100NT",
+      "uuid": "e4927a754a5f40078985327504571cb8",
+      "value": "22uF"
+    },
+    "C720477": {
+      "footprintName": "SW-SMD_L3.9-W3.0-P4.45",
+      "lcsc": "C720477",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "XUNPU(\u8baf\u666e)",
+      "manufacturerId": "TS-1088-AR02016",
+      "uuid": "cff07d923b95482c818b184e98b80db7"
+    },
+    "C7431054": {
+      "footprintName": "SW-TH_SHOU-HAN_SS12D10G4",
+      "lcsc": "C7431054",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "SHOU HAN(\u9996\u97e9)",
+      "manufacturerId": "SS12D10G5",
+      "uuid": "68ef2de7013c48d1be189bd291c4a007"
+    },
+    "C89188": {
+      "footprintName": "C0603",
+      "lcsc": "C89188",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "FH(\u98ce\u534e)",
+      "manufacturerId": "0603X105K160NT",
+      "uuid": "17b68ebae95d4d98967eddfc891f7a4a",
+      "value": "1uF"
+    },
+    "C910830": {
+      "footprintName": "F1206",
+      "lcsc": "C910830",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "BHFUSE(\u4f70\u5b8f)",
+      "manufacturerId": "BSMD1206-100-24V",
+      "uuid": "e715786774c8439c913be3d001f0fab4"
+    },
+    "C22790": {
+      "footprintName": "R0603",
+      "lcsc": "C22790",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF1202T5E",
+      "uuid": "c0e62b9654ad41e4be04ba5f1c35ce65",
+      "value": "12k\u03a9"
+    },
+    "C23138": {
+      "footprintName": "R0603",
+      "lcsc": "C23138",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF3300T5E",
+      "uuid": "7c80abced0d649bab9903f9c239fa540",
+      "value": "330\u03a9"
+    },
+    "C23140": {
+      "footprintName": "R0603",
+      "lcsc": "C23140",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF330JT5E",
+      "uuid": "c1b17fa23f304726bc91c5924d9b7c0f",
+      "value": "33\u03a9"
+    },
+    "C23186": {
+      "footprintName": "R0603",
+      "lcsc": "C23186",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF5101T5E",
+      "uuid": "b5d09b57bc354a60b86d6a6308651647",
+      "value": "5.1k\u03a9"
+    },
+    "C25803": {
+      "footprintName": "R0603",
+      "lcsc": "C25803",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "value": "100k\u03a9"
+    },
+    "C21189": {
+      "footprintName": "R0603",
+      "lcsc": "C21189",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF0000T5E",
+      "uuid": "fc38f436091b49a696be03a7955956ed",
+      "value": "0\u03a9"
+    },
+    "C22908": {
+      "footprintName": "R0603",
+      "lcsc": "C22908",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "manufacturer": "UNI-ROYAL(\u539a\u58f0)",
+      "manufacturerId": "0603WAF2491T5E",
+      "uuid": "bfe7ac1bbe254943a8d8ec521ec85247",
+      "value": "2.49k\u03a9"
+    },
+    "C41406997": {
+      "uuid": "483512e44cec42fe83bd04963382d5d9",
+      "libraryUuid": "2cb3ad867dfa4740a0fbae81ea348a21",
+      "manufacturerId": "DH0618H-2R2M",
+      "value": "2.2uH"
+    }
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "single-sheet-wire-usb-adc",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "s1",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 925], [1735, 925], [1735, 985], [1550, 985]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s2",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1550,
+        "y": 985,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s3",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 915], [1725, 915], [1725, 965], [1550, 965]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s4",
+      "run": "sch netflag",
+      "flags": {
+        "net": "VBUS_USB",
+        "x": 1550,
+        "y": 965,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s5",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 895], [1705, 895], [1705, 925], [1550, 925]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s6",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_CC1",
+        "x": 1550,
+        "y": 925,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s7",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 885], [1695, 885], [1695, 905], [1550, 905]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s8",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DM_CONN",
+        "x": 1550,
+        "y": 905,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s9",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 875], [1685, 875], [1685, 885], [1550, 885]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s10",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DP_CONN",
+        "x": 1550,
+        "y": 885,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s11",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 865], [1675, 865], [1550, 865]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s12",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DM_CONN",
+        "x": 1550,
+        "y": 865,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s13",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 855], [1695, 855], [1695, 845], [1550, 845]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s14",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DP_CONN",
+        "x": 1550,
+        "y": 845,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s15",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 835], [1715, 835], [1715, 805], [1550, 805]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s16",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_CC2",
+        "x": 1550,
+        "y": 805,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s17",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 825], [1725, 825], [1725, 785], [1550, 785]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s18",
+      "run": "sch netflag",
+      "flags": {
+        "net": "VBUS_USB",
+        "x": 1550,
+        "y": 785,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s19",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1755, 815], [1735, 815], [1735, 765], [1550, 765]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s20",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1550,
+        "y": 765,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s21",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1825, 845], [1850, 845]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s22",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1825, 835], [1850, 835]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s23",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1825, 825], [1850, 825]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s24",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1825, 815], [1850, 815]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s25",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1850, 845], [1850, 785]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s26",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1850,
+        "y": 785,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s27",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1550, 700], [1510, 700]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s28",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_CC1",
+        "x": 1510,
+        "y": 700,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s29",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1590, 700], [1630, 700], [1630, 670]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s30",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1630,
+        "y": 670,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s31",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1770, 700], [1730, 700]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s32",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_CC2",
+        "x": 1730,
+        "y": 700,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s33",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1810, 700], [1850, 700], [1850, 670]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s34",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1850,
+        "y": 670,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s35",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2020, 950], [1980, 950], [1980, 1000], [2150, 1000]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s36",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1980, 1000], [1940, 1000]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s37",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DP_CONN",
+        "x": 1940,
+        "y": 1000,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s38",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2060, 950], [2130, 950]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s39",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DP",
+        "x": 2130,
+        "y": 950,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s40",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2210, 1000], [2250, 1000], [2250, 970]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s41",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 2250,
+        "y": 970,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s42",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2020, 850], [1980, 850], [1980, 900], [2150, 900]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s43",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1980, 900], [1940, 900]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s44",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DM_CONN",
+        "x": 1940,
+        "y": 900,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s45",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2060, 850], [2130, 850]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s46",
+      "run": "sch netflag",
+      "flags": {
+        "net": "USB_DM",
+        "x": 2130,
+        "y": 850,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s47",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2210, 900], [2250, 900], [2250, 870]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s48",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 2250,
+        "y": 870,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s49",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1580, 610], [1510, 610]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s50",
+      "run": "sch netflag",
+      "flags": {
+        "net": "VBUS_USB",
+        "x": 1510,
+        "y": 610,
+        "rotation": 180,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s51",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1620, 610], [1760, 610]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s52",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1800, 610], [1900, 610]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s53",
+      "run": "sch netflag",
+      "flags": {
+        "net": "VBUS_CHG",
+        "x": 1900,
+        "y": 610,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s54",
+      "run": "sch no-connect",
+      "flags": {
+        "designator": "J1",
+        "pin": "A8,B8",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s55",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1020, 290], [1020, 320]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s56",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SYS_SW",
+        "x": 1020,
+        "y": 320,
+        "rotation": 180,
+        "kind": "power",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s57",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1020, 250], [1020, 170]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s58",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1020, 210], [1200, 210], [1200, 170]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s59",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1200, 210], [1280, 210]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s60",
+      "run": "sch netflag",
+      "flags": {
+        "net": "SYS_ADC",
+        "x": 1280,
+        "y": 210,
+        "rotation": 0,
+        "kind": "netport",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s61",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1020, 130], [1020, 100], [1200, 100], [1200, 130]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s62",
+      "run": "sch netflag",
+      "flags": {
+        "net": "GND",
+        "x": 1020,
+        "y": 100,
+        "rotation": 180,
+        "kind": "ground",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

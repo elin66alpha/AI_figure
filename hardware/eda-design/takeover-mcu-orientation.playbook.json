@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "project": "8c5d0d86032348a0a6c85102fe97607e",
+    "doc": "98cfe13509bc1f5c",
+    "name": "Measured shunt peripheral orientation"
+  },
+  "steps": [
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "c3174ee7ae9ccfa4",
+        "rotation": 90
+      },
+      "id": "rotate-C9"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "a3154fc50515ec91",
+        "rotation": 90
+      },
+      "id": "rotate-C10"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "9593b1a58265fc88",
+        "rotation": 90
+      },
+      "id": "rotate-C11"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "d0a008026a0d8ebf",
+        "rotation": 90
+      },
+      "id": "rotate-C12"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "3e78e7825cc1b9ff",
+        "rotation": 90
+      },
+      "id": "rotate-C13"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "07d7d3f2ba209a1a",
+        "rotation": 90
+      },
+      "id": "rotate-C14"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "1f0ac2db9cf4904e",
+        "rotation": 90
+      },
+      "id": "rotate-C15"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "e21e39ec7b0d084a",
+        "rotation": 90
+      },
+      "id": "rotate-C16"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "d4c1c458504b5afa",
+        "rotation": 90
+      },
+      "id": "rotate-C17"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "8c393391934e7765",
+        "rotation": 90
+      },
+      "id": "rotate-C18"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "f449b9db08c490d7",
+        "rotation": 90
+      },
+      "id": "rotate-R9"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "bbed2390656f2a7a",
+        "rotation": 90
+      },
+      "id": "rotate-R10"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "72e2f3d0b44f9600",
+        "rotation": 90
+      },
+      "id": "rotate-R11"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "id": "19756386691d000e",
+        "rotation": 90
+      },
+      "id": "rotate-R12"
+    }
+  ],
+  "version": 1
+}

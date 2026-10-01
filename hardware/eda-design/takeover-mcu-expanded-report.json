@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "operation": "schematic.layout-plan",
+  "algorithmVersion": "v1.8.1",
+  "scope": "offline-layout-only",
+  "status": "planned",
+  "phase": "complete",
+  "zones": true,
+  "layoutMode": "unbounded",
+  "sourceSha256": "783a227dd881a175e1955421a616533cd2b40a75edd4abdc684326e03823b5bc",
+  "diagnostics": [
+    {
+      "candidatesUsed": 109,
+      "feasibility": null,
+      "optimization": null,
+      "routing": {
+        "strategy": "directional-grid-a-star-v1",
+        "maxExpandedNodes": 200000,
+        "maxNodesPerAttempt": 50000,
+        "expandedNodes": 0,
+        "maxReroutes": 4,
+        "reroutes": 0,
+        "completedJoins": 0,
+        "templateCacheHits": 0
+      },
+      "search": {
+        "strategy": "unbounded-channels-v1",
+        "backtracks": 0,
+        "repairAttempts": 0,
+        "targetedRelocations": 0,
+        "movedComponents": null,
+        "branchLimit": 0,
+        "conflictPasses": 0,
+        "skippedCheckpoints": 0,
+        "placementFailures": 0,
+        "dependencyShellJumps": 0
+      },
+      "type": "layout-search",
+      "zoneId": "mcu"
+    },
+    {
+      "candidatesUsed": 14,
+      "feasibility": null,
+      "optimization": null,
+      "routing": {
+        "strategy": "directional-grid-a-star-v1",
+        "maxExpandedNodes": 200000,
+        "maxNodesPerAttempt": 50000,
+        "expandedNodes": 0,
+        "maxReroutes": 4,
+        "reroutes": 0,
+        "completedJoins": 0,
+        "templateCacheHits": 0
+      },
+      "search": {
+        "strategy": "unbounded-channels-v1",
+        "backtracks": 0,
+        "repairAttempts": 0,
+        "targetedRelocations": 0,
+        "movedComponents": null,
+        "branchLimit": 0,
+        "conflictPasses": 0,
+        "skippedCheckpoints": 0,
+        "placementFailures": 0,
+        "dependencyShellJumps": 0
+      },
+      "type": "layout-search",
+      "zoneId": "ldo"
+    },
+    {
+      "candidatesUsed": 18,
+      "feasibility": null,
+      "optimization": null,
+      "routing": {
+        "strategy": "directional-grid-a-star-v1",
+        "maxExpandedNodes": 200000,
+        "maxNodesPerAttempt": 50000,
+        "expandedNodes": 0,
+        "maxReroutes": 4,
+        "reroutes": 0,
+        "completedJoins": 0,
+        "templateCacheHits": 0
+      },
+      "search": {
+        "strategy": "unbounded-channels-v1",
+        "backtracks": 0,
+        "repairAttempts": 0,
+        "targetedRelocations": 0,
+        "movedComponents": null,
+        "branchLimit": 0,
+        "conflictPasses": 0,
+        "skippedCheckpoints": 0,
+        "placementFailures": 0,
+        "dependencyShellJumps": 0
+      },
+      "type": "layout-search",
+      "zoneId": "microphone"
+    },
+    {
+      "candidatesUsed": 27,
+      "feasibility": null,
+      "optimization": null,
+      "routing": {
+        "strategy": "directional-grid-a-star-v1",
+        "maxExpandedNodes": 200000,
+        "maxNodesPerAttempt": 50000,
+        "expandedNodes": 0,
+        "maxReroutes": 4,
+        "reroutes": 0,
+        "completedJoins": 0,
+        "templateCacheHits": 0
+      },
+      "search": {
+        "strategy": "unbounded-channels-v1",
+        "backtracks": 0,
+        "repairAttempts": 0,
+        "targetedRelocations": 0,
+        "movedComponents": null,
+        "branchLimit": 0,
+        "conflictPasses": 0,
+        "skippedCheckpoints": 0,
+        "placementFailures": 0,
+        "dependencyShellJumps": 0
+      },
+      "type": "layout-search",
+      "zoneId": "amplifier"
+    }
+  ],
+  "globalInfeasibilityProven": false,
+  "zoneReview": {
+    "schemaVersion": 1,
+    "ruleVersion": "1",
+    "sourceSha256": "783a227dd881a175e1955421a616533cd2b40a75edd4abdc684326e03823b5bc",
+    "status": "invalid",
+    "scope": "source-zone-topology-advisory",
+    "limitations": [
+      "未命中规则不证明功能归属正确；AI 需结合器件身份、手册和设计意图决定保留或拆分。",
+      "仅排除显式 local_power/local_ground；direct/module_port 也可能承载电源，不从网名猜类型。",
+      "共享源网络不证明真实导线连通；本报告不验证布局、库身份或现场图面。"
+    ],
+    "findings": [],
+    "error": "unknown JSON field /keepouts (field names are case-sensitive)"
+  }
+}

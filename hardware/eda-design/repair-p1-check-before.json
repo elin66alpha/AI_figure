@@ -1,0 +1,864 @@
+{
+  "id": "req_774",
+  "ok": true,
+  "result": {
+    "passed": false,
+    "summary": {
+      "floatingPins": 12,
+      "componentsWithFloating": 6,
+      "geomNetMismatches": 0,
+      "netMarkerMismatches": 0,
+      "multiNetWires": 0,
+      "wireCrossings": 3,
+      "wireOverPins": 0,
+      "zeroLengthWires": 0,
+      "danglingWires": 0,
+      "duplicateNetMarkers": 1,
+      "titleblockOverlaps": 0,
+      "markerOverlaps": 6,
+      "missingPartitions": 1,
+      "redundantNetMarkers": 2,
+      "foldedNetLabels": 0,
+      "reversedNetFlags": 3,
+      "polarityConventionOutliers": 0,
+      "total": 53
+    },
+    "findings": [
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "U1",
+        "primitiveId": "f1bb49ca1b50dde7",
+        "pins": [
+          "1"
+        ],
+        "pinDetails": [
+          {
+            "number": "1",
+            "name": "LNA_IN",
+            "x": 210,
+            "y": 765
+          }
+        ],
+        "count": 1,
+        "message": "1 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "L4",
+        "primitiveId": "26ffd2278d70b74c",
+        "pins": [
+          "2",
+          "1"
+        ],
+        "pinDetails": [
+          {
+            "number": "2",
+            "name": "2",
+            "x": 220,
+            "y": 130
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "x": 180,
+            "y": 130
+          }
+        ],
+        "count": 2,
+        "message": "2 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "L3",
+        "primitiveId": "25b726a5c5fa65a0",
+        "pins": [
+          "2",
+          "1"
+        ],
+        "pinDetails": [
+          {
+            "number": "2",
+            "name": "2",
+            "x": 220,
+            "y": 130
+          },
+          {
+            "number": "1",
+            "name": "1",
+            "x": 180,
+            "y": 130
+          }
+        ],
+        "count": 2,
+        "message": "2 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "C20",
+        "primitiveId": "d44004b0ad7f6850",
+        "pins": [
+          "1",
+          "2"
+        ],
+        "pinDetails": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 100,
+            "y": 79.99999999999999
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 140,
+            "y": 79.99999999999999
+          }
+        ],
+        "count": 2,
+        "message": "2 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "C21",
+        "primitiveId": "0079e413c272a8a5",
+        "pins": [
+          "1",
+          "2"
+        ],
+        "pinDetails": [
+          {
+            "number": "1",
+            "name": "1",
+            "x": 260,
+            "y": 80
+          },
+          {
+            "number": "2",
+            "name": "2",
+            "x": 300,
+            "y": 80
+          }
+        ],
+        "count": 2,
+        "message": "2 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "floating-pin",
+        "level": "warn",
+        "designator": "J4",
+        "primitiveId": "247d70c7b998c7f5",
+        "pins": [
+          "3",
+          "2",
+          "1"
+        ],
+        "pinDetails": [
+          {
+            "number": "3",
+            "name": "GND",
+            "x": 430,
+            "y": 130
+          },
+          {
+            "number": "2",
+            "name": "SIN",
+            "x": 380,
+            "y": 100
+          },
+          {
+            "number": "1",
+            "name": "GND",
+            "x": 330,
+            "y": 130
+          }
+        ],
+        "count": 3,
+        "message": "3 个引脚悬空(无导线连接,未打 NC 标识)"
+      },
+      {
+        "type": "wire-crossing",
+        "level": "error",
+        "count": 1,
+        "message": "交叉未获得无接点证据：存在引脚/标记或逐pin网络/原始几何不完整，不能豁免",
+        "at": {
+          "x": 225,
+          "y": 410
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "error",
+        "count": 1,
+        "message": "交叉未获得无接点证据：存在引脚/标记或逐pin网络/原始几何不完整，不能豁免",
+        "at": {
+          "x": 780,
+          "y": 490
+        }
+      },
+      {
+        "type": "wire-crossing",
+        "level": "error",
+        "count": 1,
+        "message": "交叉未获得无接点证据：存在引脚/标记或逐pin网络/原始几何不完整，不能豁免",
+        "at": {
+          "x": 785,
+          "y": 455
+        }
+      },
+      {
+        "type": "duplicate-net-marker",
+        "level": "warn",
+        "primitiveId": "3f93839766d2e99c",
+        "markerNet": "REC_KEY",
+        "message": "重复 netport(REC_KEY) @(160.00,695.00) ×2 — 建议保留 3f93839766d2e99c，删除 ad4aed35aa918a36 (sch prim-delete)",
+        "at": {
+          "x": 160,
+          "y": 695
+        },
+        "componentType": "netport",
+        "primitiveIds": [
+          "3f93839766d2e99c",
+          "ad4aed35aa918a36"
+        ],
+        "suggestKeepId": "3f93839766d2e99c",
+        "suggestDeleteIds": [
+          "ad4aed35aa918a36"
+        ]
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "designator": "SW4",
+        "primitiveId": "03024e42477a440c",
+        "message": "SW4(part) 与 REC_KEY(netport) 视觉重叠 21.00×6.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "part",
+        "primitiveIds": [
+          "03024e42477a440c",
+          "e6a63e26e1566d92"
+        ],
+        "bbox": {
+          "minX": 1019.5,
+          "minY": 488.5,
+          "maxX": 1040.5,
+          "maxY": 494.5
+        },
+        "other": {
+          "primitiveId": "e6a63e26e1566d92",
+          "componentType": "netport",
+          "net": "REC_KEY",
+          "bbox": {
+            "minX": 999.5,
+            "minY": 484.5,
+            "maxX": 1080.5,
+            "maxY": 495.5
+          }
+        },
+        "overlapX": 21,
+        "overlapY": 6
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "primitiveId": "3eae13f056b8864d",
+        "markerNet": "GND",
+        "message": "GND(netflag) 与 REC_KEY(netport) 视觉重叠 28.50×11.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "netflag",
+        "primitiveIds": [
+          "3eae13f056b8864d",
+          "e6a63e26e1566d92"
+        ],
+        "bbox": {
+          "minX": 1052,
+          "minY": 479.5,
+          "maxX": 1089.5,
+          "maxY": 502
+        },
+        "other": {
+          "primitiveId": "e6a63e26e1566d92",
+          "componentType": "netport",
+          "net": "REC_KEY",
+          "bbox": {
+            "minX": 999.5,
+            "minY": 484.5,
+            "maxX": 1080.5,
+            "maxY": 495.5
+          }
+        },
+        "overlapX": 28.5,
+        "overlapY": 11
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "primitiveId": "8ad8b7dd4506794a",
+        "markerNet": "3V3",
+        "message": "3V3(netflag) 与 GND(netflag) 视觉重叠 17.50×2.50 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "netflag",
+        "primitiveIds": [
+          "8ad8b7dd4506794a",
+          "cdf483b94b8b434b"
+        ],
+        "bbox": {
+          "minX": 402,
+          "minY": 749.4999999999999,
+          "maxX": 430.5,
+          "maxY": 767
+        },
+        "other": {
+          "primitiveId": "cdf483b94b8b434b",
+          "componentType": "netflag",
+          "net": "GND",
+          "bbox": {
+            "minX": 382,
+            "minY": 764.5,
+            "maxX": 419.5,
+            "maxY": 787
+          }
+        },
+        "overlapX": 17.5,
+        "overlapY": 2.5
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "designator": "J3",
+        "primitiveId": "ac1969f2f50c74d4",
+        "message": "J3(part) 与 SPK_P(netport) 视觉重叠 19.00×11.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "part",
+        "primitiveIds": [
+          "ac1969f2f50c74d4",
+          "cc6b2f446691bb29"
+        ],
+        "bbox": {
+          "minX": 1089.5,
+          "minY": 684.5,
+          "maxX": 1120.5,
+          "maxY": 715.5
+        },
+        "other": {
+          "primitiveId": "cc6b2f446691bb29",
+          "componentType": "netport",
+          "net": "SPK_P",
+          "bbox": {
+            "minX": 1039.5,
+            "minY": 699.5,
+            "maxX": 1108.5,
+            "maxY": 710.5
+          }
+        },
+        "overlapX": 19,
+        "overlapY": 11
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "designator": "J3",
+        "primitiveId": "ac1969f2f50c74d4",
+        "message": "J3(part) 与 SPK_N(netport) 视觉重叠 19.00×11.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "part",
+        "primitiveIds": [
+          "ac1969f2f50c74d4",
+          "e9fc9de7e052341e"
+        ],
+        "bbox": {
+          "minX": 1089.5,
+          "minY": 684.5,
+          "maxX": 1120.5,
+          "maxY": 715.5
+        },
+        "other": {
+          "primitiveId": "e9fc9de7e052341e",
+          "componentType": "netport",
+          "net": "SPK_N",
+          "bbox": {
+            "minX": 1039.5,
+            "minY": 689.5,
+            "maxX": 1108.5,
+            "maxY": 700.5
+          }
+        },
+        "overlapX": 19,
+        "overlapY": 11
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "primitiveId": "ad4aed35aa918a36",
+        "markerNet": "REC_KEY",
+        "message": "REC_KEY(netport) 与 U1(part) 视觉重叠 31.00×11.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "netport",
+        "primitiveIds": [
+          "ad4aed35aa918a36",
+          "f1bb49ca1b50dde7"
+        ],
+        "bbox": {
+          "minX": 169.5,
+          "minY": 689.5,
+          "maxX": 250.5,
+          "maxY": 700.5
+        },
+        "other": {
+          "primitiveId": "f1bb49ca1b50dde7",
+          "componentType": "part",
+          "designator": "U1",
+          "bbox": {
+            "minX": 219.5,
+            "minY": 604.5,
+            "maxX": 350.5,
+            "maxY": 785.5
+          }
+        },
+        "overlapX": 31,
+        "overlapY": 11
+      },
+      {
+        "type": "redundant-net-marker",
+        "level": "warn",
+        "markerNet": "3V3",
+        "count": 2,
+        "message": "同一根线树上有 2 个 3V3(netflag)标志 — 一个命名即可,其余是修补残留(视觉堆叠);建议保留 032cccdcd0a2a181,删除 86a384bb0f48423b",
+        "at": {
+          "x": 160,
+          "y": 755
+        },
+        "componentType": "netflag",
+        "primitiveIds": [
+          "032cccdcd0a2a181",
+          "86a384bb0f48423b"
+        ],
+        "suggestKeepId": "032cccdcd0a2a181",
+        "suggestDeleteIds": [
+          "86a384bb0f48423b"
+        ]
+      },
+      {
+        "type": "redundant-net-marker",
+        "level": "warn",
+        "markerNet": "REC_KEY",
+        "count": 2,
+        "message": "同一根线树上有 2 个 REC_KEY(netport)标志 — 一个命名即可,其余是修补残留(视觉堆叠);建议保留 3f93839766d2e99c,删除 ad4aed35aa918a36",
+        "at": {
+          "x": 160,
+          "y": 695
+        },
+        "componentType": "netport",
+        "primitiveIds": [
+          "3f93839766d2e99c",
+          "ad4aed35aa918a36"
+        ],
+        "suggestKeepId": "3f93839766d2e99c",
+        "suggestDeleteIds": [
+          "ad4aed35aa918a36"
+        ]
+      },
+      {
+        "type": "reversed-net-flag",
+        "level": "warn",
+        "primitiveId": "3255eaef7911d281",
+        "markerNet": "GND",
+        "message": "GND 旗反挂:桩朝 right 而旗 rot=270(应为 90)— `sch disconnect` 后 `sch connect --direction right` 重连(或该 pin `sch autoconnect --replace`)",
+        "at": {
+          "x": 200,
+          "y": 260
+        },
+        "componentType": "netflag",
+        "bbox": {
+          "minX": 180.5,
+          "minY": 249.5,
+          "maxX": 190.5,
+          "maxY": 270.5
+        }
+      },
+      {
+        "type": "reversed-net-flag",
+        "level": "warn",
+        "primitiveId": "325c92ac9f1745ee",
+        "markerNet": "3V3",
+        "message": "3V3 旗反挂:桩朝 left 而旗 rot=270(应为 90)— `sch disconnect` 后 `sch connect --direction left` 重连(或该 pin `sch autoconnect --replace`)",
+        "at": {
+          "x": 400,
+          "y": 615
+        },
+        "componentType": "netflag",
+        "bbox": {
+          "minX": 404.5,
+          "minY": 609.5,
+          "maxX": 410.5,
+          "maxY": 620.5
+        }
+      },
+      {
+        "type": "reversed-net-flag",
+        "level": "warn",
+        "primitiveId": "c89da792bf347de2",
+        "markerNet": "GND",
+        "message": "GND 旗反挂:桩朝 left 而旗 rot=90(应为 270)— `sch disconnect` 后 `sch connect --direction left` 重连(或该 pin `sch autoconnect --replace`)",
+        "at": {
+          "x": 100,
+          "y": 280
+        },
+        "componentType": "netflag",
+        "bbox": {
+          "minX": 109.5,
+          "minY": 269.5,
+          "maxX": 119.5,
+          "maxY": 290.5
+        }
+      },
+      {
+        "type": "text-overlap",
+        "level": "warn",
+        "primitiveId": "8d0c8d696c7d42c6",
+        "message": "text 8d0c8d696c7d42c6 overlaps part efbb2084066bc584 by 5.28×17.16 raw (marker text bands are estimated)",
+        "primitiveIds": [
+          "8d0c8d696c7d42c6",
+          "efbb2084066bc584"
+        ],
+        "bbox": {
+          "minX": 20,
+          "minY": 300,
+          "maxX": 130.91651916503906,
+          "maxY": 320
+        }
+      },
+      {
+        "type": "text-overlap",
+        "level": "warn",
+        "primitiveId": "fc965c2bb6961ee9",
+        "message": "text fc965c2bb6961ee9 overlaps netflag cdf483b94b8b434b by 10.00×0.50 raw (marker text bands are estimated)",
+        "primitiveIds": [
+          "fc965c2bb6961ee9",
+          "cdf483b94b8b434b"
+        ],
+        "bbox": {
+          "minX": 395,
+          "minY": 785,
+          "maxX": 514.7057342529297,
+          "maxY": 805
+        }
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C16",
+        "primitiveId": "e21e39ec7b0d084a",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C9",
+        "primitiveId": "c3174ee7ae9ccfa4",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C10",
+        "primitiveId": "a3154fc50515ec91",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C11",
+        "primitiveId": "9593b1a58265fc88",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C12",
+        "primitiveId": "d0a008026a0d8ebf",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C13",
+        "primitiveId": "3e78e7825cc1b9ff",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C14",
+        "primitiveId": "07d7d3f2ba209a1a",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C15",
+        "primitiveId": "1f0ac2db9cf4904e",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C18",
+        "primitiveId": "8c393391934e7765",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "R9",
+        "primitiveId": "f449b9db08c490d7",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "R10",
+        "primitiveId": "bbed2390656f2a7a",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "R11",
+        "primitiveId": "72e2f3d0b44f9600",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "R12",
+        "primitiveId": "19756386691d000e",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "R13",
+        "primitiveId": "63575016cd9f0543",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "SW2",
+        "primitiveId": "7ed9729093863fc9",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "SW3",
+        "primitiveId": "eb8d6f9a172fbf66",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-out-of-frame",
+        "level": "ERROR",
+        "designator": "SW4",
+        "primitiveId": "03024e42477a440c",
+        "message": "component body extends outside its module frame",
+        "primitiveIds": [
+          "03024e42477a440c",
+          "151d40c020c667fe"
+        ],
+        "bbox": {
+          "minX": 1019.5,
+          "minY": 488.5,
+          "maxX": 1040.5,
+          "maxY": 494.5
+        },
+        "keepout": {
+          "minX": 930,
+          "minY": 340,
+          "maxX": 1030,
+          "maxY": 560
+        }
+      },
+      {
+        "type": "designator-out-of-frame",
+        "level": "ERROR",
+        "designator": "SW4",
+        "primitiveId": "2248ffeab5fe0f34",
+        "message": "Designator extends outside its parent component's frame (model/parameter text excluded)",
+        "primitiveIds": [
+          "2248ffeab5fe0f34",
+          "03024e42477a440c",
+          "151d40c020c667fe"
+        ],
+        "bbox": {
+          "minX": 1020,
+          "minY": 495,
+          "maxX": 1038.961181640625,
+          "maxY": 505
+        },
+        "keepout": {
+          "minX": 930,
+          "minY": 340,
+          "maxX": 1030,
+          "maxY": 560
+        }
+      },
+      {
+        "type": "part-out-of-frame",
+        "level": "ERROR",
+        "designator": "D3",
+        "primitiveId": "faffbdae5f3827d0",
+        "message": "component body extends outside its module frame",
+        "primitiveIds": [
+          "faffbdae5f3827d0",
+          "151d40c020c667fe"
+        ],
+        "bbox": {
+          "minX": 1003.5,
+          "minY": 412.5,
+          "maxX": 1030.5,
+          "maxY": 437.5
+        },
+        "keepout": {
+          "minX": 930,
+          "minY": 340,
+          "maxX": 1030,
+          "maxY": 560
+        }
+      },
+      {
+        "type": "part-out-of-frame",
+        "level": "ERROR",
+        "designator": "L2",
+        "primitiveId": "efbb2084066bc584",
+        "message": "component body extends outside its module frame",
+        "primitiveIds": [
+          "efbb2084066bc584",
+          "aeee140f0fd259b1"
+        ],
+        "bbox": {
+          "minX": 69.55467999999999,
+          "minY": 302.83592,
+          "maxX": 74.8329,
+          "maxY": 337.38211
+        },
+        "keepout": {
+          "minX": 10,
+          "minY": 200,
+          "maxX": 200,
+          "maxY": 330
+        }
+      },
+      {
+        "type": "designator-out-of-frame",
+        "level": "ERROR",
+        "designator": "L2",
+        "primitiveId": "deadbf99f1de97e1",
+        "message": "Designator extends outside its parent component's frame (model/parameter text excluded)",
+        "primitiveIds": [
+          "deadbf99f1de97e1",
+          "efbb2084066bc584",
+          "aeee140f0fd259b1"
+        ],
+        "bbox": {
+          "minX": 80,
+          "minY": 325,
+          "maxX": 89.732666015625,
+          "maxY": 335
+        },
+        "keepout": {
+          "minX": 10,
+          "minY": 200,
+          "maxX": 200,
+          "maxY": 330
+        }
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "J3",
+        "primitiveId": "ac1969f2f50c74d4",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "L4",
+        "primitiveId": "26ffd2278d70b74c",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "L3",
+        "primitiveId": "25b726a5c5fa65a0",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C20",
+        "primitiveId": "d44004b0ad7f6850",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "C21",
+        "primitiveId": "0079e413c272a8a5",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "part-frame-unresolved",
+        "level": "ERROR",
+        "designator": "J4",
+        "primitiveId": "247d70c7b998c7f5",
+        "message": "body must belong to exactly one live module frame"
+      },
+      {
+        "type": "designator-overlap",
+        "level": "warn",
+        "designator": "SW4",
+        "primitiveId": "2248ffeab5fe0f34",
+        "message": "Designator overlaps body/marker/title/another designator; non-designator properties excluded",
+        "primitiveIds": [
+          "2248ffeab5fe0f34",
+          "e6a63e26e1566d92"
+        ],
+        "bbox": {
+          "minX": 1020,
+          "minY": 495,
+          "maxX": 1038.961181640625,
+          "maxY": 505
+        },
+        "overlapX": 18.961181640625,
+        "overlapY": 0.5
+      },
+      {
+        "type": "designator-overlap",
+        "level": "warn",
+        "designator": "L4",
+        "primitiveId": "80c6feb883327176",
+        "message": "Designator overlaps body/marker/title/another designator; non-designator properties excluded",
+        "primitiveIds": [
+          "80c6feb883327176",
+          "bd5063e2778d1a15"
+        ],
+        "bbox": {
+          "minX": 185,
+          "minY": 135,
+          "maxX": 194.732666015625,
+          "maxY": 145
+        },
+        "overlapX": 9.732666015625,
+        "overlapY": 10
+      },
+      {
+        "type": "missing-titleblock",
+        "level": "warn",
+        "count": 3,
+        "message": "图签未填:Name(图纸标题)、Drawed(设计者)、Description(图纸说明) — 交付图必须能认领(`sch titleblock --data '{\"Name\":\"…\",\"Drawed\":\"…\"}'`)"
+      }
+    ]
+  },
+  "type": "response",
+  "version": "v1"
+}

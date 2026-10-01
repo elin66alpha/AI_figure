@@ -1,0 +1,111 @@
+{
+  "id": "req_1773",
+  "ok": true,
+  "result": {
+    "passed": false,
+    "summary": {
+      "floatingPins": 0,
+      "componentsWithFloating": 0,
+      "geomNetMismatches": 0,
+      "netMarkerMismatches": 0,
+      "multiNetWires": 0,
+      "wireCrossings": 1,
+      "wireOverPins": 0,
+      "zeroLengthWires": 0,
+      "danglingWires": 0,
+      "duplicateNetMarkers": 0,
+      "titleblockOverlaps": 0,
+      "markerOverlaps": 1,
+      "missingPartitions": 1,
+      "redundantNetMarkers": 0,
+      "foldedNetLabels": 0,
+      "reversedNetFlags": 0,
+      "polarityConventionOutliers": 0,
+      "total": 5
+    },
+    "findings": [
+      {
+        "type": "wire-crossing",
+        "level": "info",
+        "count": 1,
+        "message": "已验证无接点正交内部交叉：原始段端不在交点、无引脚/标记，两个物理线岛的逐pin网络证据完整",
+        "at": {
+          "x": 710,
+          "y": 830
+        }
+      },
+      {
+        "type": "marker-overlap",
+        "level": "warn",
+        "primitiveId": "9b34090ed7021556",
+        "markerNet": "GND",
+        "message": "GND(netflag) 与 J3(part) 视觉重叠 11.00×7.00 — `sch destagger` 可自动搬(默认只算不动),或换方向/offset",
+        "componentType": "netflag",
+        "primitiveIds": [
+          "9b34090ed7021556",
+          "ac1969f2f50c74d4"
+        ],
+        "bbox": {
+          "minX": 1259.5,
+          "minY": 688.5,
+          "maxX": 1280.5,
+          "maxY": 710.5
+        },
+        "other": {
+          "primitiveId": "ac1969f2f50c74d4",
+          "componentType": "part",
+          "designator": "J3",
+          "bbox": {
+            "minX": 1269.5,
+            "minY": 664.5,
+            "maxX": 1300.5,
+            "maxY": 695.5
+          }
+        },
+        "overlapX": 11,
+        "overlapY": 7
+      },
+      {
+        "type": "designator-wire-overlap",
+        "level": "warn",
+        "designator": "C1",
+        "primitiveId": "30a33a0d888aa79c",
+        "wirePrimitiveId": "b93e568eb27ce245",
+        "message": "wire crosses Designator text bbox",
+        "bbox": {
+          "minX": 940,
+          "minY": 1520,
+          "maxX": 951.185302734375,
+          "maxY": 1530
+        }
+      },
+      {
+        "type": "designator-overlap",
+        "level": "warn",
+        "designator": "J3",
+        "primitiveId": "62d55a4111e9aca5",
+        "message": "Designator overlaps body/marker/title/another designator; non-designator properties excluded",
+        "primitiveIds": [
+          "62d55a4111e9aca5",
+          "9b34090ed7021556"
+        ],
+        "bbox": {
+          "minX": 1270,
+          "minY": 695,
+          "maxX": 1279.2413330078125,
+          "maxY": 705
+        },
+        "overlapX": 9.2413330078125,
+        "overlapY": 10
+      },
+      {
+        "type": "missing-titleblock",
+        "level": "warn",
+        "count": 3,
+        "message": "图签未填:Name(图纸标题)、Drawed(设计者)、Description(图纸说明) — 交付图必须能认领(`sch titleblock --data '{\"Name\":\"…\",\"Drawed\":\"…\"}'`)"
+      }
+    ]
+  },
+  "type": "response",
+  "version": "v1"
+}

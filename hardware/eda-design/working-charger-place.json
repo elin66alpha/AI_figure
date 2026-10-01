@@ -1,0 +1,89 @@
+{
+  "steps": [
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 650,
+        "x": 300,
+        "doc": "2a0b6c4d73111128",
+        "id": "692439a77ae82329"
+      },
+      "id": "position-U2"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 750,
+        "x": 300,
+        "doc": "2a0b6c4d73111128",
+        "id": "3904ba86067437aa"
+      },
+      "id": "position-L1"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 710,
+        "x": 550,
+        "doc": "2a0b6c4d73111128",
+        "id": "aba44f814b61a089"
+      },
+      "id": "position-C6"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 650,
+        "x": 550,
+        "doc": "2a0b6c4d73111128",
+        "id": "91bd1f14c6ae8125"
+      },
+      "id": "position-C7"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 590,
+        "x": 550,
+        "doc": "2a0b6c4d73111128",
+        "id": "d019ec40d226897b"
+      },
+      "id": "position-C8"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 560,
+        "x": 430,
+        "doc": "2a0b6c4d73111128",
+        "id": "16b5743531817c1a"
+      },
+      "id": "position-R3"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 700,
+        "x": 780,
+        "doc": "2a0b6c4d73111128",
+        "id": "6d253fa4c28874f5"
+      },
+      "id": "position-J2"
+    },
+    {
+      "run": "sch modify",
+      "flags": {
+        "y": 700,
+        "x": 900,
+        "doc": "2a0b6c4d73111128",
+        "id": "dd91157269d98bc8"
+      },
+      "id": "position-SW1"
+    }
+  ],
+  "version": 1,
+  "meta": {
+    "name": "ETA6002 charger component arrangement",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  }
+}

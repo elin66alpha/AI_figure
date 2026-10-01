@@ -1,0 +1,75 @@
+{
+  "id": "req_1997",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-30T00:35:06.633976Z",
+  "ok": true,
+  "result": {
+    "device": {
+      "association": {
+        "footprint": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "uuid": "e44e8913964d4a4db53eb387244727d6"
+        },
+        "footprintUuid": "e44e8913964d4a4db53eb387244727d6",
+        "images": [],
+        "symbol": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "type": 2,
+          "uuid": "0ef2c756326f421eab3c316c79eda910"
+        },
+        "symbolType": 2,
+        "symbolUuid": "0ef2c756326f421eab3c316c79eda910"
+      },
+      "classification": [],
+      "description": "Test Point 测试点",
+      "libraryType": "3",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "name": "Test-Point",
+      "property": {
+        "addIntoBom": true,
+        "addIntoPcb": true,
+        "designator": "TP?",
+        "name": "Test-Point",
+        "otherProperty": {
+          "3D Model": "",
+          "3D Model Title": "",
+          "3D Model Transform": "",
+          "Add into BOM": "yes",
+          "Convert to PCB": "yes",
+          "Description": "Test Point 测试点",
+          "Designator": "TP?",
+          "Footprint": "e44e8913964d4a4db53eb387244727d6",
+          "Name": "",
+          "Symbol": "0ef2c756326f421eab3c316c79eda910"
+        }
+      },
+      "subPartNames": [
+        "Test-Point.1"
+      ],
+      "uuid": "d45be48edf5f4f4eb9e20c75671b7f3b"
+    }
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 2615,
+  "seqAbandoned": 11,
+  "abandonedIds": [
+    "req_186",
+    "req_227",
+    "req_241",
+    "req_247",
+    "req_319",
+    "req_324",
+    "req_334",
+    "req_741",
+    "req_772",
+    "req_956",
+    "req_961"
+  ]
+}

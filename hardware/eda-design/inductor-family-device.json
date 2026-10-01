@@ -1,0 +1,76 @@
+{
+  "id": "req_436",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T22:43:21.0930536Z",
+  "ok": true,
+  "result": {
+    "device": {
+      "association": {
+        "footprint": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "uuid": "a4b2d15857e24b2794a23078ddfabcd6"
+        },
+        "footprintUuid": "a4b2d15857e24b2794a23078ddfabcd6",
+        "images": [
+          "https://alimg.szlcsc.com/upload/public/product/middle/20241030/F6C8F4AD1DF79ECF1CD174A5B4B88EF0.jpg"
+        ],
+        "symbol": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "type": 2,
+          "uuid": "5a0f8a53ae9e40c3b9aa5a5d82ccbde0"
+        },
+        "symbolType": 2,
+        "symbolUuid": "5a0f8a53ae9e40c3b9aa5a5d82ccbde0"
+      },
+      "classification": [
+        "电感/线圈/变压器",
+        "一体成型电感"
+      ],
+      "description": "一体成型电感，功率电感，合金电感，贴片电感.公司通过ISO90001:2015和IATF16949:2016体系认证，产品主要应用于：汽车电子(车灯、车机屏、BMS、自动驾驶控制模块等)、电脑主板(台式、笔记本、平板)、显卡、交换机、路由器、电视机、显示器、音箱、手机、通讯基站、各种机器设备控制板等。",
+      "libraryType": "3",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "name": "DH0618H-R22M",
+      "property": {
+        "addIntoBom": true,
+        "addIntoPcb": true,
+        "designator": "L?",
+        "manufacturer": "DH(德鸿感应)",
+        "manufacturerId": "DH0618H-R22M",
+        "name": "DH0618H-R22M",
+        "otherProperty": {
+          "Add into BOM": "yes",
+          "Convert to PCB": "yes",
+          "Datasheet": "https://item.szlcsc.com/datasheet/DH0618H-R22M/43206096.html",
+          "Description": "一体成型电感，功率电感，合金电感，贴片电感.公司通过ISO90001:2015和IATF16949:2016体系认证，产品主要应用于：汽车电子(车灯、车机屏、BMS、自动驾驶控制模块等)、电脑主板(台式、笔记本、平板)、显卡、交换机、路由器、电视机、显示器、音箱、手机、通讯基站、各种机器设备控制板等。",
+          "Designator": "L?",
+          "Footprint": "a4b2d15857e24b2794a23078ddfabcd6",
+          "JLCPCB Part Class": "",
+          "LCSC Part Name": "DH0618H-R22M（0.22uH)",
+          "Manufacturer": "DH(德鸿感应)",
+          "Manufacturer Part": "DH0618H-R22M",
+          "Name": "={Manufacturer Part}",
+          "Supplier": "LCSC",
+          "Supplier Footprint": "SMD,7.1x6.6mm",
+          "Supplier Part": "C41407005",
+          "Symbol": "5a0f8a53ae9e40c3b9aa5a5d82ccbde0"
+        },
+        "supplier": "LCSC",
+        "supplierId": "C41407005"
+      },
+      "subPartNames": [
+        "DH0618H-R22M.1"
+      ],
+      "uuid": "d2b217af64814a87966a8e428d6a1268"
+    }
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "1033ffb1e56e4117bae9e9d76f07d88d",
+    "documentType": "footprint",
+    "tabId": "1033ffb1e56e4117bae9e9d76f07d88d@2cb3ad867dfa4740a0fbae81ea348a21"
+  },
+  "seq": 498,
+  "seqAbandoned": 0
+}

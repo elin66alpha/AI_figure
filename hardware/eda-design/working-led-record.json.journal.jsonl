@@ -1,0 +1,2 @@
+{"playbookSha256":"c4be80d32a1916e637ea875823757e9453ee392a1ef08d3b65258366e294c852","name":"ESP32 status LED and record button","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:33:12-04:00"}
+{"idx":1,"id":"led-position","status":"fail","ms":212,"error":"run \"sch modify\" exited 1: warning [bug #256]: Web 4.1.60 原理图修改曾间歇报 cmdKey，触发条件未明；失败后先 fresh sch list 核对目标字段，勿盲重试。https://github.com/zhoushoujianwork/easyeda-agent/issues/256"}

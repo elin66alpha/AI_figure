@@ -1,0 +1,2 @@
+{"playbookSha256":"03f35f00fd635dbd9baf1840a22c09cb7ea9602ceb0120ff33fa0f8e9a56b447","name":"ESP32 status LED and record button","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:34:48-04:00"}
+{"idx":1,"id":"led-control","status":"fail","ms":5534,"error":"run \"sch connect\" exited 1: schematic.components.list failed: Cannot verify schematic readiness after netlist export: ActionError: Timed out waiting for schematic RealTimeSync; no further writes are allowed."}

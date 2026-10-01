@@ -1,0 +1,28 @@
+{
+  "id": "req_2128",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-30T00:42:31.8954967Z",
+  "ok": false,
+  "error": {
+    "code": "INVALID_STATE",
+    "message": "Cannot resolve the placed component's 32-char device-library uuid (no device matches exact LCSC/model and native footprint source (package-variant mismatch); instance footprint uuid=\"934b37072e3fae24\", libraryUuid=\"2cb3ad867dfa4740a0fbae81ea348a21\"; instance/library UUID domains require native META.source plus exact LCSC/model and official asset-library evidence) — aborting BEFORE any canvas change because rollback would be impossible. Note: the component's own device.uuid is a 16-char placed-symbol id and cannot re-create the part."
+  },
+  "seq": 2725,
+  "seqAbandoned": 13,
+  "abandonedIds": [
+    "req_186",
+    "req_227",
+    "req_241",
+    "req_247",
+    "req_319",
+    "req_324",
+    "req_334",
+    "req_741",
+    "req_772",
+    "req_956",
+    "req_961",
+    "req_2116",
+    "req_2121"
+  ]
+}

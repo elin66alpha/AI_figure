@@ -1,0 +1,92 @@
+{
+  "id": "req_15",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T22:25:32.8258778Z",
+  "ok": true,
+  "result": {
+    "device": {
+      "association": {
+        "footprint": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "uuid": "50b2e2d0d071403ab05b3135decebb1d"
+        },
+        "footprintUuid": "50b2e2d0d071403ab05b3135decebb1d",
+        "images": [
+          "https://alimg.szlcsc.com/upload/public/product/middle/20240716/56F6CE901E2F5590DF9DA5276C84D75F.jpg"
+        ],
+        "symbol": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "type": 2,
+          "uuid": "0d43066c40af4345bc24571a822344dd"
+        },
+        "symbolType": 2,
+        "symbolUuid": "0d43066c40af4345bc24571a822344dd"
+      },
+      "classification": [
+        "音频器件/振动马达",
+        "MEMS麦克风"
+      ],
+      "description": "指向性:全指向;信噪比:64dB;灵敏度:-26dB;阻抗:-;",
+      "libraryType": "3",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "name": "ICS-43434_C5656610",
+      "property": {
+        "addIntoBom": true,
+        "addIntoPcb": true,
+        "designator": "U?",
+        "manufacturer": "TDK InvenSense(应美盛)",
+        "manufacturerId": "ICS-43434",
+        "name": "ICS-43434_C5656610",
+        "otherProperty": {
+          "3D Model": "25efa4d3d354448984f6203642365041",
+          "3D Model Title": "MIC-SMD_6P-L3.5-W2.7-P0.90-BL",
+          "3D Model Transform": "104.3305,137.795,0,90,0,0,3.197,-0.001,0",
+          "Add into BOM": "yes",
+          "Convert to PCB": "yes",
+          "Current Consumption": "550uA",
+          "Datasheet": "https://item.szlcsc.com/datasheet/ICS-43434/6577565.html",
+          "Description": "指向性:全指向;信噪比:64dB;灵敏度:-26dB;阻抗:-;",
+          "Designator": "U?",
+          "Direction": "全指向",
+          "Features": "全向拾音",
+          "Footprint": "50b2e2d0d071403ab05b3135decebb1d",
+          "Frequency Range": "60Hz~20kHz",
+          "Height": "0.98mm",
+          "Impedance": "-",
+          "JLCPCB Part Class": "Extended Part",
+          "LCSC Part Name": "1.65V~3.63V",
+          "Length": "3.5mm",
+          "Manufacturer": "TDK InvenSense(应美盛)",
+          "Manufacturer Part": "ICS-43434",
+          "Name": "={Manufacturer Part}",
+          "Operating Temperature": "-40℃~+85℃",
+          "Output Type": "I2S",
+          "S/N Ratio": "64dB",
+          "Sensitivity": "-26dB",
+          "Supplier": "LCSC",
+          "Supplier Footprint": "LGA-6(3.5x2.7)",
+          "Supplier Part": "C5656610",
+          "Symbol": "0d43066c40af4345bc24571a822344dd",
+          "Voltage - Supply": "1.65V~3.63V",
+          "Width": "2.65mm"
+        },
+        "supplier": "LCSC",
+        "supplierId": "C5656610"
+      },
+      "subPartNames": [
+        "ICS-43434_C5656610.1"
+      ],
+      "uuid": "690ced618d6440b481eddb3b2a7dea1e"
+    }
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 13,
+  "seqAbandoned": 0
+}

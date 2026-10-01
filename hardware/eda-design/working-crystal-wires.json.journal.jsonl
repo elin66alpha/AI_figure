@@ -1,0 +1,21 @@
+{"playbookSha256":"7d400d5d43689b203b16fd97b11f340248e6a8fa6146271aa674f434342c8f90","name":"ESP32 crystal wiring","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:43:22-04:00"}
+{"idx":1,"id":"crystal-p-load","status":"ok","ms":484}
+{"idx":2,"id":"crystal-series","status":"ok","ms":510}
+{"idx":3,"id":"crystal-n-load","status":"ok","ms":738}
+{"idx":4,"id":"crystal-cap-p-ground","status":"ok","ms":793}
+{"idx":5,"id":"cap-p-ground","status":"ok","ms":961}
+{"idx":6,"id":"crystal-cap-n-ground","status":"ok","ms":456}
+{"idx":7,"id":"cap-n-ground","status":"ok","ms":119}
+{"idx":8,"id":"crystal-case4","status":"ok","ms":744}
+{"idx":9,"id":"case4-ground","status":"ok","ms":162}
+{"idx":10,"id":"crystal-case2","status":"ok","ms":872}
+{"idx":11,"id":"case2-ground","status":"ok","ms":173}
+{"idx":12,"id":"crystal-p-port-wire","status":"ok","ms":853}
+{"idx":13,"id":"crystal-p-port","status":"ok","ms":729}
+{"idx":14,"id":"crystal-n-port-wire","status":"ok","ms":498}
+{"idx":15,"id":"crystal-n-port","status":"ok","ms":172}
+{"idx":16,"id":"mcu-xtal-p-wire","status":"ok","ms":668}
+{"idx":17,"id":"mcu-xtal-p-port","status":"ok","ms":183}
+{"idx":18,"id":"mcu-xtal-n-wire","status":"ok","ms":720}
+{"idx":19,"id":"mcu-xtal-n-port","status":"ok","ms":175}
+{"idx":20,"id":"save","status":"ok","ms":69}

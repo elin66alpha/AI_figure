@@ -1,0 +1,16 @@
+{"playbookSha256":"c19cb7e392ad69dcaff573cfe2241de1e12d613c42c1e7bffe70410b08519b51","name":"Position unwired parts from computed layout","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T18:33:26-04:00"}
+{"idx":1,"id":"position-U1","status":"ok","ms":126}
+{"idx":2,"id":"position-U2","status":"ok","ms":116}
+{"idx":3,"id":"position-U3","status":"ok","ms":156}
+{"idx":4,"id":"position-U4","status":"ok","ms":249}
+{"idx":5,"id":"position-U5","status":"ok","ms":161}
+{"idx":6,"id":"position-J1","status":"ok","ms":160}
+{"idx":7,"id":"position-Y1","status":"ok","ms":151}
+{"idx":8,"id":"position-C1","status":"ok","ms":151}
+{"idx":9,"id":"position-C2","status":"ok","ms":160}
+{"idx":10,"id":"position-C3","status":"ok","ms":173}
+{"idx":11,"id":"position-R1","status":"ok","ms":111}
+{"idx":12,"id":"position-C4","status":"ok","ms":117}
+{"idx":13,"id":"position-C5","status":"ok","ms":111}
+{"idx":14,"id":"position-R2","status":"ok","ms":110}
+{"idx":15,"id":"save","status":"ok","ms":40}

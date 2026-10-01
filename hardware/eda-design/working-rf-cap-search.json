@@ -1,0 +1,70 @@
+{
+  "id": "req_739",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T23:51:30.6758275Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "容值:1.5pF;额定电压:50V;温度系数:C0G;",
+        "footprintName": "C0201",
+        "lcsc": "C88913",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "muRata(村田)",
+        "manufacturerId": "GRM0335C1H1R5WA01D",
+        "name": "GRM0335C1H1R5WA01D",
+        "score": 3,
+        "symbolName": "GRM0335C1H1R5WA01D",
+        "uuid": "88e15b97c8c2473ea50c5ab0c0540793",
+        "value": "1.5pF"
+      },
+      {
+        "description": "容值:1.5pF;额定电压:50V;温度系数:C0G;",
+        "footprintName": "C0201",
+        "lcsc": "C85897",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "muRata(村田)",
+        "manufacturerId": "GRM0335C1H1R5CA01D",
+        "name": "GRM0335C1H1R5CA01D",
+        "score": 3,
+        "symbolName": "GRM0335C1H1R5CA01D",
+        "uuid": "4d98a2d72eb048fb9794dcf5dedc3551",
+        "value": "1.5pF"
+      },
+      {
+        "description": "容值:1.5pF;额定电压:50V;温度系数:C0G;",
+        "footprintName": "C0201",
+        "lcsc": "C161414",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "muRata(村田)",
+        "manufacturerId": "GRM0335C1H1R5BA01D",
+        "name": "GRM0335C1H1R5BA01D",
+        "score": 3,
+        "symbolName": "GRM0335C1H1R5BA01D",
+        "uuid": "fdf73468cfee4268b396db282f1b754b",
+        "value": "1.5pF"
+      }
+    ],
+    "count": 3,
+    "query": "GRM0335C1H1R5"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 1462,
+  "seqAbandoned": 7,
+  "abandonedIds": [
+    "req_186",
+    "req_227",
+    "req_241",
+    "req_247",
+    "req_319",
+    "req_324",
+    "req_334"
+  ]
+}

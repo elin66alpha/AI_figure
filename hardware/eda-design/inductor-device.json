@@ -1,0 +1,132 @@
+{
+  "name": "DH0618H-2R2M_AI_figure",
+  "description": "2.2uH shielded power inductor, LCSC C41406997",
+  "libraryUUID": "2cb3ad867dfa4740a0fbae81ea348a21",
+  "designator": "L",
+  "evidence": {
+    "manufacturer": "Deheng",
+    "mpn": "DH0618H-2R2M",
+    "packageVariant": "DH0618H 7.1x6.6mm H1.8mm",
+    "datasheet": {
+      "title": "DH0618H-2R2M specification S200519-003",
+      "locator": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\DH0618H-datasheet.pdf",
+      "revision": "A/0 2020-05-19",
+      "sha256": "e5e358057edf73d524f7525df9ff70d0aa7fa2b336fa6e45f4e656eb77771492"
+    },
+    "pinoutPages": [
+      3
+    ],
+    "packageDrawingPages": [
+      3
+    ],
+    "landPattern": {
+      "basis": "datasheet",
+      "pages": [
+        3
+      ],
+      "note": "G=2.9mm inner gap, H=7.8mm outer span, I=3.5mm height. Pad width=(H-G)/2=2.45mm; centers +/-2.675mm. Nonpolar winding assigned 1 left / 2 right; winding start dot not numerically specified."
+    }
+  },
+  "pinMapping": {
+    "footprintOnly": [],
+    "symbolOnly": []
+  },
+  "symbol": {
+    "name": "DH0618H-2R2M",
+    "description": "Nonpolar two-terminal 2.2uH inductor",
+    "geometry": {
+      "outline": [
+        -15,
+        -5,
+        15,
+        -5,
+        15,
+        5,
+        -15,
+        5,
+        -15,
+        -5
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "x": -30,
+          "y": 0,
+          "rotation": 0,
+          "length": 15,
+          "pinType": "Passive",
+          "shape": "None"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "x": 30,
+          "y": 0,
+          "rotation": 180,
+          "length": 15,
+          "pinType": "Passive",
+          "shape": "None"
+        }
+      ]
+    }
+  },
+  "footprint": {
+    "name": "DH0618H_LAND_7.8x3.5",
+    "description": "Manufacturer recommended two 2.45x3.5mm pads, 2.9mm gap, units mil",
+    "geometry": {
+      "pads": [
+        {
+          "number": "1",
+          "layer": 1,
+          "x": -105.31496062949998,
+          "y": 0,
+          "rotation": 0,
+          "shape": [
+            1,
+            96.456692913,
+            137.79527559
+          ]
+        },
+        {
+          "number": "2",
+          "layer": 1,
+          "x": 105.31496062949998,
+          "y": 0,
+          "rotation": 0,
+          "shape": [
+            1,
+            96.456692913,
+            137.79527559
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "layer": 3,
+          "startX": -129.92125984199998,
+          "startY": -139.76377952699997,
+          "endX": 129.92125984199998,
+          "endY": -139.76377952699997,
+          "width": 5
+        },
+        {
+          "layer": 3,
+          "startX": -129.92125984199998,
+          "startY": 139.76377952699997,
+          "endX": 129.92125984199998,
+          "endY": 139.76377952699997,
+          "width": 5
+        }
+      ]
+    }
+  },
+  "properties": {
+    "Manufacturer": "Deheng",
+    "Manufacturer Part": "DH0618H-2R2M",
+    "Supplier": "LCSC",
+    "Supplier Part": "C41406997",
+    "Value": "2.2uH",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241112/2B291D1A3B9FC49D176F25E8B1E8EEB3.pdf"
+  }
+}

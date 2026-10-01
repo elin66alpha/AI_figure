@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "detail-fixes",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "s0",
+      "run": "sch prim-delete",
+      "flags": {
+        "ids": "b93e568eb27ce245,5d66cf1b72314ac7,9b34090ed7021556,cb83e197ed1d9525,84d2cd71018f8d97",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s1",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1055,1510],[1020,1510],[1020,1530],[1020,1540],[900,1540],[900,1510],[930,1510]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s2",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[1220,750],[1330,750],[1330,720]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s3",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1330,
+        "y": 720,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s4",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[455,860],[480,860],[480,840],[600,840]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s5",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "net": "I2S_BCLK",
+        "x": 600,
+        "y": 840,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s6",
+      "run": "sch titleblock",
+      "flags": {
+        "data": "{\"Name\": {\"value\": \"ESP32-C3 Voice / Battery\", \"showTitle\": true, \"showValue\": true}, \"Description\": {\"value\": \"Single-sheet schematic\", \"showTitle\": true, \"showValue\": true}, \"Drawed\": {\"value\": \"Codex\", \"showTitle\": false, \"showValue\": true}}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "replace-flags",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "delete-flags",
+      "run": "sch prim-delete",
+      "flags": {
+        "ids": "1c92b929b3e10ef1,2254328a5a2184a7,27337e70f4ce3c22,2940efc35599b114,31a04cddf55505e7,3a9476b7242f6c78,3c57e370987b6c1f,3e3fedd68315c446,40903a16f067fbe8,5722818cb99eabd9,5e431784ada330f7,650af65e9e036ef4,66d419461071a2f7,6f178e0372546683,6f2094321dcc1997,721b8c3752a0e444,749e8c00e4c80e0b,7731afd67a86583c,790b930054c495a5,804955c68381e48d,82f7e8e269e3ab2e,83998dcf61a02146,8c4ceae55f48dcec,99e932b6b4f0d32c,9f4fcc7d95d2ce59,ab0fe0f7dcf6f049,ac2c2b61ef61213b,ba7bcb5742ac4c7a,bfbb3db05729f690,c5bfde520164fc16,cc6fc544d68588de,d59c7556c445cc1c,d5a0dee9f731481f,d6a94200e673355a,db70bf2ac29a6b88,dc8fb711d0f3f733,e2ebb528d32412c5,e55b3ab661f828c1,e7716dfc599a40f5,ed4342ef66af202f,f133d28a5ebf1e80,f1dcfb839b321fb1,f3a9635da1ad3308,f6181d408c089417,f71a85940aa204ff,fd677f94d6f7b799,ff52b7c4a73e9294,ff82b3f5ab233689,ffa77eead7c959ab,0b23a3dca3c78b58",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-1c92b929b3e10ef1",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 750,
+        "y": 160,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-2254328a5a2184a7",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1840,
+        "y": 1450,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-27337e70f4ce3c22",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 620,
+        "y": 600,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-2940efc35599b114",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2090,
+        "y": 1280,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-31a04cddf55505e7",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 600,
+        "y": 280,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-3a9476b7242f6c78",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1960,
+        "y": 1180,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-3c57e370987b6c1f",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2250,
+        "y": 870,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-3e3fedd68315c446",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 940,
+        "y": 600,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-40903a16f067fbe8",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2250,
+        "y": 970,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-5722818cb99eabd9",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 620,
+        "y": 1030,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-5e431784ada330f7",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 660,
+        "y": 870,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-650af65e9e036ef4",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1710,
+        "y": 1350,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-66d419461071a2f7",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1200,
+        "y": 1055,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-6f178e0372546683",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 1150,
+        "y": 780,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-6f2094321dcc1997",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 1200,
+        "y": 410,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-721b8c3752a0e444",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 320,
+        "y": 430,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-749e8c00e4c80e0b",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1000,
+        "y": 730,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-7731afd67a86583c",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1160,
+        "y": 1160,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-790b930054c495a5",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1270,
+        "y": 890,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-804955c68381e48d",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 220,
+        "y": 600,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-82f7e8e269e3ab2e",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1850,
+        "y": 670,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-83998dcf61a02146",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1290,
+        "y": 1470,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-8c4ceae55f48dcec",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "VBUS_CHG",
+        "x": 1990,
+        "y": 1470,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-99e932b6b4f0d32c",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1850,
+        "y": 785,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-9f4fcc7d95d2ce59",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2090,
+        "y": 1400,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ab0fe0f7dcf6f049",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1020,
+        "y": 100,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ac2c2b61ef61213b",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 480,
+        "y": 450,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ba7bcb5742ac4c7a",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 1100,
+        "y": 600,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-bfbb3db05729f690",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1000,
+        "y": 1055,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-c5bfde520164fc16",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 490,
+        "y": 940,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-cc6fc544d68588de",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "VBAT",
+        "x": 2140,
+        "y": 1530,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-d59c7556c445cc1c",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 540,
+        "y": 770,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-d5a0dee9f731481f",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 1160,
+        "y": 1560,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-d6a94200e673355a",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1040,
+        "y": 1250,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-db70bf2ac29a6b88",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2120,
+        "y": 1340,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-dc8fb711d0f3f733",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 620,
+        "y": 1150,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-e2ebb528d32412c5",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 840,
+        "y": 440,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-e55b3ab661f828c1",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 310,
+        "y": 110,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-e7716dfc599a40f5",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1630,
+        "y": 670,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ed4342ef66af202f",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "VBAT",
+        "x": 1950,
+        "y": 1340,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-f133d28a5ebf1e80",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 990,
+        "y": 1470,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-f1dcfb839b321fb1",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 700,
+        "y": 330,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-f3a9635da1ad3308",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 350,
+        "y": 810,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-f6181d408c089417",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 570,
+        "y": 110,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-f71a85940aa204ff",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 2150,
+        "y": 1450,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-fd677f94d6f7b799",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1040,
+        "y": 1450,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ff52b7c4a73e9294",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "3V3",
+        "x": 1150,
+        "y": 950,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ff82b3f5ab233689",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "power",
+        "net": "VDD_SPI",
+        "x": 720,
+        "y": 1160,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-ffa77eead7c959ab",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "ground",
+        "net": "GND",
+        "x": 1270,
+        "y": 720,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "flag-0b23a3dca3c78b58",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "net": "AMP_CTRL",
+        "x": 900,
+        "y": 980,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "ctrl-extend",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[900,960],[900,980]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"playbookSha256":"8d29df6d5b07d4ccb04d3a095b1f418483b4399888d19dbe2e15a336bc74b04c","name":"ESP32 crystal component arrangement","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:40:01-04:00"}
+{"idx":1,"id":"crystal","status":"fail","ms":245,"error":"run \"sch modify\" exited 1: warning [bug #256]: Web 4.1.60 原理图修改曾间歇报 cmdKey，触发条件未明；失败后先 fresh sch list 核对目标字段，勿盲重试。https://github.com/zhoushoujianwork/easyeda-agent/issues/256"}

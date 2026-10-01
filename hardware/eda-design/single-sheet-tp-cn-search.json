@@ -1,0 +1,131 @@
+{
+  "id": "req_1992",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-30T00:33:51.1635679Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "间距:1mm;总PIN数:64P;工作温度:-40℃~+85℃;",
+        "footprintName": "CONN-TH_6-1734857-5",
+        "lcsc": "C4484681",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TE Connectivity(泰科电子)",
+        "manufacturerId": "6-1734857-5",
+        "name": "6-1734857-5",
+        "score": 1,
+        "symbolName": "6-1734857-5",
+        "uuid": "ebd190a3bb0c4f5393c5bf8a22d23209"
+      },
+      {
+        "description": "",
+        "footprintName": "CAP-TH_L31.5-W11.0-P27.50-D0.8-1",
+        "lcsc": "C40256878",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "",
+        "manufacturerId": "MKS4G042206B00KD00",
+        "name": "MKS4G042206B00KD00",
+        "score": 0,
+        "symbolName": "MKS4G042206B00KD00",
+        "uuid": "2f355139473f462690efc18dd9557ee8"
+      },
+      {
+        "description": "",
+        "footprintName": "WLCSP-16_L1.4-W1.4-R4-C4-P0.35-TL",
+        "lcsc": "C9900320209",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "",
+        "manufacturerId": "AW86874CSR",
+        "name": "AW86874CSR",
+        "score": 0,
+        "symbolName": "AW86874CSR",
+        "uuid": "1d3d0f732df74ed4b4cfe48aa8b1a640"
+      },
+      {
+        "description": "",
+        "footprintName": "WIRELM-SMD_BL-M8852BS2",
+        "lcsc": "C20616028",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "",
+        "manufacturerId": "BL-M8852BS2",
+        "name": "BL-M8852BS2",
+        "score": 0,
+        "symbolName": "BL-M8852BS2",
+        "uuid": "559c4fb4769d4e16a620aa0f37a1f198"
+      },
+      {
+        "description": "24位总线模拟开关",
+        "footprintName": "TSSOP-56_L14.0-W6.1-P0.50-LS8.1-BL",
+        "lcsc": "C7445",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "",
+        "manufacturerId": "PI5C16211A",
+        "name": "PI5C16211A",
+        "score": 0,
+        "symbolName": "PI5C16211A",
+        "uuid": "9ca482c3d3274fb9a44495a76a91bfe5"
+      },
+      {
+        "description": "VFD：12位，，条状，无吸嘴，高亮度VFD屏，SSOT 璞丰光电。产品工艺以及技术全部采用原三星VFD生产要求。广泛应用于CD，VCD，DVD，功放；冰箱，微波炉，洗衣机，空调，抽油烟机；汽车时钟，电子秤，收款机，加油机，电力设备，通信设备，卫星接收机等。",
+        "footprintName": "VFD-TH_41P-HNA-12SS62",
+        "lcsc": "C139973",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "SSOT(上海璞丰)",
+        "manufacturerId": "HNV-12SS62",
+        "name": "HNV-12SS62",
+        "score": 0,
+        "symbolName": "HNV-12SS62",
+        "uuid": "54d6a5fc91894640b684374b98a940bd"
+      },
+      {
+        "description": "类型:-;工作电压(DC):3V~5.5V;开关频率:30MHz;通道数:16;输出电压:17V;输出电流:80mA;调光:-;拓扑结构:-;",
+        "footprintName": "HTSSOP-32_L11.0-W6.1-P0.65-LS8.1-BL-EP-4",
+        "lcsc": "C3191128",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TI(德州仪器)",
+        "manufacturerId": "TLC5923DAPG4",
+        "name": "TLC5923DAPG4",
+        "score": 0,
+        "symbolName": "TLC5923DAPG4",
+        "uuid": "b870123b4cf34db1959ca92955bbae3d"
+      },
+      {
+        "description": "类型:-;工作电压(DC):3V~5.5V;开关频率:30MHz;通道数:16;输出电压:-;输出电流:80mA;拓扑结构:-;",
+        "footprintName": "HTSSOP-32_L11.0-W6.1-P0.65-LS8.1-BL-EP-4",
+        "lcsc": "C3191127",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "TI(德州仪器)",
+        "manufacturerId": "TLC5924DAPRG4",
+        "name": "TLC5924DAPRG4",
+        "score": 0,
+        "symbolName": "TLC5924DAPRG4",
+        "uuid": "ca556d94db454e12b3ddd0fe3a22198b"
+      }
+    ],
+    "count": 8,
+    "query": "测试点 1mm"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 2611,
+  "seqAbandoned": 11,
+  "abandonedIds": [
+    "req_186",
+    "req_227",
+    "req_241",
+    "req_247",
+    "req_319",
+    "req_324",
+    "req_334",
+    "req_741",
+    "req_772",
+    "req_956",
+    "req_961"
+  ]
+}

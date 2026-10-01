@@ -1,0 +1,94 @@
+{
+  "steps": [
+    {
+      "flags": {
+        "net": "SYS_SW",
+        "points": "[[950,500],[950,525]]",
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch wire",
+      "id": "adc-supply"
+    },
+    {
+      "flags": {
+        "y": 525,
+        "net": "SYS_SW",
+        "doc": "2a0b6c4d73111128",
+        "kind": "power",
+        "x": 950
+      },
+      "run": "sch netflag",
+      "id": "adc-supply-flag"
+    },
+    {
+      "flags": {
+        "net": "SYS_ADC",
+        "points": "[[950,460],[950,380]]",
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch wire",
+      "id": "adc-divider"
+    },
+    {
+      "flags": {
+        "net": "SYS_ADC",
+        "points": "[[950,420],[1050,420],[1050,380]]",
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch wire",
+      "id": "adc-filter"
+    },
+    {
+      "flags": {
+        "net": "SYS_ADC",
+        "points": "[[1050,420],[1100,420]]",
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch wire",
+      "id": "adc-output"
+    },
+    {
+      "flags": {
+        "y": 420,
+        "net": "SYS_ADC",
+        "doc": "2a0b6c4d73111128",
+        "kind": "netport",
+        "x": 1100
+      },
+      "run": "sch netflag",
+      "id": "adc-output-flag"
+    },
+    {
+      "flags": {
+        "net": "GND",
+        "points": "[[950,340],[950,310],[1050,310],[1050,340]]",
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch wire",
+      "id": "adc-ground-bus"
+    },
+    {
+      "flags": {
+        "y": 310,
+        "net": "GND",
+        "doc": "2a0b6c4d73111128",
+        "kind": "gnd",
+        "x": 950
+      },
+      "run": "sch netflag",
+      "id": "adc-ground-flag"
+    },
+    {
+      "flags": {
+        "doc": "2a0b6c4d73111128"
+      },
+      "run": "sch save",
+      "id": "save"
+    }
+  ],
+  "meta": {
+    "name": "Supply ADC divider and filter wiring",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "version": 1
+}

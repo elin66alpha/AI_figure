@@ -1,0 +1,59 @@
+{
+  "id": "req_435",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T22:43:11.1882304Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "一体成型电感，功率电感，合金电感，贴片电感.公司通过ISO90001:2015和IATF16949:2016体系认证，产品主要应用于：汽车电子(车灯、车机屏、BMS、自动驾驶控制模块等)、电脑主板(台式、笔记本、平板)、显卡、交换机、路由器、电视机、显示器、音箱、手机、通讯基站、各种机器设备控制板等。",
+        "footprintName": "IND-SMD_L7.1-W6.6_DH0618H-R22M",
+        "lcsc": "C41407005",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "DH(德鸿感应)",
+        "manufacturerId": "DH0618H-R22M",
+        "name": "DH0618H-R22M",
+        "score": 3,
+        "symbolName": "DH0618H-R22M",
+        "uuid": "d2b217af64814a87966a8e428d6a1268"
+      },
+      {
+        "description": "电感值:1uH;精度:±20%;额定电流:7A;饱和电流(Isat):14A;",
+        "footprintName": "IND-SMD_L7.1-W6.6_DH0618H-R22M",
+        "lcsc": "C49308513",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "MetalLions(美铼)",
+        "manufacturerId": "MMPC0618-1R0MT",
+        "name": "MMPC0618-1R0MT",
+        "score": 2,
+        "symbolName": "MMPC0618-1R0MT",
+        "uuid": "6b9f5e065d144481ba59e67715797874",
+        "value": "1uH"
+      },
+      {
+        "description": "一体成型电感，功率电感，合金电感，贴片电感.公司通过ISO90001:2015和IATF16949:2016体系认证，产品主要应用于：汽车电子(车灯、车机屏、BMS、自动驾驶控制模块等)、电脑主板(台式、笔记本、平板)、显卡、交换机、路由器、电视机、显示器、音箱、手机、通讯基站、各种机器设备控制板等。",
+        "footprintName": "IND-SMD_L7.1-W6.6_DH0618H-R22M",
+        "lcsc": "C41407083",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "DH(德鸿感应)",
+        "manufacturerId": "DH0630H-R10M",
+        "name": "DH0630H-R10M",
+        "score": 2,
+        "symbolName": "DH0630H-R10M",
+        "uuid": "3d79c18c4f9247ef8db2cc74f3379398"
+      }
+    ],
+    "count": 3,
+    "query": "DH0618H"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "1033ffb1e56e4117bae9e9d76f07d88d",
+    "documentType": "footprint",
+    "tabId": "1033ffb1e56e4117bae9e9d76f07d88d@2cb3ad867dfa4740a0fbae81ea348a21"
+  },
+  "seq": 497,
+  "seqAbandoned": 0
+}

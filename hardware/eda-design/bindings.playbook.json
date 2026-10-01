@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "run": "sch modify",
+      "id": "bind-U1",
+      "flags": {
+        "id": "f1bb49ca1b50dde7",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-U1.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-U2",
+      "flags": {
+        "id": "791b8f29210f76ed",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-U2.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-U3",
+      "flags": {
+        "id": "eb3c17de573cbecc",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-U3.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-U4",
+      "flags": {
+        "id": "180e4f846c566c7a",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-U4.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-U5",
+      "flags": {
+        "id": "26f813f62e5681eb",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-U5.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-J1",
+      "flags": {
+        "id": "ec98d27829055eaf",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-J1.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-Y1",
+      "flags": {
+        "id": "9a15cdd3e3c72d60",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-Y1.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-C1",
+      "flags": {
+        "id": "62d0d2ea3bd1a622",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-C1.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-C2",
+      "flags": {
+        "id": "e984f5e66136d6ce",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-C2.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-C3",
+      "flags": {
+        "id": "a27a1a32a78b9df7",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-C3.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-R1",
+      "flags": {
+        "id": "0fe8688564904a24",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-R1.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-R2",
+      "flags": {
+        "id": "0ea996b6b87a0575",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-R2.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-C4",
+      "flags": {
+        "id": "4be9b9a57c245a93",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-C4.json"
+      }
+    },
+    {
+      "run": "sch modify",
+      "id": "bind-C5",
+      "flags": {
+        "id": "2940808446b8e8cb",
+        "patch-file": "D:\\DATA\\重要项目\\AI_figure\\hardware\\eda-design\\binding-C5.json"
+      }
+    },
+    {
+      "id": "save",
+      "run": "sch save"
+    }
+  ],
+  "meta": {
+    "project": "8c5d0d86032348a0a6c85102fe97607e",
+    "doc": "98cfe13509bc1f5c",
+    "name": "Bind canonical design identities"
+  }
+}

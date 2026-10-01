@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "run": "sch place",
+      "id": "place-U1",
+      "flags": {
+        "x": 500,
+        "uuid": "b0f5c7f94afd4c96bc29bb504fcc996d",
+        "y": 500,
+        "designator": "U1",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-U2",
+      "flags": {
+        "x": 170,
+        "uuid": "94d943a9c23e462fba23e4484244eabb",
+        "y": 660,
+        "designator": "U2",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-U3",
+      "flags": {
+        "x": 170,
+        "uuid": "695fdfd2bb434cb78768d65bb6d49e72",
+        "y": 430,
+        "designator": "U3",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-U4",
+      "flags": {
+        "x": 850,
+        "uuid": "690ced618d6440b481eddb3b2a7dea1e",
+        "y": 660,
+        "designator": "U4",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-U5",
+      "flags": {
+        "x": 850,
+        "uuid": "99449cc6029d4df2a83a0ec13caf5dda",
+        "y": 410,
+        "designator": "U5",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-J1",
+      "flags": {
+        "x": 170,
+        "uuid": "74d31c19993b4b9581f3175a7da4b280",
+        "y": 230,
+        "designator": "J1",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "run": "sch place",
+      "id": "place-Y1",
+      "flags": {
+        "x": 530,
+        "uuid": "e6027fcbca274028b528cf14626207f5",
+        "y": 220,
+        "designator": "Y1",
+        "lib": "0819f05c4eef4c71ace90d822a990e87"
+      }
+    },
+    {
+      "id": "save-core",
+      "run": "sch save"
+    }
+  ],
+  "meta": {
+    "project": "8c5d0d86032348a0a6c85102fe97607e",
+    "doc": "98cfe13509bc1f5c",
+    "name": "AI_figure core parts initial placement"
+  }
+}

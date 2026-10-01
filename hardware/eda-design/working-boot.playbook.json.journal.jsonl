@@ -1,0 +1,15 @@
+{"playbookSha256":"8f1a657ea7338303e618c8d6b5165a654c6651117747ea7a7039c71b9a667514","name":"ESP32 bootstrap pullups and BOOT button","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:23:41-04:00"}
+{"idx":1,"id":"position-R12","status":"ok","ms":482}
+{"idx":2,"id":"position-SW3","status":"ok","ms":544}
+{"idx":3,"id":"position-R10","status":"ok","ms":597}
+{"idx":4,"id":"position-R11","status":"ok","ms":538}
+{"idx":5,"id":"boot-button-wire","status":"ok","ms":403}
+{"idx":6,"id":"boot-button-ground","status":"ok","ms":1957}
+{"idx":7,"id":"power-R12","status":"ok","ms":2303}
+{"idx":8,"id":"port-R12","status":"ok","ms":2990}
+{"idx":9,"id":"mcu-BOOT_GPIO9","status":"ok","ms":1484}
+{"idx":10,"id":"power-R10","status":"ok","ms":3324}
+{"idx":11,"id":"port-R10","status":"ok","ms":2078}
+{"idx":12,"id":"mcu-BOOT_GPIO2","status":"ok","ms":1779}
+{"idx":13,"id":"power-R11","status":"ok","ms":2886}
+{"idx":14,"id":"port-R11","status":"fail","ms":33672,"error":"run \"sch connect\" exited 1: Connection not confirmed. Read back wires, marker and pin direction before retrying; existing net membership alone is not proof of this write."}

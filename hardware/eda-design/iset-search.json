@@ -1,0 +1,47 @@
+{
+  "id": "req_42",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-09-29T22:28:00.324221Z",
+  "ok": true,
+  "result": {
+    "components": [
+      {
+        "description": "电阻类型:厚膜电阻;阻值:2.49kΩ;精度:±1%;功率:100mW;最大工作电压:75V;温度系数:±100ppm/℃;",
+        "footprintName": "R0603",
+        "lcsc": "C22908",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "manufacturerId": "0603WAF2491T5E",
+        "name": "0603WAF2491T5E",
+        "score": 3,
+        "symbolName": "0603WAF2491T5E",
+        "uuid": "bfe7ac1bbe254943a8d8ec521ec85247",
+        "value": "2.49kΩ"
+      },
+      {
+        "description": "",
+        "footprintName": "R0603",
+        "lcsc": "C2980797",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "manufacturer": "",
+        "manufacturerId": "0603WAF2491T5E",
+        "name": "0603WAF2491T5E_C2980797",
+        "score": 3,
+        "symbolName": "0603WAF2491T5E_C2980797",
+        "uuid": "c7718bb6eefc47479803a352861a4758"
+      }
+    ],
+    "count": 2,
+    "query": "0603WAF2491T5E"
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 52,
+  "seqAbandoned": 0
+}

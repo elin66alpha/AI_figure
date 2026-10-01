@@ -1,0 +1,4 @@
+sch bridge-check: 1 problem tree(s) — 0 wire-bridge(s) (real short), 0 orphan-stub(s) (dangling stub), 1 orphan-flag(s) (flag on no wire), 0 orphan-tree(s) (tree touching no pin) across 130 wire tree(s)
+  WARN   orphan-flag        ORPHAN_FLAG  nets=[SYS_SW]
+          flags: 070fea1fb2f80724
+→ orphan-flag (孤儿标志): a netflag/netport sits on NO wire — delete it (sch prim-delete <flagId>) before a new wire inherits its stray net name

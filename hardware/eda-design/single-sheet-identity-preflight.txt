@@ -1,0 +1,22 @@
+playbook "restore-identities" — 20 step(s), project=8c5d0d86032348a0a6c85102fe97607e
+  [1/20] id-U2            run     sch modify
+  [2/20] id-L1            run     sch modify
+  [3/20] id-C6            run     sch modify
+  [4/20] id-C7            run     sch modify
+  [5/20] id-C8            run     sch modify
+  [6/20] id-R3            run     sch modify
+  [7/20] id-J2            run     sch modify
+  [8/20] id-SW1           run     sch modify
+  [9/20] id-J1            run     sch modify
+  [10/20] id-R4            run     sch modify
+  [11/20] id-R5            run     sch modify
+  [12/20] id-R6            run     sch modify
+  [13/20] id-R7            run     sch modify
+  [14/20] id-D1            run     sch modify
+  [15/20] id-D2            run     sch modify
+  [16/20] id-F1            run     sch modify
+  [17/20] id-R8            run     sch modify
+  [18/20] id-R14           run     sch modify
+  [19/20] id-R15           run     sch modify
+  [20/20] id-C19           run     sch modify
+dry-run: preflight passed, nothing executed

@@ -1,0 +1,41 @@
+{
+  "status": "found",
+  "host": "127.0.0.1",
+  "ports": "60832-60841",
+  "found": {
+    "port": 60832,
+    "service": "easyeda-agent",
+    "raw": {
+      "pid": 22060,
+      "service": "easyeda-agent",
+      "version": "v1.8.1",
+      "status": "ok",
+      "port": 60832,
+      "windows": []
+    }
+  },
+  "versionGate": {
+    "cli": "v1.8.1",
+    "daemon": "v1.8.1",
+    "verdict": "ok",
+    "findings": [
+      {
+        "component": "daemon",
+        "version": "v1.8.1",
+        "severity": "ok",
+        "reason": "与 CLI 同版 v1.8.1"
+      }
+    ]
+  },
+  "hostCompatibility": {
+    "baseline": "4.0.0",
+    "recommended": "4.1.60",
+    "verdict": "skipped"
+  },
+  "checked": [
+    {
+      "port": 60832,
+      "status": "ok"
+    }
+  ]
+}

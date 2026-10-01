@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "final-visual-fixes",
+    "project": "8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "steps": [
+    {
+      "id": "s0",
+      "run": "sch prim-delete",
+      "flags": {
+        "ids": "6fcf6345e2c72e14,cc3cd7f5ae97bc4f,a9b961b0bedaefbf,b435507a7bae0f90",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s1",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[970,1300],[970,1330],[940,1330]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s2",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "net": "XTAL_P",
+        "x": 940,
+        "y": 1330,
+        "rotation": 180,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s3",
+      "run": "sch wire",
+      "flags": {
+        "points": "[[2190,1235],[2190,1200],[2210,1200]]",
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s4",
+      "run": "sch netflag",
+      "flags": {
+        "kind": "netport",
+        "net": "SYS",
+        "x": 2210,
+        "y": 1200,
+        "rotation": 0,
+        "doc": "98cfe13509bc1f5c"
+      }
+    },
+    {
+      "id": "s5",
+      "run": "sch titleblock",
+      "flags": {
+        "data": "{\"Name\": {\"showTitle\": false, \"showValue\": false}, \"Description\": {\"showTitle\": false, \"showValue\": false}, \"Drawed\": {\"showTitle\": false, \"showValue\": false}}",
+        "doc": "98cfe13509bc1f5c"
+      }
+    }
+  ]
+}

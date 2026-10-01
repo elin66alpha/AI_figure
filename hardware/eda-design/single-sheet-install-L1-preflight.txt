@@ -1,0 +1,4 @@
+playbook "install-L1" — 2 step(s), project=8c5d0d86032348a0a6c85102fe97607e
+  [1/2] remove-old-L1    run     sch prim-delete [confirm]
+  [2/2] install-standard-L1 run     sch modify
+dry-run: preflight passed, nothing executed

@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "Bind measured power parts",
+    "project": "8c5d0d86032348a0a6c85102fe97607e",
+    "doc": "2a0b6c4d73111128"
+  },
+  "steps": [
+    {
+      "id": "bind-U2",
+      "run": "sch modify",
+      "flags": {
+        "id": "692439a77ae82329",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-U2.json"
+      }
+    },
+    {
+      "id": "bind-L1",
+      "run": "sch modify",
+      "flags": {
+        "id": "3904ba86067437aa",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-L1.json"
+      }
+    },
+    {
+      "id": "bind-C6",
+      "run": "sch modify",
+      "flags": {
+        "id": "aba44f814b61a089",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-C6.json"
+      }
+    },
+    {
+      "id": "bind-C7",
+      "run": "sch modify",
+      "flags": {
+        "id": "91bd1f14c6ae8125",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-C7.json"
+      }
+    },
+    {
+      "id": "bind-C8",
+      "run": "sch modify",
+      "flags": {
+        "id": "d019ec40d226897b",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-C8.json"
+      }
+    },
+    {
+      "id": "bind-R3",
+      "run": "sch modify",
+      "flags": {
+        "id": "16b5743531817c1a",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R3.json"
+      }
+    },
+    {
+      "id": "bind-J2",
+      "run": "sch modify",
+      "flags": {
+        "id": "6d253fa4c28874f5",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-J2.json"
+      }
+    },
+    {
+      "id": "bind-SW1",
+      "run": "sch modify",
+      "flags": {
+        "id": "dd91157269d98bc8",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-SW1.json"
+      }
+    },
+    {
+      "id": "bind-J1",
+      "run": "sch modify",
+      "flags": {
+        "id": "3f62dfd0272150c8",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-J1.json"
+      }
+    },
+    {
+      "id": "bind-R4",
+      "run": "sch modify",
+      "flags": {
+        "id": "8869b749c5273d7f",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R4.json"
+      }
+    },
+    {
+      "id": "bind-R5",
+      "run": "sch modify",
+      "flags": {
+        "id": "901bbef3e63193d5",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R5.json"
+      }
+    },
+    {
+      "id": "bind-R6",
+      "run": "sch modify",
+      "flags": {
+        "id": "1a1a72c6bbb61de6",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R6.json"
+      }
+    },
+    {
+      "id": "bind-R7",
+      "run": "sch modify",
+      "flags": {
+        "id": "0a2eb76411a6e84a",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R7.json"
+      }
+    },
+    {
+      "id": "bind-D1",
+      "run": "sch modify",
+      "flags": {
+        "id": "06393d82b8f2272c",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-D1.json"
+      }
+    },
+    {
+      "id": "bind-D2",
+      "run": "sch modify",
+      "flags": {
+        "id": "aec52ef9375b4c34",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-D2.json"
+      }
+    },
+    {
+      "id": "bind-F1",
+      "run": "sch modify",
+      "flags": {
+        "id": "a00f2c9d7ed890d1",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-F1.json"
+      }
+    },
+    {
+      "id": "bind-R8",
+      "run": "sch modify",
+      "flags": {
+        "id": "e62128663194a021",
+        "patch-file": "D:\\DATA\\\u91cd\u8981\u9879\u76ee\\AI_figure\\hardware\\eda-design\\power-binding-R8.json"
+      }
+    }
+  ]
+}

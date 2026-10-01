@@ -1,0 +1,5069 @@
+{
+  "schemaVersion": 1,
+  "operation": "schematic.layout-plan",
+  "algorithmVersion": "v1.8.1",
+  "scope": "offline-layout-only",
+  "status": "failed",
+  "phase": "solve",
+  "zones": true,
+  "sourceSha256": "c02d0dbf9eb17475c2696fed5fd11d6eb4ea9dd05d427d7feb7bf1f094f1c58e",
+  "error": "unresolved: module mcu: local search failed after 1000000 candidates, 17 backtracks, 6 relocation attempts (branch limit 1000000; no capacity proof): candidate search budget exhausted: last observed terminal conflict: net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+  "failureClass": "candidate-budget-exhausted",
+  "diagnostics": [
+    {
+      "kind": "search-failure",
+      "globalInfeasibilityProven": false,
+      "candidatesUsed": 1000000,
+      "remainingCandidates": 0,
+      "search": {
+        "strategy": "checkpoint-local-repair-v1",
+        "backtracks": 17,
+        "repairAttempts": 6,
+        "targetedRelocations": 148,
+        "relocationAttempts": [
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 14218
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 535,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 2091,
+            "regenerationCandidatesUsed": 2091
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 15695
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 629,
+            "regenerationCandidatesUsed": 629
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 13038
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 3286,
+            "regenerationCandidatesUsed": 3286
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 12818
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 3503,
+            "regenerationCandidatesUsed": 3503
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 13104
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 738,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 3205,
+            "regenerationCandidatesUsed": 3205
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 15695
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 629,
+            "regenerationCandidatesUsed": 629
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8071
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8071
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 30,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4266,
+            "regenerationCandidatesUsed": 4266
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 12950
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 3374,
+            "regenerationCandidatesUsed": 3374
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8168
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 404,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8141,
+            "regenerationCandidatesUsed": 8141
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 15695
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 629,
+            "regenerationCandidatesUsed": 629
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 13582
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 2742,
+            "regenerationCandidatesUsed": 2742
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 12818
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 3500,
+            "regenerationCandidatesUsed": 3500
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7541
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 535,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8768,
+            "regenerationCandidatesUsed": 8768
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7664
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8660,
+            "regenerationCandidatesUsed": 8660
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 30,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5986,
+            "regenerationCandidatesUsed": 5986
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8161
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8163,
+            "regenerationCandidatesUsed": 8163
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -30,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5980,
+            "regenerationCandidatesUsed": 5980
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7339
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 720,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8970,
+            "regenerationCandidatesUsed": 8970
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7596
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8728,
+            "regenerationCandidatesUsed": 8728
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 30,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5986,
+            "regenerationCandidatesUsed": 5986
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7920
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8404,
+            "regenerationCandidatesUsed": 8404
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -30,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5986,
+            "regenerationCandidatesUsed": 5986
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7303
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7917
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 404,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -30,
+            "dy": 0,
+            "expandedNodes": 447,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5167,
+            "regenerationCandidatesUsed": 5167
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7936
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8388,
+            "regenerationCandidatesUsed": 8388
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 10,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 15,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 20,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 25,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 30,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5986,
+            "regenerationCandidatesUsed": 5986
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 8192
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 16384,
+            "regenerationCandidatesUsed": 14407
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1917,
+            "regenerationCandidatesUsed": 1917
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -10,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -15,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -20,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "final-validation-failed",
+            "message": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+            "regenerationCandidateQuota": 8192,
+            "regenerationCandidatesUsed": 7211
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -25,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 4096,
+            "regenerationCandidatesUsed": 4096
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -30,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 5976,
+            "regenerationCandidatesUsed": 5976
+          },
+          {
+            "componentId": "cmp-C10",
+            "componentRef": "C10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1092,
+            "regenerationCandidatesUsed": 1092
+          },
+          {
+            "componentId": "cmp-C16",
+            "componentRef": "C16",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C16"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1093,
+            "regenerationCandidatesUsed": 1093
+          },
+          {
+            "componentId": "cmp-C9",
+            "componentRef": "C9",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-C9"
+            ],
+            "dx": 0,
+            "dy": 5,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1093,
+            "regenerationCandidatesUsed": 1093
+          },
+          {
+            "componentId": "cmp-R10",
+            "componentRef": "R10",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R10"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1093,
+            "regenerationCandidatesUsed": 1093
+          },
+          {
+            "componentId": "cmp-R11",
+            "componentRef": "R11",
+            "trigger": "naming-island",
+            "group": [
+              "cmp-R11"
+            ],
+            "dx": -5,
+            "dy": 0,
+            "expandedNodes": 0,
+            "result": "candidate-budget-exhausted",
+            "message": "candidate search budget exhausted",
+            "regenerationCandidateQuota": 1094,
+            "regenerationCandidatesUsed": 1094
+          }
+        ],
+        "movedComponents": [],
+        "branchLimit": 1000000,
+        "conflictPasses": 1,
+        "skippedCheckpoints": 0,
+        "placementFailures": 0,
+        "dependencyShellJumps": 0,
+        "checkpointAlternatives": {
+          "cmp-C10": 1,
+          "cmp-C11": 1,
+          "cmp-C12": 1,
+          "cmp-C13": 1,
+          "cmp-C14": 1,
+          "cmp-C16": 1,
+          "cmp-C9": 1,
+          "cmp-R10": 3,
+          "cmp-R11": 7
+        }
+      }
+    },
+    {
+      "kind": "terminal-conflict",
+      "reason": "net MIC_SD has no safe naming lead for island at pin 12 (-75,-40)",
+      "preRegenerationLayout": {
+        "schemaVersion": 0,
+        "documentId": "",
+        "placements": [
+          {
+            "primitiveId": "",
+            "designator": "U1",
+            "value": "CPU内核:RISC-V;CPU最大主频:160MHz;CPU位数:32 Bit;",
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -65.5,
+              "minY": -90.5,
+              "maxX": 65.5,
+              "maxY": 90.5
+            },
+            "textBboxes": [
+              {
+                "minX": -65,
+                "minY": 90,
+                "maxX": -53.814697265625,
+                "maxY": 100
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "LNA_IN",
+                "net": "",
+                "x": -75,
+                "y": 70,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "VDD3P3",
+                "net": "3V3",
+                "x": -75,
+                "y": 60,
+                "rotation": 180
+              },
+              {
+                "number": "3",
+                "name": "VDD3P3",
+                "net": "3V3",
+                "x": -75,
+                "y": 50,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "XTAL_32K_P",
+                "net": "",
+                "x": -75,
+                "y": 40,
+                "rotation": 180
+              },
+              {
+                "number": "5",
+                "name": "XTAL_32K_N",
+                "net": "SYS_ADC",
+                "x": -75,
+                "y": 30,
+                "rotation": 180
+              },
+              {
+                "number": "6",
+                "name": "GPIO2",
+                "net": "BOOT_GPIO2",
+                "x": -75,
+                "y": 20,
+                "rotation": 180
+              },
+              {
+                "number": "7",
+                "name": "CHIP_EN",
+                "net": "CHIP_EN",
+                "x": -75,
+                "y": 10,
+                "rotation": 180
+              },
+              {
+                "number": "8",
+                "name": "GPIO3",
+                "net": "REC_KEY",
+                "x": -75,
+                "y": 0,
+                "rotation": 180
+              },
+              {
+                "number": "9",
+                "name": "MTMS",
+                "net": "I2S_BCLK",
+                "x": -75,
+                "y": -10,
+                "rotation": 180
+              },
+              {
+                "number": "10",
+                "name": "MTDI",
+                "net": "I2S_WS",
+                "x": -75,
+                "y": -20,
+                "rotation": 180
+              },
+              {
+                "number": "11",
+                "name": "VDD3P3_RTC",
+                "net": "3V3",
+                "x": -75,
+                "y": -30,
+                "rotation": 180
+              },
+              {
+                "number": "12",
+                "name": "MTCK",
+                "net": "MIC_SD",
+                "x": -75,
+                "y": -40,
+                "rotation": 180
+              },
+              {
+                "number": "13",
+                "name": "MTDO",
+                "net": "AMP_DIN",
+                "x": -75,
+                "y": -50,
+                "rotation": 180
+              },
+              {
+                "number": "14",
+                "name": "GPIO8",
+                "net": "LED_GPIO8",
+                "x": -75,
+                "y": -60,
+                "rotation": 180
+              },
+              {
+                "number": "15",
+                "name": "GPIO9",
+                "net": "BOOT_GPIO9",
+                "x": -75,
+                "y": -70,
+                "rotation": 180
+              },
+              {
+                "number": "16",
+                "name": "GPIO10",
+                "net": "AMP_CTRL",
+                "x": -75,
+                "y": -80,
+                "rotation": 180
+              },
+              {
+                "number": "17",
+                "name": "VDD3P3_CPU",
+                "net": "3V3",
+                "x": 75,
+                "y": -80,
+                "rotation": 0
+              },
+              {
+                "number": "18",
+                "name": "VDD_SPI",
+                "net": "VDD_SPI",
+                "x": 75,
+                "y": -70,
+                "rotation": 0
+              },
+              {
+                "number": "19",
+                "name": "SPIHD",
+                "net": "",
+                "x": 75,
+                "y": -60,
+                "rotation": 0
+              },
+              {
+                "number": "20",
+                "name": "SPIWP",
+                "net": "",
+                "x": 75,
+                "y": -50,
+                "rotation": 0
+              },
+              {
+                "number": "21",
+                "name": "SPICS0",
+                "net": "",
+                "x": 75,
+                "y": -40,
+                "rotation": 0
+              },
+              {
+                "number": "22",
+                "name": "SPICLK",
+                "net": "",
+                "x": 75,
+                "y": -30,
+                "rotation": 0
+              },
+              {
+                "number": "23",
+                "name": "SPID",
+                "net": "",
+                "x": 75,
+                "y": -20,
+                "rotation": 0
+              },
+              {
+                "number": "24",
+                "name": "SPIQ",
+                "net": "",
+                "x": 75,
+                "y": -10,
+                "rotation": 0
+              },
+              {
+                "number": "25",
+                "name": "GPIO18",
+                "net": "USB_DM_MCU",
+                "x": 75,
+                "y": 0,
+                "rotation": 0
+              },
+              {
+                "number": "26",
+                "name": "GPIO19",
+                "net": "USB_DP_MCU",
+                "x": 75,
+                "y": 10,
+                "rotation": 0
+              },
+              {
+                "number": "27",
+                "name": "U0RXD",
+                "net": "UART_RX",
+                "x": 75,
+                "y": 20,
+                "rotation": 0
+              },
+              {
+                "number": "28",
+                "name": "U0TXD",
+                "net": "UART_TX",
+                "x": 75,
+                "y": 30,
+                "rotation": 0
+              },
+              {
+                "number": "29",
+                "name": "XTAL_N",
+                "net": "XTAL_N",
+                "x": 75,
+                "y": 40,
+                "rotation": 0
+              },
+              {
+                "number": "30",
+                "name": "XTAL_P",
+                "net": "XTAL_P",
+                "x": 75,
+                "y": 50,
+                "rotation": 0
+              },
+              {
+                "number": "31",
+                "name": "VDDA",
+                "net": "3V3",
+                "x": 75,
+                "y": 60,
+                "rotation": 0
+              },
+              {
+                "number": "32",
+                "name": "VDDA",
+                "net": "3V3",
+                "x": 75,
+                "y": 70,
+                "rotation": 0
+              },
+              {
+                "number": "33",
+                "name": "EP",
+                "net": "GND",
+                "x": 75,
+                "y": 80,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C11",
+            "value": "100nF",
+            "x": 105,
+            "y": -80,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": -88.5,
+              "maxX": 115.5,
+              "maxY": -71.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": -70,
+                "maxX": 110.4022216796875,
+                "maxY": -60
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 85,
+                "y": -80,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": -80,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C12",
+            "value": "100nF",
+            "x": 105,
+            "y": 60,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": 51.5,
+              "maxX": 115.5,
+              "maxY": 68.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": 70,
+                "maxX": 111.0516357421875,
+                "maxY": 80
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 85,
+                "y": 60,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": 60,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C16",
+            "value": "10uF",
+            "x": -95,
+            "y": 65,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -105.5,
+              "minY": 56.5,
+              "maxX": -84.5,
+              "maxY": 73.5
+            },
+            "textBboxes": [
+              {
+                "minX": -105,
+                "minY": 75,
+                "maxX": -88.9483642578125,
+                "maxY": 85
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -75,
+                "y": 65,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -115,
+                "y": 65,
+                "rotation": 180
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C10",
+            "value": "100nF",
+            "x": -115,
+            "y": -30,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -125.5,
+              "minY": -38.5,
+              "maxX": -104.5,
+              "maxY": -21.5
+            },
+            "textBboxes": [
+              {
+                "minX": -125,
+                "minY": -20,
+                "maxX": -108.9483642578125,
+                "maxY": -10
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -135,
+                "y": -30,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -95,
+                "y": -30,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C13",
+            "value": "100nF",
+            "x": 100,
+            "y": 95,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 89.5,
+              "minY": 86.5,
+              "maxX": 110.5,
+              "maxY": 103.5
+            },
+            "textBboxes": [
+              {
+                "minX": 90,
+                "minY": 105,
+                "maxX": 106.0516357421875,
+                "maxY": 115
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 80,
+                "y": 95,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 120,
+                "y": 95,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C14",
+            "value": "1uF",
+            "x": 105,
+            "y": -45,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": -53.5,
+              "maxX": 115.5,
+              "maxY": -36.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": -35,
+                "maxX": 111.0516357421875,
+                "maxY": -25
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "VDD_SPI",
+                "x": 85,
+                "y": -45,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": -45,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C9",
+            "value": "100nF",
+            "x": -85,
+            "y": 105,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -95.5,
+              "minY": 96.5,
+              "maxX": -74.5,
+              "maxY": 113.5
+            },
+            "textBboxes": [
+              {
+                "minX": -95,
+                "minY": 115,
+                "maxX": -83.814697265625,
+                "maxY": 125
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -105,
+                "y": 105,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -65,
+                "y": 105,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "R10",
+            "value": "10kΩ",
+            "x": -115,
+            "y": 20,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -125.5,
+              "minY": 15.5,
+              "maxX": -104.5,
+              "maxY": 24.5
+            },
+            "textBboxes": [
+              {
+                "minX": -125,
+                "minY": 25,
+                "maxX": -108.9483642578125,
+                "maxY": 35
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "3V3",
+                "x": -95,
+                "y": 20,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "BOOT_GPIO2",
+                "x": -135,
+                "y": 20,
+                "rotation": 180
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "R11",
+            "value": "10kΩ",
+            "x": -110,
+            "y": -60,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -120.5,
+              "minY": -64.5,
+              "maxX": -99.5,
+              "maxY": -55.5
+            },
+            "textBboxes": [
+              {
+                "minX": -120,
+                "minY": -55,
+                "maxX": -104.5977783203125,
+                "maxY": -45
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "3V3",
+                "x": -90,
+                "y": -60,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "LED_GPIO8",
+                "x": -130,
+                "y": -60,
+                "rotation": 180
+              }
+            ]
+          }
+        ],
+        "wires": [
+          {
+            "net": "3V3",
+            "points": [
+              [
+                75,
+                -80
+              ],
+              [
+                85,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                70
+              ],
+              [
+                80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                75,
+                60
+              ],
+              [
+                80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                60
+              ],
+              [
+                85,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                85
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                80,
+                85
+              ],
+              [
+                80,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                80,
+                80
+              ],
+              [
+                75,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                55
+              ],
+              [
+                -120,
+                65
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                65
+              ],
+              [
+                -115,
+                65
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -40
+              ],
+              [
+                -145,
+                -40
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -145,
+                -40
+              ],
+              [
+                -145,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -145,
+                -30
+              ],
+              [
+                -135,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                75,
+                70
+              ],
+              [
+                80,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                70
+              ],
+              [
+                85,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                85,
+                70
+              ],
+              [
+                85,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                85,
+                105
+              ],
+              [
+                70,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                70,
+                105
+              ],
+              [
+                70,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                70,
+                95
+              ],
+              [
+                80,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                120,
+                95
+              ],
+              [
+                130,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                60
+              ],
+              [
+                130,
+                85
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                85
+              ],
+              [
+                130,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                60
+              ],
+              [
+                130,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                75,
+                -70
+              ],
+              [
+                80,
+                -70
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                80,
+                -70
+              ],
+              [
+                80,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                80,
+                -45
+              ],
+              [
+                85,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                -45
+              ],
+              [
+                130,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                -45
+              ],
+              [
+                130,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                -80
+              ],
+              [
+                125,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                60
+              ],
+              [
+                -75,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                50
+              ],
+              [
+                -80,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                55
+              ],
+              [
+                -80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                55
+              ],
+              [
+                -110,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -110,
+                55
+              ],
+              [
+                -80,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -110,
+                55
+              ],
+              [
+                -110,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -110,
+                105
+              ],
+              [
+                -105,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -75,
+                20
+              ],
+              [
+                -80,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -80,
+                20
+              ],
+              [
+                -80,
+                15
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -80,
+                15
+              ],
+              [
+                -140,
+                15
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -140,
+                15
+              ],
+              [
+                -140,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -140,
+                20
+              ],
+              [
+                -135,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -95,
+                20
+              ],
+              [
+                -90,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                20
+              ],
+              [
+                -90,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                50
+              ],
+              [
+                -85,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                50
+              ],
+              [
+                -80,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                50
+              ],
+              [
+                -75,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -75,
+                -60
+              ],
+              [
+                -80,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -80,
+                -60
+              ],
+              [
+                -80,
+                -65
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -80,
+                -65
+              ],
+              [
+                -135,
+                -65
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -135,
+                -65
+              ],
+              [
+                -135,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -135,
+                -60
+              ],
+              [
+                -130,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                -60
+              ],
+              [
+                -85,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -60
+              ],
+              [
+                -85,
+                -40
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -40
+              ],
+              [
+                -85,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -30
+              ],
+              [
+                -85,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -30
+              ],
+              [
+                -75,
+                -30
+              ]
+            ]
+          }
+        ],
+        "flags": null,
+        "expectedPinNets": null,
+        "frames": null
+      }
+    },
+    {
+      "kind": "naming-conflict",
+      "net": "MIC_SD",
+      "endpointRefs": [
+        "U1"
+      ],
+      "ownersComplete": true,
+      "globalInfeasibilityProven": false,
+      "namingLayout": {
+        "schemaVersion": 0,
+        "documentId": "",
+        "placements": [
+          {
+            "primitiveId": "",
+            "designator": "U1",
+            "value": "CPU内核:RISC-V;CPU最大主频:160MHz;CPU位数:32 Bit;",
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -65.5,
+              "minY": -90.5,
+              "maxX": 65.5,
+              "maxY": 90.5
+            },
+            "textBboxes": [
+              {
+                "minX": -65,
+                "minY": 90,
+                "maxX": -53.814697265625,
+                "maxY": 100
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "LNA_IN",
+                "net": "",
+                "x": -75,
+                "y": 70,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "VDD3P3",
+                "net": "3V3",
+                "x": -75,
+                "y": 60,
+                "rotation": 180
+              },
+              {
+                "number": "3",
+                "name": "VDD3P3",
+                "net": "3V3",
+                "x": -75,
+                "y": 50,
+                "rotation": 180
+              },
+              {
+                "number": "4",
+                "name": "XTAL_32K_P",
+                "net": "",
+                "x": -75,
+                "y": 40,
+                "rotation": 180
+              },
+              {
+                "number": "5",
+                "name": "XTAL_32K_N",
+                "net": "SYS_ADC",
+                "x": -75,
+                "y": 30,
+                "rotation": 180
+              },
+              {
+                "number": "6",
+                "name": "GPIO2",
+                "net": "BOOT_GPIO2",
+                "x": -75,
+                "y": 20,
+                "rotation": 180
+              },
+              {
+                "number": "7",
+                "name": "CHIP_EN",
+                "net": "CHIP_EN",
+                "x": -75,
+                "y": 10,
+                "rotation": 180
+              },
+              {
+                "number": "8",
+                "name": "GPIO3",
+                "net": "REC_KEY",
+                "x": -75,
+                "y": 0,
+                "rotation": 180
+              },
+              {
+                "number": "9",
+                "name": "MTMS",
+                "net": "I2S_BCLK",
+                "x": -75,
+                "y": -10,
+                "rotation": 180
+              },
+              {
+                "number": "10",
+                "name": "MTDI",
+                "net": "I2S_WS",
+                "x": -75,
+                "y": -20,
+                "rotation": 180
+              },
+              {
+                "number": "11",
+                "name": "VDD3P3_RTC",
+                "net": "3V3",
+                "x": -75,
+                "y": -30,
+                "rotation": 180
+              },
+              {
+                "number": "12",
+                "name": "MTCK",
+                "net": "MIC_SD",
+                "x": -75,
+                "y": -40,
+                "rotation": 180
+              },
+              {
+                "number": "13",
+                "name": "MTDO",
+                "net": "AMP_DIN",
+                "x": -75,
+                "y": -50,
+                "rotation": 180
+              },
+              {
+                "number": "14",
+                "name": "GPIO8",
+                "net": "LED_GPIO8",
+                "x": -75,
+                "y": -60,
+                "rotation": 180
+              },
+              {
+                "number": "15",
+                "name": "GPIO9",
+                "net": "BOOT_GPIO9",
+                "x": -75,
+                "y": -70,
+                "rotation": 180
+              },
+              {
+                "number": "16",
+                "name": "GPIO10",
+                "net": "AMP_CTRL",
+                "x": -75,
+                "y": -80,
+                "rotation": 180
+              },
+              {
+                "number": "17",
+                "name": "VDD3P3_CPU",
+                "net": "3V3",
+                "x": 75,
+                "y": -80,
+                "rotation": 0
+              },
+              {
+                "number": "18",
+                "name": "VDD_SPI",
+                "net": "VDD_SPI",
+                "x": 75,
+                "y": -70,
+                "rotation": 0
+              },
+              {
+                "number": "19",
+                "name": "SPIHD",
+                "net": "",
+                "x": 75,
+                "y": -60,
+                "rotation": 0
+              },
+              {
+                "number": "20",
+                "name": "SPIWP",
+                "net": "",
+                "x": 75,
+                "y": -50,
+                "rotation": 0
+              },
+              {
+                "number": "21",
+                "name": "SPICS0",
+                "net": "",
+                "x": 75,
+                "y": -40,
+                "rotation": 0
+              },
+              {
+                "number": "22",
+                "name": "SPICLK",
+                "net": "",
+                "x": 75,
+                "y": -30,
+                "rotation": 0
+              },
+              {
+                "number": "23",
+                "name": "SPID",
+                "net": "",
+                "x": 75,
+                "y": -20,
+                "rotation": 0
+              },
+              {
+                "number": "24",
+                "name": "SPIQ",
+                "net": "",
+                "x": 75,
+                "y": -10,
+                "rotation": 0
+              },
+              {
+                "number": "25",
+                "name": "GPIO18",
+                "net": "USB_DM_MCU",
+                "x": 75,
+                "y": 0,
+                "rotation": 0
+              },
+              {
+                "number": "26",
+                "name": "GPIO19",
+                "net": "USB_DP_MCU",
+                "x": 75,
+                "y": 10,
+                "rotation": 0
+              },
+              {
+                "number": "27",
+                "name": "U0RXD",
+                "net": "UART_RX",
+                "x": 75,
+                "y": 20,
+                "rotation": 0
+              },
+              {
+                "number": "28",
+                "name": "U0TXD",
+                "net": "UART_TX",
+                "x": 75,
+                "y": 30,
+                "rotation": 0
+              },
+              {
+                "number": "29",
+                "name": "XTAL_N",
+                "net": "XTAL_N",
+                "x": 75,
+                "y": 40,
+                "rotation": 0
+              },
+              {
+                "number": "30",
+                "name": "XTAL_P",
+                "net": "XTAL_P",
+                "x": 75,
+                "y": 50,
+                "rotation": 0
+              },
+              {
+                "number": "31",
+                "name": "VDDA",
+                "net": "3V3",
+                "x": 75,
+                "y": 60,
+                "rotation": 0
+              },
+              {
+                "number": "32",
+                "name": "VDDA",
+                "net": "3V3",
+                "x": 75,
+                "y": 70,
+                "rotation": 0
+              },
+              {
+                "number": "33",
+                "name": "EP",
+                "net": "GND",
+                "x": 75,
+                "y": 80,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C11",
+            "value": "100nF",
+            "x": 105,
+            "y": -80,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": -88.5,
+              "maxX": 115.5,
+              "maxY": -71.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": -70,
+                "maxX": 110.4022216796875,
+                "maxY": -60
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 85,
+                "y": -80,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": -80,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C12",
+            "value": "100nF",
+            "x": 105,
+            "y": 60,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": 51.5,
+              "maxX": 115.5,
+              "maxY": 68.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": 70,
+                "maxX": 111.0516357421875,
+                "maxY": 80
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 85,
+                "y": 60,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": 60,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C16",
+            "value": "10uF",
+            "x": -95,
+            "y": 65,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -105.5,
+              "minY": 56.5,
+              "maxX": -84.5,
+              "maxY": 73.5
+            },
+            "textBboxes": [
+              {
+                "minX": -105,
+                "minY": 75,
+                "maxX": -88.9483642578125,
+                "maxY": 85
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -75,
+                "y": 65,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -115,
+                "y": 65,
+                "rotation": 180
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C10",
+            "value": "100nF",
+            "x": -115,
+            "y": -30,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -125.5,
+              "minY": -38.5,
+              "maxX": -104.5,
+              "maxY": -21.5
+            },
+            "textBboxes": [
+              {
+                "minX": -125,
+                "minY": -20,
+                "maxX": -108.9483642578125,
+                "maxY": -10
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -135,
+                "y": -30,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -95,
+                "y": -30,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C13",
+            "value": "100nF",
+            "x": 100,
+            "y": 95,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 89.5,
+              "minY": 86.5,
+              "maxX": 110.5,
+              "maxY": 103.5
+            },
+            "textBboxes": [
+              {
+                "minX": 90,
+                "minY": 105,
+                "maxX": 106.0516357421875,
+                "maxY": 115
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": 80,
+                "y": 95,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 120,
+                "y": 95,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C14",
+            "value": "1uF",
+            "x": 105,
+            "y": -45,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": 94.5,
+              "minY": -53.5,
+              "maxX": 115.5,
+              "maxY": -36.5
+            },
+            "textBboxes": [
+              {
+                "minX": 95,
+                "minY": -35,
+                "maxX": 111.0516357421875,
+                "maxY": -25
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "VDD_SPI",
+                "x": 85,
+                "y": -45,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": 125,
+                "y": -45,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "C9",
+            "value": "100nF",
+            "x": -85,
+            "y": 105,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -95.5,
+              "minY": 96.5,
+              "maxX": -74.5,
+              "maxY": 113.5
+            },
+            "textBboxes": [
+              {
+                "minX": -95,
+                "minY": 115,
+                "maxX": -83.814697265625,
+                "maxY": 125
+              }
+            ],
+            "pins": [
+              {
+                "number": "1",
+                "name": "1",
+                "net": "3V3",
+                "x": -105,
+                "y": 105,
+                "rotation": 180
+              },
+              {
+                "number": "2",
+                "name": "2",
+                "net": "GND",
+                "x": -65,
+                "y": 105,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "R10",
+            "value": "10kΩ",
+            "x": -115,
+            "y": 20,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -125.5,
+              "minY": 15.5,
+              "maxX": -104.5,
+              "maxY": 24.5
+            },
+            "textBboxes": [
+              {
+                "minX": -125,
+                "minY": 25,
+                "maxX": -108.9483642578125,
+                "maxY": 35
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "3V3",
+                "x": -95,
+                "y": 20,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "BOOT_GPIO2",
+                "x": -135,
+                "y": 20,
+                "rotation": 180
+              }
+            ]
+          },
+          {
+            "primitiveId": "",
+            "designator": "R11",
+            "value": "10kΩ",
+            "x": -110,
+            "y": -60,
+            "rotation": 0,
+            "mirror": false,
+            "bbox": {
+              "minX": -120.5,
+              "minY": -64.5,
+              "maxX": -99.5,
+              "maxY": -55.5
+            },
+            "textBboxes": [
+              {
+                "minX": -120,
+                "minY": -55,
+                "maxX": -104.5977783203125,
+                "maxY": -45
+              }
+            ],
+            "pins": [
+              {
+                "number": "2",
+                "name": "2",
+                "net": "3V3",
+                "x": -90,
+                "y": -60,
+                "rotation": 0
+              },
+              {
+                "number": "1",
+                "name": "1",
+                "net": "LED_GPIO8",
+                "x": -130,
+                "y": -60,
+                "rotation": 180
+              }
+            ]
+          }
+        ],
+        "wires": [
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                -45
+              ],
+              [
+                130,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                -45
+              ],
+              [
+                130,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                -80
+              ],
+              [
+                125,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                95
+              ],
+              [
+                130,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                130,
+                60
+              ],
+              [
+                125,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                120,
+                95
+              ],
+              [
+                125,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                95
+              ],
+              [
+                130,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                95
+              ],
+              [
+                125,
+                85
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                125,
+                85
+              ],
+              [
+                80,
+                85
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                80,
+                85
+              ],
+              [
+                80,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "GND",
+            "points": [
+              [
+                80,
+                80
+              ],
+              [
+                75,
+                80
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                70
+              ],
+              [
+                80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                85,
+                -80
+              ],
+              [
+                75,
+                -80
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                75,
+                60
+              ],
+              [
+                80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                60
+              ],
+              [
+                85,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                95
+              ],
+              [
+                70,
+                95
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                70,
+                95
+              ],
+              [
+                70,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                70,
+                105
+              ],
+              [
+                85,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                85,
+                105
+              ],
+              [
+                85,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                75,
+                70
+              ],
+              [
+                80,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                80,
+                70
+              ],
+              [
+                85,
+                70
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                85,
+                -45
+              ],
+              [
+                80,
+                -45
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                80,
+                -45
+              ],
+              [
+                80,
+                -70
+              ]
+            ]
+          },
+          {
+            "net": "VDD_SPI",
+            "points": [
+              [
+                80,
+                -70
+              ],
+              [
+                75,
+                -70
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                55
+              ],
+              [
+                -80,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                50
+              ],
+              [
+                -80,
+                55
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                55
+              ],
+              [
+                -80,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                60
+              ],
+              [
+                -75,
+                60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                -60
+              ],
+              [
+                -85,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -105,
+                105
+              ],
+              [
+                -120,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                55
+              ],
+              [
+                -120,
+                65
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                65
+              ],
+              [
+                -120,
+                105
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -120,
+                65
+              ],
+              [
+                -115,
+                65
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -95,
+                20
+              ],
+              [
+                -90,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                20
+              ],
+              [
+                -90,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -90,
+                50
+              ],
+              [
+                -85,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                50
+              ],
+              [
+                -80,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -80,
+                50
+              ],
+              [
+                -75,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -135,
+                -30
+              ],
+              [
+                -145,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -145,
+                -30
+              ],
+              [
+                -145,
+                -40
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -145,
+                -40
+              ],
+              [
+                -85,
+                -40
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -60
+              ],
+              [
+                -85,
+                -40
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -40
+              ],
+              [
+                -85,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -30
+              ],
+              [
+                -85,
+                50
+              ]
+            ]
+          },
+          {
+            "net": "3V3",
+            "points": [
+              [
+                -85,
+                -30
+              ],
+              [
+                -75,
+                -30
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -130,
+                -60
+              ],
+              [
+                -135,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -135,
+                -60
+              ],
+              [
+                -135,
+                -65
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -135,
+                -65
+              ],
+              [
+                -80,
+                -65
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -80,
+                -65
+              ],
+              [
+                -80,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "LED_GPIO8",
+            "points": [
+              [
+                -80,
+                -60
+              ],
+              [
+                -75,
+                -60
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -135,
+                20
+              ],
+              [
+                -140,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -140,
+                20
+              ],
+              [
+                -140,
+                15
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -140,
+                15
+              ],
+              [
+                -80,
+                15
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -80,
+                15
+              ],
+              [
+                -80,
+                20
+              ]
+            ]
+          },
+          {
+            "net": "BOOT_GPIO2",
+            "points": [
+              [
+                -80,
+                20
+              ],
+              [
+                -75,
+                20
+              ]
+            ]
+          }
+        ],
+        "flags": null,
+        "expectedPinNets": null,
+        "frames": null
+      },
+      "observedMarkerBlockerRefs": [
+        "C10",
+        "C16",
+        "C9",
+        "R10",
+        "R11",
+        "U1"
+      ]
+    }
+  ],
+  "globalInfeasibilityProven": false,
+  "zoneReview": {
+    "schemaVersion": 1,
+    "ruleVersion": "1",
+    "sourceSha256": "c02d0dbf9eb17475c2696fed5fd11d6eb4ea9dd05d427d7feb7bf1f094f1c58e",
+    "status": "invalid",
+    "scope": "source-zone-topology-advisory",
+    "limitations": [
+      "未命中规则不证明功能归属正确；AI 需结合器件身份、手册和设计意图决定保留或拆分。",
+      "仅排除显式 local_power/local_ground；direct/module_port 也可能承载电源，不从网名猜类型。",
+      "共享源网络不证明真实导线连通；本报告不验证布局、库身份或现场图面。"
+    ],
+    "findings": [],
+    "error": "unknown JSON field /sheet (field names are case-sensitive)"
+  }
+}
