@@ -1,6 +1,21 @@
 # 原理图进度与待完成项
 
-## 最新有效检查点：P1 单页 / DRC 清零（2026-09-29 20:46 本地）
+## 最新有效检查点：电源架构返修（2026-10-01）
+
+用户确认后按数据手册返修电源，取代下方 09-29 检查点中的电源部分。仍未进入 PCB。
+
+- 去掉拨动开关 SW1（SYS_SW 并入 SYS）。整机常通电，靠 ESP32 深睡 + REC_KEY（GPIO3，可做深睡唤醒）开关机。
+- 新增电池保护：U6 DW01A（C351410）+ Q1 FS8205A（C16052）。R16 100Ω/C22 100nF 接 VCC，R17 1kΩ 接 VM。J2 负极改为 BAT_N；Q1 的 D12 和 U6 的 TD 标 NC。
+- 功放独立供电：U7 TLV75733PDBVR（C485517，Cout 1–200µF，Iq 25µA），SYS → 3V3_AMP，接 C23 1µF 输入、C4 1µF + C5 100µF 输出和 NS4168 VDD。
+- ESP32 3V3（U3 ETA5060，手册 Cout 1–10µF）：C2 改为 1µF，网络上标称约 11.6µF，DC 偏压后有效值在范围内。
+- 新增 R18 100k 作 REC_KEY 上拉；R14/R15 改为 1MΩ（分压静态电流约 2µA）。
+- 检查结果：官方 DRC 0；sch check 只有 1 条已验证的 info 级无接点交叉；bridge-check 0。逐引脚网表对账只有计划内改动，共 70 个器件。
+- 证据：`P1-A2-power-rework-20261001.png`、`AI_figure-P1-power-rework-20261001.epro2`；改前备份 `backup-before-power-rework-20261001.epro2`。
+- 未完成：电池区标题仍是 "Battery Charger / Power Switch"，没有可用的类型化文字修改接口，需手动改为 "Battery Charger / Protection"。
+- 本轮未做：VDD3P3 的 LC 滤波、VBUS 过压保护；固件端的深睡唤醒、醒来先录音缓冲、睡眠前把 GPIO4/5 拉低。
+- 注意：EasyEDA 窗口最小化时 `sch wire` 会返回 "create failed!"，需先把窗口恢复到前台。
+
+## 检查点：P1 单页 / DRC 清零（2026-09-29 20:46 本地）
 
 本节取代下方历史状态。具体证据见 `SINGLE_SHEET_REPAIR_REPORT.md`。
 
