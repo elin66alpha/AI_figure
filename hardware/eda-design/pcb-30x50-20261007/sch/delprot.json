@@ -1,0 +1,63 @@
+{
+  "abandonedIds": [
+    "req_29",
+    "req_1003",
+    "req_1117",
+    "req_1124",
+    "req_1140"
+  ],
+  "context": {
+    "documentType": "schematic",
+    "documentUuid": "98cfe13509bc1f5c",
+    "projectName": "AI_figure",
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "createdAt": "2026-10-07T01:17:05.6282632Z",
+  "id": "req_293",
+  "ok": true,
+  "result": {
+    "deleted": {
+      "components": 14,
+      "wires": 12
+    },
+    "deletedIds": {
+      "components": [
+        "4af64de63df095c0",
+        "71411b2b04f8870f",
+        "b958cb6e6513d145",
+        "ffe69dbb8a7407af",
+        "f9859e1981bf5190",
+        "ff79030141ba27fe",
+        "5e6f641fb2ff56a9",
+        "b03f9c2c76d69188",
+        "a324ed6bd41f74dd",
+        "546704db17fa75c0",
+        "05ba9b82ffa8ecda",
+        "475876c5bf47f653",
+        "27bebd1ad10a78c9",
+        "eb53c3e353e757ac"
+      ],
+      "wires": [
+        "4dab262055bd5cde",
+        "8ce92c70fbd82273",
+        "25ea9f9a549fdccf",
+        "4351052ed451de91",
+        "de78828a965cf75e",
+        "717439677b37e2a2",
+        "6d0df11ba9c8b3ee",
+        "202ca3643c347a0b",
+        "bcf24a00e6709586",
+        "94fc1ce1f1c83abf",
+        "6e99cc1e1d23621a",
+        "2d97ae703759acbf"
+      ]
+    },
+    "requested": 26,
+    "total": 26
+  },
+  "seq": 1039,
+  "seqAbandoned": 5,
+  "type": "response",
+  "version": "v1"
+}

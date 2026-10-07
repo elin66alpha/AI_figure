@@ -1,0 +1,7265 @@
+{
+  "components": [
+    {
+      "primitiveId": "b5ac84ada146fdbe",
+      "designator": "C1",
+      "name": "={Value}",
+      "device": "HGC0805R5106K250NSLJ",
+      "layer": 2,
+      "x": 496.06,
+      "y": -1874.02,
+      "rotation": 0,
+      "bbox": {
+        "minX": 415.753,
+        "minY": -1912.5949999999998,
+        "maxX": 576.3670000000001,
+        "maxY": -1835.445
+      },
+      "pads": [
+        {
+          "primitiveId": "b5ac84ada146fdbee15",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 535.4,
+          "y": -1874,
+          "width": 55.5,
+          "height": 53.1,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "b5ac84ada146fdbee16",
+          "padNumber": "1",
+          "net": "SYS",
+          "layer": 2,
+          "x": 456.7,
+          "y": -1874,
+          "width": 55.5,
+          "height": 53.1,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "a4f5c96c3a58f119",
+      "designator": "C2",
+      "name": "={Value}",
+      "device": "CL05A105KA5NQNC",
+      "layer": 1,
+      "x": 51.18000000000001,
+      "y": -417.32,
+      "rotation": -90,
+      "bbox": {
+        "minX": 28.509,
+        "minY": -454.722,
+        "maxX": 73.851,
+        "maxY": -379.918
+      },
+      "pads": [
+        {
+          "primitiveId": "a4f5c96c3a58f119e17",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 1,
+          "x": 51.2,
+          "y": -433.9,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": -90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "a4f5c96c3a58f119e18",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 1,
+          "x": 51.2,
+          "y": -400.8,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": -90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "26ff00c6e5533a0c",
+      "designator": "C3",
+      "name": "={Value}",
+      "device": "CL05B104KO5NNNC",
+      "layer": 1,
+      "x": 51.18000000000001,
+      "y": -330.71,
+      "rotation": 90,
+      "bbox": {
+        "minX": 28.509,
+        "minY": -368.11199999999997,
+        "maxX": 73.851,
+        "maxY": -293.308
+      },
+      "pads": [
+        {
+          "primitiveId": "26ff00c6e5533a0ce17",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 1,
+          "x": 51.2,
+          "y": -314.2,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "26ff00c6e5533a0ce18",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 1,
+          "x": 51.2,
+          "y": -347.2,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "ce35fd9e65fbaf4c",
+      "designator": "C4",
+      "name": "={Value}",
+      "device": "CL05A225KA5NUNC",
+      "layer": 2,
+      "x": 1047.24,
+      "y": -1259.84,
+      "rotation": 90,
+      "bbox": {
+        "minX": 1024.569,
+        "minY": -1297.242,
+        "maxX": 1069.911,
+        "maxY": -1222.4379999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "ce35fd9e65fbaf4ce17",
+          "padNumber": "2",
+          "net": "3V3_AMP",
+          "layer": 2,
+          "x": 1047.2,
+          "y": -1243.3,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "ce35fd9e65fbaf4ce18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 1047.2,
+          "y": -1276.4,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "d23090ab98d0c1ce",
+      "designator": "C6",
+      "name": "={Value}",
+      "device": "HGC0805R5106K250NSLJ",
+      "layer": 2,
+      "x": 681.1,
+      "y": -1795.28,
+      "rotation": 0,
+      "bbox": {
+        "minX": 600.793,
+        "minY": -1833.8549999999998,
+        "maxX": 761.4069999999999,
+        "maxY": -1756.705
+      },
+      "pads": [
+        {
+          "primitiveId": "d23090ab98d0c1cee15",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 720.5,
+          "y": -1795.3,
+          "width": 55.5,
+          "height": 53.1,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "d23090ab98d0c1cee16",
+          "padNumber": "1",
+          "net": "VBUS_CHG",
+          "layer": 2,
+          "x": 641.7,
+          "y": -1795.3,
+          "width": 55.5,
+          "height": 53.1,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "e413a137f46ebd14",
+      "designator": "C7",
+      "name": "={Value}",
+      "device": "0805X226M100NT",
+      "layer": 2,
+      "x": 496.06,
+      "y": -1767.7199999999998,
+      "rotation": 180,
+      "bbox": {
+        "minX": 415.753,
+        "minY": -1806.2949999999998,
+        "maxX": 576.3670000000001,
+        "maxY": -1729.145
+      },
+      "pads": [
+        {
+          "primitiveId": "e413a137f46ebd14e15",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 456.7,
+          "y": -1767.7,
+          "width": 55.50000000000001,
+          "height": 53.10000000000001,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "e413a137f46ebd14e16",
+          "padNumber": "1",
+          "net": "SYS",
+          "layer": 2,
+          "x": 535.4,
+          "y": -1767.7,
+          "width": 55.50000000000001,
+          "height": 53.10000000000001,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "0fdc161838e20558",
+      "designator": "C8",
+      "name": "={Value}",
+      "device": "CL05A225KA5NUNC",
+      "layer": 2,
+      "x": 838.58,
+      "y": -1791.34,
+      "rotation": 180,
+      "bbox": {
+        "minX": 801.178,
+        "minY": -1814.011,
+        "maxX": 875.9820000000001,
+        "maxY": -1768.6689999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "0fdc161838e20558e17",
+          "padNumber": "2",
+          "net": "VBAT",
+          "layer": 2,
+          "x": 822,
+          "y": -1791.3,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0fdc161838e20558e18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 855.1,
+          "y": -1791.3,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "a5f70fbfbc322da7",
+      "designator": "C13",
+      "name": "={Value}",
+      "device": "CL05B104KO5NNNC",
+      "layer": 2,
+      "x": 866.1400000000001,
+      "y": -413.39,
+      "rotation": 180,
+      "bbox": {
+        "minX": 828.738,
+        "minY": -436.061,
+        "maxX": 903.542,
+        "maxY": -390.719
+      },
+      "pads": [
+        {
+          "primitiveId": "a5f70fbfbc322da7e17",
+          "padNumber": "2",
+          "net": "3V3",
+          "layer": 2,
+          "x": 849.6,
+          "y": -413.4,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "a5f70fbfbc322da7e18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 882.7,
+          "y": -413.4,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "c9136e055dcae256",
+      "designator": "C15",
+      "name": "={Value}",
+      "device": "CL05A105KA5NQNC",
+      "layer": 1,
+      "x": 51.18000000000001,
+      "y": -503.94,
+      "rotation": -90,
+      "bbox": {
+        "minX": 28.509,
+        "minY": -541.342,
+        "maxX": 73.851,
+        "maxY": -466.53799999999995
+      },
+      "pads": [
+        {
+          "primitiveId": "c9136e055dcae256e17",
+          "padNumber": "2",
+          "net": "CHIP_EN",
+          "layer": 1,
+          "x": 51.2,
+          "y": -520.5,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": -90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "c9136e055dcae256e18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 1,
+          "x": 51.2,
+          "y": -487.4,
+          "width": 21.3,
+          "height": 19.7,
+          "rotation": -90,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "748c4e2f0d4d3fa5",
+      "designator": "C16",
+      "name": "={Value}",
+      "device": "HGC0805R5106K250NSLJ",
+      "layer": 2,
+      "x": 299.21,
+      "y": -838.58,
+      "rotation": 90,
+      "bbox": {
+        "minX": 260.635,
+        "minY": -918.887,
+        "maxX": 337.785,
+        "maxY": -758.2730000000001
+      },
+      "pads": [
+        {
+          "primitiveId": "748c4e2f0d4d3fa5e15",
+          "padNumber": "2",
+          "net": "3V3",
+          "layer": 2,
+          "x": 299.2,
+          "y": -799.2,
+          "width": 53.1,
+          "height": 55.5,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "748c4e2f0d4d3fa5e16",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 299.2,
+          "y": -877.9,
+          "width": 53.1,
+          "height": 55.5,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            55.5,
+            53.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "450baef5e5671c3e",
+      "designator": "C19",
+      "name": "={Value}",
+      "device": "CL05B104KO5NNNC",
+      "layer": 2,
+      "x": 393.7,
+      "y": -834.6500000000001,
+      "rotation": 180,
+      "bbox": {
+        "minX": 356.29799999999994,
+        "minY": -857.321,
+        "maxX": 431.102,
+        "maxY": -811.979
+      },
+      "pads": [
+        {
+          "primitiveId": "450baef5e5671c3ee17",
+          "padNumber": "2",
+          "net": "SYS_ADC",
+          "layer": 2,
+          "x": 377.2,
+          "y": -834.6,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "450baef5e5671c3ee18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 410.2,
+          "y": -834.6,
+          "width": 19.700000000000003,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "8c21096b05e9b38c",
+      "designator": "C23",
+      "name": "={Value}",
+      "device": "CL05A225KA5NUNC",
+      "layer": 2,
+      "x": 1110.24,
+      "y": -1259.84,
+      "rotation": 270,
+      "bbox": {
+        "minX": 1087.569,
+        "minY": -1297.242,
+        "maxX": 1132.911,
+        "maxY": -1222.4379999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "8c21096b05e9b38ce17",
+          "padNumber": "2",
+          "net": "SYS",
+          "layer": 2,
+          "x": 1110.2,
+          "y": -1276.4,
+          "width": 21.300000000000008,
+          "height": 19.700000000000006,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "8c21096b05e9b38ce18",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 1110.2,
+          "y": -1243.3,
+          "width": 21.300000000000008,
+          "height": 19.700000000000006,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            19.7,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "e1adaa699368aa84",
+      "designator": "D1",
+      "name": "={Manufacturer Part}",
+      "device": "SEUCS2X3V1B",
+      "layer": 2,
+      "x": 625.78,
+      "y": -929.1275,
+      "rotation": 90,
+      "bbox": {
+        "minX": 611.575,
+        "minY": -953.9635,
+        "maxX": 640.385,
+        "maxY": -904.2965000000002
+      },
+      "pads": [
+        {
+          "primitiveId": "e1adaa699368aa84e11",
+          "padNumber": "1",
+          "net": "USB_DP_CONN",
+          "layer": 2,
+          "x": 625.8,
+          "y": -939,
+          "width": 11.8,
+          "height": 11.8,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            11.8,
+            11.8,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "e1adaa699368aa84e12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 625.8,
+          "y": -919.3,
+          "width": 11.8,
+          "height": 11.8,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            11.8,
+            11.8,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "dfef32f042289de1",
+      "designator": "D2",
+      "name": "={Manufacturer Part}",
+      "device": "SEUCS2X3V1B",
+      "layer": 2,
+      "x": 665.15,
+      "y": -929.1275,
+      "rotation": 90,
+      "bbox": {
+        "minX": 650.9449999999999,
+        "minY": -953.9635,
+        "maxX": 679.755,
+        "maxY": -904.2965000000002
+      },
+      "pads": [
+        {
+          "primitiveId": "dfef32f042289de1e11",
+          "padNumber": "1",
+          "net": "USB_DM_CONN",
+          "layer": 2,
+          "x": 665.2,
+          "y": -939,
+          "width": 11.8,
+          "height": 11.8,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            11.8,
+            11.8,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "dfef32f042289de1e12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 665.2,
+          "y": -919.3,
+          "width": 11.8,
+          "height": 11.8,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            11.8,
+            11.8,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "cadd401f04e3214f",
+      "designator": "D3",
+      "name": "={Manufacturer Part}",
+      "device": "19-217/R6C-AL1M2VY/6T",
+      "layer": 1,
+      "x": 1102.36,
+      "y": -534.43,
+      "rotation": 90,
+      "bbox": {
+        "minX": 1063.36,
+        "minY": -610.93,
+        "maxX": 1141.36,
+        "maxY": -459.92999999999995
+      },
+      "pads": [
+        {
+          "primitiveId": "cadd401f04e3214fe15",
+          "padNumber": "2",
+          "net": "LED_GPIO8",
+          "layer": 1,
+          "x": 1102.4,
+          "y": -567.9,
+          "width": 31.500000000000004,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            31.5,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "cadd401f04e3214fe16",
+          "padNumber": "1",
+          "net": "$1N317",
+          "layer": 1,
+          "x": 1102.4,
+          "y": -500.9,
+          "width": 31.500000000000004,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            31.5,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "73a15d3e9dc147ca",
+      "designator": "D4",
+      "name": "={Manufacturer Part}",
+      "device": "SMF5.0A",
+      "layer": 2,
+      "x": 118.108,
+      "y": -1377.9500000000003,
+      "rotation": 0,
+      "bbox": {
+        "minX": 27.558000000000007,
+        "minY": -1422.3200000000002,
+        "maxX": 208.66199999999998,
+        "maxY": -1333.58
+      },
+      "pads": [
+        {
+          "primitiveId": "73a15d3e9dc147cae8",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 185,
+          "y": -1378,
+          "width": 47.2,
+          "height": 55.1,
+          "shape": [
+            "RECT",
+            47.2,
+            55.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "73a15d3e9dc147cae9",
+          "padNumber": "1",
+          "net": "VBUS_CHG",
+          "layer": 2,
+          "x": 51.2,
+          "y": -1378,
+          "width": 47.2,
+          "height": 55.1,
+          "shape": [
+            "RECT",
+            47.2,
+            55.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "c4d72302e2b250e9",
+      "designator": "F1",
+      "name": "={Manufacturer Part}",
+      "device": "BSMD1206-100-24V",
+      "layer": 2,
+      "x": 141.73,
+      "y": -1181.1,
+      "rotation": 90,
+      "bbox": {
+        "minX": 95.71399999999997,
+        "minY": -1273.4189999999999,
+        "maxX": 187.74599999999998,
+        "maxY": -1088.781
+      },
+      "pads": [
+        {
+          "primitiveId": "c4d72302e2b250e9e3",
+          "padNumber": "1",
+          "net": "VBUS_USB",
+          "layer": 2,
+          "x": 141.7,
+          "y": -1238,
+          "width": 68,
+          "height": 46.900000000000006,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            46.9,
+            68,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "c4d72302e2b250e9e4",
+          "padNumber": "2",
+          "net": "$1N222",
+          "layer": 2,
+          "x": 141.7,
+          "y": -1124.2,
+          "width": 68,
+          "height": 46.900000000000006,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            46.9,
+            68,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "46e440203b4e6b5b",
+      "designator": "J2",
+      "name": "={Manufacturer Part}",
+      "device": "PZ254V-11-02P",
+      "layer": 1,
+      "x": 781.1,
+      "y": -708.66,
+      "rotation": 0,
+      "bbox": {
+        "minX": 677.0999999999999,
+        "minY": -762.6600000000001,
+        "maxX": 885.1,
+        "maxY": -654.66
+      },
+      "pads": [
+        {
+          "primitiveId": "46e440203b4e6b5be10",
+          "padNumber": "1",
+          "net": "VBAT",
+          "layer": 12,
+          "x": 731.1,
+          "y": -708.7,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "46e440203b4e6b5be11",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 12,
+          "x": 831.1,
+          "y": -708.7,
+          "width": 2,
+          "height": 78.7,
+          "shape": [
+            "ELLIPSE",
+            2,
+            78.7
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "625819bfe7bdc511",
+      "designator": "J3",
+      "name": "={Manufacturer Part}",
+      "device": "PZ254V-11-02P",
+      "layer": 1,
+      "x": 1005.51,
+      "y": -708.66,
+      "rotation": 0,
+      "bbox": {
+        "minX": 901.51,
+        "minY": -762.6600000000001,
+        "maxX": 1109.51,
+        "maxY": -654.66
+      },
+      "pads": [
+        {
+          "primitiveId": "625819bfe7bdc511e10",
+          "padNumber": "1",
+          "net": "SPK_P",
+          "layer": 12,
+          "x": 955.5,
+          "y": -708.7,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "625819bfe7bdc511e11",
+          "padNumber": "2",
+          "net": "SPK_N",
+          "layer": 12,
+          "x": 1055.5,
+          "y": -708.7,
+          "width": 2,
+          "height": 78.7,
+          "shape": [
+            "ELLIPSE",
+            2,
+            78.7
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "2a01867ca1b4cb28",
+      "designator": "J4",
+      "name": "={Manufacturer Part}",
+      "device": "PZ254V-11-02P",
+      "layer": 1,
+      "x": 889.76,
+      "y": -574.8,
+      "rotation": 0,
+      "bbox": {
+        "minX": 785.76,
+        "minY": -628.8,
+        "maxX": 993.76,
+        "maxY": -520.8
+      },
+      "pads": [
+        {
+          "primitiveId": "2a01867ca1b4cb28e10",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 12,
+          "x": 839.8,
+          "y": -574.8,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "2a01867ca1b4cb28e11",
+          "padNumber": "2",
+          "net": "REC_KEY",
+          "layer": 12,
+          "x": 939.8,
+          "y": -574.8,
+          "width": 2,
+          "height": 78.7,
+          "shape": [
+            "ELLIPSE",
+            2,
+            78.7
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "4e20903ed1c19653",
+      "designator": "R1",
+      "name": "={Value}",
+      "device": "0402WGF1003TCE",
+      "layer": 2,
+      "x": 393.7,
+      "y": -775.5899999999999,
+      "rotation": 180,
+      "bbox": {
+        "minX": 353.525,
+        "minY": -798.22,
+        "maxX": 433.87499999999994,
+        "maxY": -752.9599999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "4e20903ed1c19653e12",
+          "padNumber": "2",
+          "net": "MIC_DATA",
+          "layer": 2,
+          "x": 376.7,
+          "y": -775.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "4e20903ed1c19653e13",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 410.7,
+          "y": -775.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "c51af130e9bef255",
+      "designator": "R2",
+      "name": "={Value}",
+      "device": "0402WGF1003TCE",
+      "layer": 2,
+      "x": 393.7,
+      "y": -716.54,
+      "rotation": 180,
+      "bbox": {
+        "minX": 353.525,
+        "minY": -739.1700000000001,
+        "maxX": 433.87499999999994,
+        "maxY": -693.9099999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "c51af130e9bef255e12",
+          "padNumber": "2",
+          "net": "AMP_CTRL",
+          "layer": 2,
+          "x": 376.7,
+          "y": -716.5,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "c51af130e9bef255e13",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 410.7,
+          "y": -716.5,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "aaeef3a21806c19a",
+      "designator": "R4",
+      "name": "={Value}",
+      "device": "0402WGF5101TCE",
+      "layer": 2,
+      "x": 224.41,
+      "y": -1114.17,
+      "rotation": 90,
+      "bbox": {
+        "minX": 201.77999999999997,
+        "minY": -1154.345,
+        "maxX": 247.04000000000002,
+        "maxY": -1073.9950000000001
+      },
+      "pads": [
+        {
+          "primitiveId": "aaeef3a21806c19ae12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 224.4,
+          "y": -1097.1,
+          "width": 21.3,
+          "height": 22.3,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "aaeef3a21806c19ae13",
+          "padNumber": "1",
+          "net": "USB_CC1",
+          "layer": 2,
+          "x": 224.4,
+          "y": -1131.2,
+          "width": 21.3,
+          "height": 22.3,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "98a181097ef19a63",
+      "designator": "R5",
+      "name": "={Value}",
+      "device": "0402WGF5101TCE",
+      "layer": 2,
+      "x": 224.41,
+      "y": -1248.03,
+      "rotation": 270,
+      "bbox": {
+        "minX": 201.77999999999997,
+        "minY": -1288.2050000000002,
+        "maxX": 247.04000000000002,
+        "maxY": -1207.855
+      },
+      "pads": [
+        {
+          "primitiveId": "98a181097ef19a63e12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 224.4,
+          "y": -1265.1,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "98a181097ef19a63e13",
+          "padNumber": "1",
+          "net": "USB_CC2",
+          "layer": 2,
+          "x": 224.4,
+          "y": -1231,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "d4883741a2b823b3",
+      "designator": "R6",
+      "name": "={Value}",
+      "device": "RC0402FR-0733RL",
+      "layer": 2,
+      "x": 716.54,
+      "y": -511.80999999999995,
+      "rotation": 180,
+      "bbox": {
+        "minX": 676.365,
+        "minY": -534.4399999999999,
+        "maxX": 756.7149999999999,
+        "maxY": -489.18
+      },
+      "pads": [
+        {
+          "primitiveId": "d4883741a2b823b3e12",
+          "padNumber": "2",
+          "net": "USB_DP",
+          "layer": 2,
+          "x": 699.5,
+          "y": -511.8,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "d4883741a2b823b3e13",
+          "padNumber": "1",
+          "net": "USB_DP_CONN",
+          "layer": 2,
+          "x": 733.6,
+          "y": -511.8,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "e68266a03d4dfdb6",
+      "designator": "R7",
+      "name": "={Value}",
+      "device": "RC0402FR-0733RL",
+      "layer": 2,
+      "x": 716.54,
+      "y": -570.87,
+      "rotation": 180,
+      "bbox": {
+        "minX": 676.365,
+        "minY": -593.5,
+        "maxX": 756.7149999999999,
+        "maxY": -548.24
+      },
+      "pads": [
+        {
+          "primitiveId": "e68266a03d4dfdb6e12",
+          "padNumber": "2",
+          "net": "USB_DM",
+          "layer": 2,
+          "x": 699.5,
+          "y": -570.9,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "e68266a03d4dfdb6e13",
+          "padNumber": "1",
+          "net": "USB_DM_CONN",
+          "layer": 2,
+          "x": 733.6,
+          "y": -570.9,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "19da32243673c317",
+      "designator": "R8",
+      "name": "={Value}",
+      "device": "0402WGF0000TCE",
+      "layer": 2,
+      "x": 47.24,
+      "y": -1102.36,
+      "rotation": 270,
+      "bbox": {
+        "minX": 24.61,
+        "minY": -1142.5349999999999,
+        "maxX": 69.87,
+        "maxY": -1062.185
+      },
+      "pads": [
+        {
+          "primitiveId": "19da32243673c317e12",
+          "padNumber": "2",
+          "net": "VBUS_CHG",
+          "layer": 2,
+          "x": 47.2,
+          "y": -1119.4,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "19da32243673c317e13",
+          "padNumber": "1",
+          "net": "$1N222",
+          "layer": 2,
+          "x": 47.2,
+          "y": -1085.3,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "108f2508c916259a",
+      "designator": "R9",
+      "name": "={Value}",
+      "device": "0402WGF1002TCE",
+      "layer": 1,
+      "x": 51.18000000000001,
+      "y": -590.55,
+      "rotation": 90,
+      "bbox": {
+        "minX": 28.55,
+        "minY": -630.7249999999999,
+        "maxX": 73.81,
+        "maxY": -550.375
+      },
+      "pads": [
+        {
+          "primitiveId": "108f2508c916259ae12",
+          "padNumber": "2",
+          "net": "CHIP_EN",
+          "layer": 1,
+          "x": 51.2,
+          "y": -573.5,
+          "width": 21.3,
+          "height": 22.3,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "108f2508c916259ae13",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 1,
+          "x": 51.2,
+          "y": -607.6,
+          "width": 21.3,
+          "height": 22.3,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "517658251d8f6ee2",
+      "designator": "R10",
+      "name": "={Value}",
+      "device": "0402WGF1002TCE",
+      "layer": 2,
+      "x": 480.31,
+      "y": -834.6500000000001,
+      "rotation": 180,
+      "bbox": {
+        "minX": 440.135,
+        "minY": -857.2800000000001,
+        "maxX": 520.485,
+        "maxY": -812.02
+      },
+      "pads": [
+        {
+          "primitiveId": "517658251d8f6ee2e12",
+          "padNumber": "2",
+          "net": "BOOT_GPIO2",
+          "layer": 2,
+          "x": 463.3,
+          "y": -834.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "517658251d8f6ee2e13",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 2,
+          "x": 497.4,
+          "y": -834.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "deaa045b126a6794",
+      "designator": "R11",
+      "name": "={Value}",
+      "device": "0402WGF1002TCE",
+      "layer": 2,
+      "x": 480.31,
+      "y": -716.54,
+      "rotation": 0,
+      "bbox": {
+        "minX": 440.135,
+        "minY": -739.1700000000001,
+        "maxX": 520.485,
+        "maxY": -693.9099999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "deaa045b126a6794e12",
+          "padNumber": "2",
+          "net": "LED_GPIO8",
+          "layer": 2,
+          "x": 497.4,
+          "y": -716.5,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "deaa045b126a6794e13",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 2,
+          "x": 463.3,
+          "y": -716.5,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "9b8cca87760038b3",
+      "designator": "R12",
+      "name": "={Value}",
+      "device": "0402WGF1002TCE",
+      "layer": 2,
+      "x": 566.93,
+      "y": -716.54,
+      "rotation": 180,
+      "bbox": {
+        "minX": 526.755,
+        "minY": -739.1700000000001,
+        "maxX": 607.105,
+        "maxY": -693.9099999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "9b8cca87760038b3e12",
+          "padNumber": "2",
+          "net": "BOOT_GPIO9",
+          "layer": 2,
+          "x": 549.9,
+          "y": -716.5,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "9b8cca87760038b3e13",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 2,
+          "x": 584,
+          "y": -716.5,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "18ea06fdbee25ef7",
+      "designator": "R13",
+      "name": "={Value}",
+      "device": "0402WGF3300TCE",
+      "layer": 2,
+      "x": 1007.8700000000001,
+      "y": -452.76,
+      "rotation": 270,
+      "bbox": {
+        "minX": 985.24,
+        "minY": -492.93499999999995,
+        "maxX": 1030.5,
+        "maxY": -412.585
+      },
+      "pads": [
+        {
+          "primitiveId": "18ea06fdbee25ef7e12",
+          "padNumber": "2",
+          "net": "$1N317",
+          "layer": 2,
+          "x": 1007.9,
+          "y": -469.8,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "18ea06fdbee25ef7e13",
+          "padNumber": "1",
+          "net": "3V3",
+          "layer": 2,
+          "x": 1007.9,
+          "y": -435.7,
+          "width": 21.300000000000008,
+          "height": 22.300000000000008,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "76d88c4a83a027ba",
+      "designator": "R14",
+      "name": "={Value}",
+      "device": "0402WGF1004TCE",
+      "layer": 2,
+      "x": 480.31,
+      "y": -775.5899999999999,
+      "rotation": 180,
+      "bbox": {
+        "minX": 440.135,
+        "minY": -798.22,
+        "maxX": 520.485,
+        "maxY": -752.9599999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "76d88c4a83a027bae12",
+          "padNumber": "2",
+          "net": "SYS_ADC",
+          "layer": 2,
+          "x": 463.3,
+          "y": -775.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "76d88c4a83a027bae13",
+          "padNumber": "1",
+          "net": "SYS",
+          "layer": 2,
+          "x": 497.4,
+          "y": -775.6,
+          "width": 22.300000000000004,
+          "height": 21.300000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "7d8f3add3914c3c7",
+      "designator": "R15",
+      "name": "={Value}",
+      "device": "0402WGF1004TCE",
+      "layer": 2,
+      "x": 566.93,
+      "y": -775.5899999999999,
+      "rotation": 0,
+      "bbox": {
+        "minX": 526.755,
+        "minY": -798.22,
+        "maxX": 607.105,
+        "maxY": -752.9599999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "7d8f3add3914c3c7e12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 584,
+          "y": -775.6,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "7d8f3add3914c3c7e13",
+          "padNumber": "1",
+          "net": "SYS_ADC",
+          "layer": 2,
+          "x": 549.9,
+          "y": -775.6,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "d93fb4e5f6ef553d",
+      "designator": "R18",
+      "name": "={Value}",
+      "device": "0402WGF1003TCE",
+      "layer": 2,
+      "x": 566.93,
+      "y": -834.6500000000001,
+      "rotation": 0,
+      "bbox": {
+        "minX": 526.755,
+        "minY": -857.2800000000001,
+        "maxX": 607.105,
+        "maxY": -812.02
+      },
+      "pads": [
+        {
+          "primitiveId": "d93fb4e5f6ef553de12",
+          "padNumber": "2",
+          "net": "3V3",
+          "layer": 2,
+          "x": 584,
+          "y": -834.6,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "d93fb4e5f6ef553de13",
+          "padNumber": "1",
+          "net": "REC_KEY",
+          "layer": 2,
+          "x": 549.9,
+          "y": -834.6,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "59cb4c62f32f04a6",
+      "designator": "U1",
+      "name": "={Value}",
+      "device": "ESP32-C3-MINI-1-H4X",
+      "layer": 1,
+      "x": 397.69,
+      "y": -453.7405,
+      "rotation": 0,
+      "bbox": {
+        "minX": 98.48600000000002,
+        "minY": -679.2125,
+        "maxX": 662.534,
+        "maxY": -15.66749999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "59cb4c62f32f04a6e13",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 1,
+          "x": 165.4,
+          "y": -296.3,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e14",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 1,
+          "x": 165.4,
+          "y": -327.8,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e15",
+          "padNumber": "3",
+          "net": "3V3",
+          "layer": 1,
+          "x": 165.4,
+          "y": -359.3,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e16",
+          "padNumber": "4",
+          "net": "",
+          "layer": 1,
+          "x": 165.4,
+          "y": -390.8,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e17",
+          "padNumber": "5",
+          "net": "BOOT_GPIO2",
+          "layer": 1,
+          "x": 165.4,
+          "y": -422.2,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e18",
+          "padNumber": "6",
+          "net": "REC_KEY",
+          "layer": 1,
+          "x": 165.4,
+          "y": -453.7,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e19",
+          "padNumber": "7",
+          "net": "",
+          "layer": 1,
+          "x": 165.4,
+          "y": -485.2,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e20",
+          "padNumber": "8",
+          "net": "CHIP_EN",
+          "layer": 1,
+          "x": 165.4,
+          "y": -516.7,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e21",
+          "padNumber": "9",
+          "net": "",
+          "layer": 1,
+          "x": 165.4,
+          "y": -548.2,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e22",
+          "padNumber": "10",
+          "net": "",
+          "layer": 1,
+          "x": 165.4,
+          "y": -579.7,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e23",
+          "padNumber": "11",
+          "net": "GND",
+          "layer": 1,
+          "x": 165.4,
+          "y": -611.2,
+          "width": 31.5,
+          "height": 15.700000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e24",
+          "padNumber": "12",
+          "net": "MIC_DATA",
+          "layer": 1,
+          "x": 208.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e25",
+          "padNumber": "13",
+          "net": "SYS_ADC",
+          "layer": 1,
+          "x": 240.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e26",
+          "padNumber": "14",
+          "net": "GND",
+          "layer": 1,
+          "x": 271.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e27",
+          "padNumber": "15",
+          "net": "",
+          "layer": 1,
+          "x": 303.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e28",
+          "padNumber": "16",
+          "net": "AMP_CTRL",
+          "layer": 1,
+          "x": 334.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e29",
+          "padNumber": "17",
+          "net": "",
+          "layer": 1,
+          "x": 366.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e30",
+          "padNumber": "18",
+          "net": "I2S_BCLK",
+          "layer": 1,
+          "x": 397.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e31",
+          "padNumber": "19",
+          "net": "I2S_WS",
+          "layer": 1,
+          "x": 429.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e32",
+          "padNumber": "20",
+          "net": "MIC_CLK",
+          "layer": 1,
+          "x": 460.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e33",
+          "padNumber": "21",
+          "net": "AMP_DIN",
+          "layer": 1,
+          "x": 492.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e34",
+          "padNumber": "22",
+          "net": "LED_GPIO8",
+          "layer": 1,
+          "x": 523.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e35",
+          "padNumber": "23",
+          "net": "BOOT_GPIO9",
+          "layer": 1,
+          "x": 555.2,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e36",
+          "padNumber": "24",
+          "net": "",
+          "layer": 1,
+          "x": 586.7,
+          "y": -646.7,
+          "width": 15.700000000000003,
+          "height": 31.500000000000004,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e37",
+          "padNumber": "25",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -611.2,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e38",
+          "padNumber": "26",
+          "net": "USB_DM",
+          "layer": 1,
+          "x": 630,
+          "y": -579.7,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e39",
+          "padNumber": "27",
+          "net": "USB_DP",
+          "layer": 1,
+          "x": 630,
+          "y": -548.2,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e40",
+          "padNumber": "28",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -516.7,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e41",
+          "padNumber": "29",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -485.2,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e42",
+          "padNumber": "30",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -453.7,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e43",
+          "padNumber": "31",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -422.2,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e44",
+          "padNumber": "32",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -390.8,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e45",
+          "padNumber": "33",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -359.3,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e46",
+          "padNumber": "34",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -327.8,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e47",
+          "padNumber": "35",
+          "net": "",
+          "layer": 1,
+          "x": 630,
+          "y": -296.3,
+          "width": 31.500000000000007,
+          "height": 15.700000000000012,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e48",
+          "padNumber": "36",
+          "net": "GND",
+          "layer": 1,
+          "x": 586.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e49",
+          "padNumber": "37",
+          "net": "GND",
+          "layer": 1,
+          "x": 555.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e50",
+          "padNumber": "38",
+          "net": "GND",
+          "layer": 1,
+          "x": 523.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e51",
+          "padNumber": "39",
+          "net": "GND",
+          "layer": 1,
+          "x": 492.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e52",
+          "padNumber": "40",
+          "net": "GND",
+          "layer": 1,
+          "x": 460.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e53",
+          "padNumber": "41",
+          "net": "GND",
+          "layer": 1,
+          "x": 429.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e54",
+          "padNumber": "42",
+          "net": "GND",
+          "layer": 1,
+          "x": 397.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e55",
+          "padNumber": "43",
+          "net": "GND",
+          "layer": 1,
+          "x": 366.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e56",
+          "padNumber": "44",
+          "net": "GND",
+          "layer": 1,
+          "x": 334.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e57",
+          "padNumber": "45",
+          "net": "GND",
+          "layer": 1,
+          "x": 303.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e58",
+          "padNumber": "46",
+          "net": "GND",
+          "layer": 1,
+          "x": 271.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e59",
+          "padNumber": "47",
+          "net": "GND",
+          "layer": 1,
+          "x": 240.2,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e60",
+          "padNumber": "48",
+          "net": "GND",
+          "layer": 1,
+          "x": 208.7,
+          "y": -260.8,
+          "width": 15.7,
+          "height": 31.5,
+          "shape": [
+            "RECT",
+            15.7,
+            31.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e61",
+          "padNumber": "50",
+          "net": "GND",
+          "layer": 1,
+          "x": 631.9,
+          "y": -258.9,
+          "width": 27.6,
+          "height": 27.6,
+          "shape": [
+            "RECT",
+            27.6,
+            27.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e62",
+          "padNumber": "51",
+          "net": "GND",
+          "layer": 1,
+          "x": 631.9,
+          "y": -648.6,
+          "width": 27.6,
+          "height": 27.6,
+          "shape": [
+            "RECT",
+            27.6,
+            27.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e63",
+          "padNumber": "52",
+          "net": "GND",
+          "layer": 1,
+          "x": 163.4,
+          "y": -648.6,
+          "width": 27.6,
+          "height": 27.6,
+          "shape": [
+            "RECT",
+            27.6,
+            27.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e64",
+          "padNumber": "53",
+          "net": "GND",
+          "layer": 1,
+          "x": 163.4,
+          "y": -258.9,
+          "width": 27.6,
+          "height": 27.6,
+          "shape": [
+            "RECT",
+            27.6,
+            27.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e65",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 319.9,
+          "y": -376,
+          "shape": [
+            "POLYGON",
+            [
+              291.386,
+              -371.0655,
+              "L",
+              315.008,
+              -347.4435,
+              348.472,
+              -347.4435,
+              348.472,
+              -404.5295,
+              291.386,
+              -404.5295,
+              291.386,
+              -371.0655
+            ]
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e66",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 475.4,
+          "y": -531.5,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e67",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 397.7,
+          "y": -531.5,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e68",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 319.9,
+          "y": -531.5,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e69",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 319.9,
+          "y": -453.7,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e70",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 397.7,
+          "y": -376,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e71",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 475.4,
+          "y": -376,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e72",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 475.4,
+          "y": -453.7,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "59cb4c62f32f04a6e73",
+          "padNumber": "49",
+          "net": "GND",
+          "layer": 1,
+          "x": 397.7,
+          "y": -453.7,
+          "width": 57.1,
+          "height": 57.1,
+          "shape": [
+            "RECT",
+            57.1,
+            57.1,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "3d776476579ee73b",
+      "designator": "U2",
+      "name": "={Manufacturer Part}",
+      "device": "ETA6002E8A",
+      "layer": 2,
+      "x": 714.9602,
+      "y": -1596.1664999999998,
+      "rotation": 0,
+      "bbox": {
+        "minX": 597.9347,
+        "minY": -1738.4889999999998,
+        "maxX": 819.3852000000002,
+        "maxY": -1450.4909999999998
+      },
+      "pads": [
+        {
+          "primitiveId": "3d776476579ee73be4",
+          "padNumber": "5",
+          "net": "$1N189",
+          "layer": 2,
+          "x": 790,
+          "y": -1701.8,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be5",
+          "padNumber": "6",
+          "net": "VBAT",
+          "layer": 2,
+          "x": 740,
+          "y": -1701.8,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be6",
+          "padNumber": "7",
+          "net": "SYS",
+          "layer": 2,
+          "x": 690,
+          "y": -1701.8,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be7",
+          "padNumber": "8",
+          "net": "VBUS_CHG",
+          "layer": 2,
+          "x": 640,
+          "y": -1701.8,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be8",
+          "padNumber": "4",
+          "net": "",
+          "layer": 2,
+          "x": 790,
+          "y": -1490.6,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be9",
+          "padNumber": "3",
+          "net": "GND",
+          "layer": 2,
+          "x": 740,
+          "y": -1490.6,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be10",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 690,
+          "y": -1490.6,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be11",
+          "padNumber": "1",
+          "net": "$1N181",
+          "layer": 2,
+          "x": 640,
+          "y": -1490.6,
+          "width": 24.8,
+          "height": 73.4,
+          "shape": [
+            "OVAL",
+            24.8,
+            73.4
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3d776476579ee73be12",
+          "padNumber": "9",
+          "net": "GND",
+          "layer": 2,
+          "x": 715,
+          "y": -1596.2,
+          "width": 129.9,
+          "height": 94.5,
+          "shape": [
+            "RECT",
+            129.9,
+            94.5,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "b2cbc24caa0ac39d",
+      "designator": "U3",
+      "name": "={Manufacturer Part}",
+      "device": "ETA5060V330S8F",
+      "layer": 2,
+      "x": 157.475,
+      "y": -825.0014999999999,
+      "rotation": 180,
+      "bbox": {
+        "minX": 63.896,
+        "minY": -960.0014999999999,
+        "maxX": 251.06400000000002,
+        "maxY": -717.1584999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "b2cbc24caa0ac39de18",
+          "padNumber": "3",
+          "net": "SYS",
+          "layer": 2,
+          "x": 98.4,
+          "y": -897.8,
+          "width": 23.600000000000005,
+          "height": 59.1,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            59.1,
+            23.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "b2cbc24caa0ac39de19",
+          "padNumber": "1",
+          "net": "",
+          "layer": 2,
+          "x": 216.5,
+          "y": -897.8,
+          "width": 23.600000000000005,
+          "height": 59.1,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            59.1,
+            23.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "b2cbc24caa0ac39de20",
+          "padNumber": "4",
+          "net": "SYS",
+          "layer": 2,
+          "x": 98.4,
+          "y": -752.2,
+          "width": 23.600000000000005,
+          "height": 59.1,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            59.1,
+            23.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "b2cbc24caa0ac39de21",
+          "padNumber": "5",
+          "net": "3V3",
+          "layer": 2,
+          "x": 216.5,
+          "y": -752.2,
+          "width": 23.600000000000005,
+          "height": 59.1,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            59.1,
+            23.6,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "b2cbc24caa0ac39de22",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 157.1,
+          "y": -791,
+          "rotation": 180,
+          "shape": [
+            "POLYGON",
+            [
+              119.728,
+              -754.5495,
+              "L",
+              119.77,
+              -752.7965,
+              119.893,
+              -751.0475,
+              120.098,
+              -749.3055,
+              120.384,
+              -747.5765,
+              120.752,
+              -745.8605,
+              121.199,
+              -744.1655,
+              121.725,
+              -742.4925,
+              122.329,
+              -740.8465,
+              123.01,
+              -739.2305,
+              123.765,
+              -737.6475,
+              124.594,
+              -736.1025,
+              125.495,
+              -734.5975,
+              126.465,
+              -733.1365,
+              127.502,
+              -731.7225,
+              128.603,
+              -730.3595,
+              129.77,
+              -729.0485,
+              130.995,
+              -727.7935,
+              132.278,
+              -726.5985,
+              133.615,
+              -725.4645,
+              135.004,
+              -724.3945,
+              136.442,
+              -723.3905,
+              137.925,
+              -722.4555,
+              139.451,
+              -721.5905,
+              141.015,
+              -720.7975,
+              142.615,
+              -720.0795,
+              144.246,
+              -719.4355,
+              145.906,
+              -718.8715,
+              147.591,
+              -718.3845,
+              149.297,
+              -717.9775,
+              151.019,
+              -717.6505,
+              152.756,
+              -717.4045,
+              154.502,
+              -717.2415,
+              156.253,
+              -717.1585,
+              158.007,
+              -717.1585,
+              159.758,
+              -717.2405,
+              161.504,
+              -717.4045,
+              163.241,
+              -717.6505,
+              164.963,
+              -717.9775,
+              166.669,
+              -718.3845,
+              168.354,
+              -718.8715,
+              170.014,
+              -719.4365,
+              171.645,
+              -720.0795,
+              173.245,
+              -720.7975,
+              174.809,
+              -721.5905,
+              176.335,
+              -722.4555,
+              177.818,
+              -723.3905,
+              179.256,
+              -724.3945,
+              180.645,
+              -725.4645,
+              181.982,
+              -726.5985,
+              183.265,
+              -727.7945,
+              184.49,
+              -729.0485,
+              185.656,
+              -730.3595,
+              186.758,
+              -731.7215,
+              187.795,
+              -733.1365,
+              188.765,
+              -734.5975,
+              189.666,
+              -736.1025,
+              190.494,
+              -737.6475,
+              191.25,
+              -739.2305,
+              191.931,
+              -740.8465,
+              192.535,
+              -742.4925,
+              193.061,
+              -744.1655,
+              193.508,
+              -745.8595,
+              193.876,
+              -747.5755,
+              194.162,
+              -749.3055,
+              194.367,
+              -751.0475,
+              194.49,
+              -752.7965,
+              194.533,
+              -754.5495,
+              194.532,
+              -827.5495,
+              194.49,
+              -829.3025,
+              194.367,
+              -831.0515,
+              194.162,
+              -832.7935,
+              193.876,
+              -834.5235,
+              193.508,
+              -836.2385,
+              193.061,
+              -837.9335,
+              192.535,
+              -839.6065,
+              191.931,
+              -841.2525,
+              191.25,
+              -842.8685,
+              190.495,
+              -844.4515,
+              189.666,
+              -845.9965,
+              188.765,
+              -847.5015,
+              187.795,
+              -848.9625,
+              186.758,
+              -850.3755,
+              185.656,
+              -851.7395,
+              184.49,
+              -853.0505,
+              183.265,
+              -854.3045,
+              181.982,
+              -855.5005,
+              180.645,
+              -856.6345,
+              179.256,
+              -857.7045,
+              177.817,
+              -858.7085,
+              176.335,
+              -859.6435,
+              174.809,
+              -860.5085,
+              173.245,
+              -861.3015,
+              170.121,
+              -862.0195,
+              170.121,
+              -928.8435,
+              144.136,
+              -928.8435,
+              144.137,
+              -862.0195,
+              141.015,
+              -861.3015,
+              139.451,
+              -860.5085,
+              137.925,
+              -859.6435,
+              136.442,
+              -858.7085,
+              135.003,
+              -857.7045,
+              133.615,
+              -856.6345,
+              132.278,
+              -855.5005,
+              130.996,
+              -854.3045,
+              129.77,
+              -853.0505,
+              128.604,
+              -851.7395,
+              127.502,
+              -850.3765,
+              126.465,
+              -848.9625,
+              125.495,
+              -847.5015,
+              124.594,
+              -845.9965,
+              123.765,
+              -844.4515,
+              123.01,
+              -842.8685,
+              122.329,
+              -841.2525,
+              121.725,
+              -839.6065,
+              121.199,
+              -837.9335,
+              120.752,
+              -836.2385,
+              120.384,
+              -834.5235,
+              120.098,
+              -832.7935,
+              119.893,
+              -831.0515,
+              119.77,
+              -829.3025,
+              119.728,
+              -827.5495,
+              119.728,
+              -754.5495
+            ]
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "0b289da71018ff7c",
+      "designator": "U4",
+      "name": "={Manufacturer Part}",
+      "device": "LMD2718T261-OA1",
+      "layer": 1,
+      "x": 858.6405,
+      "y": -314.96,
+      "rotation": 180,
+      "bbox": {
+        "minX": 813.6405,
+        "minY": -379.96000000000004,
+        "maxX": 918.6394999999999,
+        "maxY": -249.95999999999998
+      },
+      "pads": [
+        {
+          "primitiveId": "0b289da71018ff7ce19",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 1,
+          "x": 879.3,
+          "y": -353.5,
+          "width": 21.700000000000003,
+          "height": 21.700000000000003,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0b289da71018ff7ce20",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 1,
+          "x": 879.3,
+          "y": -315,
+          "width": 21.700000000000003,
+          "height": 21.700000000000003,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0b289da71018ff7ce21",
+          "padNumber": "3",
+          "net": "GND",
+          "layer": 1,
+          "x": 879.3,
+          "y": -276.4,
+          "width": 21.700000000000003,
+          "height": 21.700000000000003,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0b289da71018ff7ce22",
+          "padNumber": "4",
+          "net": "3V3",
+          "layer": 1,
+          "x": 838,
+          "y": -353.5,
+          "width": 21.7,
+          "height": 21.7,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0b289da71018ff7ce23",
+          "padNumber": "5",
+          "net": "MIC_DATA",
+          "layer": 1,
+          "x": 838,
+          "y": -315,
+          "width": 21.7,
+          "height": 21.7,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0b289da71018ff7ce24",
+          "padNumber": "6",
+          "net": "MIC_CLK",
+          "layer": 1,
+          "x": 838,
+          "y": -276.4,
+          "width": 21.7,
+          "height": 21.7,
+          "shape": [
+            "RECT",
+            21.7,
+            21.7,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "123119d162a89f6a",
+      "designator": "U5",
+      "name": "={Manufacturer Part}",
+      "device": "NS4168",
+      "layer": 2,
+      "x": 1036.415,
+      "y": -910.8617000000002,
+      "rotation": 0,
+      "bbox": {
+        "minX": 905.425,
+        "minY": -1048.9837000000002,
+        "maxX": 1141.815,
+        "maxY": -769.9162000000001
+      },
+      "pads": [
+        {
+          "primitiveId": "123119d162a89f6ae11",
+          "padNumber": "1",
+          "net": "AMP_CTRL",
+          "layer": 2,
+          "x": 961.4,
+          "y": -796.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae12",
+          "padNumber": "2",
+          "net": "I2S_WS",
+          "layer": 2,
+          "x": 1011.4,
+          "y": -796.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae13",
+          "padNumber": "3",
+          "net": "I2S_BCLK",
+          "layer": 2,
+          "x": 1061.4,
+          "y": -796.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae14",
+          "padNumber": "4",
+          "net": "AMP_DIN",
+          "layer": 2,
+          "x": 1111.4,
+          "y": -796.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae15",
+          "padNumber": "5",
+          "net": "SPK_N",
+          "layer": 2,
+          "x": 1111.4,
+          "y": -1025.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae16",
+          "padNumber": "6",
+          "net": "3V3_AMP",
+          "layer": 2,
+          "x": 1061.4,
+          "y": -1025.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae17",
+          "padNumber": "7",
+          "net": "GND",
+          "layer": 2,
+          "x": 1011.4,
+          "y": -1025.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae18",
+          "padNumber": "8",
+          "net": "SPK_P",
+          "layer": 2,
+          "x": 961.4,
+          "y": -1025.4,
+          "width": 23.6,
+          "height": 47.2,
+          "shape": [
+            "RECT",
+            23.6,
+            47.2,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "123119d162a89f6ae19",
+          "padNumber": "9",
+          "net": "GND",
+          "layer": 2,
+          "x": 1036.4,
+          "y": -910.9,
+          "width": 129.9,
+          "height": 94.50000000000001,
+          "rotation": -180,
+          "shape": [
+            "RECT",
+            129.9,
+            94.5,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "2caf0714b3855f62",
+      "designator": "U7",
+      "name": "={Manufacturer Part}",
+      "device": "TLV75733PDBVR",
+      "layer": 2,
+      "x": 942.38,
+      "y": -1250.4297,
+      "rotation": 180,
+      "bbox": {
+        "minX": 882.38,
+        "minY": -1332.2451999999998,
+        "maxX": 1007.38,
+        "maxY": -1187.4347
+      },
+      "pads": [
+        {
+          "primitiveId": "2caf0714b3855f62e7",
+          "padNumber": "5",
+          "net": "3V3_AMP",
+          "layer": 2,
+          "x": 979.8,
+          "y": -1207.1,
+          "width": 23.600000000000005,
+          "height": 39.4,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            23.6,
+            39.4,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "2caf0714b3855f62e8",
+          "padNumber": "4",
+          "net": "",
+          "layer": 2,
+          "x": 905,
+          "y": -1207.1,
+          "width": 23.600000000000005,
+          "height": 39.4,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            23.6,
+            39.4,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "2caf0714b3855f62e9",
+          "padNumber": "1",
+          "net": "SYS",
+          "layer": 2,
+          "x": 979.8,
+          "y": -1293.7,
+          "width": 23.600000000000005,
+          "height": 39.4,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            23.6,
+            39.4,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "2caf0714b3855f62e10",
+          "padNumber": "3",
+          "net": "SYS",
+          "layer": 2,
+          "x": 905,
+          "y": -1293.7,
+          "width": 23.600000000000005,
+          "height": 39.4,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            23.6,
+            39.4,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "2caf0714b3855f62e11",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 942.4,
+          "y": -1293.7,
+          "width": 23.600000000000005,
+          "height": 39.4,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            23.6,
+            39.4,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "3afe8f74ce776ed4",
+      "designator": "J1",
+      "name": "={Manufacturer Part}",
+      "device": "TYPE-C 16PLT-H6.5",
+      "layer": 2,
+      "x": 590.55,
+      "y": -1181.1,
+      "rotation": 180,
+      "bbox": {
+        "minX": 409.5659999999999,
+        "minY": -1287.499,
+        "maxX": 771.5339999999999,
+        "maxY": -1074.7009999999998
+      },
+      "pads": [
+        {
+          "primitiveId": "3afe8f74ce776ed4e50",
+          "padNumber": "A1",
+          "net": "GND",
+          "layer": 2,
+          "x": 698.8,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e51",
+          "padNumber": "B1",
+          "net": "GND",
+          "layer": 2,
+          "x": 482.3,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e52",
+          "padNumber": "A4",
+          "net": "VBUS_USB",
+          "layer": 2,
+          "x": 639.8,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e53",
+          "padNumber": "A5",
+          "net": "USB_CC1",
+          "layer": 2,
+          "x": 620.1,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e54",
+          "padNumber": "A6",
+          "net": "USB_DP_CONN",
+          "layer": 2,
+          "x": 600.4,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e55",
+          "padNumber": "A7",
+          "net": "USB_DM_CONN",
+          "layer": 2,
+          "x": 580.7,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e56",
+          "padNumber": "A8",
+          "net": "",
+          "layer": 2,
+          "x": 561,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e57",
+          "padNumber": "A9",
+          "net": "VBUS_USB",
+          "layer": 2,
+          "x": 541.3,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e58",
+          "padNumber": "A12",
+          "net": "GND",
+          "layer": 2,
+          "x": 482.3,
+          "y": -1147,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e59",
+          "padNumber": "B4",
+          "net": "VBUS_USB",
+          "layer": 2,
+          "x": 541.3,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e60",
+          "padNumber": "B5",
+          "net": "USB_CC2",
+          "layer": 2,
+          "x": 561,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e61",
+          "padNumber": "B6",
+          "net": "USB_DP_CONN",
+          "layer": 2,
+          "x": 580.7,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e62",
+          "padNumber": "B7",
+          "net": "USB_DM_CONN",
+          "layer": 2,
+          "x": 600.4,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e63",
+          "padNumber": "B8",
+          "net": "",
+          "layer": 2,
+          "x": 620.1,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e64",
+          "padNumber": "B9",
+          "net": "VBUS_USB",
+          "layer": 2,
+          "x": 639.8,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e65",
+          "padNumber": "B12",
+          "net": "GND",
+          "layer": 2,
+          "x": 698.8,
+          "y": -1215.2,
+          "width": 11.800000000000004,
+          "height": 34.3,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            11.8,
+            34.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e76",
+          "padNumber": "0",
+          "net": "GND",
+          "layer": 12,
+          "x": 685,
+          "y": -1096.5,
+          "width": 53.1,
+          "height": 1.10000000000002,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "OVAL",
+            1.1,
+            53.1
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e77",
+          "padNumber": "0",
+          "net": "GND",
+          "layer": 12,
+          "x": 496.1,
+          "y": -1096.5,
+          "width": 53.1,
+          "height": 1.10000000000002,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "OVAL",
+            1.1,
+            53.1
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e78",
+          "padNumber": "0",
+          "net": "GND",
+          "layer": 12,
+          "x": 496.1,
+          "y": -1265.7,
+          "width": 53.1,
+          "height": 1.10000000000002,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "OVAL",
+            1.1,
+            53.1
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "3afe8f74ce776ed4e79",
+          "padNumber": "0",
+          "net": "GND",
+          "layer": 12,
+          "x": 685,
+          "y": -1265.7,
+          "width": 53.1,
+          "height": 1.10000000000002,
+          "rotation": -90.00000000000001,
+          "shape": [
+            "OVAL",
+            1.1,
+            53.1
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "1e9fd4bda9906fd7",
+      "designator": "C5",
+      "name": "={Value}",
+      "device": "CL31A107MQHNNNE",
+      "layer": 2,
+      "x": 1023.6199999999999,
+      "y": -1102.36,
+      "rotation": 180,
+      "bbox": {
+        "minX": 919.691,
+        "minY": -1148.376,
+        "maxX": 1127.549,
+        "maxY": -1056.3439999999998
+      },
+      "pads": [
+        {
+          "primitiveId": "1e9fd4bda9906fd7e7",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 960.9,
+          "y": -1102.4,
+          "width": 58.50000000000001,
+          "height": 68.00000000000001,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            58.5,
+            68,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "1e9fd4bda9906fd7e8",
+          "padNumber": "1",
+          "net": "3V3_AMP",
+          "layer": 2,
+          "x": 1086.3,
+          "y": -1102.4,
+          "width": 58.50000000000001,
+          "height": 68.00000000000001,
+          "rotation": 180,
+          "shape": [
+            "RECT",
+            58.5,
+            68,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "0eee316b1466509d",
+      "designator": "L1",
+      "name": "={Manufacturer Part}",
+      "device": "FXL0420-2R2-M",
+      "layer": 2,
+      "x": 496.06,
+      "y": -1594.4900000000002,
+      "rotation": 90,
+      "bbox": {
+        "minX": 407.38300000000004,
+        "minY": -1701.8890000000001,
+        "maxX": 584.737,
+        "maxY": -1487.0910000000001
+      },
+      "pads": [
+        {
+          "primitiveId": "0eee316b1466509de9",
+          "padNumber": "1",
+          "net": "$1N181",
+          "layer": 2,
+          "x": 496.1,
+          "y": -1514.6,
+          "width": 83.5,
+          "height": 55.10000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            55.1,
+            83.5,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "0eee316b1466509de10",
+          "padNumber": "2",
+          "net": "SYS",
+          "layer": 2,
+          "x": 496.1,
+          "y": -1674.3,
+          "width": 83.5,
+          "height": 55.10000000000001,
+          "rotation": 90,
+          "shape": [
+            "RECT",
+            55.1,
+            83.5,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "4dd158e0d03e74fe",
+      "designator": "TP1",
+      "name": "={Manufacturer Part}",
+      "device": "T-1.6x1.6x0.5",
+      "layer": 2,
+      "x": 1098.43,
+      "y": -244.08999999999997,
+      "rotation": 0,
+      "bbox": {
+        "minX": 1043.43,
+        "minY": -299.09,
+        "maxX": 1153.43,
+        "maxY": -189.08999999999997
+      },
+      "pads": [
+        {
+          "primitiveId": "4dd158e0d03e74fee3",
+          "padNumber": "1",
+          "net": "CHIP_EN",
+          "layer": 2,
+          "x": 1098.4,
+          "y": -244.1,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "0e0a3ddda472059e",
+      "designator": "TP2",
+      "name": "={Manufacturer Part}",
+      "device": "T-1.6x1.6x0.5",
+      "layer": 2,
+      "x": 1098.43,
+      "y": -370.0799999999999,
+      "rotation": 0,
+      "bbox": {
+        "minX": 1043.43,
+        "minY": -425.0799999999999,
+        "maxX": 1153.43,
+        "maxY": -315.0799999999999
+      },
+      "pads": [
+        {
+          "primitiveId": "0e0a3ddda472059ee3",
+          "padNumber": "1",
+          "net": "GND",
+          "layer": 2,
+          "x": 1098.4,
+          "y": -370.1,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "cab172835f36fd2e",
+      "designator": "TP3",
+      "name": "={Manufacturer Part}",
+      "device": "T-1.6x1.6x0.5",
+      "layer": 2,
+      "x": 1098.43,
+      "y": -496.06,
+      "rotation": 0,
+      "bbox": {
+        "minX": 1043.43,
+        "minY": -551.0600000000001,
+        "maxX": 1153.43,
+        "maxY": -441.06
+      },
+      "pads": [
+        {
+          "primitiveId": "cab172835f36fd2ee3",
+          "padNumber": "1",
+          "net": "BOOT_GPIO9",
+          "layer": 2,
+          "x": 1098.4,
+          "y": -496.1,
+          "width": 78.7,
+          "height": 78.7,
+          "shape": [
+            "RECT",
+            78.7,
+            78.7,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    },
+    {
+      "primitiveId": "66c88f7922cb7ff2",
+      "designator": "R3",
+      "name": "={Value}",
+      "device": "0402WGF3001TCE",
+      "layer": 2,
+      "x": 838.58,
+      "y": -1850.39,
+      "rotation": 0,
+      "bbox": {
+        "minX": 798.4050000000001,
+        "minY": -1873.0200000000002,
+        "maxX": 878.755,
+        "maxY": -1827.7600000000002
+      },
+      "pads": [
+        {
+          "primitiveId": "66c88f7922cb7ff2e12",
+          "padNumber": "2",
+          "net": "GND",
+          "layer": 2,
+          "x": 855.6,
+          "y": -1850.4,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        },
+        {
+          "primitiveId": "66c88f7922cb7ff2e13",
+          "padNumber": "1",
+          "net": "$1N189",
+          "layer": 2,
+          "x": 821.5,
+          "y": -1850.4,
+          "width": 22.3,
+          "height": 21.3,
+          "shape": [
+            "RECT",
+            22.3,
+            21.3,
+            0
+          ],
+          "specialPad": []
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "bbox": {
+      "minX": -5,
+      "minY": -1973.5039000000002,
+      "maxX": 1186.1024,
+      "maxY": 5
+    },
+    "source": "bbox",
+    "format": "unexpected-start:R"
+  },
+  "silk": [
+    {
+      "ID": "b5ac84ada146fdbee19",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0805",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "b5ac84ada146fdbe",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "b5ac84ada146fdbee20",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "b5ac84ada146fdbe",
+      "CompLayer": 2,
+      "X": 415.753,
+      "Y": -1917.595,
+      "BBox": {
+        "MinX": 415.753,
+        "MinY": -1962.595,
+        "MaxX": 457.953,
+        "MaxY": -1917.595
+      }
+    },
+    {
+      "ID": "b5ac84ada146fdbee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "HGC0805R5106K250NSLJ",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "b5ac84ada146fdbe",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a4f5c96c3a58f119e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "1uF",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 67.5,
+      "CompID": "a4f5c96c3a58f119",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a4f5c96c3a58f119e2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C2",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "a4f5c96c3a58f119",
+      "CompLayer": 1,
+      "X": 78.851,
+      "Y": -379.918,
+      "BBox": {
+        "MinX": 78.85099999999997,
+        "MinY": -433.118,
+        "MaxX": 123.851,
+        "MaxY": -379.918
+      }
+    },
+    {
+      "ID": "a4f5c96c3a58f119ee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "a4f5c96c3a58f119",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a4f5c96c3a58f119e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05A105KA5NQNC",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "a4f5c96c3a58f119",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "26ff00c6e5533a0ce1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "100nF",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 67.5,
+      "CompID": "26ff00c6e5533a0c",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "26ff00c6e5533a0ce2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C3",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "26ff00c6e5533a0c",
+      "CompLayer": 1,
+      "X": 23.509,
+      "Y": -368.11199999999997,
+      "BBox": {
+        "MinX": -21.491,
+        "MinY": -368.11199999999997,
+        "MaxX": 23.509000000000007,
+        "MaxY": -314.912
+      }
+    },
+    {
+      "ID": "26ff00c6e5533a0cee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "26ff00c6e5533a0c",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "26ff00c6e5533a0ce0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05B104KO5NNNC",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "26ff00c6e5533a0c",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "ce35fd9e65fbaf4ce1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "2.2uF",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 67.5,
+      "CompID": "ce35fd9e65fbaf4c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "ce35fd9e65fbaf4ce2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C4",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "ce35fd9e65fbaf4c",
+      "CompLayer": 2,
+      "X": 1074.911,
+      "Y": -1297.242,
+      "BBox": {
+        "MinX": 1074.911,
+        "MinY": -1297.242,
+        "MaxX": 1119.911,
+        "MaxY": -1242.842
+      }
+    },
+    {
+      "ID": "ce35fd9e65fbaf4cee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "ce35fd9e65fbaf4c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "ce35fd9e65fbaf4ce0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05A225KA5NUNC",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "ce35fd9e65fbaf4c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d23090ab98d0c1cee19",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0805",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d23090ab98d0c1ce",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d23090ab98d0c1cee20",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C6",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d23090ab98d0c1ce",
+      "CompLayer": 2,
+      "X": 600.793,
+      "Y": -1838.855,
+      "BBox": {
+        "MinX": 600.793,
+        "MinY": -1883.855,
+        "MaxX": 652.7930000000001,
+        "MaxY": -1838.855
+      }
+    },
+    {
+      "ID": "d23090ab98d0c1cee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "HGC0805R5106K250NSLJ",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d23090ab98d0c1ce",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e413a137f46ebd14e19",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0805",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e413a137f46ebd14",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e413a137f46ebd14e20",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C7",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e413a137f46ebd14",
+      "CompLayer": 2,
+      "X": 576.367,
+      "Y": -1724.145,
+      "BBox": {
+        "MinX": 523.1669999999999,
+        "MinY": -1724.145,
+        "MaxX": 576.367,
+        "MaxY": -1679.145
+      }
+    },
+    {
+      "ID": "e413a137f46ebd14e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0805X226M100NT_C503482",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e413a137f46ebd14",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0fdc161838e20558e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "2.2uF",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -360,
+      "FontSize": 67.5,
+      "CompID": "0fdc161838e20558",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0fdc161838e20558e2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C8",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -360,
+      "FontSize": 45,
+      "CompID": "0fdc161838e20558",
+      "CompLayer": 2,
+      "X": 875.982,
+      "Y": -1763.669,
+      "BBox": {
+        "MinX": 822.7819999999999,
+        "MinY": -1763.669,
+        "MaxX": 875.982,
+        "MaxY": -1718.669
+      }
+    },
+    {
+      "ID": "0fdc161838e20558ee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -360,
+      "FontSize": 45,
+      "CompID": "0fdc161838e20558",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0fdc161838e20558e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05A225KA5NUNC",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -360,
+      "FontSize": 45,
+      "CompID": "0fdc161838e20558",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a5f70fbfbc322da7e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "100nF",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 67.5,
+      "CompID": "a5f70fbfbc322da7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a5f70fbfbc322da7e2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C13",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "a5f70fbfbc322da7",
+      "CompLayer": 2,
+      "X": 903.542,
+      "Y": -385.719,
+      "BBox": {
+        "MinX": 832.442,
+        "MinY": -385.719,
+        "MaxX": 903.542,
+        "MaxY": -340.719
+      }
+    },
+    {
+      "ID": "a5f70fbfbc322da7ee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "a5f70fbfbc322da7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "a5f70fbfbc322da7e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05B104KO5NNNC",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "a5f70fbfbc322da7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c9136e055dcae256e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "1uF",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 67.5,
+      "CompID": "c9136e055dcae256",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c9136e055dcae256e2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C15",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "c9136e055dcae256",
+      "CompLayer": 1,
+      "X": 78.851,
+      "Y": -466.538,
+      "BBox": {
+        "MinX": 78.85099999999997,
+        "MinY": -537.638,
+        "MaxX": 123.851,
+        "MaxY": -466.538
+      }
+    },
+    {
+      "ID": "c9136e055dcae256ee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "c9136e055dcae256",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c9136e055dcae256e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05A105KA5NQNC",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 630,
+      "FontSize": 45,
+      "CompID": "c9136e055dcae256",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "748c4e2f0d4d3fa5e19",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0805",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "748c4e2f0d4d3fa5",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "748c4e2f0d4d3fa5e20",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C16",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "748c4e2f0d4d3fa5",
+      "CompLayer": 2,
+      "X": 342.785,
+      "Y": -918.887,
+      "BBox": {
+        "MinX": 342.785,
+        "MinY": -918.887,
+        "MaxX": 387.785,
+        "MaxY": -848.9870000000001
+      }
+    },
+    {
+      "ID": "748c4e2f0d4d3fa5e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "HGC0805R5106K250NSLJ",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "748c4e2f0d4d3fa5",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "450baef5e5671c3ee1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "100nF",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 67.5,
+      "CompID": "450baef5e5671c3e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "450baef5e5671c3ee2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C19",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "450baef5e5671c3e",
+      "CompLayer": 2,
+      "X": 431.102,
+      "Y": -806.979,
+      "BBox": {
+        "MinX": 361.202,
+        "MinY": -806.979,
+        "MaxX": 431.102,
+        "MaxY": -761.979
+      }
+    },
+    {
+      "ID": "450baef5e5671c3eee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "450baef5e5671c3e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "450baef5e5671c3ee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05B104KO5NNNC",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "450baef5e5671c3e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "8c21096b05e9b38ce1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "2.2uF",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 67.5,
+      "CompID": "8c21096b05e9b38c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "8c21096b05e9b38ce2",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C23",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "8c21096b05e9b38c",
+      "CompLayer": 2,
+      "X": 1082.569,
+      "Y": -1222.438,
+      "BBox": {
+        "MinX": 1037.569,
+        "MinY": -1304.538,
+        "MaxX": 1082.569,
+        "MaxY": -1222.438
+      }
+    },
+    {
+      "ID": "8c21096b05e9b38cee0",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "8c21096b05e9b38c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "8c21096b05e9b38ce0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL05A225KA5NUNC",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "8c21096b05e9b38c",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e1adaa699368aa84e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "SEUCS2X3V1B",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 67.5,
+      "CompID": "e1adaa699368aa84",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e1adaa699368aa84e2",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "SEUCS2X3V1B",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "e1adaa699368aa84",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e1adaa699368aa84e3",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "D1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "e1adaa699368aa84",
+      "CompLayer": 2,
+      "X": 645.385,
+      "Y": -953.9635,
+      "BBox": {
+        "MinX": 645.385,
+        "MinY": -953.9635,
+        "MaxX": 690.385,
+        "MaxY": -912.9635000000001
+      }
+    },
+    {
+      "ID": "e1adaa699368aa84e4",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "DFN0603-2L-BI",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "e1adaa699368aa84",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "dfef32f042289de1e1",
+      "Kind": "attribute",
+      "Key": "Name",
+      "Text": "SEUCS2X3V1B",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 67.5,
+      "CompID": "dfef32f042289de1",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "dfef32f042289de1e2",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "SEUCS2X3V1B",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "dfef32f042289de1",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "dfef32f042289de1e3",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "D2",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "dfef32f042289de1",
+      "CompLayer": 2,
+      "X": 684.755,
+      "Y": -953.9635,
+      "BBox": {
+        "MinX": 684.755,
+        "MinY": -953.9635,
+        "MaxX": 729.755,
+        "MaxY": -901.9635
+      }
+    },
+    {
+      "ID": "dfef32f042289de1e4",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "DFN0603-2L-BI",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "dfef32f042289de1",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "cadd401f04e3214fe20",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "LED0603-R-FD",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "cadd401f04e3214f",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "cadd401f04e3214fe21",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "D3",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "cadd401f04e3214f",
+      "CompLayer": 1,
+      "X": 1058.36,
+      "Y": -610.93,
+      "BBox": {
+        "MinX": 1013.3599999999999,
+        "MinY": -610.93,
+        "MaxX": 1058.36,
+        "MaxY": -558.93
+      }
+    },
+    {
+      "ID": "cadd401f04e3214fe0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "19-217/R6C-AL1M2VY/6T",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "cadd401f04e3214f",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "73a15d3e9dc147cae21",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "SOD-123FL_L2.8-W1.9-LS3.7-RD",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "73a15d3e9dc147ca",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "73a15d3e9dc147cae22",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "D4",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "73a15d3e9dc147ca",
+      "CompLayer": 2,
+      "X": 27.558,
+      "Y": -1427.32,
+      "BBox": {
+        "MinX": 27.557999999999993,
+        "MinY": -1472.32,
+        "MaxX": 80.758,
+        "MaxY": -1427.32
+      }
+    },
+    {
+      "ID": "73a15d3e9dc147cae0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "SMF5.0A_C2857263",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "73a15d3e9dc147ca",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c4d72302e2b250e9e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "F1206",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "c4d72302e2b250e9",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c4d72302e2b250e9e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "F1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "c4d72302e2b250e9",
+      "CompLayer": 2,
+      "X": 192.74599999999998,
+      "Y": -1273.419,
+      "BBox": {
+        "MinX": 192.74599999999998,
+        "MinY": -1273.419,
+        "MaxX": 237.74599999999998,
+        "MaxY": -1233.719
+      }
+    },
+    {
+      "ID": "c4d72302e2b250e9e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "BSMD1206-100-24V",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "c4d72302e2b250e9",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "46e440203b4e6b5be12",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "HDR-TH_2P-P2.54-V-M",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "46e440203b4e6b5b",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "46e440203b4e6b5be13",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "J2",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "46e440203b4e6b5b",
+      "CompLayer": 1,
+      "X": 677.1000000000001,
+      "Y": -649.66,
+      "BBox": {
+        "MinX": 677.1000000000001,
+        "MinY": -649.66,
+        "MaxX": 724.2,
+        "MaxY": -604.66
+      }
+    },
+    {
+      "ID": "46e440203b4e6b5be0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "PZ254V-11-02P",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "46e440203b4e6b5b",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "625819bfe7bdc511e12",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "HDR-TH_2P-P2.54-V-M",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "625819bfe7bdc511",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "625819bfe7bdc511e13",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "J3",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "625819bfe7bdc511",
+      "CompLayer": 1,
+      "X": 901.51,
+      "Y": -649.66,
+      "BBox": {
+        "MinX": 901.51,
+        "MinY": -649.66,
+        "MaxX": 948.6099999999999,
+        "MaxY": -604.66
+      }
+    },
+    {
+      "ID": "625819bfe7bdc511e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "PZ254V-11-02P",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "625819bfe7bdc511",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "2a01867ca1b4cb28e12",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "HDR-TH_2P-P2.54-V-M",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2a01867ca1b4cb28",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "2a01867ca1b4cb28e13",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "J4",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2a01867ca1b4cb28",
+      "CompLayer": 1,
+      "X": 785.76,
+      "Y": -515.8,
+      "BBox": {
+        "MinX": 785.76,
+        "MinY": -515.8,
+        "MaxX": 834.06,
+        "MaxY": -470.79999999999995
+      }
+    },
+    {
+      "ID": "2a01867ca1b4cb28e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "PZ254V-11-02P",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2a01867ca1b4cb28",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "4e20903ed1c19653e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "4e20903ed1c19653",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "4e20903ed1c19653e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "4e20903ed1c19653",
+      "CompLayer": 2,
+      "X": 433.875,
+      "Y": -747.96,
+      "BBox": {
+        "MinX": 392.875,
+        "MinY": -747.96,
+        "MaxX": 433.875,
+        "MaxY": -702.96
+      }
+    },
+    {
+      "ID": "4e20903ed1c19653e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1003TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "4e20903ed1c19653",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c51af130e9bef255e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "c51af130e9bef255",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "c51af130e9bef255e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R2",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "c51af130e9bef255",
+      "CompLayer": 2,
+      "X": 433.875,
+      "Y": -688.9099999999999,
+      "BBox": {
+        "MinX": 381.875,
+        "MinY": -688.9099999999999,
+        "MaxX": 433.875,
+        "MaxY": -643.9099999999999
+      }
+    },
+    {
+      "ID": "c51af130e9bef255e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1003TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "c51af130e9bef255",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "aaeef3a21806c19ae15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "aaeef3a21806c19a",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "aaeef3a21806c19ae16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R4",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "aaeef3a21806c19a",
+      "CompLayer": 2,
+      "X": 252.04000000000002,
+      "Y": -1154.345,
+      "BBox": {
+        "MinX": 252.04000000000002,
+        "MinY": -1154.345,
+        "MaxX": 297.04,
+        "MaxY": -1101.145
+      }
+    },
+    {
+      "ID": "aaeef3a21806c19ae0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF5101TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "aaeef3a21806c19a",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "98a181097ef19a63e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "98a181097ef19a63",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "98a181097ef19a63e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "98a181097ef19a63",
+      "CompLayer": 2,
+      "X": 196.78,
+      "Y": -1207.855,
+      "BBox": {
+        "MinX": 151.78,
+        "MinY": -1259.855,
+        "MaxX": 196.78,
+        "MaxY": -1207.855
+      }
+    },
+    {
+      "ID": "98a181097ef19a63e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF5101TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "98a181097ef19a63",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d4883741a2b823b3e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "d4883741a2b823b3",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d4883741a2b823b3e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R6",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "d4883741a2b823b3",
+      "CompLayer": 2,
+      "X": 756.7150000000001,
+      "Y": -484.18,
+      "BBox": {
+        "MinX": 705.9150000000001,
+        "MinY": -484.18,
+        "MaxX": 756.7150000000001,
+        "MaxY": -439.18
+      }
+    },
+    {
+      "ID": "d4883741a2b823b3e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "RC0402FR-0733RL",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "d4883741a2b823b3",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e68266a03d4dfdb6e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e68266a03d4dfdb6",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "e68266a03d4dfdb6e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R7",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e68266a03d4dfdb6",
+      "CompLayer": 2,
+      "X": 756.7150000000001,
+      "Y": -543.24,
+      "BBox": {
+        "MinX": 704.715,
+        "MinY": -543.24,
+        "MaxX": 756.7150000000001,
+        "MaxY": -498.24
+      }
+    },
+    {
+      "ID": "e68266a03d4dfdb6e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "RC0402FR-0733RL",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "e68266a03d4dfdb6",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "19da32243673c317e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "19da32243673c317",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "19da32243673c317e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R8",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "19da32243673c317",
+      "CompLayer": 2,
+      "X": 19.61,
+      "Y": -1062.185,
+      "BBox": {
+        "MinX": -25.39,
+        "MinY": -1114.185,
+        "MaxX": 19.61,
+        "MaxY": -1062.185
+      }
+    },
+    {
+      "ID": "19da32243673c317e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF0000TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "19da32243673c317",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "108f2508c916259ae15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "108f2508c916259a",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "108f2508c916259ae16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R9",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "108f2508c916259a",
+      "CompLayer": 1,
+      "X": 23.55,
+      "Y": -630.725,
+      "BBox": {
+        "MinX": -21.45,
+        "MinY": -630.725,
+        "MaxX": 23.550000000000004,
+        "MaxY": -579.9250000000001
+      }
+    },
+    {
+      "ID": "108f2508c916259ae0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1002TCE",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "108f2508c916259a",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "517658251d8f6ee2e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "517658251d8f6ee2",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "517658251d8f6ee2e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R10",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "517658251d8f6ee2",
+      "CompLayer": 2,
+      "X": 520.485,
+      "Y": -807.02,
+      "BBox": {
+        "MinX": 450.58500000000004,
+        "MinY": -807.02,
+        "MaxX": 520.485,
+        "MaxY": -762.02
+      }
+    },
+    {
+      "ID": "517658251d8f6ee2e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1002TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "517658251d8f6ee2",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "deaa045b126a6794e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "deaa045b126a6794",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "deaa045b126a6794e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R11",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "deaa045b126a6794",
+      "CompLayer": 2,
+      "X": 440.135,
+      "Y": -744.1700000000001,
+      "BBox": {
+        "MinX": 440.135,
+        "MinY": -789.1700000000001,
+        "MaxX": 499.035,
+        "MaxY": -744.1700000000001
+      }
+    },
+    {
+      "ID": "deaa045b126a6794e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1002TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "deaa045b126a6794",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "9b8cca87760038b3e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "9b8cca87760038b3",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "9b8cca87760038b3e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R12",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "9b8cca87760038b3",
+      "CompLayer": 2,
+      "X": 607.105,
+      "Y": -688.9099999999999,
+      "BBox": {
+        "MinX": 537.205,
+        "MinY": -688.9099999999999,
+        "MaxX": 607.105,
+        "MaxY": -643.9099999999999
+      }
+    },
+    {
+      "ID": "9b8cca87760038b3e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1002TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "9b8cca87760038b3",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "18ea06fdbee25ef7e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "18ea06fdbee25ef7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "18ea06fdbee25ef7e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R13",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "18ea06fdbee25ef7",
+      "CompLayer": 2,
+      "X": 980.24,
+      "Y": -412.585,
+      "BBox": {
+        "MinX": 935.24,
+        "MinY": -482.485,
+        "MaxX": 980.24,
+        "MaxY": -412.585
+      }
+    },
+    {
+      "ID": "18ea06fdbee25ef7e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF3300TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -90,
+      "FontSize": 45,
+      "CompID": "18ea06fdbee25ef7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "76d88c4a83a027bae15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "76d88c4a83a027ba",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "76d88c4a83a027bae16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R14",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "76d88c4a83a027ba",
+      "CompLayer": 2,
+      "X": 515.623,
+      "Y": -752.8596,
+      "BBox": {
+        "MinX": 444.5230000000001,
+        "MinY": -752.8596,
+        "MaxX": 515.623,
+        "MaxY": -707.8596
+      }
+    },
+    {
+      "ID": "76d88c4a83a027bae0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1004TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "76d88c4a83a027ba",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "7d8f3add3914c3c7e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "7d8f3add3914c3c7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "7d8f3add3914c3c7e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R15",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "7d8f3add3914c3c7",
+      "CompLayer": 2,
+      "X": 526.755,
+      "Y": -803.22,
+      "BBox": {
+        "MinX": 526.755,
+        "MinY": -848.22,
+        "MaxX": 596.655,
+        "MaxY": -803.22
+      }
+    },
+    {
+      "ID": "7d8f3add3914c3c7e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1004TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "7d8f3add3914c3c7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d93fb4e5f6ef553de15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d93fb4e5f6ef553d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "d93fb4e5f6ef553de16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R18",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d93fb4e5f6ef553d",
+      "CompLayer": 2,
+      "X": 526.755,
+      "Y": -862.28,
+      "BBox": {
+        "MinX": 526.755,
+        "MinY": -907.28,
+        "MaxX": 596.655,
+        "MaxY": -862.28
+      }
+    },
+    {
+      "ID": "d93fb4e5f6ef553de0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF1003TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "d93fb4e5f6ef553d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "59cb4c62f32f04a6e135",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "WIFIM-SMD_ESP32-C3-MINI-1",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "59cb4c62f32f04a6",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "59cb4c62f32f04a6e136",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U1",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "59cb4c62f32f04a6",
+      "CompLayer": 1,
+      "X": 98.48600000000002,
+      "Y": -10.6675,
+      "BBox": {
+        "MinX": 98.48600000000002,
+        "MinY": -10.6675,
+        "MaxX": 139.48600000000002,
+        "MaxY": 34.3325
+      }
+    },
+    {
+      "ID": "59cb4c62f32f04a6e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "ESP32-C3-MINI-1-H4X",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "59cb4c62f32f04a6",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "3d776476579ee73be36",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP-1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "3d776476579ee73b",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "3d776476579ee73be37",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U2",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "3d776476579ee73b",
+      "CompLayer": 2,
+      "X": 597.9345,
+      "Y": -1743.489,
+      "BBox": {
+        "MinX": 597.9345,
+        "MinY": -1788.489,
+        "MaxX": 649.9345,
+        "MaxY": -1743.489
+      }
+    },
+    {
+      "ID": "3d776476579ee73be0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "ETA6002E8A",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "3d776476579ee73b",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "b2cbc24caa0ac39de25",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "SOT-89-5_L4.5-W2.5-P1.50-LS4.6-BL",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "b2cbc24caa0ac39d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "b2cbc24caa0ac39de26",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U3",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "b2cbc24caa0ac39d",
+      "CompLayer": 2,
+      "X": 251.06400000000002,
+      "Y": -712.1585,
+      "BBox": {
+        "MinX": 199.06400000000002,
+        "MinY": -712.1585,
+        "MaxX": 251.06400000000002,
+        "MaxY": -667.1585
+      }
+    },
+    {
+      "ID": "b2cbc24caa0ac39de0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "ETA5060V330S8F",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "b2cbc24caa0ac39d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0b289da71018ff7ce27",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "MIC-SMD_6P-L2.8-W1.9-P0.98-TL",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0b289da71018ff7c",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0b289da71018ff7ce28",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U4",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0b289da71018ff7c",
+      "CompLayer": 1,
+      "X": 918.6395,
+      "Y": -384.9599999999999,
+      "BBox": {
+        "MinX": 865.4395,
+        "MinY": -429.9599999999999,
+        "MaxX": 918.6395,
+        "MaxY": -384.9599999999999
+      }
+    },
+    {
+      "ID": "0b289da71018ff7ce0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "LMD2718T261-OA1",
+      "Layer": 3,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0b289da71018ff7c",
+      "CompLayer": 1,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "123119d162a89f6ae37",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "123119d162a89f6a",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "123119d162a89f6ae38",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "123119d162a89f6a",
+      "CompLayer": 2,
+      "X": 905.425,
+      "Y": -1053.9837,
+      "BBox": {
+        "MinX": 905.425,
+        "MinY": -1098.9837,
+        "MaxX": 957.425,
+        "MaxY": -1053.9837
+      }
+    },
+    {
+      "ID": "123119d162a89f6ae0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "NS4168_C910588",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "123119d162a89f6a",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "2caf0714b3855f62e22",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2caf0714b3855f62",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "2caf0714b3855f62e23",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "U7",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2caf0714b3855f62",
+      "CompLayer": 2,
+      "X": 1007.38,
+      "Y": -1182.435,
+      "BBox": {
+        "MinX": 955.38,
+        "MinY": -1182.435,
+        "MaxX": 1007.38,
+        "MaxY": -1137.435
+      }
+    },
+    {
+      "ID": "2caf0714b3855f62e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "TLV75733PDBVR",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "2caf0714b3855f62",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "3afe8f74ce776ed4e80",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "USB-C-SMD_SOUHAN_TYPE-C-16PLT-H6.5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "3afe8f74ce776ed4",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "3afe8f74ce776ed4e81",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "J1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "3afe8f74ce776ed4",
+      "CompLayer": 2,
+      "X": 784.552,
+      "Y": -1053.001,
+      "BBox": {
+        "MinX": 748.452,
+        "MinY": -1053.001,
+        "MaxX": 784.552,
+        "MaxY": -1008.001
+      }
+    },
+    {
+      "ID": "3afe8f74ce776ed4e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "TYPE-C 16PLT-H6.5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "3afe8f74ce776ed4",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "1e9fd4bda9906fd7e19",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "C1206",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "1e9fd4bda9906fd7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "1e9fd4bda9906fd7e20",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "C5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "1e9fd4bda9906fd7",
+      "CompLayer": 2,
+      "X": 1161.417,
+      "Y": -990.061,
+      "BBox": {
+        "MinX": 1108.2169999999999,
+        "MinY": -990.061,
+        "MaxX": 1161.417,
+        "MaxY": -945.061
+      }
+    },
+    {
+      "ID": "1e9fd4bda9906fd7e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "CL31A107MQHNNNE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 0,
+      "FontSize": 45,
+      "CompID": "1e9fd4bda9906fd7",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0eee316b1466509de13",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "IND-SMD_L4.4-W4.2",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "0eee316b1466509d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0eee316b1466509de14",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "L1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "0eee316b1466509d",
+      "CompLayer": 2,
+      "X": 636.981,
+      "Y": -1765.3565,
+      "BBox": {
+        "MinX": 636.981,
+        "MinY": -1765.3565,
+        "MaxX": 681.981,
+        "MaxY": -1726.8565
+      }
+    },
+    {
+      "ID": "0eee316b1466509de0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "FXL0420-2R2-M",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 90,
+      "FontSize": 45,
+      "CompID": "0eee316b1466509d",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "4dd158e0d03e74fee6",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "TESTPOINT-SMD_L1.6-W1.6_C9900017411",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "4dd158e0d03e74fe",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "4dd158e0d03e74fee7",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "TP1",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "4dd158e0d03e74fe",
+      "CompLayer": 2,
+      "X": 1043.43,
+      "Y": -304.09,
+      "BBox": {
+        "MinX": 1043.43,
+        "MinY": -349.09,
+        "MaxX": 1113.33,
+        "MaxY": -304.09
+      }
+    },
+    {
+      "ID": "4dd158e0d03e74fee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "T-1.6x1.6x0.5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "4dd158e0d03e74fe",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0e0a3ddda472059ee6",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "TESTPOINT-SMD_L1.6-W1.6_C9900017411",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0e0a3ddda472059e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "0e0a3ddda472059ee7",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "TP2",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0e0a3ddda472059e",
+      "CompLayer": 2,
+      "X": 1043.43,
+      "Y": -430.0799999999999,
+      "BBox": {
+        "MinX": 1043.43,
+        "MinY": -475.0799999999999,
+        "MaxX": 1124.3300000000002,
+        "MaxY": -430.0799999999999
+      }
+    },
+    {
+      "ID": "0e0a3ddda472059ee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "T-1.6x1.6x0.5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "0e0a3ddda472059e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "cab172835f36fd2ee6",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "TESTPOINT-SMD_L1.6-W1.6_C9900017411",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "cab172835f36fd2e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "cab172835f36fd2ee7",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "TP3",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "cab172835f36fd2e",
+      "CompLayer": 2,
+      "X": 1043.43,
+      "Y": -556.06,
+      "BBox": {
+        "MinX": 1043.43,
+        "MinY": -601.06,
+        "MaxX": 1124.3300000000002,
+        "MaxY": -556.06
+      }
+    },
+    {
+      "ID": "cab172835f36fd2ee0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "T-1.6x1.6x0.5",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": 180,
+      "FontSize": 45,
+      "CompID": "cab172835f36fd2e",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "66c88f7922cb7ff2e15",
+      "Kind": "attribute",
+      "Key": "Footprint",
+      "Text": "R0402",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "66c88f7922cb7ff2",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    },
+    {
+      "ID": "66c88f7922cb7ff2e16",
+      "Kind": "attribute",
+      "Key": "Designator",
+      "Text": "R3",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "66c88f7922cb7ff2",
+      "CompLayer": 2,
+      "X": 798.405,
+      "Y": -1878.02,
+      "BBox": {
+        "MinX": 798.405,
+        "MinY": -1923.02,
+        "MaxX": 850.405,
+        "MaxY": -1878.02
+      }
+    },
+    {
+      "ID": "66c88f7922cb7ff2e0",
+      "Kind": "attribute",
+      "Key": "Device",
+      "Text": "0402WGF3001TCE",
+      "Layer": 4,
+      "Mirror": false,
+      "Reverse": false,
+      "Rotation": -180,
+      "FontSize": 45,
+      "CompID": "66c88f7922cb7ff2",
+      "CompLayer": 2,
+      "X": 0,
+      "Y": 0,
+      "BBox": null
+    }
+  ],
+  "copperLayers": 2,
+  "rules": {
+    "clearanceMil": 5.98,
+    "clearanceTrackTrackMil": 4.02,
+    "trackWidthMil": 10,
+    "powerWidthMil": 20,
+    "trackWidthMinMil": 5,
+    "viaDrillMil": 12.01,
+    "viaDiameterMil": 24.02,
+    "copperToEdgeMil": 10,
+    "source": "live"
+  },
+  "routedLines": 0,
+  "partial": [
+    "board outline is an AABB approximation (connector reported outline format unexpected-start:R) — edge distances on a non-rectangular board are approximate"
+  ],
+  "capturedAt": "2026-10-07T02:50:07Z",
+  "project": "8c5d0d86032348a0a6c85102fe97607e",
+  "semanticSha256": "79fe5bfbd42975f5c91a67d18f8ec6c1242036328ba832d1e57ce619773336d1"
+}

@@ -1,0 +1,315 @@
+{
+  "count": 31,
+  "nets": [
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "GND"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SYS"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "3V3"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "3V3_AMP"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "VBUS_CHG"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "VBAT"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "CHIP_EN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SYS_ADC"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_DP_CONN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_DM_CONN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "LED_GPIO8"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "$1N317"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "VBUS_USB"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "$1N222"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SPK_P"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "SPK_N"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "REC_KEY"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "MIC_DATA"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AMP_CTRL"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "$1N189"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_CC1"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_CC2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_DP"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "USB_DM"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BOOT_GPIO2"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "BOOT_GPIO9"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "I2S_BCLK"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "I2S_WS"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "MIC_CLK"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "AMP_DIN"
+    },
+    {
+      "color": {
+        "alpha": 1,
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "length": 0,
+      "net": "$1N181"
+    }
+  ]
+}

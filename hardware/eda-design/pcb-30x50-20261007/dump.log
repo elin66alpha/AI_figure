@@ -1,0 +1,2 @@
+✅ 52 component(s), outline=bbox → board.json
+⚠️  board outline is an AABB approximation (connector reported outline format unexpected-start:R) — edge distances on a non-rectangular board are approximate

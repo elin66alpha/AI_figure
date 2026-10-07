@@ -1,0 +1,2 @@
+⚠ staleRisk: PCB was mutated by pcb.component.attrs_backfill since the last reload — pcb.documents.list (and DRC) may read stale engine state; authoritative workflows should save, run `easyeda doc reload`, then read back; if refresh fails, treat the data as unavailable
+✓ reloaded pcb f39f5125c569691f (saved → closed → reopened)

@@ -1,0 +1,11 @@
+sch check: 6 finding(s) — 1 floating pin(s)/1 comp, 0 geom-net mismatch(es), 0 net-marker mismatch(es), 0 multi-net wire(s), 0 wire-crossing(s), 0 wire-over-pin(s), 0 zero-length wire(s), 0 dangling wire(s), 1 duplicate-net-marker(s), 0 titleblock-overlap(s), 0 marker-overlap(s), 0 missing-deliverable(partition/titleblock), 0 folded-net-label(s), 1 redundant-net-marker(s), 0 reversed-net-flag(s), 0 polarity-convention outlier(s)
+  WARN   floating-pin       SCREW5  1 个引脚悬空(无导线连接,未打 NC 标识)  [1]
+          pin 1 (1)  @(25.00,160.00)
+  WARN   duplicate-net-marker  27bebd1ad10a78c9  重复 netflag(GND) @(1425.00,1430.00) ×2 — 建议保留 27bebd1ad10a78c9，删除 475876c5bf47f653 (sch prim-delete)  marker=GND wire=  @(1425.00,1430.00)
+  WARN   redundant-net-marker  同一根线树上有 2 个 GND(netflag)标志 — 一个命名即可,其余是修补残留(视觉堆叠);建议保留 27bebd1ad10a78c9,删除 475876c5bf47f653  marker=GND wire=  @(1425.00,1430.00)
+  ERROR  pin-exit-direction  J4  pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (330,260)→(265,260) does not  [1]  @(265.00,260.00)
+  ERROR  pin-exit-direction  J4  pin 2 outward rotation 90° requires its first wire segment to leave outward; segment 0 (210,260)→(255,260) does not  [2]  @(255.00,260.00)
+  ERROR  part-frame-unresolved  SCREW5  body must belong to exactly one live module frame
+→ floating pins: wire them, or mark the intentional ones NC — the listed pins are exactly what `sch no-connect --designator <REF> --pin <n>[,<n>]` takes
+→ duplicate markers: a partial autoconnect stacked coincident flags/ports — sch prim-delete the suggested IDs (keep one)
+→ redundant-net-marker: 同一线树上同网标志重复(修补残留)— 按 suggestDeleteIds `sch prim-delete` 清冗余(保留一个)

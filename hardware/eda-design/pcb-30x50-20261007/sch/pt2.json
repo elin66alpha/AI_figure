@@ -1,0 +1,140 @@
+⚠ Mutation may have landed. No automatic rollback/retry; read the current data and regenerate the repair.
+{
+  "id": "req_514",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-10-07T01:21:11.2818651Z",
+  "ok": false,
+  "result": {
+    "actionResult": {
+      "component": {
+        "addIntoBom": true,
+        "addIntoPcb": true,
+        "component": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "T-1.6x1.6x0.5",
+          "uuid": "4758d2e2cdb2f981"
+        },
+        "componentType": "part",
+        "designator": "TP2",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "={Manufacturer Part}",
+          "uuid": "4758d2e2cdb2f981"
+        },
+        "footprint": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "TESTPOINT-SMD_L1.6-W1.6_C9900017411",
+          "uuid": "d46f92f4defb6eea"
+        },
+        "manufacturer": "",
+        "manufacturerId": "T-1.6x1.6x0.5",
+        "mirror": false,
+        "name": "={Manufacturer Part}",
+        "net": "",
+        "otherProperty": {
+          "Datasheet": "",
+          "Description": "",
+          "JLCPCB Part Class": "Extended Part",
+          "LCSC Part Name": "T-1.6x1.6x0.5",
+          "PCB Layer": "",
+          "Supplier Footprint": "T-1.6x1.6x0.5"
+        },
+        "primitiveId": "d21b164ddfc5cad4",
+        "rotation": 0,
+        "subPartName": "T-1.6X1.6X0.5.1",
+        "supplier": "LCSC",
+        "supplierId": "C9900017411",
+        "symbol": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "T-1.6X1.6X0.5",
+          "uuid": "7cb370ec73b073ed"
+        },
+        "uniqueId": "",
+        "x": 340,
+        "y": 510
+      },
+      "otherPropertyBackfilled": [
+        "JLCPCB Part Class",
+        "LCSC Part Name",
+        "Supplier Footprint"
+      ],
+      "primitiveId": "d21b164ddfc5cad4"
+    },
+    "geometryGuard": {
+      "findings": [
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "J4",
+          "primitiveId": "77744783f98bf8c6",
+          "wirePrimitiveId": "f7d195ede2a64fa8",
+          "pins": [
+            "1"
+          ],
+          "message": "pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (330,260)→(265,260) does not",
+          "at": {
+            "x": 265,
+            "y": 260
+          },
+          "segment": [
+            {
+              "x": 330,
+              "y": 260
+            },
+            {
+              "x": 265,
+              "y": 260
+            }
+          ]
+        },
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "J4",
+          "primitiveId": "77744783f98bf8c6",
+          "wirePrimitiveId": "75712bb4840a7984",
+          "pins": [
+            "2"
+          ],
+          "message": "pin 2 outward rotation 90° requires its first wire segment to leave outward; segment 0 (210,260)→(255,260) does not",
+          "at": {
+            "x": 255.00000000000003,
+            "y": 260
+          },
+          "segment": [
+            {
+              "x": 210,
+              "y": 260
+            },
+            {
+              "x": 255,
+              "y": 260
+            }
+          ]
+        }
+      ],
+      "mutationApplied": true,
+      "observations": [
+        {
+          "readId": "req_514-geometry-after",
+          "seq": 1174,
+          "seqAbandoned": 5,
+          "wireSegments": 275
+        }
+      ],
+      "passed": false,
+      "phase": "readback",
+      "readbackAttempts": 1
+    },
+    "partial": true
+  },
+  "warnings": [
+    "Mutation may have landed. No automatic rollback/retry; read the current data and regenerate the repair."
+  ],
+  "error": {
+    "code": "SCHEMATIC_GEOMETRY_INVALID",
+    "message": "schematic geometry guard failed (readback)",
+    "detail": "New invalid geometry observed after write. Repair the measured state; API success is not validation success. pin-exit-direction (J4:1): pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (330,260)→(265,260) does not; pin-exit-direction (J4:2): pin 2 outward rotation 90° requires its first wire segment to leave outward; segment 0 (210,260)→(255,260) does not"
+  }
+}

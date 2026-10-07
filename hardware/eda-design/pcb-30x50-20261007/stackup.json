@@ -1,0 +1,27 @@
+Configure the board stackup — the count of copper layers and the type of each
+inner layer. A PLANE (内电层) inner layer is a solid negative plane, the clean way
+to distribute GND + power on 4+ layer boards: each gets a dedicated plane instead
+of two power nets fighting over one layer (the 2-layer pour conflict). Read the
+current stackup with 'pcb layers' (copperLayerCount + each layer's type).
+
+Usage:
+  easyeda pcb stackup [flags]
+  easyeda pcb stackup [command]
+
+Available Commands:
+  set         Set copper layer count and/or inner-layer types
+  show        Show the current stackup (copper layer count + layers)
+
+Flags:
+  -h, --help   help for stackup
+
+Global Flags:
+      --doc string                pin every mutating action to this schematic page / PCB (uuid or name): the CLI switches to it and confirms via live document.current before editing, refusing rather than land the edit on whatever page is foreground — removes the doc-switch race
+      --force-stale-read string   deprecated compatibility option; stale PCB reads now continue with staleRisk and authoritative workflows still save, reload, then read back
+      --host string               daemon host (default "127.0.0.1")
+      --ports string              daemon port range (start-end) (default "60832-60841")
+      --project string            route by project name/uuid instead of --window (survives windowId churn)
+      --skip-version-check        deprecated compatibility option; version differences are diagnostic and no longer block actions
+      --window string             EasyEDA window ID
+
+Use "easyeda pcb stackup [command] --help" for more information about a command.

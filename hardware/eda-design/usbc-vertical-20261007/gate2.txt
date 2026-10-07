@@ -1,0 +1,16 @@
+sch gate: FAIL
+  PASS   layout-lint    0 overlap, 0 pin-coincidence, 0 tight, 5 off-grid, 0 out-of-sheet, 0 no-bbox, 0 unchecked-pin, 0 unproven-pin, 0 nets-unproven, 0 invalid-geometry (zone-check=not-configured sheet-check=checked)
+  FAIL   clusters       58 个虚拟组:1 重叠 / 0 出图纸 / 0 过近
+  FAIL   check          6 finding(s): 3 error/fatal, 3 warn/info
+  PASS   bridge-check   0 bridge(short), 0 orphan-stub, 0 orphan-flag, 0 orphan-tree (135 wire tree(s))
+  PASS   drc            0 fatal, 0 error, 2 warn, 0 info (total 2); native verdict PASS
+
+阻塞项:
+  • clusters: 1 处组间图元重叠
+  • check: 3 个 error/fatal finding: pin-exit-direction×2, part-frame-unresolved×1
+
+下一步:
+  → 按 finding 类型分治:duplicate-net-marker 喂 `sch prim-delete`(带 suggestDeleteIds),floating-pin 用 `sch no-connect`,wire-* 用 `sch disconnect` 后重连
+
+告警(不阻塞): layout-lint: 5 条告警, check: 3 条告警, drc: 2 条告警
+sch gate: FAIL — clusters: 1 处组间图元重叠; check: 3 个 error/fatal finding: pin-exit-direction×2, part-frame-unresolved×1

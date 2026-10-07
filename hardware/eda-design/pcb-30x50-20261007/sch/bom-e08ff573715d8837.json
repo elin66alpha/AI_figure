@@ -1,0 +1,298 @@
+warning [bug #256]: Web 4.1.60 原理图修改曾间歇报 cmdKey，触发条件未明；失败后先 fresh sch list 核对目标字段，勿盲重试。https://github.com/zhoushoujianwork/easyeda-agent/issues/256
+⚠ Mutation may have landed. No automatic rollback/retry; read the current data and regenerate the repair.
+{
+  "id": "req_333",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-10-07T01:18:14.5522007Z",
+  "ok": false,
+  "result": {
+    "actionResult": {
+      "component": {
+        "addIntoBom": false,
+        "addIntoPcb": true,
+        "component": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "Test-Point",
+          "uuid": "315294e4be17f94b"
+        },
+        "componentType": "part",
+        "designator": "TP2",
+        "device": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "",
+          "uuid": "315294e4be17f94b"
+        },
+        "footprint": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "Test-Point-0.5mm",
+          "uuid": "dee30fd26dfe6420"
+        },
+        "manufacturer": "",
+        "manufacturerId": "",
+        "mirror": false,
+        "name": "",
+        "net": "",
+        "otherProperty": {
+          "Description": "Test Point 测试点",
+          "PCB Layer": ""
+        },
+        "primitiveId": "e08ff573715d8837",
+        "rotation": 180,
+        "subPartName": "Test-Point.1",
+        "supplier": "",
+        "supplierId": "",
+        "symbol": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "name": "Test-Point",
+          "uuid": "ecce5b50684536dd"
+        },
+        "uniqueId": "gge84",
+        "x": 300,
+        "y": 510
+      },
+      "propertiesBefore": {
+        "Description": "Test Point 测试点",
+        "PCB Layer": ""
+      },
+      "propertiesPreserved": [
+        "PCB Layer",
+        "Description"
+      ]
+    },
+    "geometryGuard": {
+      "findings": [
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "J4",
+          "primitiveId": "77744783f98bf8c6",
+          "wirePrimitiveId": "f7d195ede2a64fa8",
+          "pins": [
+            "1"
+          ],
+          "message": "pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (330,260)→(265,260) does not",
+          "at": {
+            "x": 265,
+            "y": 260
+          },
+          "segment": [
+            {
+              "x": 330,
+              "y": 260
+            },
+            {
+              "x": 265,
+              "y": 260
+            }
+          ]
+        },
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "J4",
+          "primitiveId": "77744783f98bf8c6",
+          "wirePrimitiveId": "75712bb4840a7984",
+          "pins": [
+            "2"
+          ],
+          "message": "pin 2 outward rotation 90° requires its first wire segment to leave outward; segment 0 (210,260)→(255,260) does not",
+          "at": {
+            "x": 255.00000000000003,
+            "y": 260
+          },
+          "segment": [
+            {
+              "x": 210,
+              "y": 260
+            },
+            {
+              "x": 255,
+              "y": 260
+            }
+          ]
+        },
+        {
+          "type": "wire-through-body",
+          "level": "ERROR",
+          "designator": "TP1",
+          "primitiveId": "bedc73350e4b366e",
+          "wirePrimitiveId": "1fc1266251cabcb2",
+          "message": "wire segment 0 (220,510)→(240,510) enters component body",
+          "at": {
+            "x": 220,
+            "y": 510
+          },
+          "bbox": {
+            "minX": 239.5,
+            "minY": 509.5,
+            "maxX": 262.4484354352888,
+            "maxY": 529.8610054906572
+          },
+          "segment": [
+            {
+              "x": 220,
+              "y": 510
+            },
+            {
+              "x": 240,
+              "y": 510
+            }
+          ]
+        },
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "TP1",
+          "primitiveId": "bedc73350e4b366e",
+          "wirePrimitiveId": "1fc1266251cabcb2",
+          "pins": [
+            "1"
+          ],
+          "message": "pin 1 outward rotation 270° requires its first wire segment to leave outward; segment 0 (220,510)→(240,510) does not",
+          "at": {
+            "x": 240,
+            "y": 510
+          },
+          "segment": [
+            {
+              "x": 220,
+              "y": 510
+            },
+            {
+              "x": 240,
+              "y": 510
+            }
+          ]
+        },
+        {
+          "type": "wire-through-body",
+          "level": "ERROR",
+          "designator": "TP2",
+          "primitiveId": "e08ff573715d8837",
+          "wirePrimitiveId": "4add78656242ae21",
+          "message": "wire segment 0 (345,510)→(300,510) enters component body",
+          "at": {
+            "x": 345,
+            "y": 510
+          },
+          "bbox": {
+            "minX": 277.55156456471127,
+            "minY": 490.13899450934287,
+            "maxX": 300.49999999999994,
+            "maxY": 510.50000000000006
+          },
+          "segment": [
+            {
+              "x": 345,
+              "y": 510
+            },
+            {
+              "x": 300,
+              "y": 510
+            }
+          ]
+        },
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "TP2",
+          "primitiveId": "e08ff573715d8837",
+          "wirePrimitiveId": "4add78656242ae21",
+          "pins": [
+            "1"
+          ],
+          "message": "pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (345,510)→(300,510) does not",
+          "at": {
+            "x": 299.99999999999994,
+            "y": 510.00000000000006
+          },
+          "segment": [
+            {
+              "x": 345,
+              "y": 510
+            },
+            {
+              "x": 300,
+              "y": 510
+            }
+          ]
+        },
+        {
+          "type": "wire-through-body",
+          "level": "ERROR",
+          "designator": "TP3",
+          "primitiveId": "543bc464e39f1288",
+          "wirePrimitiveId": "4a63dfa633dd0ded",
+          "message": "wire segment 0 (565,480)→(525,480) enters component body",
+          "at": {
+            "x": 565,
+            "y": 480
+          },
+          "bbox": {
+            "minX": 564.5,
+            "minY": 479.5,
+            "maxX": 587.4484354352887,
+            "maxY": 499.86100549065713
+          },
+          "segment": [
+            {
+              "x": 565,
+              "y": 480
+            },
+            {
+              "x": 525,
+              "y": 480
+            }
+          ]
+        },
+        {
+          "type": "pin-exit-direction",
+          "level": "ERROR",
+          "designator": "TP3",
+          "primitiveId": "543bc464e39f1288",
+          "wirePrimitiveId": "4a63dfa633dd0ded",
+          "pins": [
+            "1"
+          ],
+          "message": "pin 1 outward rotation 270° requires its first wire segment to leave outward; segment 0 (565,480)→(525,480) does not",
+          "at": {
+            "x": 565,
+            "y": 480
+          },
+          "segment": [
+            {
+              "x": 565,
+              "y": 480
+            },
+            {
+              "x": 525,
+              "y": 480
+            }
+          ]
+        }
+      ],
+      "mutationApplied": true,
+      "observations": [
+        {
+          "readId": "req_333-geometry-after",
+          "seq": 1070,
+          "seqAbandoned": 5,
+          "wireSegments": 277
+        }
+      ],
+      "passed": false,
+      "phase": "readback",
+      "readbackAttempts": 1
+    },
+    "partial": true
+  },
+  "warnings": [
+    "Mutation may have landed. No automatic rollback/retry; read the current data and regenerate the repair."
+  ],
+  "error": {
+    "code": "SCHEMATIC_GEOMETRY_INVALID",
+    "message": "schematic geometry guard failed (readback)",
+    "detail": "New invalid geometry observed after write. Repair the measured state; API success is not validation success. pin-exit-direction (J4:1): pin 1 outward rotation 90° requires its first wire segment to leave outward; segment 0 (330,260)→(265,260) does not; pin-exit-direction (J4:2): pin 2 outward rotation 90° requires its first wire segment to leave outward; segment 0 (210,260)→(255,260) does not; wire-through-body (TP1): wire segment 0 (220,510)→(240,510) enters component body; +5 more"
+  }
+}

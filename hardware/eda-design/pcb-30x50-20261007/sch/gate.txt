@@ -1,0 +1,15 @@
+sch gate: FAIL
+  PASS   layout-lint    0 overlap, 0 pin-coincidence, 0 tight, 0 off-grid, 0 out-of-sheet, 0 no-bbox, 0 unchecked-pin, 0 unproven-pin, 0 nets-unproven, 0 invalid-geometry (zone-check=not-configured sheet-check=checked)
+  PASS   clusters       48 个虚拟组:0 重叠 / 0 出图纸 / 0 过近
+  FAIL   check          10 finding(s): 8 error/fatal, 2 warn/info
+  PASS   bridge-check   0 bridge(short), 0 orphan-stub, 2 orphan-flag, 0 orphan-tree (116 wire tree(s))
+  PASS   drc            0 fatal, 0 error, 1 warn, 0 info (total 1); native verdict PASS
+
+阻塞项:
+  • check: 8 个 error/fatal finding: pin-exit-direction×5, wire-through-body×3
+
+下一步:
+  → 按 finding 类型分治:duplicate-net-marker 喂 `sch prim-delete`(带 suggestDeleteIds),floating-pin 用 `sch no-connect`,wire-* 用 `sch disconnect` 后重连
+
+告警(不阻塞): check: 2 条告警, bridge-check: 2 条告警, drc: 1 条告警
+sch gate: FAIL — check: 8 个 error/fatal finding: pin-exit-direction×5, wire-through-body×3

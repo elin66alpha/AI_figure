@@ -1,0 +1,56 @@
+{
+  "id": "req_971",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-10-07T01:27:02.3191915Z",
+  "ok": true,
+  "result": {
+    "layer": 12,
+    "lineWidth": 0.2,
+    "locked": false,
+    "primitiveId": "a88ca543bfacd660",
+    "regionName": null,
+    "ruleType": [
+      6,
+      5,
+      7,
+      8
+    ],
+    "ruleTypeNames": [
+      "no-fills",
+      "no-wires",
+      "no-pours",
+      "no-inner-electrical"
+    ],
+    "source": [
+      0,
+      -604,
+      "L",
+      0,
+      0,
+      215,
+      0,
+      215,
+      -604,
+      0,
+      -604
+    ],
+    "verified": true
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "f39f5125c569691f",
+    "documentType": "pcb",
+    "tabId": "f39f5125c569691f@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "seq": 1408,
+  "seqAbandoned": 5,
+  "abandonedIds": [
+    "req_29",
+    "req_1003",
+    "req_1117",
+    "req_1124",
+    "req_1140"
+  ]
+}

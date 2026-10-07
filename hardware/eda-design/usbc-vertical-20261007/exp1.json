@@ -1,0 +1,45 @@
+{
+  "id": "req_86",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-10-07T00:45:03.2312134Z",
+  "ok": true,
+  "result": {
+    "artifactId": "art_af2766db-62d5-40a7-b589-2462f14edecc",
+    "artifactPath": "D:\\DATA\\重要项目\\AI_figure\\.easyeda\\artifacts\\20261006-204503-schematic_export-af2766db.png",
+    "bytes": 99735,
+    "fileName": "j1-region.png.png",
+    "format": "png",
+    "scope": "selection",
+    "selectedCount": 40
+  },
+  "context": {
+    "projectUuid": "8c5d0d86032348a0a6c85102fe97607e",
+    "projectName": "AI_figure",
+    "documentUuid": "98cfe13509bc1f5c",
+    "documentType": "schematic",
+    "tabId": "98cfe13509bc1f5c@8c5d0d86032348a0a6c85102fe97607e"
+  },
+  "artifacts": [
+    {
+      "id": "art_af2766db-62d5-40a7-b589-2462f14edecc",
+      "kind": "schematic_export",
+      "path": "D:\\DATA\\重要项目\\AI_figure\\.easyeda\\artifacts\\20261006-204503-schematic_export-af2766db.png",
+      "fileName": "j1-region.png.png",
+      "mimeType": "image/png",
+      "size": 99735,
+      "sha256": "3c06084828f2600932a6030156b786b606c9a546006707b654d4ab38f6309406"
+    }
+  ],
+  "seq": 829,
+  "seqAbandoned": 5,
+  "abandonedIds": [
+    "req_29",
+    "req_1003",
+    "req_1117",
+    "req_1124",
+    "req_1140"
+  ]
+}
+📎 artifact saved: D:\DATA\重要项目\AI_figure\.easyeda\artifacts\20261006-204503-schematic_export-af2766db.png
+✓ wrote D:\DATA\重要项目\AI_figure\hardware\eda-design\usbc-vertical-20261007\j1-region.png (99735 bytes)

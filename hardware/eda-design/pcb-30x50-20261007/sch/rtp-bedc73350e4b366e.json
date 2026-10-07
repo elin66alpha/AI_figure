@@ -1,0 +1,21 @@
+⚠ staleRisk: PCB was mutated by pcb.component.attrs_backfill since the last reload — pcb.documents.list (and DRC) may read stale engine state; authoritative workflows should save, run `easyeda doc reload`, then read back; if refresh fails, treat the data as unavailable
+{
+  "id": "req_490",
+  "type": "response",
+  "version": "v1",
+  "createdAt": "2026-10-07T01:20:22.4481366Z",
+  "ok": false,
+  "error": {
+    "code": "INVALID_STATE",
+    "message": "Cannot resolve the placed component's 32-char device-library uuid (incomplete identity evidence for 16-hex instance footprint; instance footprint uuid=\"dee30fd26dfe6420\", libraryUuid=\"0819f05c4eef4c71ace90d822a990e87\"; instance/library UUID domains require native META.source plus exact LCSC/model and official asset-library evidence) — aborting BEFORE any canvas change because rollback would be impossible. Note: the component's own device.uuid is a 16-char placed-symbol id and cannot re-create the part."
+  },
+  "seq": 1155,
+  "seqAbandoned": 5,
+  "abandonedIds": [
+    "req_29",
+    "req_1003",
+    "req_1117",
+    "req_1124",
+    "req_1140"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "blank": false,
+  "captureKind": "board-fitted-viewport-png",
+  "dataFiles": [
+    "components.json",
+    "tracks.json",
+    "vias.json",
+    "pours.json",
+    "nets.json",
+    "drc.json"
+  ],
+  "drcPassKnown": true,
+  "drcPassed": false,
+  "fitApi": "eda.pcb_Document.zoomToBoardOutline",
+  "fitMode": "board",
+  "frameColors": 70,
+  "frameContent": 0.9818853560232871,
+  "objectLevelExport": false,
+  "sha256": "e876e627676e486fe70982aa494e02d995a15f910fda0d97c06ca19b9ab82eb1",
+  "sha256Source": "cli-artifact",
+  "snapshot": "snap\\j3j4-edge-top\\snapshot.png",
+  "stage": "j3j4 edge top",
+  "stale": false
+}
