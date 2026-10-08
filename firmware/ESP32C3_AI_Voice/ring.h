@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 #include <stddef.h>
 
 // 播放环形缓冲。**静态数组,绝不 malloc**(AGENT.md §7 第 1 条)。

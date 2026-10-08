@@ -1,5 +1,10 @@
 # Build artifacts
 build/
+build-idf61/
+managed_components/
+sdkconfig
+sdkconfig.old
+tmp/
 *.o
 *.elf
 *.bin

@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 #include <stddef.h>
 
 // 极简 WebSocket 客户端(RFC 6455 客户端侧)。

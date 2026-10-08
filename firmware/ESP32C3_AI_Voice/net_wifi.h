@@ -1,6 +1,7 @@
 #pragma once
-#include <Arduino.h>
-#include <IPAddress.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "esp_netif_ip_addr.h"
 
 // WiFi 连接 + 指数退避重连(AGENT.md §5.1:1s -> 2s -> 4s -> ... -> 30s 封顶)。
 //
@@ -10,12 +11,14 @@
 
 // 凭据存 NVS 命名空间 "net"(BLE 配网写入),为空时回落到 secrets.h 的 WIFI_SSID/WIFI_PASS。
 bool      netWifiHasCreds();     // NVS 或 secrets.h 里有没有 SSID
-void      netWifiSaveCreds(const char *ssid, const char *pass);   // 只由配网调用
+bool      netWifiSaveCreds(const char *ssid, const char *pass);   // 只由配网调用
 
 void      netWifiBegin();
+void      netWifiInit();
+void      netWifiStop();
 void      netWifiUpdate();       // 每次 loop 都调一次
 bool      netWifiIsUp();
 void      netWifiForceRetry();   // 跳过退避立刻重试(ERROR 态按键触发,AGENT.md §8)
 int32_t   netWifiRssi();
-IPAddress netWifiIp();
+esp_ip4_addr_t netWifiIp();
 uint32_t  netWifiDisconnectCount();   // 进遥测,盯 AGENT.md §7 说的"重连 N 次之后"

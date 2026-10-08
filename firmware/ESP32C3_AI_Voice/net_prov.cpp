@@ -1,92 +1,108 @@
+#include "platform.h"
 #include "net_prov.h"
 #include "config.h"
 #include "cue.h"
 #include "led.h"
 #include "net_wifi.h"
-#include <WiFi.h>
-#include <WiFiProv.h>
-#include <esp_mac.h>
+#include "power.h"
+#include "driver/gpio.h"
+#include "esp_mac.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
+#include "freertos/queue.h"
+#include "network_provisioning/manager.h"
+#include "network_provisioning/scheme_ble.h"
+#include <atomic>
+#include <cstdlib>
 
-// 事件回调跑在 Arduino 的事件任务里,不是 loop 这个线程。
-// 回调里只拷数据、置标志;写 NVS、放提示音、打日志、重启都回主循环做。
-static char          s_ssid[33], s_pass[65];
-static volatile bool s_ok, s_fail, s_end;
-static volatile uint8_t s_failReason;
+struct ProvEvent {
+    int32_t id;
+    wifi_sta_config_t credentials;
+};
+static QueueHandle_t s_events;
+static bool s_active = false;
+static std::atomic<bool> s_eventOverflow{false};
 
-static void onProvEvent(arduino_event_t *e) {
-  switch (e->event_id) {
-    case ARDUINO_EVENT_PROV_CRED_RECV: {
-      // wifi_sta_config_t 的 ssid[32] / password[64] 在满长时**没有结尾 0**,不能 strlcpy
-      const wifi_sta_config_t &c = e->event_info.prov_cred_recv;
-      memcpy(s_ssid, c.ssid, 32);     s_ssid[32] = 0;
-      memcpy(s_pass, c.password, 64); s_pass[64] = 0;
-      break;
-    }
-    case ARDUINO_EVENT_PROV_CRED_FAIL:
-      s_failReason = (uint8_t)e->event_info.prov_fail_reason;
-      s_fail = true;
-      break;
-    case ARDUINO_EVENT_PROV_CRED_SUCCESS: s_ok  = true; break;
-    case ARDUINO_EVENT_PROV_END:          s_end = true; break;
-    default: break;
-  }
+static void onProvEvent(void *, esp_event_base_t, int32_t id, void *data) {
+    if (id != NETWORK_PROV_WIFI_CRED_RECV && id != NETWORK_PROV_WIFI_CRED_FAIL &&
+        id != NETWORK_PROV_WIFI_CRED_SUCCESS && id != NETWORK_PROV_END) return;
+    ProvEvent event = {};
+    event.id = id;
+    if (id == NETWORK_PROV_WIFI_CRED_RECV) event.credentials = *static_cast<wifi_sta_config_t *>(data);
+    if (xQueueSend(s_events, &event, 0) != pdTRUE) s_eventOverflow.store(true);
 }
-
 bool provWanted() {
-  pinMode(PIN_PTT_BUTTON, INPUT_PULLUP);
-  delay(5);
-  const uint32_t t0 = millis();
-  while (digitalRead(PIN_PTT_BUTTON) == LOW) {
-    ledUpdate();
-    if (millis() - t0 >= PROV_HOLD_MS) {
-      Serial.println("[PROV] 上电时按住了按键 -> 配网模式");
-      return true;
+    const uint32_t start = appMillis();
+    while (gpio_get_level(static_cast<gpio_num_t>(PIN_PTT_BUTTON)) == 0) {
+        ledUpdate();
+        if (appMillis() - start >= PROV_HOLD_MS) return true;
+        appDelay(10);
     }
-    delay(10);
-  }
-  if (netWifiHasCreds()) return false;
-  Serial.println("[PROV] 没有 WiFi 凭据 -> 配网模式");
-  return true;
+    return !netWifiHasCreds();
 }
-
 void provRun() {
-  uint8_t mac[6];
-  esp_read_mac(mac, ESP_MAC_WIFI_STA);
-  char name[16];
-  snprintf(name, sizeof name, PROV_NAME_PREFIX "%02X%02X%02X", mac[3], mac[4], mac[5]);
-  static uint8_t uuid[16] = PROV_SERVICE_UUID;
+    netWifiInit();
+    s_events = xQueueCreate(8, sizeof(ProvEvent));
+    if (!s_events) abort();
+    ESP_ERROR_CHECK(esp_event_handler_register(NETWORK_PROV_EVENT, ESP_EVENT_ANY_ID, onProvEvent, nullptr));
+    network_prov_mgr_config_t cfg = {};
+    cfg.scheme = network_prov_scheme_ble;
+    cfg.scheme_event_handler = NETWORK_PROV_EVENT_HANDLER_NONE;
+    cfg.network_prov_wifi_conn_cfg.wifi_conn_attempts = 3;
+    ESP_ERROR_CHECK(network_prov_mgr_init(cfg));
+    s_active = true;
+    // Retain Security 1 / no-PoP and the service UUID used by miniprogram/.
+    static uint8_t uuid[16] = PROV_SERVICE_UUID;
+    ESP_ERROR_CHECK(network_prov_scheme_ble_set_service_uuid(uuid));
+    uint8_t mac[6];
+    ESP_ERROR_CHECK(esp_read_mac(mac, ESP_MAC_WIFI_STA));
+    char name[16];
+    snprintf(name, sizeof(name), PROV_NAME_PREFIX "%02X%02X%02X", mac[3], mac[4], mac[5]);
+    ESP_ERROR_CHECK(network_prov_mgr_start_provisioning(NETWORK_PROV_SECURITY_1, nullptr, name, nullptr));
+    printf("[PROV] BLE %s\n", name);
+    ledSet(LedMode::DOUBLE);
+    cueProv();
 
-  WiFi.onEvent(onProvEvent);
-  // 必须显式传 SECURITY_1:WiFiProv 的默认值是 Security 0(明文)。
-  // HANDLER_NONE 而不是 FREE_BLE:反正配完就重启,没必要把 BLE 内存永久释放掉。
-  // 最后一个 true = 清掉 WiFiProv 自己记的"已配网"标记,否则它会跳过配网直接去连。
-  WiFiProv.beginProvision(NETWORK_PROV_SCHEME_BLE, NETWORK_PROV_SCHEME_HANDLER_NONE,
-                          NETWORK_PROV_SECURITY_1, nullptr, name, nullptr, uuid, true);
-  Serial.printf("[PROV] BLE 广播 \"%s\",打开微信小程序配网\n", name);
-  ledSet(LedMode::DOUBLE);
-  cueProv();
-
-  for (;;) {
-    ledUpdate();
-    if (s_fail) {
-      s_fail = false;
-      Serial.printf("[PROV] 连 \"%s\" 失败:%s。等小程序重发\n", s_ssid,
-                    s_failReason == NETWORK_PROV_WIFI_STA_AUTH_ERROR ? "密码错误" : "找不到这个 WiFi");
-      cueLinkDown();
+    char ssid[33] = {}, pass[65] = {};
+    bool saved = false;
+    for (;;) {
+        ledUpdate();
+        powerUpdate(false);
+        if (s_eventOverflow.load()) {
+            printf("[PROV] Event queue overflow; restarting without saving credentials\n");
+            esp_restart();
+        }
+        ProvEvent event;
+        if (xQueueReceive(s_events, &event, pdMS_TO_TICKS(10)) != pdTRUE) continue;
+        powerNoteActivity();
+        switch (event.id) {
+            case NETWORK_PROV_WIFI_CRED_RECV:
+                memcpy(ssid, event.credentials.ssid, 32); ssid[32] = 0;
+                memcpy(pass, event.credentials.password, 64); pass[64] = 0;
+                saved = false;
+                break;
+            case NETWORK_PROV_WIFI_CRED_FAIL:
+                printf("[PROV] WiFi connection failed; waiting for new credentials\n");
+                ESP_ERROR_CHECK(network_prov_mgr_reset_wifi_sm_state_on_failure());
+                cueLinkDown();
+                break;
+            case NETWORK_PROV_WIFI_CRED_SUCCESS:
+                saved = ssid[0] && netWifiSaveCreds(ssid, pass);
+                if (saved) cueLinkUp(); else printf("[PROV] Credential save failed\n");
+                break;
+            case NETWORK_PROV_END:
+                printf("[PROV] End, credentials saved=%d; restart\n", saved);
+                ESP_ERROR_CHECK(network_prov_mgr_deinit());
+                s_active = false;
+                appDelay(100);
+                esp_restart();
+                break;
+            default: break;
+        }
     }
-    if (s_ok) {
-      s_ok = false;
-      netWifiSaveCreds(s_ssid, s_pass);
-      Serial.printf("[PROV] 连上 \"%s\",凭据已存 NVS\n", s_ssid);
-      cueLinkUp();
-    }
-    // 小程序读到"已连接"后 1 s,或连上后 30 s 没人读,WiFiProv 自己收尾 -> PROV_END。
-    // 没成功也可能走到这里(极少见):NVS 没被改过,重启后照旧 —— 有旧凭据就连旧的,没有就再进配网。
-    if (s_end) {
-      Serial.println("[PROV] 配网结束,重启");
-      delay(100);
-      ESP.restart();
-    }
-    delay(10);
-  }
+}
+void provStop() {
+    if (!s_active) return;
+    s_active = false;
+    ESP_ERROR_CHECK(network_prov_mgr_deinit());
 }
