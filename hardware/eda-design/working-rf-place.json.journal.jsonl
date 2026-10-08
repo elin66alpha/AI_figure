@@ -1,2 +1,0 @@
-{"playbookSha256":"868d21d5424e3c8d06d65fb2805b4d5efb809395950fd121aeaee3e8d18e0e3a","name":"ESP32 RF matching initial values and UFL","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:52:06-04:00"}
-{"idx":1,"id":"place-L3","status":"fail","ms":8245,"error":"run \"sch place\" exited 1: }"}

@@ -1,9 +1,0 @@
-playbook "detail-fixes" — 7 step(s), project=8c5d0d86032348a0a6c85102fe97607e
-  [1/7] s0               run     sch prim-delete [confirm]
-  [2/7] s1               run     sch wire
-  [3/7] s2               run     sch wire
-  [4/7] s3               run     sch netflag
-  [5/7] s4               run     sch wire
-  [6/7] s5               run     sch netflag
-  [7/7] s6               run     sch titleblock
-dry-run: preflight passed, nothing executed

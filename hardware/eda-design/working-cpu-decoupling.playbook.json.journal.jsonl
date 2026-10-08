@@ -1,4 +1,0 @@
-{"playbookSha256":"c3926f3be19b0994b4a63d69822901e718b9247862918636c4dc2f76b4cb0b02","name":"ESP32 CPU and flash supply decoupling","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:20:16-04:00"}
-{"idx":1,"id":"position-C11","status":"ok","ms":352}
-{"idx":2,"id":"position-C14","status":"ok","ms":298}
-{"idx":3,"id":"cpu-decoupling","status":"fail","ms":133,"error":"run \"sch wire\" exited 1: }"}

@@ -1,7 +1,0 @@
-net-class spec widths (rules: live)
-  ROLE              mil      mm   note
-  signal             10   0.254   logic/analog signal (live default)
-  power-branch    9.843    0.25   regulated rail <5V (3V3/1V8/VCC/VDD)
-  power-trunk     15.75     0.4   main rail 5–9V (+5V-class)
-  high-current    19.69     0.5   connector-in/battery/bus (VBUS/VIN/VBAT, ≥9V)
-  gnd             19.69     0.5   ground — prefer pour/plane over a track

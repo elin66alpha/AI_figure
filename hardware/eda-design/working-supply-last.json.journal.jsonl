@@ -1,5 +1,0 @@
-{"playbookSha256":"d9eb6063866f4ac1690cb938571352f90a762ad61af3b21d9b233a6a7e2c5715","name":"ESP32 supply pin connections","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:33:03-04:00"}
-{"idx":1,"id":"rtc-supply","status":"ok","ms":1686}
-{"idx":2,"id":"analog-supply-pair","status":"ok","ms":407}
-{"idx":3,"id":"analog-supply-port","status":"ok","ms":2828}
-{"idx":4,"id":"save","status":"ok","ms":38}

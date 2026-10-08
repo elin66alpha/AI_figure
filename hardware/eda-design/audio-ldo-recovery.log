@@ -1,5 +1,0 @@
-
-✗ step [13/16] electrical-check failed: assert $.passed true failed (value=false)
-  journal: hardware\eda-design\audio-ldo-recovery.playbook.json.journal.jsonl
-  先回读实际状态,重新生成计划并完整执行 sch apply;此队列禁止 --resume/--from/--to 跳过校验。
-playbook stopped at step electrical-check (12 ok, 0 skipped)

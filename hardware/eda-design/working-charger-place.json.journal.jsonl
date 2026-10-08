@@ -1,9 +1,0 @@
-{"playbookSha256":"1940f38f3415c7c2ad666ed88a84a52aa23af4404e030a6a105528bffd8f4256","name":"ETA6002 charger component arrangement","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:44:56-04:00"}
-{"idx":1,"id":"position-U2","status":"ok","ms":232}
-{"idx":2,"id":"position-L1","status":"ok","ms":144}
-{"idx":3,"id":"position-C6","status":"ok","ms":142}
-{"idx":4,"id":"position-C7","status":"ok","ms":146}
-{"idx":5,"id":"position-C8","status":"ok","ms":134}
-{"idx":6,"id":"position-R3","status":"ok","ms":143}
-{"idx":7,"id":"position-J2","status":"ok","ms":135}
-{"idx":8,"id":"position-SW1","status":"ok","ms":146}

@@ -1,3 +1,0 @@
-{"playbookSha256":"ac279ed8796d378536472c9a327fc0ab33c3b392c4ebfff7d361129fbc475881","name":"ESP32 status LED and record button","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:33:48-04:00"}
-{"idx":1,"id":"led-resistor-position","status":"ok","ms":430}
-{"idx":2,"id":"led-series-wire","status":"fail","ms":206,"error":"run \"sch wire\" exited 1: }"}

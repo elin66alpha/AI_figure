@@ -1,3 +1,0 @@
-{"playbookSha256":"e6d02e822cea85400b1bd8335e128c08a2c81aa569de9b87188e35c53c7a0ffd","name":"ESP32 supply pin connections","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:32:12-04:00"}
-{"idx":1,"id":"rf-supply-pair","status":"ok","ms":497}
-{"idx":2,"id":"rf-supply-port","status":"fail","ms":33656,"error":"run \"sch connect\" exited 1: Connection not confirmed. Read back wires, marker and pin direction before retrying; existing net membership alone is not proof of this write."}

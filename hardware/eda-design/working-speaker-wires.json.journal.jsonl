@@ -1,5 +1,0 @@
-{"playbookSha256":"f9ababd04be2241d0df7c0b8a558cb67a9971a176d58fc51c393c56b09698f73","name":"Speaker connector wiring","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:51:18-04:00"}
-{"idx":1,"id":"positive-wire","status":"ok","ms":600}
-{"idx":2,"id":"positive-port","status":"ok","ms":717}
-{"idx":3,"id":"negative-wire","status":"ok","ms":640}
-{"idx":4,"id":"negative-port","status":"ok","ms":143}

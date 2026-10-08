@@ -1,9 +1,0 @@
-{"playbookSha256":"8c6098bbb59a72f071f5287104fe726b54031fa0c649f8ef645aa9ba3bf75dc1","name":"AI_figure core parts initial placement","project":"AI_figure","startedAt":"2026-09-29T18:26:23-04:00"}
-{"idx":1,"id":"place-U1","status":"ok","ms":4576}
-{"idx":2,"id":"place-U2","status":"ok","ms":2537}
-{"idx":3,"id":"place-U3","status":"ok","ms":2929}
-{"idx":4,"id":"place-U4","status":"ok","ms":2569}
-{"idx":5,"id":"place-U5","status":"ok","ms":2254}
-{"idx":6,"id":"place-J1","status":"ok","ms":3174}
-{"idx":7,"id":"place-Y1","status":"ok","ms":2411}
-{"idx":8,"id":"save-core","status":"ok","ms":558}

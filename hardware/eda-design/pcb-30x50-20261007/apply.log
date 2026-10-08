@@ -1,45 +1,0 @@
-U1 rot(90->90):skip center(343.5,-301.97):
-R6 rot(0->90):"ok": true center(712.6,-62.99):
-R7 rot(0->90):"ok": true center(763.78,-62.99):
-D3 rot(0->180):"ok": true center(874.02,-59.06):
-R13 rot(0->0):skip center(748.03,-133.86):
-U4 rot(0->180):"ok": true center(1019.69,-118.11):
-C13 rot(0->90):"ok": true center(929.13,-181.1):
-R1 rot(0->90):"ok": true center(870.08,-181.1):
-R11 rot(0->0):skip center(748.03,-188.98):
-R12 rot(0->0):skip center(748.03,-244.09):
-R2 rot(0->0):skip center(748.03,-346.46):
-R14 rot(0->0):skip center(748.03,-401.57):
-R15 rot(0->0):skip center(748.03,-456.69):
-C19 rot(0->0):skip center(748.03,-511.81):
-TP1 rot(0->0):skip center(1098.43,-275.59):
-TP2 rot(0->0):skip center(1098.43,-393.7):
-TP3 rot(0->0):skip center(1098.43,-511.81):
-C2 rot(0->0):skip center(334.65,-614.17):
-C3 rot(0->0):skip center(421.26,-614.17):
-R9 rot(0->0):skip center(511.81,-614.17):
-C15 rot(0->0):skip center(598.43,-614.17):
-R10 rot(0->0):skip center(511.81,-669.29):
-R18 rot(0->0):skip center(602.36,-669.29):
-J4 rot(0->90):"ok": true center(1110.24,-708.66):
-U3 rot(0->0):skip center(370.08,-787.4):
-C16 rot(0->90):"ok": true center(220.47,-748.03):
-U5 rot(0->180):"ok": true center(157.48,-1059.06):
-U7 rot(0->0):skip center(370.08,-1023.62):
-C23 rot(0->90):"ok": true center(472.44,-1003.94):
-C4 rot(0->0):skip center(354.33,-1141.73):
-C5 rot(0->0):skip center(157.48,-1259.84):
-C6 rot(0->0):skip center(590.55,-881.89):
-C7 rot(0->0):skip center(787.4,-866.14):
-L1 rot(0->270):"ok": true center(590.55,-1062.99):
-U2 rot(0->0):skip center(807.09,-1062.99):
-C1 rot(0->90):"ok": true center(1019.69,-1023.62):
-R3 rot(0->90):"ok": true center(948.82,-1003.94):
-C8 rot(0->90):"ok": true center(948.82,-1165.35):
-D4 rot(0->0):skip center(787.4,-1318.9):
-F1 rot(0->0):skip center(531.5,-1496.06):
-R8 rot(0->0):skip center(681.1,-1496.06):
-R4 rot(0->0):skip center(440.94,-1586.61):
-R5 rot(0->0):skip center(527.56,-1586.61):
-D1 rot(0->0):skip center(602.36,-1586.61):
-D2 rot(0->0):skip center(665.35,-1586.61):

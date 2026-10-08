@@ -1,7 +1,0 @@
-{"playbookSha256":"f048abd2c8cb4fd0dae53b61ace5073b5598cd51c1602044147992850fe38623","name":"ESP32 supply checkpoint","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:21:10-04:00"}
-{"idx":1,"id":"flash-wire","status":"ok","ms":332}
-{"idx":2,"id":"cpu-ground","status":"ok","ms":3000}
-{"idx":3,"id":"flash-ground","status":"ok","ms":1399}
-{"idx":4,"id":"cpu-power","status":"ok","ms":3017}
-{"idx":5,"id":"exposed-pad-ground","status":"ok","ms":2530}
-{"idx":6,"id":"save","status":"ok","ms":56}

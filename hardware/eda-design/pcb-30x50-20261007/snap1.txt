@@ -1,3 +1,0 @@
-{"blank":false,"captureKind":"board-fitted-viewport-png","dir":"snap\\30x50-layout-r1","drcPassed":false,"fitMode":"board","objectLevelExport":false,"sha256":"f547fd52bbb476efde53062039da0eb2e6a11fae4883895a3edd9702df3606fb","stage":"30x50 layout r1","stale":false}
-⚠️  stage "30x50 layout r1": DRC not clean — recorded, but the board has violations.
-✓ stage "30x50 layout r1" saved → snap\30x50-layout-r1 (6 data files, frame 98.19% content)

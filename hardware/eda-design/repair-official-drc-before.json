@@ -1,4 +1,0 @@
-sch drc: 19 reported violation(s) — 2 fatal, 0 error, 17 warn, 0 info
-  FATAL  fatalError  2 issue(s) — EDA returned no per-item detail
-  WARN   warn  17 issue(s) — EDA returned no per-item detail
-✗ Native DRC failed with 2 fatal violation(s)

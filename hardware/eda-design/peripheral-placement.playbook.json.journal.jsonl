@@ -1,9 +1,0 @@
-{"playbookSha256":"1a60bdc9dfb5f99f0bd2828a12aabad603f6ee466b97fe08e3ab415d42e97653","name":"AI_figure audio and LDO peripherals","project":"AI_figure","startedAt":"2026-09-29T18:29:07-04:00"}
-{"idx":1,"id":"place-C1","status":"ok","ms":3784}
-{"idx":2,"id":"place-C2","status":"ok","ms":1543}
-{"idx":3,"id":"place-C3","status":"ok","ms":2647}
-{"idx":4,"id":"place-R1","status":"ok","ms":2607}
-{"idx":5,"id":"place-C4","status":"ok","ms":3007}
-{"idx":6,"id":"place-C5","status":"ok","ms":3302}
-{"idx":7,"id":"place-R2","status":"ok","ms":2597}
-{"idx":8,"id":"save-peripherals","status":"ok","ms":46}

@@ -1,3 +1,0 @@
-{"playbookSha256":"c320d58503dcd0a9a6df44ce6ba4721167598814e8874edff76f0aa78940a9ce","name":"install-L1","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T20:44:03-04:00"}
-{"idx":1,"id":"remove-old-L1","status":"ok","ms":1141}
-{"idx":2,"id":"install-standard-L1","status":"ok","ms":604}

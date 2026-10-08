@@ -1,3 +1,0 @@
-{"playbookSha256":"6881ca6c75e6a34f2d233df3d3fbb84227dd6355e160c9fc18c1568ede7b1ef0","name":"ESP32 remaining supply pins and decoupling bank","project":"8c5d0d86032348a0a6c85102fe97607e","startedAt":"2026-09-29T19:31:04-04:00"}
-{"idx":1,"id":"bank-ground","status":"ok","ms":2096}
-{"idx":2,"id":"mcu-supply-2","status":"fail","ms":33934,"error":"run \"sch autoconnect\" exited 1: autoconnect: 1 connection(s) failed"}

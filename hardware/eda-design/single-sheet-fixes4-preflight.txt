@@ -1,6 +1,0 @@
-playbook "fixes4" — 4 step(s), project=8c5d0d86032348a0a6c85102fe97607e
-  [1/4] s0               run     sch prim-delete [confirm]
-  [2/4] s1               run     sch wire
-  [3/4] s2               run     sch netflag
-  [4/4] s3               run     sch wire
-dry-run: preflight passed, nothing executed
