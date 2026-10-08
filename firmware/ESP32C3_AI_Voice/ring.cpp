@@ -1,3 +1,4 @@
+#include "platform.h"
 #include "ring.h"
 #include "config.h"
 

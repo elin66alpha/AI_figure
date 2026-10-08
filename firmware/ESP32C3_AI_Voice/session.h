@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 
 // 设备状态机。规格见 AGENT.md §8。
 //

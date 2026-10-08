@@ -1,3 +1,4 @@
+#include "platform.h"
 #include "session.h"
 #include "config.h"
 #include "secrets.h"
@@ -67,7 +68,7 @@ static void onText(const char *json, size_t len) {
     case MsgType::READY:
       // sr 只用于开机断言,不是用来切换配置的(AGENT.md §4)。
       if (m.sr != SAMPLE_RATE_HZ) {
-        Serial.printf("[SESS] !! 服务器说采样率是 %ld,设备是 %d —— 全双工共享时钟,"
+        printf("[SESS] !! 服务器说采样率是 %ld,设备是 %d —— 固定 PCM 格式,"
                       "这个对不上就没法播\n", (long)m.sr, SAMPLE_RATE_HZ);
         wsClose("采样率不一致");
         return;
@@ -75,7 +76,7 @@ static void onText(const char *json, size_t len) {
       s_ready = true;
       s_st = VoiceState::IDLE;
       s_cue = PendingCue::LINK_UP;
-      Serial.printf("[SESS] ready sr=%ld —— 可以按按键说话了\n", (long)m.sr);
+      printf("[SESS] ready sr=%ld —— 可以按按键说话了\n", (long)m.sr);
       break;
 
     case MsgType::AUDIO_BEGIN:
@@ -83,7 +84,7 @@ static void onText(const char *json, size_t len) {
       // 发了出来,此刻设备已经进 RECORDING —— 认了它会把录音打断,而且播的是
       // 已经被 abort 掉的那一轮的声音。
       if (s_st != VoiceState::WAITING) {
-        Serial.printf("[SESS] 忽略 %s 状态下的 audio_begin seq=%ld(过期的回合)\n",
+        printf("[SESS] 忽略 %s 状态下的 audio_begin seq=%ld(过期的回合)\n",
                       sessionStateName(), (long)m.seq);
         break;
       }
@@ -93,20 +94,20 @@ static void onText(const char *json, size_t len) {
       s_playStarted = false;
       wsSetAudioAccept(true);            // 从这一刻起 binary 帧才算数
       s_st = VoiceState::PLAYING;
-      Serial.printf("[SESS] audio_begin seq=%ld\n", (long)m.seq);
+      printf("[SESS] audio_begin seq=%ld\n", (long)m.seq);
       break;
 
     case MsgType::AUDIO_END:
       if (m.seq == s_seq) {
         s_audioEnded = true;
-        Serial.printf("[SESS] audio_end seq=%ld,ring 里还剩 %u 字节\n",
+        printf("[SESS] audio_end seq=%ld,ring 里还剩 %u 字节\n",
                       (long)m.seq, (unsigned)ringUsed());
       }
       break;
 
     case MsgType::ASR:
     case MsgType::REPLY:
-      Serial.printf("[SESS] %.*s\n", (int)len, json);   // 仅供串口调试
+      printf("[SESS] %.*s\n", (int)len, json);   // 仅供串口调试
       break;
 
     case MsgType::CUE:
@@ -116,12 +117,12 @@ static void onText(const char *json, size_t len) {
         if (s_st == VoiceState::WAITING) s_bubbleReq = true;
       } else {
         // 必须静默忽略不认识的 cue 名,好让服务器先行加新音效
-        Serial.printf("[SESS] 不认识的 cue name=%s,忽略\n", m.name);
+        printf("[SESS] 不认识的 cue name=%s,忽略\n", m.name);
       }
       break;
 
     case MsgType::ERROR_MSG:
-      Serial.printf("[SESS] 服务器报错 code=%s: %.*s\n", m.name, (int)len, json);
+      printf("[SESS] 服务器报错 code=%s: %.*s\n", m.name, (int)len, json);
       s_cue = PendingCue::ERR;
       // 还没开始播就报错(ASR 失败之类)= 这一回合不会有声音了,不用等超时
       if (s_st == VoiceState::WAITING) s_waitFail = true;
@@ -153,7 +154,7 @@ static void stopAudioAll(bool cut = false) {
 
 static void enterError(const char *why) {
   if (s_st == VoiceState::ERROR_STATE) return;
-  Serial.printf("[SESS] -> ERROR (%s)\n", why);
+  printf("[SESS] -> ERROR (%s)\n", why);
   stopAudioAll();
   s_ready = false;
   s_st = VoiceState::ERROR_STATE;
@@ -167,7 +168,7 @@ static void startRecording() {
   s_upDropStreak = 0;
   s_st = VoiceState::RECORDING;
   ledSet(LedMode::ON);
-  Serial.println("[SESS] turn_start —— 录音中");
+  printf("%s\n", "[SESS] turn_start —— 录音中");
 }
 
 // 打断。AGENT.md §8:**先发 abort 再关功放** ——
@@ -177,7 +178,7 @@ static void bargeIn() {
   wsSendText(PROTO_ABORT);
   stopAudioAll(true);
   s_seq = -1;                 // 到下一个 audio_begin 之前的 binary 帧全丢
-  Serial.println("[SESS] abort(打断)");
+  printf("%s\n", "[SESS] abort(打断)");
 }
 
 // 把攒着的样本发出去。返回 false 表示链路坏了。
@@ -192,7 +193,7 @@ static bool flushUplink() {
   // ASR 丢 100 ms 比整条链路卡死强(AGENT.md §9.2)。
   s_upDrops++;
   if (++s_upDropStreak >= WS_UPLINK_DROP_LIMIT) {
-    Serial.printf("[SESS] 连续丢了 %u 个上行帧,链路不行了\n", (unsigned)s_upDropStreak);
+    printf("[SESS] 连续丢了 %u 个上行帧,链路不行了\n", (unsigned)s_upDropStreak);
     return false;
   }
   return true;
@@ -212,23 +213,23 @@ static void doRecording() {
     audioStopCapture();
     if (!wsSendText(PROTO_TURN_END)) { enterError("turn_end 发不出去"); return; }
     s_st = VoiceState::WAITING;
-    s_waitStart = millis();
+    s_waitStart = appMillis();
     s_bubbleReq = false;
     s_waitFail  = false;
     ledSet(LedMode::BLINK_FAST);
-    Serial.println("[SESS] turn_end —— 等服务器");
+    printf("%s\n", "[SESS] turn_end —— 等服务器");
   }
 }
 
 static void doWaiting() {
   if (s_waitFail) {
-    Serial.println("[SESS] 服务器报错,这一回合没有回复了");
+    printf("%s\n", "[SESS] 服务器报错,这一回合没有回复了");
     stopAudioAll();
     s_st = VoiceState::IDLE;               // 错误音 onText 已经挂上了
     return;
   }
-  if (millis() - s_waitStart > WAITING_TIMEOUT_MS) {
-    Serial.printf("[SESS] 等了 %d ms 没等到 audio_begin,放弃\n", WAITING_TIMEOUT_MS);
+  if (appMillis() - s_waitStart > WAITING_TIMEOUT_MS) {
+    printf("[SESS] 等了 %d ms 没等到 audio_begin,放弃\n", WAITING_TIMEOUT_MS);
     wsSendText(PROTO_ABORT);               // 先发 abort(§8),再停本地声音
     stopAudioAll();
     s_st = VoiceState::IDLE;
@@ -272,13 +273,13 @@ static void doPlaying() {
       if (!audioStartPlayback()) { enterError("播放启动失败"); return; }
       s_playStarted = true;
       ledSet(LedMode::ON);
-      Serial.printf("[SESS] 起播,预缓冲 %u 字节 (%u ms)\n",
+      printf("[SESS] 起播,预缓冲 %u 字节 (%u ms)\n",
                     (unsigned)ringUsed(),
                     (unsigned)(ringUsed() * 1000 / (SAMPLE_RATE_HZ * 2)));
     } else {
       // 没冒泡、预缓冲也没攒够:这时没有 audioWrite 当节拍器,loop 会全速空转
       // (PLAYING 下 loop 不 delay)。歇 1 ms,wsPoll 照样每毫秒收一次。
-      delay(1);
+      appDelay(1);
     }
     return;
   }
@@ -291,13 +292,13 @@ static void doPlaying() {
     audioStopPlayback();                  // 内含补静音 -> drain -> 关功放
     wsSetAudioAccept(false);
     s_st = VoiceState::IDLE;
-    Serial.printf("[SESS] 本回合结束。TX 欠载 %lu 次,ring 见底 %lu 次\n",
+    printf("[SESS] 本回合结束。TX 欠载 %lu 次,ring 见底 %lu 次\n",
                   (unsigned long)audioTxUnderruns(), (unsigned long)s_underruns);
   } else {
     // ring 见底但服务器还没说完 —— 网络跟不上。
     // 不用喂静音:auto_clear 已经在硬件层面输出零了(AGENT.md §4)。
     s_underruns++;
-    delay(2);
+    appDelay(2);
   }
 }
 
@@ -337,22 +338,22 @@ void sessionUpdate() {
     enterError("WS 未连接");
     ledSet(LedMode::BLINK_SLOW);
 
-    if (s_btn.tookPress()) { s_wsRetryAt = millis(); s_wsBackoff = WS_RETRY_MIN_MS; }
+    if (s_btn.tookPress()) { s_wsRetryAt = appMillis(); s_wsBackoff = WS_RETRY_MIN_MS; }
     s_btn.clearEvents();
 
-    if ((int32_t)(millis() - s_wsRetryAt) >= 0) {
+    if ((int32_t)(appMillis() - s_wsRetryAt) >= 0) {
       if (wsConnect()) {
         char hello[96];
         size_t n = protoBuildHello(hello, sizeof(hello), DEVICE_ID, FW_VERSION);
         if (n && wsSendText(hello)) {
-          s_helloAt = millis();
+          s_helloAt = appMillis();
           s_wsBackoff = WS_RETRY_MIN_MS;
           ledSet(LedMode::BLINK_FAST);
         } else {
           wsClose("hello 发不出去");
         }
       } else {
-        s_wsRetryAt = millis() + s_wsBackoff;
+        s_wsRetryAt = appMillis() + s_wsBackoff;
         s_wsBackoff *= 2;
         if (s_wsBackoff > WS_RETRY_MAX_MS) s_wsBackoff = WS_RETRY_MAX_MS;
       }
@@ -367,9 +368,9 @@ void sessionUpdate() {
   if (!s_ready) {
     // 握手期间按的键不算数,否则一收到 ready 就会莫名其妙开始录音
     s_btn.clearEvents();
-    if (millis() - s_helloAt > WS_HANDSHAKE_TIMEOUT_MS) {
+    if (appMillis() - s_helloAt > WS_HANDSHAKE_TIMEOUT_MS) {
       wsClose("发了 hello 但服务器没回 ready");
-      s_wsRetryAt = millis() + s_wsBackoff;
+      s_wsRetryAt = appMillis() + s_wsBackoff;
     }
     return;
   }

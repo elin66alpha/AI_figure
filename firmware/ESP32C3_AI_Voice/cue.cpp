@@ -1,3 +1,4 @@
+#include "platform.h"
 #include "cue.h"
 #include "config.h"
 #include "audio_io.h"
@@ -17,7 +18,7 @@ void cueBegin() {
   if (s_ready) return;
   for (int i = 0; i < CUE_LUT_LEN; i++) {
     // 参数最大 2π,远小于 newlib 走 Payne-Hanek 的 201 阈值;而且只跑这一次。
-    s_lut[i] = (int16_t)lroundf(32767.0f * sinf(2.0f * (float)PI * (float)i / (float)CUE_LUT_LEN));
+    s_lut[i] = (int16_t)lroundf(32767.0f * sinf(2.0f * 3.14159265358979323846f * (float)i / (float)CUE_LUT_LEN));
   }
   s_ready = true;
 }

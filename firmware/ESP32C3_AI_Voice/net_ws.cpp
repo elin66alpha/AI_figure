@@ -1,34 +1,12 @@
+#include "platform.h"
 #include "net_ws.h"
 #include "config.h"
 #include "secrets.h"
 #include "ring.h"
 
-#include <WiFi.h>
+#include "transport.h"
 #include <esp_random.h>
 #include <lwip/sockets.h>
-
-// rev.5:默认走 wss://(TLS-PSK)。SERVER_USE_TLS=0 可以退回明文,
-// 用来在局域网里不架 stunnel 直连调试。
-//
-// 两条路的客户端对象方法签名完全一样(NetworkClientSecure 就是 NetworkClient 的子类),
-// 所以下面的收发代码一份,不用分叉。
-#ifndef SERVER_USE_TLS
-  // 不给默认值是故意的。老的 secrets.h 里没有这个宏 —— 要是这里默默退回明文,
-  // 那就是拿着公网地址在裸奔,而且**一切看起来都正常**。宁可编译不过。
-  #error "secrets.h 里缺 SERVER_USE_TLS。照 secrets.h.example 补上(公网部署填 1)。"
-#endif
-
-#if SERVER_USE_TLS
-  #include <NetworkClientSecure.h>
-  static NetworkClientSecure s_cli;
-  // PSK 空着就等于没鉴权,而 stunnel 那边会直接拒绝握手 ——
-  // 与其烧进去再对着串口猜,不如编译期就拦下。
-  static_assert(sizeof(PSK_IDENTITY) > 1, "PSK_IDENTITY 是空的,填 secrets.h(见 esp32_server/deploy/README.md §0)");
-  static_assert(sizeof(PSK_KEY_HEX) == 65, "PSK_KEY_HEX 必须是 64 位 hex(32 字节)—— 设备侧 MBEDTLS_PSK_MAX_LEN 在 TLS1.3 关闭时就是 32");
-#else
-  #include <NetworkClient.h>
-  static NetworkClient s_cli;
-#endif
 
 // ---------------------------------------------------------------- 状态
 static bool          s_up = false;
@@ -73,7 +51,7 @@ uint32_t wsRxAudioBytes()              { return s_rxAudio; }
 int16_t *wsAudioTxBuf()                { return s_txAudio + WS_HDR_MAX / 2; }
 
 // 只看自己的标志,不碰 socket。
-// 以前这里是 s_up && s_cli.connected() —— 而 NetworkClientSecure::connected() 内部是
+// 以前这里是 s_up && transportConnected() —— 而 NetworkClientSecure::connected() 内部是
 // read(&dummy, 0) -> available() -> mbedtls_ssl_read + 一次 lwIP recv。每轮 loop 被调好几次,
 // 空闲时 ~500 Hz x 5 次全是白做。TCP 断没断改由 wsPoll 每轮探一次,发送失败也会 wsClose,
 // 两条路都会把 s_up 清掉,所以这里的判断不会漏。
@@ -99,14 +77,9 @@ static void base64_16(const uint8_t *in, char *out25) {
   out25[o]   = 0;
 }
 
-// 在写之前先问一句"socket 现在能写吗"。
-//
-// 为什么非问不可:NetworkClient::write() 内部是 10 次重试 x 每次 select 等 1 秒,
-// 也就是**最坏能阻塞 10 秒**,而且这个上限不受 setTimeout() 控制(setTimeout 只
-// 管 SO_SNDTIMEO)。10 秒的阻塞会直接把 20 ms 的音频循环撕碎。
-// 先自己 select 一把,把常见的"发送窗口满"挡在 write() 之外。
+// Native nonblocking socket: wait up to the per-frame budget before starting a frame.
 static bool writable(uint32_t timeoutMs) {
-  int fd = s_cli.fd();
+  int fd = transportFd();
   if (fd < 0) return false;
   fd_set set;
   FD_ZERO(&set);
@@ -150,12 +123,13 @@ static bool sendFrame(uint8_t opcode, const uint8_t *payload, size_t len, uint32
   for (size_t i = 0; i < len; i++) pl[i] ^= mask[i & 3];
   const size_t total = h + len;
 
-  // 只在 socket 可写时才进 write()。lwIP 的发送缓冲是 5744 字节
-  // (CONFIG_LWIP_TCP_SND_BUF_DEFAULT),一个 3208 字节的音频帧通常能一次吃下,
-  // 所以"可写"之后基本不会发生部分写。残留风险写在 writable() 上面。
+  // Keep one deadline for select and TLS writes; a partial WS frame closes the stream.
+  const uint32_t started = appMillis();
   if (!writable(timeoutMs)) return false;
 
-  size_t w = s_cli.write(f, total);
+  const uint32_t elapsed = appMillis() - started;
+  if (elapsed >= timeoutMs) return false;
+  size_t w = transportWrite(f, total, timeoutMs - elapsed);
   if (w != total) {
     // 半帧已经出去了,流就错位了,后面所有帧都会解析错。
     // 直接掐掉等重连,比带着错位继续跑干净得多。
@@ -175,8 +149,8 @@ bool wsSendBinary(const uint8_t *data, size_t n) {
 
 // ---------------------------------------------------------------- 连接
 void wsClose(const char *why) {
-  if (s_up && why) Serial.printf("[WS] 断开:%s\n", why);
-  s_cli.stop();
+  if (s_up && why) printf("[WS] 断开:%s\n", why);
+  transportClose();
   s_up = false;
   s_rx = Rx::HDR;
   s_hdrNeed = 2; s_hdrGot = 0;
@@ -188,51 +162,9 @@ void wsClose(const char *why) {
 bool wsConnect() {
   wsClose(nullptr);
 
-#if SERVER_USE_TLS
-  Serial.printf("[WS] 连接 wss://%s:%d%s  (TLS-PSK, ident=%s)\n",
-                SERVER_HOST, SERVER_PORT, SERVER_WS_PATH, PSK_IDENTITY);
-
-  // 纯 PSK,不装 CA。
-  //
-  // ⚠️ **不要同时调 setCACert()。** arduino-esp32 3.3.12 的 ssl_client.cpp 里
-  // CA / CA-bundle / PSK 是一串 else-if,CA 排在前面 —— 两个都设的话 PSK 会被直接
-  // 无视,然后握手挂在一个和 PSK 毫无关系的错误上,很难查。
-  //
-  // 服务器侧对应 stunnel 的 PSKsecrets(esp32_server/deploy/stunnel.conf),
-  // 那边钉死了 TLS 1.2 + 纯 PSK 套件,两条都是必须的:
-  //   - 本 core 的预编译 IDF 里 CONFIG_MBEDTLS_SSL_PROTO_TLS1_3 **没开**,设备不会 1.3
-  //   - RSA-PSK 会让服务器下发证书链,而 PSK 分支下没装 CA,验证必挂
-  s_cli.setPreSharedKey(PSK_IDENTITY, PSK_KEY_HEX);
-  s_cli.setHandshakeTimeout(WS_TLS_HANDSHAKE_TIMEOUT_S);   // 这个 API 的单位是**秒**
-#else
-  Serial.printf("[WS] 连接 ws://%s:%d%s  (明文)\n", SERVER_HOST, SERVER_PORT, SERVER_WS_PATH);
-#endif
-
-  // 第三个参数同时是 **TCP connect 预算**和 **TLS 写操作的停滞上限**:
-  // ssl_client.cpp 在 connect 时把它存进 socket_timeout,之后 send_ssl_data()
-  // 拿它当"多久没有进展就放弃"的窗口,而且**后面再调 setTimeout() 也改不动它**。
-  // 所以这个值不能给大:给 10 s 就意味着某次上行可能把 20 ms 的音频循环卡住 10 s。
-  // TLS 握手有自己独立的预算(setHandshakeTimeout),不受这里限制。
-  if (!s_cli.connect(SERVER_HOST, SERVER_PORT, WS_TCP_CONNECT_TIMEOUT_MS)) {
-#if SERVER_USE_TLS
-    Serial.println("[WS] 连不上,或者 TLS 握手失败。按顺序查:");
-    Serial.println("     1) 域名解析对不对、VPS 的 443 在不在听(ss -lntp)");
-    Serial.println("     2) 云厂商**安全组**放行了没 —— 和系统防火墙是两道独立的墙");
-    Serial.println("     3) PSK_IDENTITY/PSK_KEY_HEX 和 VPS 的 psk.secrets 对不对得上");
-    Serial.println("     4) stunnel 是不是钉在 TLS1.2 + 纯 PSK 套件上");
-#else
-    Serial.println("[WS] TCP 连不上。查:IP 填对没、服务器在跑没、PC 防火墙放行没");
-#endif
-    return false;
-  }
-#if SERVER_USE_TLS
-  // AGENT.md §5.6 那张预算表说纯 PSK 的握手峰值 ~67 KB —— 这一行就是"真实数字"。
-  // maxAlloc 掉到 HEAP_MIN_MAXALLOC(24 KB)附近就说明余量不够了,别等现场重启才发现。
-  Serial.printf("[WS] TLS 握手成功,剩余堆 %u B / 最大可分配块 %u B\n",
-                (unsigned)ESP.getFreeHeap(), (unsigned)ESP.getMaxAllocHeap());
-#endif
-  s_cli.setNoDelay(true);                 // 100 ms 一包的音频,不能让 Nagle 压着
-  s_cli.setTimeout(WS_SEND_TIMEOUT_MS);
+  printf("[WS] Connecting %s://%s:%d%s\n", SERVER_USE_TLS ? "wss" : "ws",
+         SERVER_HOST, SERVER_PORT, SERVER_WS_PATH);
+  if (!transportConnect()) return false;
 
   uint8_t nonce[16];
   for (int i = 0; i < 16; i += 4) {
@@ -254,7 +186,9 @@ bool wsConnect() {
   if (defaultPort) snprintf(hostHdr, sizeof(hostHdr), "%s", SERVER_HOST);
   else             snprintf(hostHdr, sizeof(hostHdr), "%s:%d", SERVER_HOST, SERVER_PORT);
 
-  s_cli.printf("GET %s HTTP/1.1\r\n"
+  char request[384];
+  const int requestLen = snprintf(request, sizeof(request),
+               "GET %s HTTP/1.1\r\n"
                "Host: %s\r\n"
                "Upgrade: websocket\r\n"
                "Connection: Upgrade\r\n"
@@ -262,6 +196,11 @@ bool wsConnect() {
                "Sec-WebSocket-Version: 13\r\n"
                "\r\n",
                SERVER_WS_PATH, hostHdr, key);
+  if (requestLen <= 0 || requestLen >= (int)sizeof(request) ||
+      transportWrite((const uint8_t *)request, requestLen, WS_SEND_TIMEOUT_MS) != (size_t)requestLen) {
+    transportClose();
+    return false;
+  }
 
   // 读响应头到空行。只认状态行里的 101。
   //
@@ -273,24 +212,26 @@ bool wsConnect() {
   char line[128];
   size_t n = 0;
   bool got101 = false, firstLine = true;
-  const uint32_t t0 = millis();
-  while (millis() - t0 < WS_HANDSHAKE_TIMEOUT_MS) {
-    if (!s_cli.connected() && !s_cli.available()) break;
-    int c = s_cli.read();
-    if (c < 0) { delay(2); continue; }
+  const uint32_t t0 = appMillis();
+  while (appMillis() - t0 < WS_HANDSHAKE_TIMEOUT_MS) {
+    if (!transportConnected()) break;
+    uint8_t byte;
+    int count = transportRead(&byte, 1);
+    int c = count == 1 ? byte : -1;
+    if (c < 0) { appDelay(2); continue; }
     if (c == 0x0A) {                                  // '\n'
       line[n] = 0;
       if (firstLine) {
         got101 = (strstr(line, " 101") != nullptr);
-        if (!got101) Serial.printf("[WS] 握手被拒:%s\n", line);
+        if (!got101) printf("[WS] 握手被拒:%s\n", line);
         firstLine = false;
       }
       if (n == 0 || (n == 1 && line[0] == 0x0D)) {    // 空行 = 头结束
         if (got101) {
           s_up = true;
-          s_lastPong = millis();
-          s_lastPingSent = millis();
-          Serial.println("[WS] 握手成功");
+          s_lastPong = appMillis();
+          s_lastPingSent = appMillis();
+          printf("%s\n", "[WS] 握手成功");
           return true;
         }
         break;
@@ -301,8 +242,8 @@ bool wsConnect() {
     }
   }
 
-  Serial.println("[WS] 握手失败");
-  s_cli.stop();
+  printf("%s\n", "[WS] 握手失败");
+  transportClose();
   return false;
 }
 
@@ -316,7 +257,7 @@ static void dispatchControl() {
       sendFrame(0xA, s_ctl, s_ctlLen, WS_AUDIO_SEND_TIMEOUT_MS);   // 播放中也可能收到 ping,别久等
       break;
     case 0xA:                                   // pong
-      s_lastPong = millis();
+      s_lastPong = appMillis();
       break;
     default:
       break;
@@ -325,7 +266,7 @@ static void dispatchControl() {
 
 static void dispatchText() {
   if (s_textOverflow)
-    Serial.printf("[WS] 控制消息超过 %d 字节,已截断\n", WS_TEXT_MAX);
+    printf("[WS] 控制消息超过 %d 字节,已截断\n", WS_TEXT_MAX);
   if (s_onText && s_textLen) s_onText(s_text, s_textLen);
   s_textLen = 0;
   s_textOverflow = false;
@@ -333,10 +274,10 @@ static void dispatchText() {
 
 void wsPoll() {
   if (!s_up) return;
-  if (!s_cli.connected()) { wsClose("TCP 断了"); return; }
+  if (!transportConnected()) { wsClose("TCP 断了"); return; }
 
   // 保活。AGENT.md §5.1:30 s 一次 ping,连续两次无 pong 视为断线。
-  const uint32_t now = millis();
+  const uint32_t now = appMillis();
   if (now - s_lastPingSent >= WS_PING_INTERVAL_MS) {
     s_lastPingSent = now;
     sendFrame(0x9, nullptr, 0, WS_AUDIO_SEND_TIMEOUT_MS);
@@ -353,7 +294,7 @@ void wsPoll() {
   // 下一轮 connected() 就会发现。
   while (budget > 0) {
     if (s_rx == Rx::HDR || s_rx == Rx::LEN) {
-      int got = s_cli.read(s_hdr + s_hdrGot, s_hdrNeed - s_hdrGot);
+      int got = transportRead(s_hdr + s_hdrGot, s_hdrNeed - s_hdrGot);
       if (got <= 0) return;
       s_hdrGot += got;
       budget   -= got;
@@ -424,7 +365,7 @@ void wsPoll() {
     if (want > room)           want = room;
     if (want > (size_t)budget) want = (size_t)budget;
 
-    int got = s_cli.read(dst, want);
+    int got = transportRead(dst, want);
     if (got <= 0) return;
     s_remain -= got;
     budget   -= got;
