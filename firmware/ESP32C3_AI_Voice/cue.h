@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 
 // 本地提示音。不接串口时,它和 LED 一起构成设备的全部对外状态输出。
 //

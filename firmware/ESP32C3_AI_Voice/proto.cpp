@@ -1,3 +1,4 @@
+#include "platform.h"
 #include "proto.h"
 #include <string.h>
 #include <stdlib.h>

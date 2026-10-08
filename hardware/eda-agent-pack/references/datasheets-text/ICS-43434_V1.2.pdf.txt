@@ -1,0 +1,273 @@
+
+--- PDF PAGE 1 ---
+	 	 		ICS-43434	Multi-Mode	Microphone	with	I2S	Digital	Output	
+InvenSense	reserves	the	right	to	change	the	detail	specifications	as	may	be	required	to	permit	improvements	in	the	design	of	its	products.	
+InvenSense	Inc.	1745	Technology	Drive,	San	Jose,	CA	95110	U.S.A	+1(408)	988–7339	www.invensense.com	 Document	Number:	DS-000069		Revision:	1.2	Release	Date:	08/29/2016			
+	GENERAL	DESCRIPTION	The	ICS-43434	is	digital	I2S	output	bottom	port	microphone.	The	complete	ICS-43434	solution	consists	of	a	MEMS	sensor,	signal	conditioning,	an	analog-to-digital	converter,	decimation	and	antialiasing	filters,	power	management,	and	an	industry	standard	24-bit	I²S	interface.	The	I²S	interface	allows	the		ICS-43434	to	connect	directly	to	digital	processors,	such	as	DSPs	and	microcontrollers,	without	the	need	for	an	audio	codec	in	the	system.			The	ICS-43434	has	multiple	modes	of	operation:	High	Performance,	Low	Power	(AlwaysOn)	and	Sleep.	The	ICS-43434	has	high	SNR	and	120	dB	SPL	AOP	in	all	operational	modes.			The	ICS-43434	has	a	high	SNR	of	65	dBA	and	a	wideband	frequency	response.	The	sensitivity	tolerance	of	the	ICS-43434	is	±1	dB,	which	enables	high-performance	microphone	arrays	without	the	need	for	system	calibration.		The	ICS-43434	is	available	in	a	small	3.50	mm	×	2.65	mm	×	0.98	mm	surface-mount	package.	The	ICS-43434	is	function-compatible	with	the	ICS-43432	while	providing	equivalent	electro-acoustic	performance	at	lower	power	consumption	and	in	a	smaller	package.	
+	APPLICATIONS	• Wearables		• Smart	Televisions	• Remote	Controls	• IoT	Devices	• Teleconferencing	Systems	• Gaming	Consoles	• Security	Systems		FEATURES	SPEC	HIGH	PERFORMANCE	MODE	 LOW-POWER	MODE	Sensitivity	−26	dB	FS	±1	dB	−26	dB	FS	±1	dB	SNR	 65	dBA	 64	dBA	Current	 490	µA	 230	µA	AOP	 120	dB	SPL	 120	dB	SPL	Sample	Rate	23	–	51.6	kHz	 6.25	–	18.75	kHz		• Digital	I²S	interface	with	high	precision	24-bit	data		• Wide	frequency	response	from	60	Hz	to	20	kHz	• High	power	supply	rejection:	−100	dB	FS	• Small	3.50	mm	×	2.65	mm	×	0.98	mm	surface-mount	package	• Compatible	with	Sn/Pb	and	Pb-free	solder	processes		• RoHS/WEEE	compliant			  FUNCTIONAL	BLOCK	DIAGRAM		
+		
+ ORDERING	INFORMATION		PART	TEMP	RANGE	PACKAGING	ICS-43434	 −40°C	to	+85°C	13”	Tape	&	Reel	EV_ICS-43434-FX	 —	 			
+	 	
+ICS-43434
+ADC
+FILTER
+HARDWARE
+CONTROL
+I2S
+SERIAL
+PORTPOWER
+MANAGEMENT
+SCK
+SD
+WS
+VDD
+GND
+LR
+
+--- PDF PAGE 2 ---
+	 	 ICS-43434		
+Page	2	of	21	Document	Number:	DS-000069		Revision:	1.2	
+TABLE	OF	CONTENTS	General	Description	.....................................................................................................................................................................	1	Applications	..................................................................................................................................................................................	1	Features	.......................................................................................................................................................................................	1	Functional	Block	Diagram	.............................................................................................................................................................	1	Ordering	Information	...................................................................................................................................................................	1	Table	of	Contents	....................................................................................................................................................................................	2	Specifications	..........................................................................................................................................................................................	4	Table	1.	Acoustical/Electrical	Characteristics	–	General	..............................................................................................................	4	Table	2.	Acoustical/Electrical	Characteristics	–	High-Performance	Mode	...................................................................................	4	Table	3.	Acoustical/Electrical	Characteristics	–	Low-Power	Mode	..............................................................................................	5	Table	4.	Digital	Filter	Characteristics	............................................................................................................................................	5	Table	5.	I²S	Digital	INPUT/Output	................................................................................................................................................	6	Timing	Diagram	............................................................................................................................................................................	7	Absolute	Maximum	Ratings	....................................................................................................................................................................	8	Table	6.	Absolute	Maximum	Ratings	............................................................................................................................................	8	ESD	Caution	..................................................................................................................................................................................	8	Soldering	Profile	...........................................................................................................................................................................	9	Table	7.	Recommended	Soldering	Profile	....................................................................................................................................	9	Pin	Configurations	And	Function	Descriptions	......................................................................................................................................	10	Table	8.	Pin	Function	Descriptions	.............................................................................................................................................	10	Typical	Performance	Characteristics	.....................................................................................................................................................	11	Theory	of	Operation	..............................................................................................................................................................................	12	Power	Management	...................................................................................................................................................................	12	Startup	and	Normal	Operation	.......................................................................................................................................	12	Standby	Mode	.................................................................................................................................................................	12	Synchronizing	Microphones	.......................................................................................................................................................	12	I²S	Data	Interface	.......................................................................................................................................................................	12	Data	Output	Mode	..........................................................................................................................................................	12	Data	Word	Length	...........................................................................................................................................................	12	Data	Word	Format	..........................................................................................................................................................	12	Data	Output	Format	........................................................................................................................................................	13	Digital	Microphone	Sensitivity	...................................................................................................................................................	13	Digital	Filter	Characteristics	.......................................................................................................................................................	14	High-Pass	Filter	...............................................................................................................................................................	14	Low-Pass	Decimation	Filter	.............................................................................................................................................	14	Applications	Information	.......................................................................................................................................................................	15	Low-Power	Mode	.......................................................................................................................................................................	15	
+
+--- PDF PAGE 3 ---
+	 	 ICS-43434		
+Page	3	of	21	Document	Number:	DS-000069		Revision:	1.2	
+Sleep	Mode	................................................................................................................................................................................	15	SD	Output	Drive	Strength	...........................................................................................................................................................	15	Power	Supply	Decoupling	..........................................................................................................................................................	15	Supporting	Documents	..........................................................................................................................................................................	16	Evaluation	Board	User	Guide	.....................................................................................................................................................	16	Application	Notes	.......................................................................................................................................................................	16	PCB	Design	And	Land	Pattern	Layout	....................................................................................................................................................	17	PCB	Material	And	Thickness	.......................................................................................................................................................	17	Handling	Instructions	............................................................................................................................................................................	18	Pick	And	Place	Equipment	..........................................................................................................................................................	18	Reflow	Solder	.............................................................................................................................................................................	18	Board	Wash	................................................................................................................................................................................	18	Outline	Dimensions	...............................................................................................................................................................................	19	Ordering	Guide	...........................................................................................................................................................................	19	Revision	History	..........................................................................................................................................................................	20	Compliance	Declaration	Disclaimer	......................................................................................................................................................	21	
+
+--- PDF PAGE 4 ---
+	 	 ICS-43434		
+Page	4	of	21	Document	Number:	DS-000069		Revision:	1.2	
+SPECIFICATIONS		TABLE	1.	ACOUSTICAL/ELECTRICAL	CHARACTERISTICS	–	GENERAL	TA	=	25°C,	VDD	=	1.8	to	3.3	V,	fS	=	48	kHz,	CLOAD	=	30	pF	unless	otherwise	noted.	Typical	specifications	are	not	guaranteed.	PARAMETER		 CONDITIONS	 MIN	TYP	MAX	UNITS	NOTES	PERFORMANCE	Directionality	 	 Omni	 		Output	Polarity	 Input	acoustic	pressure	vs.	output	data	 Non-Inverted	 		Supply	Voltage	(VDD)	 	 1.65		3.63	V		Sleep	Mode	Current	(IS)	 fS	<	3.125	kHz	 	12	20	µA			TABLE	2.	ACOUSTICAL/ELECTRICAL	CHARACTERISTICS	–	HIGH-PERFORMANCE	MODE	TA	=	25°C,	VDD	=	1.8	to	3.3	V,	fS	=	48	kHz,	CLOAD	=	30	pF	unless	otherwise	noted.	Typical	specifications	are	not	guaranteed.	PARAMETER		 CONDITIONS	 MIN	TYP	MAX	UNITS	NOTES	Sensitivity	 1	kHz,	94	dB	SPL	 −27	−26	−25	dB	FS	1	Signal-to-Noise	Ratio	(SNR)	20	kHz	bandwidth,	A-weighted		65		dBA		Equivalent	Input	Noise	(EIN)	20	kHz	bandwidth,	A-weighted		29		dBA	SPL		Dynamic	Range	 Derived	from	EIN	and	acoustic	overload	point	 	91		dB			Total	Harmonic	Distortion	(THD)	105	dB	SPL		 	0.2	1	%		Power	Supply	Rejection	(PSR)	217	Hz,	100	mV	p-p	square	wave	superimposed	on	VDD	=	1.8	V,	A-weighted	 	−99		dB	FS		Power	Supply	Rejection—Swept	Sine	 1	kHz	sine	wave,	VDD	=	1.8	V		−106		dB	FS		Acoustic	Overload	Point	 10%	THD	 	120		dB	SPL		Noise	Floor	 20	Hz	to	20	kHz,	A-weighted,	rms	 	−90		dB	FS		Supply	Current	(IS)	 VDD	=	1.8	V,	no	load	 	490	550	µA		Note	1:		Sensitivity	is	relative	to	the	RMS	level	of	a	sine	wave	with	positive	amplitude	equal	to	100%	1s	density	and	negative	amplitude	equal	to	0%	1s	density.		 	
+
+--- PDF PAGE 5 ---
+	 	 ICS-43434		
+Page	5	of	21	Document	Number:	DS-000069		Revision:	1.2	
+TABLE	3.	ACOUSTICAL/ELECTRICAL	CHARACTERISTICS	–	LOW-POWER	MODE	TA	=	25°C,	VDD	=	1.8	to	3.3	V,	fS	=	16	kHz,	CLOAD	=	30	pF	unless	otherwise	noted.	Typical	specifications	are	not	guaranteed.	PARAMETER		 CONDITIONS	 MIN	TYP	MAX	UNITS	NOTES	Sensitivity	 1	kHz,	94	dB	SPL	 −27	−26	−25	dB	FS	1	Signal-to-Noise	Ratio	(SNR)	20	kHz	bandwidth,	A-weighted		64		dBA		Equivalent	Input	Noise	(EIN)	20	kHz	bandwidth,	A-weighted		30		dBA	SPL		Dynamic	Range	 Derived	from	EIN	and	acoustic	overload	point	 	90		dB			Total	Harmonic	Distortion	(THD)	105	dB	SPL		 	0.2	1	%		Power	Supply	Rejection	(PSR)	217	Hz,	100	mV	p-p	square	wave	superimposed	on	VDD	=	1.8	V,	A-weighted	 	−98		dB	FS		Power	Supply	Rejection—Swept	Sine	 1	kHz	sine	wave,	VDD	=	1.8	V			−100		dB	FS		Acoustic	Overload	Point	 10%	THD	 	120		dB	SPL		Noise	Floor	 20	kHz	bandwidth,	A-weighted,	rms	 	−90		dB	FS		Supply	Current	(IS)	 VDD	=	1.8	V,	no	load	 	230	300	µA		Note	1:		Sensitivity	is	relative	to	the	RMS	level	of	a	sine	wave	with	positive	amplitude	equal	to	100%	1s	density	and	negative	amplitude	equal	to	0%	1s	density.		TABLE	4.	DIGITAL	FILTER	CHARACTERISTICS	PARAMETER		 CONDITIONS	 MIN	TYP	MAX	UNITS	NOTES	Group	Delay	 Acoustic	input	to	digital	output	–	includes	filter	and	I2S	serial	output	 	2/fS		sec.		Pass	Band	Ripple	 	 		±0.3	dB		Stop	Band	Attenuation	 	 	58		dB		Pass	Band	 fs	=	48	kHz	 	20		kHz		
+
+--- PDF PAGE 6 ---
+	 ICS-43434		
+Page	6	of	21	Document	Number:	DS-000069		Revision:	1.2	
+TABLE	5.	I²S	DIGITAL	INPUT/OUTPUT	–40°C	<	TA	<	+85°C,	1.8	V	<	VDD	<	3.3	V,	unless	otherwise	noted.		PARAMETER		 CONDITIONS	 MIN	MAX	UNITS	NOTES	MODE	SWITCHING	Sleep	Time	 Time	from	fS	falling	<	3.125	kHz	 	 1	ms		Wake-Up	Time	 High-Performance	mode,	Sleep	Mode	to	fWS	>	21.875	kHz,	output	within	1	dB	of	final	sensitivity,	power	on	 	20	ms		
+Wake-Up	Time	 Low-Power	Mode,	Sleep	Mode	to	fWS	>	6.25	kHz,	output	within	1	dB	of	final	sensitivity,	power	on	 	20	ms		Switching	time	 Between	Low-Power	and	High-Performance	Modes		10	ms		INPUT/OUTPUT	SCK	period	(tSCP)	 Input	clock	period	 303	2500	ns		Sampling	Frequency	(fS)	 Sleep	Mode	 	3.125	kHz		Low-Power	Mode	 6.25	18.75	kHz		High-Performance	Mode	23	51.6	kHz		SCK	high	(tSCH)	 	 50		ns		SCK	low	(tSCL)	 	 50		ns		WS	setup	(tWSS)	 	 0		ns		WS	hold	(tWSH)	 	 20		ns		SCK	Duty	Cycle	 	 40	60	%		SD	Data	Valid	(tSDV)	 From	SCK	falling	to	valid	SD	data	 	75	ns		SD	Data	Disable	(tSDD)	 From	SCK	falling	to	SD	output	tristated	 	76	ns		tRISE	 SCK	rise	time	(10%	to	90%	level)	 	25	ns	1	tFALL	 SCK	fall	time	(90%	to	10%	level)	 	25	ns	1	DIGITAL	INPUT	Voltage	Input	Low	(VIL)	 	 0	0.3	×	VDD	V		Voltage	Input	High	(VIH)	 	 0.7	×	VDD	VDD	V		SD	DIGITAL	OUTPUT	Voltage	Output	Low	(VOL)	 	 0	0.35	×	VDD	V		Voltage	Output	High	(VOH)	 	 0.65	×	VDD	VDD	V		Maximum	Load	 fS	=	48	kHz	 	85	pF		Note 1:  Guaranteed by design		
+
+--- PDF PAGE 7 ---
+	 ICS-43434		
+Page	7	of	21	Document	Number:	DS-000069		Revision:	1.2	
+TIMING	DIAGRAM	
+ Figure	1.	Serial	Data	Port	Timing		
+
+
+--- PDF PAGE 8 ---
+	 ICS-43434		
+Page	8	of	21	Document	Number:	DS-000069		Revision:	1.2	
+ABSOLUTE	MAXIMUM	RATINGS	Stress	above	those	listed	as	Absolute	Maximum	Ratings	may	cause	permanent	damage	to	the	device.	These	are	stress	ratings	only	and	functional	operation	of	the	device	at	these	conditions	is	not	implied.		Exposure	to	the	absolute	maximum	ratings	conditions	for	extended	periods	may	affect	device	reliability.			TABLE	6.	ABSOLUTE	MAXIMUM	RATINGS		PARAMETER		 RATING	Supply	Voltage	(VDD)	 −0.3	V	to	+3.63	V	Digital	Pin	Input	Voltage	 −0.3	V	to	VDD	+	0.3	V	or	3.63	V,	whichever	is	less	Sound	Pressure	Level	 160	dB	Mechanical	Shock	 10,000	g	Vibration	 Per	MIL-STD-883	Method	2007,	Test	Condition	B	Temperature	Range	 			Biased	 −40°C	to	+85°C			Storage	 −55°C	to	+150°C						 ESD	CAUTION																
+	
+ESD	(electrostatic	discharge)	sensitive	device.	Charged	devices	and	circuit	boards	can	discharge	without	detection.	Although	this	product	features	patented	or	proprietary	protection	circuitry,	damage	may	occur	on	devices	subjected	to	high	energy	ESD.	Therefore	proper	ESD	precautions	should	be	taken	to	avoid	performance	degradation	or	loss	of	functionality.			
+
+--- PDF PAGE 9 ---
+	 ICS-43434		
+Page	9	of	21	Document	Number:	DS-000069		Revision:	1.2	
+SOLDERING	PROFILE		
+	Figure	2.	Recommended	Soldering	Profile	Limits				TABLE	7.	RECOMMENDED	SOLDERING	PROFILE		PROFILE	FEATURE	 Sn63/Pb37	 Pb-Free	Average	Ramp	Rate	(TL	to	TP)	1.25°C/sec	max	 1.25°C/sec	max	
+Preheat	Minimum	Temperature	(TSMIN)	 100°C	 100°C	Minimum	Temperature	(TSMIN)	 150°C	 200°C	Time	(TSMIN	to	TSMAX),	tS	60	sec	to	75	sec	 60	sec	to	75		sec	Ramp-Up	Rate	(TSMAX	to	TL)	 1.25°C/sec	 1.25°C/sec	Time	Maintained	Above	Liquidous	(tL)	45	sec	to	75	sec	 ~50	sec	Liquidous	Temperature	(TL)	 183°C	 217°C	Peak	Temperature	(TP)	 215°C	+3°C/−3°C	 260°C	+0°C/−5°C	Time	Within	+5°C	of	Actual	Peak	Temperature	(tP)	 20	sec	to	30	sec	 20	sec	to	30	sec	Ramp-Down	Rate	 3°C/sec	max	 3°C/sec	max	Time	+25°C	(t25°C)	to	Peak	Temperature	5	min	max	 5	min	max		*The	reflow	profile	in	Table	7	is	recommended	for	board	manufacturing	with	InvenSense	MEMS	microphones.	All	microphones	are	also	compatible	with	the	J-STD-020	profile
+tP
+tL
+t25°CTO PEAK TEMPERATURE
+tS
+PREHEAT
+CRITICAL ZONE
+TLTO TP
+TEMPERATURE
+TIME
+RAMP-DOWN
+RAMP-UP
+TSMIN
+TSMAX
+TP
+TL
+
+--- PDF PAGE 10 ---
+	 ICS-43434		
+Page	10	of	21	Document	Number:	DS-000069		Revision:	1.2	
+PIN	CONFIGURATIONS	AND	FUNCTION	DESCRIPTIONS		
+			Figure	3.	Pin	Configuration	(top	view,	terminal	side	down)		TABLE	8.	PIN	FUNCTION	DESCRIPTIONS	PIN	NAME	TYPE	FUNCTION	1	WS	Input	Serial	Data-Word	Select	for	I²S	Interface.	This	pin	includes	an	internal	100	kΩ	pull-down	resistor.	If	the	pin	is	pulled	to	VDD		in	standby	mode,	then	VDD/100	kΩ	current	will	sink	through	the	pin.	2	LR	Input	Left/Right	channel	select.	When	set	low,	the	microphone	outputs	its	signal	in	the	left	channel	of	the	I²S	frame.	When	set	high,	the	microphone	outputs	its	signal	in	the	right	channel.		3	GND	Ground	Ground.	Connect	to	ground	on	the	PCB.	4	SCK	Input	Serial	Data	Clock	for	I²S	Interface.	5	VDD	Power	Power,	1.65	to	3.63	V.	This	pin	should	be	decoupled	to	GND	with	a	0.1	μF	capacitor.	6	SD	Output	Serial	Data	Output	for	I²S	Interface.	This	pin	tristates	when	not	actively	driving	the	appropriate	output	channel.	The	SD	trace	should	have	a	100	kΩ	pull-down	resistor	to	discharge	the	line	during	the	time	that	all	microphones	on	the	bus	have	tristated	their	outputs.		
+
+
+--- PDF PAGE 11 ---
+	 ICS-43434		
+Page	11	of	21	Document	Number:	DS-000069		Revision:	1.2	
+TYPICAL	PERFORMANCE	CHARACTERISTICS	
+	Figure	4.	Typical	Frequency	Response	(Measured)	 	Figure	5.	Total	Harmonic	Distortion	+	Noise	(THD+N)	vs.	Input	SPL	
+	Figure	6.	PSR	vs.	Frequency,	100	mV	p-p	Swept	Sine	Wave	 	Figure	7.	Linearity		 		 	
+-30
+-20
+-10
+0
+10
+20
+30
+10100100010000
+NORMALIZED	AMPLITUDE	(dB)
+FREQUENCY	 (Hz)
+0.01
+0.1
+1
+10
+90100110120130
+THD+N	 (%)
+INPUT	AMPLITUDE	(dB	SPL)
+LOW-POWER	MODEHIGH-PERFORMANCE	 MODE
+-120-100-80-60-40-200
+100 1,00010,000
+PSR	(dB	FS)
+FREQUENCY	 (Hz)
+LOW-POWER	MODEHIGH-PERFORMANCE	 MODE
+-40
+-30
+-20
+-10
+0
+90100110120
+OUTPUT	AMPLITUDE	(dB	FS)
+INPUT	AMPLITUDE	(dB	SPL)
+
+--- PDF PAGE 12 ---
+	 ICS-43434		
+Page	12	of	21	Document	Number:	DS-000069		Revision:	1.2	
+THEORY	OF	OPERATION		POWER	MANAGEMENT	The	ICS-43434	has	three	power	states:	high-performance	mode,	low-power	mode	and	standby	mode.		Startup	and	Normal	Operation	The	start-up	time	of	the	ICS-43434	is	less	than	20	ms.	The	I2S	data	from	the	microphone	is	valid	to	be	used	as	soon	as	the	data	is	being	output.	The	part	is	in	normal	operation	(high-performance	and	low-power	modes)	when	SCK	and	WS	are	active.			Standby	Mode	The	microphone	enters	standby	mode	when	the	frequency	of	SCK	falls	below	about	200	kHz.	It	is	recommended	to	enter	standby	mode	by	stopping	both	the	SCK	and	WS	clock	signals	and	pulling	those	signals	to	ground	to	avoid	drawing	current	through	the	WS	pin’s	internal	pull-down	resistor.	The	timing	for	exiting	standby	mode	is	the	same	as	normal	startup.			It	is	not	recommended	to	supply	active	clocks	(WS	and	SCK)	to	the	ICS-43434	while	there	is	no	power	supplied	to	VDD.	Doing	this	continuously	turns	on	ESD	protection	diodes,	which	may	affect	long-term	reliability	of	the	microphone.			SYNCHRONIZING	MICROPHONES	Stereo	ICS-43434	microphones	are	synchronized	by	the	WS	signal,	so	audio	captured	from	two	microphones	sharing	the	same	clock	will	be	in	sync.	The	two	microphones	will	synchronously	sample	the	acoustic	signals	at	the	beginning	of	the	I2S	frame	(WS	falling	edge).			I²S	DATA	INTERFACE	The	slave	serial	data	port’s	format	is	I²S,	24-bit,	twos	complement.	There	must	be	64	SCK	cycles	in	each	WS	stereo	frame.	The	LR	control	pin	determines	whether	the	ICS-43434	outputs	data	in	the	left	or	right	channel.	When	set	to	the	left	channel,	the	data	will	be	output	following	WS’s	falling	edge	and	when	set	to	output	on	the	right	channel,	data	will	be	output	following	WS’s	rising	edge.		For	a	stereo	application,	the	SD	pins	of	the	left	and	right	ICS-43434	microphones	should	be	tied	together	as	shown	in	Figure	8.	The	format	of	a	stereo	I²S	data	stream	is	shown	in	Figure	9.	Figure	10	and	Figure	11	show	the	formats	of	a	mono	microphone	data	stream	for	left	and	right	microphones,	respectively.			Data	Output	Mode		The	output	data	pin	(SD)	is	tristated	when	it	is	not	actively	driving	I²S	output	data.	SD	immediately	tristates	after	the	LSB		is	output	so	that	another	microphone	can	drive	the	common	data	line.			The	SD	trace	should	have	a	pull-down	resistor	to	discharge	the	line	during	the	time	that	all	microphones	on	the	bus	have	tristated	their	outputs.	A	100	kΩ	resistor	is	sufficient	for	this,	as	shown	in	Figure	8.	If	the	SD	line	needs	to	be	discharged	faster	than	a	100	kΩ	resistor	can,	a	smaller	resistor,	such	as	10	kΩ,	can	be	used.				Data	Word	Length	The	output	data	word	length	is	24	bits	per	channel.			Data	Word	Format	The	default	data	format	is	I²S	(twos	complement),	MSB-first.	In	this	format,	the	MSB	of	each	word	is	delayed	by	one	SCK	cycle	from	the	start	of	each	half-frame.		
+
+--- PDF PAGE 13 ---
+	 ICS-43434		
+Page	13	of	21	Document	Number:	DS-000069		Revision:	1.2	
+  Figure	8.	System	Block	Diagram		
+ Figure	9.	Stereo	Output	I²S	Format		
+ Figure	10.	Mono	Output	I²S	Format	Left	Channel	(LR	=	0)			
+ Figure	11.	Mono	Output	I²S	Format	Right	Channel	(LR	=	1)	Data	Output	Format		The	output	data	word	length	is	24	bits/channel.	The	data	word	format	is	2’s	complement,	MSB-first.		The	output	data	pin	(SD)	is	tri-stated	when	it	is	not	actively	driving	output	data.	SD	will	immediately	tri-state	after	the	LSB	is	output	so	that	another	microphone	can	drive	the	common	data	line.			DIGITAL	MICROPHONE	SENSITIVITY	The	sensitivity	of	a	digital	output	microphone	is	specified	in	units	of	dB	FS	(decibels	relative	to	a	full-scale	digital	output).	A	0	dB	FS	sine	wave	is	defined	as	a	signal	whose	peak	just	touches	the	full-scale	code	of	the	digital	word	(see	Figure	5).	This	measurement	convention	means	that	signals	with	a	different	crest	factor	may	have	an	RMS	level	higher	than	0	dB	FS.	For	example,	a	full-scale	square	wave	has	an	RMS	level	of	3	dB	FS.	
+SCK
+WS
+SD
+SYSTEMMASTER
+(DSP,MICROCONTROLLER,
+CODEC)
+SCK
+WS
+SD
+VDD
+LEFT
+ICS-43434
+GND
+0.1µF
+FROMVOLTAGE
+REGULATOR
+(1.8VTO3.3V)
+LRSCK
+WS
+SD
+VDD
+RIGHT
+ICS-43434
+GND
+0.1µF
+100kΩ
+VDD
+LR
+
+
+--- PDF PAGE 14 ---
+	 ICS-43434		
+Page	14	of	21	Document	Number:	DS-000069		Revision:	1.2	
+	
+	Figure	11.	1	kHz,	0	dB	FS	Sine	Wave		The	definition	of	a	0	dB	FS	signal	must	be	understood	when	measuring	the	sensitivity	of	the	ICS-43434.	An	acoustic	input	signal	of	a	1	kHz	sine	wave	at	94	dB	SPL	applied	to	the	ICS-43434	results	in	an	output	signal	with	a	−26	dB	FS	level.	This	means	that	the	output	digital	word	peaks	at	−26	dB	below	the	digital	full-scale	level.	A	common	misunderstanding	is	that	the	output	has	an	RMS	level	of	−29	dB	FS;	however,	this	is	not	the	case	because	of	the	definition	of	a	0	dB	FS	sine	wave.		There	is	no	commonly	accepted	unit	of	measurement	to	express	the	instantaneous	level	of	a	digital	signal	output	from	the	microphone,	as	opposed	to	the	RMS	level	of	the	signal.	Some	measurement	systems	express	the	instantaneous	level	of	an	individual	sample	in	units	of	D,	where	1.0	D	is	digital	full	scale	(see	Figure	11).	In	this	case,	a	−26	dB	FS	sine	wave	has	peaks	at	0.05	D.		For	more	information	about	digital	microphone	sensitivity,	see	the	AN-1112	Application	Note,	Microphone	Specifications	Explained.		DIGITAL	FILTER	CHARACTERISTICS	The	ICS-43434	has	an	internal	digital	bandpass	filter.	A	high-pass	filter	eliminates	unwanted	low	frequency	signals.	A	low-pass	decimation	filter	scales	the	pass	band	with	the	sampling	frequency	and	performs	required	out-of-band	noise	reduction.			High-Pass	Filter	The	ICS-43434	incorporates	a	high-pass	filter	to	remove	DC	and	low	frequency	components.	This	high	pass	filter	has	a	−3	dB	corner	frequency	of	24	Hz	and	does	not	scale	with	the	sampling	rate.			Low-Pass	Decimation	Filter	The	analog-to-digital	converter	in	the	ICS-43434	is	a	single-bit,	high	order,	sigma-delta	(Σ-Δ)	running	at	a	high	oversampling	ratio.	The	noise	shaping	of	the	converter	pushes	the	majority	of	the	noise	well	above	the	audio	band	and	gives	the	microphone	a	wide	dynamic	range.	However,	it	does	require	a	good	quality	low-pass	decimation	filter	to	eliminate	the	high	frequency	noise.			The	pass	band	of	the	filter	extends	to	0.417	×	fS	and,	in	that	band,	has	only	±0.3	dB	of	ripple.	A	48	kHz	sampling	rate	results	in	a	pass	band	of	20	kHz	and	a	half	amplitude	corner	at	24	kHz;	the	stop-band	attenuation	of	the	filter	is	58	dB.	Note	that	these	filter	specifications	scale	with	sampling	frequency.		
+1.0
+–1.0
+–0.8
+–0.6
+–0.4
+–0.2
+0
+0.2
+0.4
+0.6
+0.8
+0 0.91.00.80.70.60.50.40.30.20.1
+DIGITAL AMPLITUDE (D)
+TIME (ms)
+
+--- PDF PAGE 15 ---
+	 ICS-43434		
+Page	15	of	21	Document	Number:	DS-000069		Revision:	1.2	
+APPLICATIONS	INFORMATION		LOW-POWER	MODE	Low	Power	Mode	(LPM)	enables	the	ICS-43434	to	be	used	in	an	AlwaysOn	listening	mode	for	keyword	spotting	and	ambient	sound	analysis.	The	ICS-43434	will	enter	LPM	when	the	sampling	frequency	is	between	6.25	and	18.75	kHz.	In	this	mode,	the	microphone	consumes	only	230	µA	while	retaining	high	electro-acoustic	performance.			When	one	microphone	is	in	LPM	for	AlwaysOn	listening,	a	second	microphone	sharing	the	same	data	line	may	be	powered	down.	In	this	case,	where	one	microphone	is	powered	up	and	another	is	powered	down	by	disabling	the	VDD	supply	or	in	sleep	mode	by	reducing	the	frequency	of	a	separate	clock	source,	the	disabled	microphone	does	not	present	a	load	to	the	signal	on	the	LPM	microphone’s	DATA	pin.		SLEEP	MODE	The	microphone	enters	sleep	mode	when	the	sampling	frequency	falls	below	3.125	kHz.	In	this	mode,	the	microphone	data	output	is	in	a	high	impedance	state.	The	current	consumption	in	sleep	mode	is	12	µA.			The	ICS-43434	enters	sleep	mode	within	1	ms	of	the	sampling	frequency	falling	below	3.125	kHz.	The	microphone	wakes	up	from	sleep	mode	and	begins	to	output	data	32,768	SCK	cycles	after	the	clock	becomes	active.	For	a	3.072	MHz	clock	(fS	=	48	kHz),	the	microphone	starts	to	output	data	in	10.7	ms.	For	a	2.4	MHz	clock	(fS	=	37.5	kHz),	the	microphone	starts	to	output	data	in	13.7	ms.	The	wake-up	time	(Table	5)	indicates	the	time	from	when	the	clock	is	enabled	to	when	the	ICS-43434	outputs	data	within	1	dB	of	its	settled	sensitivity.		SD	OUTPUT	DRIVE	STRENGTH	The	SD	data	output	pin	must	drive	a	load	that	includes	the	PCB	trace	and	the	tri-stated	inputs	of	the	other	ICS-43434	SD	pins	connected	to	that	same	trace.	The	tri-stated	load	capacitance	of	the	ICS-43434	SD	pin	is	about	6	pF.	The	ICS-43434	has	been	designed	to	drive	a	load	of	85	pF.			POWER	SUPPLY	DECOUPLING	For	best	performance	and	to	avoid	potential	parasitic	artifacts,	placing	a	0.1	µF	ceramic	type	X7R	or	better	capacitor	between		Pin	5	(VDD)	and	ground	is	strongly	recommended.	The	capacitor	should	be	placed	as	close	to	Pin	3	as	possible.		The	connections	to	each	side	of	the	capacitor	should	be	as	short	as	possible,	and	the	trace	should	stay	on	a	single	layer	with	no	vias.	For	maximum	effectiveness,	locate	the	capacitor	equidistant	from	the	power	and	ground	pins	or,	when	equidistant	placement	is	not	possible,	slightly	closer	to	the	power	pin.	Thermal	connections	to	the	ground	planes	should	be	made	on	the	far	side	of	the	capacitor,	as	shown	in	Figure	12.			
+ Figure	12.	Recommended	Power	Supply	Bypass	Capacitor	Layout		
+VDDGND
+TO	GND
+TO	VDD
+CAPACITOR
+
+--- PDF PAGE 16 ---
+	 ICS-43434		
+Page	16	of	21	Document	Number:	DS-000069		Revision:	1.2	
+SUPPORTING	DOCUMENTS		For	additional	information,	see	the	following	documents.		EVALUATION	BOARD	USER	GUIDE	AN-000088,	Bottom-Port	I2S	Output	MEMS	Microphone	Evaluation	Board		APPLICATION	NOTES	AN-100,	MEMS	Microphone	Handling	and	Assembly	Guide	AN-1003,	Recommendations	for	Mounting	and	Connecting	the	InvenSense	Bottom-Ported	MEMS	Microphones	AN-1112,	Microphone	Specifications	Explained	AN-1124,	Recommendations	for	Sealing	InvenSense	Bottom-Port	MEMS	Microphones	from	Dust	and	Liquid	Ingress	AN-1140,	Microphone	Array	Beamforming		
+
+--- PDF PAGE 17 ---
+	 ICS-43434		
+Page	17	of	21	Document	Number:	DS-000069		Revision:	1.2	
+PCB	DESIGN	AND	LAND	PATTERN	LAYOUT	The	recommended	PCB	land	pattern	for	the	ICS-43434	should	be	laid	out	to	a	1:1	ratio	to	the	solder	pads	on	the	microphone	package,	as	shown	in	Figure	13.	Take	care	to	avoid	applying	solder	paste	to	the	sound	hole	in	the	PCB.	A	suggested	solder	paste	stencil	pattern	layout	is	shown	in	Figure	14.	The	diameter	of	the	sound	hole	in	the	PCB	should	be	larger	than	the	diameter	of	the	sound	port	of	the	microphone.	A	minimum	diameter	of	0.5	mm	is	recommended.		
+	Figure	13.		PCB	Land	Pattern	Layout	Dimensions	shown	in	millimeters		
+	Figure	14.	Suggested	Solder	Paste	Stencil	Pattern	Layout	Dimensions	shown	in	millimeters		PCB	MATERIAL	AND	THICKNESS	The	performance	of	the	ICS-43434	is	not	affected	by	PCB	thickness.	The	ICS-43434	can	be	mounted	on	either	a	rigid	or	flexible	PCB.	A	flexible	PCB	with	the	microphone	can	be	attached	directly	to	the	device	housing	with	an	adhesive	layer.	This	mounting	method	offers	a	reliable	seal	around	the	sound	port	while	providing	the	shortest	acoustic	path	for	good	sound	quality.	
+
+
+--- PDF PAGE 18 ---
+	 ICS-43434		
+Page	18	of	21	Document	Number:	DS-000069		Revision:	1.2	
+HANDLING	INSTRUCTIONS		PICK	AND	PLACE	EQUIPMENT	The	MEMS	microphone	can	be	handled	using	standard	pick-and-place	and	chip	shooting	equipment.	Take	care	to	avoid	damage	to	the	MEMS	microphone	structure	as	follows:	• Use	a	standard	pickup	tool	to	handle	the	microphone.	Because	the	microphone	hole	is	on	the	bottom	of	the	package,	the	pickup	tool	can	make	contact	with	any	part	of	the	lid	surface.	• Do	not	pick	up	the	microphone	with	a	vacuum	tool	that	makes	contact	with	the	bottom	side	of	the	microphone.		Do	not	pull	air	out	of	or	blow	air	into	the	microphone	port.	• Do	not	use	excessive	force	to	place	the	microphone	on	the	PCB.		REFLOW	SOLDER	For	best	results,	the	soldering	profile	must	be	in	accordance	with	the	recommendations	of	the	manufacturer	of	the	solder	paste	used	to	attach	the	MEMS	microphone	to	the	PCB.	It	is	recommended	that	the	solder	reflow	profile	not	exceed	the	limit	conditions	specified	in	Figure	2	and	Table	7.		BOARD	WASH	When	washing	the	PCB,	ensure	that	water	does	not	make	contact	with	the	microphone	port.	Do	not	use	blow-off	procedures	or	ultrasonic	cleaning.		
+
+--- PDF PAGE 19 ---
+	 ICS-43434		
+Page	19	of	21	Document	Number:	DS-000069		Revision:	1.2	
+OUTLINE	DIMENSIONS		
+	Figure	15.	6-Terminal	Chip	Array	Small	Outline	No	Lead	Cavity	3.50	×	2.65	×	0.98	mm	Body	Dimensions	shown	in	millimeters		
+		Figure	16.	Package	Marking	Specification	(Top	View)	ORDERING	GUIDE	PART	 TEMP	RANGE	PACKAGE	 QUANTITY	PACKAGING	ICS-43434	 −40°C	to	+85°C	6-Terminal	LGA_CAV	10,000	 13”	Tape	and	Reel	EV_ICS-43434-FX		 Flex	Evaluation	Board		 		
+PIN	#1
+REFERENCE
+CORNER
+PIN	#1
+REFERENCE
+CORNER
+0.98
+0.75
+0.23	(REF)
+2.65
+3.50 3.20
+R0.16
+2.35
+0.125
+0.125
+0.600	(5X)
+0.522	(5X)
+0.300
+0.300
+ø0.375
+ø1.025
+ø1.625
+1.325
+1.040
+1.513
+2.03
+2.88
+R0.125
+R0.240
+YYXXX
+434
+LOT	TRACEABILITYCODE
+PIN	1	INDICATIONPART	NUMBER
+DATECODE
+
+--- PDF PAGE 20 ---
+	 ICS-43434		
+Page	20	of	21	Document	Number:	DS-000069		Revision:	1.2	
+REVISION	HISTORY	REVISION	DATE	 REVISION	DESCRIPTION	4/26/2016	 1.0	Initial	version	6/3/2016	 1.1	Updated	Ordering	Quantity	8/29/2016	 1.2	Updated	HPM	SNR,	EIN	and	Dynamic	Range	value	
+
+--- PDF PAGE 21 ---
+	 ICS-43434		
+Page	21	of	21	Document	Number:	DS-000069		Revision:	1.2	
+COMPLIANCE	DECLARATION	DISCLAIMER	InvenSense	believes	the	environmental	and	other	compliance	information	given	in	this	document	to	be	correct	but	cannot	guarantee	accuracy	or	completeness.	Conformity	documents	substantiating	the	specifications	and	component	characteristics	are	on	file.	InvenSense	subcontracts	manufacturing,	and	the	information	contained	herein	is	based	on	data	received	from	vendors	and	suppliers,	which	has	not	been	validated	by	InvenSense.																							This	information	furnished	by	InvenSense	is	believed	to	be	accurate	and	reliable.	However,	no	responsibility	is	assumed	by	InvenSense	for	its	use,	or	for	any	infringements	of	patents	or	other	rights	of	third	parties	that	may	result	from	its	use.	Specifications	are	subject	to	change	without	notice.	InvenSense	reserves	the	right	to	make	changes	to	this	product,	including	its	circuits	and	software,	in	order	to	improve	its	design	and/or	performance,	without	prior	notice.	InvenSense	makes	no	warranties,	neither	expressed	nor	implied,	regarding	the	information	and	specifications	contained	in	this	document.	InvenSense	assumes	no	responsibility	for	any	claims	or	damages	arising	from	information	contained	in	this	document,	or	from	the	use	of	products	and	services	detailed	therein.	This	includes,	but	is	not	limited	to,	claims	or	damages	based	on	the	infringement	of	patents,	copyrights,	mask	work	and/or	other	intellectual	property	rights.			Certain	intellectual	property	owned	by	InvenSense	and	described	in	this	document	is	patent	protected.	No	license	is	granted	by	implication	or	otherwise	under	any	patent	or	patent	rights	of	InvenSense.	This	publication	supersedes	and	replaces	all	information	previously	supplied.	Trademarks	that	are	registered	trademarks	are	the	property	of	their	respective	companies.	InvenSense	sensors	should	not	be	used	or	sold	in	the	development,	storage,	production	or	utilization	of	any	conventional	or	mass-destructive	weapons	or	for	any	other	weapons	or	life	threatening	applications,	as	well	as	in	any	other	life	critical	applications	such	as	medical	equipment,	transportation,	aerospace	and	nuclear	instruments,	undersea	equipment,	power	plant	equipment,	disaster	prevention	and	crime	prevention	equipment.			©2016	InvenSense,	Inc.	All	rights	reserved.	InvenSense,	MotionTracking,	MotionProcessing,	MotionProcessor,	MotionFusion,	MotionApps,	Digital	Motion	Processor,	AAR	and	the	InvenSense	logo	are	trademarks	of	InvenSense,	Inc.	Other	company	and	product	names	may	be	trademarks	of	the	respective	companies	with	which	they	are	associated.		 		©2016	InvenSense,	Inc.	All	rights	reserved.	

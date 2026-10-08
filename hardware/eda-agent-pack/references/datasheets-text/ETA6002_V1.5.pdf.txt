@@ -1,0 +1,421 @@
+
+--- PDF PAGE 1 ---
+ETA6002 
+ 
+www.etasolution.com 1 Empower, Transcend, Achieve! 
+2.5A, 3MHz Switching Charger with Dynamic Power Path in ESOP8 
+DESCRIPTION FEATURES 
+ETA6002 is a switching Li-Ion battery charger with dynamic 
+power-path control and input current limiting.  
+When a battery is connected, depending on the battery 
+voltage, the DC -DC switching regulator either pre -
+conditions, fast -charges the battery or just regulates a 
+system voltage (V SYS) to a preset voltage. It does not 
+require an external sense resistor for current sensing. 
+The fast-charging current is determined by programming 
+ISET pin. When the battery voltage reaches the 
+termination voltage i.e., 4.2V, the charging path 
+disconnects SYS to BATT. The ETA6002 also includes a 
+dynamic power path when the SYS load current exceeds 
+current limit of the DCDC regulator internally set, the SYS 
+voltage falls below V BATT, ETA6002 turns on the power -
+path to supplement the system load through the battery. 
+ Switching Charger with Power Path Management 
+ Up to 95% DC-DC Efficiency 
+ 50mΩ Power Path MOSFET 
+ Up to 2.5A Max charging current  
+ Instant on with a dead Battery or no Battery 
+ No Battery Detection  
+ No External Sense Resistor 
+ Programmable Charging Current 
+ RoHS Compliant 
+ 
+APPLICATIONS 
+ Tablet, MID 
+ Smart Phone 
+ Power Bank 
+TYPICAL APPLICATION 
+8
+IN
+AC_IN
+4 STAT
+6BATT
+3NTC
+1
+SW
+7SYS
+2
+5 ISET
+PGND
+SYS
+Li+
+Battery
+ETA6002
+10uF
+2.2K
+500Ω
+2.2uH
+22uF
+1uF
+SYSTEM
+ 
+1000
+BAT
+ISET
+I R=
+ 
+ORDERING INFORMATION 
+PART No. PACKAGE TOP MARK Pcs/Reel 
+ETA6002E8A ESOP-8 ETA6002 
+YWWPL 
+4000 
+
+--- PDF PAGE 2 ---
+ETA6002 
+ 
+www.etasolution.com 2 Empower, Transcend, Achieve! 
+PIN CONFIGURATION ABSOLUTE MAXIMUM RATINGS 
+PGND
+5
+8
+7 SYS
+6 BATTNTC
+4
+1
+2
+ESOP8
+SW
+3
+STAT ISET
+IN
+9:AGND
+ETA6002
+ 
+(Note: Exceeding these limits may damage the device. Exposure to absolute 
+maximum rating conditions for long periods may affect device reliability.) 
+ 
+IN, BATT Voltage ... ................ ................ –0.3V to 6V  
+All Other Pin Voltage…… ......VIN–0.3V to VIN+0.3 V 
+SW, SYS, BATT to ground current ...Internally limited  
+Operating  Temperature Range …...…–40° C to 85° C 
+Storage Temperature Range… ….–55° C to 150° C  
+Thermal Resistance        θJA               
+ESOP8 …………………... …….50 ...... .......... .. ° C /W 
+ELECTRICAL CHARACTERISTICS 
+(VIN = 5V, unless otherwise specified. Typical values are at TA = 25C.) 
+PARAMETER CONDITIONS MIN TYP MAX UNITS 
+IN INPUT 
+INPUT Range  4.4  5.5 V 
+INPUT UVLO Rising, Hys=500mV  4.35  V 
+INPUT Operating Current 
+Switcher Enable, Switching   5  mA 
+Switcher Enable, 
+No Switching  70  μA 
+BATT to INPUT Leakage Current Input Floating  0 5 μA 
+DC-DC and SYS OUTPUT 
+VSYSMIN ISYS=1A, Default  3.6  V 
+VSYSMAX   4.5  V 
+Load Regulation   40  mV/A 
+Line Regulation VIN = 4.75 to 5.25V  0.04  %/V 
+Switching Frequency   3  MHz 
+Max Duty  100   % 
+HIGHSIDE MOS RDSON ISW =500mA  100  mΩ 
+LOWSIDE MOS RDSON ISW =500mA  60  mΩ 
+HIGHSIDE Current Limit   3.5  A 
+SYS UVLO  Falling, Hys=200mV  2.25  V 
+Thermal Shutdown Rising, Hys=30oC  160  oC 
+POWER PATH Management 
+BATT TO SYS RDSON   50  mΩ 
+BATTERY CHARGER 
+Battery CV Voltage  IBAT =0mA, Default 4.16 4.2 4.24 V 
+Charger Restart Threshold  From DONE to Fast Charge  -200  mV 
+Battery Pre-condition Voltage VBAT Rising Hys=180mV  2.9  V 
+Pre-condition Charge Current   100  mA 
+
+--- PDF PAGE 3 ---
+ETA6002 
+ 
+www.etasolution.com 3 Empower, Transcend, Achieve! 
+PARAMETER CONDITIONS MIN TYP MAX UNITS 
+AC Fast Charge Current 
+RISET1 =500Ω,  
+nUSB_DET= VIN  2  A 
+RISET1 =2000Ω 0.45 0.5 0.55 A 
+Pre-Condition Timer   120  min 
+Fast-Charge Timer   960  min 
+THERMISTOR MONITOR 
+NTC Threshold, Cold Charger Suspended  76.5  %VIN 
+NTC Threshold, Hot Charger Suspended  35  %VIN 
+NTC Threshold Hysteresis   1.5  %VIN 
+NTC Disable Threshold   100  mV 
+NTC Input Leakage   0  μA 
+STATS 
+STAT Output Low Voltage ISTATS=10mA   0.2 V 
+ 
+PIN DESCRIPTION 
+PIN # NAME DESCRIPTION 
+1 SW Switching node of the Switching Regulator. Connect a 1H to 2.2H inductor from 
+this pin to SYS 
+2 PGND Power Ground pin. Bypass with a 10F capacitor to IN 
+3 NTC Thermistor Input 
+4 STAT Status pin for Charging status indications. An open drain device capable of driving 
+10mA current  
+5 ISET Fast Charge Current set pin. Connecting a Resistor between ISET to GND This 
+sets the fast charge current value 
+1000
+BAT
+ISET
+I R=
+ 
+6 BATT Battery pin. Connect a Battery to this pin 
+7 SYS System Voltage pin. It is also the Switching regulator’s output pin. Connect an 
+inductor and capacitor to form the output filter 
+8 IN Input pin. Can be connected to an AC adaptor or a USB charger output. Bypass 
+with a 10F capacitor each to PGND 
+9 (EP) AGND Exposed pad for analog ground connection. Must be connected to PGND on PCB 
+ 
+  
+
+--- PDF PAGE 4 ---
+ETA6002 
+ 
+www.etasolution.com 4 Empower, Transcend, Achieve! 
+TYPICAL CHARACTERISTICS 
+(Typical values are at TA = 25oC unless otherwise specified.) 
+  
+  
+  
+  
+  
+  
+  
+50%
+60%
+70%
+80%
+90%
+100%
+0.01 0.1 1
+Effciency 
+IOUT (A)
+Efficiency Vs  ISYS Charger Disabled
+VIN=4.7V
+VIN=5V
+VIN=5.5V
+VSYS=3.4V
+0
+0.4
+0.8
+1.2
+1.6
+2
+2.4
+2 2.4 2.8 3.2 3.6 4 4.4
+ICharge (mA)
+VBATT (V)
+ICharge Vs  VBATT
+RISET=0.5K
+0
+20
+40
+60
+80
+100
+0 0.5 1 1.5 2 2.5
+ICharge (mA)
+VBATT (V)
+IPre-Charge Vs  VBATT
+RISET=0.5K
+3
+3.2
+3.4
+3.6
+3.8
+4
+0 0.5 1 1.5 2 2.5 3
+VSYS (V)
+ISYS (A)
+VSYS Vs  ISYS
+VSYS
+3.8
+3.82
+3.84
+3.86
+3.88
+3.9
+-50 0 50 100
+VSYS(V)
+Temperature(OC)
+VSYS Vs  Temperature
+0
+0.5
+1
+1.5
+2
+2.5
+-50 0 50 100 150
+ICharge(A)
+Temperature(OC)
+ICharge Vs Temperature
+Thermal Foldback
+RISET=0.5K
+
+--- PDF PAGE 5 ---
+ETA6002 
+ 
+www.etasolution.com 5 Empower, Transcend, Achieve! 
+TYPICAL APPLICATION CIRCUIT 
+IN
+VCC
+FB
+EN
+OUTVIN
+EN
+10μF R1
+R2
+100Ω
+1μF
+1μFETA7014
+*optional
+GND
+8
+IN
+4 STAT
+6BATT
+3NTC
+1
+SW
+7SYS
+2
+5 ISET
+PGND
+SYS
+Li+
+Battery
+ETA6002
+10uF
+2.2K
+500Ω
+2.2uH
+22uF
+1uF
+SYSTEM
+ 
+2A Switching Charger with Dynamic Power Path with OVP protection and Charge Enable 
+ 
+FUNCTIONAL DESCRIOTION 
+Status Indicators 
+STAT pin is a status pin for charging status indications. Please refer to Table 1. 
+ 
+Table 1 STAT indicator 
+ 
+  
+
+
+--- PDF PAGE 6 ---
+ETA6002 
+ 
+www.etasolution.com 6 Empower, Transcend, Achieve! 
+Battery Charge Profile 
+Precondition Fast Charge CV Charge Termination Discharge Auto Recharge
+I PRE=ITERM
+I VPRECOND
+V RECHRG
+VTERM
+I CHRG
+Charge 
+Current
+Battery 
+Voltage
+PRE
+ 
+ 
+Charge Current Translator 
+Begin Charging
+Start Precharge
+STAT=low
+VBAT>VBAT_PRECHARGE
+No
+No
+tPRECHARGE
+Elapsed
+Start Fastcharge
+ICHARGE set by ISET
+End Charge
+FlashSTAT
+tPRECHARGE
+Elapsed
+VBAT<VRCH
+Charge Done
+STAT=Hi-Z
+IBAT<ITERM
+No
+No
+Yes
+End Charge
+FlashSTAT
+Termination Reached
+BATTFET Off
+Wait for VBAT<VRCH
+No
+Yes
+Yes
+ 
+
+--- PDF PAGE 7 ---
+ETA6002 
+ 
+www.etasolution.com 7 Empower, Transcend, Achieve! 
+FUNCTION BLOCK DIAGRAM 
+ 
+8
+3
+5
+2
+1
+7
+6
+4
+VIN
+NTC
+ISET
+PGND
+DC/DC 
+CONTROL
+SW
+SYS
+BATT
+STAT
+NTC 
+COMP CC/CV
+CONTROL
+STAT 
+Logic
+Charging
+Set
+ETA6002
+ 
+  
+
+--- PDF PAGE 8 ---
+ETA6002 
+ 
+www.etasolution.com 8 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: ESOP8 
+ 
+ 
+ 
+          RECOMMENDED LAND PATTERN 
+                                       
+
+
+--- PDF PAGE 9 ---
+ETA6002 
+ 
+www.etasolution.com 9 Empower, Transcend, Achieve! 
+TAPE AND REEL INFORMATION 
+ 
+ 
+ 
+ 
