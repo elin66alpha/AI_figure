@@ -1,0 +1,549 @@
+
+--- PDF PAGE 1 ---
+ETA5060 
+ 
+www.etasolution.com 1 Empower, Transcend, Achieve! 
+1A, Low IQ, High Accuracy, Fast Transient Low Dropout 
+Voltage Regulator 
+DESCRIPTION FEATURES 
+ETA5060 is a low dropout (LDO) voltage regulator 
+capable of sourcing 1A with only 140mV of 
+dropout. ETA5060 output is adjustable with 
+external resistors from 0.8V to 5V. ETA5060 wide 
+input-voltage range supports operation as low as 
+1.8V and up to 5.5 V. 
+ 
+ETA5060 is designed to have high accuracy, 2% 
+at output voltage over line, load, and temperature. 
+And ETA5060 soft -start capabilities to reduce in -
+rush current. ETA5060 is ideal for powering 
+sensitive analog low-voltage devices.  
+ 
+ETA5060 is available in SOT89-5, HFBP1.2x1.6-
+8, DFN1.2x1.6-8, DFN2x2 -6 and DFN2x2-8 
+packages. 
+ Programmable Output Voltage Configuration 
+ High Accuracy Output Voltage: ± 2% 
+ Wide Input Voltage Range: 1.8V to 5.5V 
+ Wide Output Voltage Range: 0.8V to 5V 
+ Low Power Consumption: 20µ A Quiescent 
+Current 
+ Low Dropout: 140mV at 1A 
+ Fast Transient Response 
+ Stable with Small 1μF Capacitor 
+ Inrush Current Protection 
+ Available in SOT89-5, HFBP1.2x1.6-8, 
+DFN1.2x1.6-8, DFN2x2-6, and DFN2x2-8 
+APPLICATIONS 
+ USB Ports and Hubs 
+ Digital TVs 
+ Set-Top Boxes 
+ VOIP Phones 
+TYPICAL APPLICATION 
+IN OUT
+EN
+NC/FB*
+ETA5060
+VIN OUT
+1µFR1
+R2
+GND
+1µF Cff
+Enable
+* FB for adjustable voltage version
+  NC for fixed output voltage version
+ 
+  
+
+--- PDF PAGE 2 ---
+ETA5060 
+ 
+www.etasolution.com 2 Empower, Transcend, Achieve! 
+ORDERING 
+INFORMATION 
+PART No. PACKAGE TOP MARK Pcs/Reel 
+ETA5060VXXXS8F SOT89-5 SGxYW 1000 
+ETA5060VXXXHBI HFBP1.2x1.6-8 SGxYW 3000 
+ETA5060VXXXDBI DFN1.2x1.6-8 SGxYW 3000 
+ETA5060V0D2G DFN2x2-6 SG0YW 3000 
+ETA5060VXXXD2I DFN2x2-8 SGxYW 3000 
+PIN CONFIGURATION ABSOLUTE MAXIMUM RATINGS 
+1
+2
+3
+5
+4
+NC/FB
+GND
+EN
+OUT
+IN
+SOT89-5
+ETA5060
+1
+2
+3
+4
+IN
+IN
+EN
+GND
+OUT
+OUT
+HFBP1.2x1.6-8
+NC
+NC/FB
+8
+7
+6
+5
+4
+1 IN
+EN
+GND
+IN
+OUT
+OUT
+NC/FB
+OUT
+DFN2x2-8
+2
+3
+5
+8
+7
+6
+ETA5060
+ETA5060
+2
+DFN2x2-6
+1
+2
+3
+6
+5
+4
+ETA5060
+OUT
+FB
+GND
+IN
+NC
+EN
+1
+2
+3
+4
+IN
+IN
+EN
+GND
+OUT
+OUT
+NC
+NC/FB
+8
+7
+6
+5
+ETA5060
+TOP VIEW
+NOT IN SCALE
+1
+2
+3
+4
+IN
+IN
+EN
+GND
+OUT
+OUT
+DFN1.2x1.6-8
+From assembly house 2
+NC
+NC/FB
+8
+7
+6
+5
+ETA5060
+DFN1.2x1.6-8
+From assembly house 1
+ 
+(Note: Exceeding these limits may damage the device. Exposure to absolute 
+maximum rating conditions for long periods may affect device reliability.) 
+ 
+IN, OUT Pin Voltage to GND. .... …...-0.3V to 5.5V 
+FB, EN Pin Voltage to GND ……. .... -0.3V to 5.5V 
+OUT to ground current................ Internally limited 
+Operating Temp Range ................. –40° C to 85°C  
+Storage Temp Range .................. –55° C to 170° C 
+Thermal Resistance  θJC    θJA 
+SOT89-5 .....................47...........77…...........° C/W 
+HFBP1.2x1.6-8 ...........30..........111…..........°C/W 
+DFN1.2x1.6-8..............30..........111…….…..° C/W 
+DFN2x2-6....................30...........92…….......° C/W 
+DFN2x2-8....................20...........80…….......° C/W 
+Lead Temp (Soldering, 10sec) .................... 260° C 
+ESD HBM (Human Body Mode) .................... 3KV 
+ELECTRICAL CHARACTERISTICS 
+(VIN = VOUT+1V, unless otherwise specified. Typical values are at TA = 25oC.) 
+PARAMETER SYMBOL TESTCONDITIONS MIN TYP MAX UNIT 
+Input Voltage Range  VIN (1)  1.8  5.5 V 
+Ground Current IQ_HLOAD No load  20  µA  
+Shutdown Current  ISD VEN = 0V, 1.8V ≤ VIN ≤ 5.5V  0.5  µA  
+Dropout Voltage  VDROP IOUT = 1A, VOUT = 3.3V  140  mV 
+Discharge Resistance RDIS VEN=0V  30  Ω 
+Output Current Limit ILIM VOUT = 95%  1.1 1.4  A 
+Enable Threshold 
+Voltage 
+VEN_HI  0.8   V 
+VEN_LO    0.71 V 
+
+--- PDF PAGE 3 ---
+ETA5060 
+ 
+www.etasolution.com 3 Empower, Transcend, Achieve! 
+PARAMETER SYMBOL TESTCONDITIONS MIN TYP MAX UNIT 
+Line Regulation  VOUT + 1V ≤ VIN ≤ 5.5V  0.06  %/V 
+Load Regulation  0µA ≤ IOUT ≤ 1A  11  mV 
+FB Feedback Voltage  VREF   0.8  V 
+Output Voltage Accuracy VOUT_NOM IOUT =1mA, -40°C  ≤ TJ ≤ 125°C  -2  2 % 
+Power Supply Rejection 
+Ratio 
+PSRR 
+Frequency=100Hz, IOUT=100mA, 
+VOUT=1.8V, VIN=5V 
+ 68  
+dB 
+Frequency=100Hz, IOUT=100mA, 
+VOUT=3.3V, VIN=5V 
+ 52  
+Start-up time TSS COUT=1µ F   30  µs  
+Thermal Shutdown  TSHUT Rising, Hysteresis =30° C  150  °C  
+(1): Minimum VIN is 1.8 V or VOUT + VDROPOUT, whichever is greater 
+PIN DESCRIPTION 
+PIN 
+NAME 
+ETA5060 
+DESCRIPTION SOT89-
+5 
+HFBP1.2x1.6-
+8 
+DFN1.2x1.6-
+8 
+DFN2x2-
+6 
+DFN2x2-
+8 
+IN 4 7, 8 7, 8 6 7, 8 Input Supply Pin 
+OUT 5 1, 2 1, 2 1 1, 2, 3 Output of Regulator 
+GND 2 5 5 3 5 Ground Pin 
+NC NA 3 3 5 NA No electrical connection inside the chip  
+FB/NC 1 4 4 2 4 
+Feedback pin for output voltage configuration, 
+FB only for adjustable voltage version, fixed 
+voltage version internal no connection 
+EN 3 6 6 4 6 
+Enable Pin. Drive EN to a Logic-High to enable 
+IC, drive EN Logic-Low to disable. EN is 
+connected to GND via 2 MΩ resistor internally. 
+EP NA EP EP NA EP 
+Thermal Pad (with the color of silver or gold). 
+Connect the thermal pad to the printed circuit 
+board (PCB) ground plane. 
+  
+
+--- PDF PAGE 4 ---
+ETA5060 
+ 
+www.etasolution.com 4 Empower, Transcend, Achieve! 
+FUNCTIONAL BLOCK DIAGRAM 
+BANDGAP & 
+BIAS &TSD
+OUT
+FB
+GND
+IN
+EN
+0.8 V ETA5060
+DISABLE
+30ohm
+DISABLE
+0.8 V
+ 
+TYPICAL PERFORMANCE CHARACTERISTICS 
+(TA=25C, VIN=5V, CIN = 1μF, COUT = 1μF, unless otherwise specified) 
+Start-Up Waveform at No Load, VOUT =1.2V Start-Up Waveform with ROUT = 1.2Ω, VOUT =1.2V 
+  
+  
+Start-Up Waveform at No Load, VOUT =2.5V Start-Up Waveform with ROUT = 2.5Ω, VOUT =2.5V 
+  
+  
+
+
+--- PDF PAGE 5 ---
+ETA5060 
+ 
+www.etasolution.com 5 Empower, Transcend, Achieve! 
+TYPICAL PERFORMANCE CHARACTERISTICS CONT’D 
+(TA=25C, VIN=5V, CIN = 1μF, COUT = 1μF, unless otherwise specified) 
+Start-Up Waveform at No Load, VOUT =3.3V Start-Up Waveform with ROUT = 3.3Ω, VOUT =3.3V 
+  
+  
+Shutdown Waveform at No Load, VOUT =1.2V Shutdown Waveform with ROUT = 1.2Ω, VOUT =1.2V 
+  
+  
+Shutdown Waveform at No Load, VOUT =2.5V Shutdown Waveform with ROUT = 2.5Ω, VOUT =2.5V 
+  
+  
+Shutdown Waveform at No Load, VOUT =3.3V Shutdown Waveform with ROUT = 3.3Ω, VOUT =3.3V 
+  
+
+
+--- PDF PAGE 6 ---
+ETA5060 
+ 
+www.etasolution.com 6 Empower, Transcend, Achieve! 
+TYPICAL PERFORMANCE CHARACTERISTICS CONT’D 
+(TA=25C, VIN=5V, CIN = 1μF, COUT = 1μF, unless otherwise specified) 
+Load Transient, 1mA – 1A, VIN = 5V, VOUT =3.3V Load Transient, 1mA – 1A, VIN = 2.5V, VOUT =1.2V 
+  
+Line Transient, VIN = 3.9V – 5V, IOUT=1mA, VOUT 
+=3.3V 
+Line Transient, VIN = 2.2V – 3.2V, IOUT=1mA, VOUT 
+=1.2V 
+  
+Load Regulation, VIN = 5V, VOUT = 3.3V Line Regulation, VIN = 5V, VOUT = 3.3V 
+  
+Power Supply Rejection vs. Output Current 
+VOUT =1.8V, CIN = COUT =10 µ F  
+PSRR vs. Frequency and Output Current, 
+VOUT =3.3V, CIN = COUT =10 µ F 
+  
+
+
+--- PDF PAGE 7 ---
+ETA5060 
+ 
+www.etasolution.com 7 Empower, Transcend, Achieve! 
+TYPICAL PERFORMANCE CHARACTERISTICS CONT’D 
+(TA=25C, VIN=5V, CIN = 1μF, COUT = 1μF, unless otherwise specified) 
+Drop-out Voltage vs. Output Voltage, IOUT = 1A Quiescent Current over Temperature 
+  
+  
+Shutdown Current over Temperature Current Limit vs. Temperature 
+  
+  
+Output Voltage vs. Temperature, IOUT=1mA  
+ 
+ 
+  
+
+
+--- PDF PAGE 8 ---
+ETA5060 
+ 
+www.etasolution.com 8 Empower, Transcend, Achieve! 
+FUNCTIONAL DESCRIPTION 
+The ETA5060 family of LDO regulators has been optimized for use in noise-sensitive equipments. The device 
+features extremely low dropout voltages, high PSRR, low output noise, low quiescent current, and enable -
+input to reduce supply currents to less than 1μA when the regulator is turned off. 
+Enable Sequence 
+ETA5060 is enabled when all below conditions happen. Otherwise, ETA5060 is in standby mode. 
+ EN pin voltage above Logic High level 
+ Junction Temperature is not at Over-Temperature Protection level. 
+Once all above conditions happen, ETA5060 enables LDO core. 
+ETA5060 is completed forced in shutdown mode when EN  pin is at below V EN_LO that supply current is less 
+than 1μA. Otherwise, part only shutdowns the VOUT while other circuit still in operation. 
+Output Current Limit and Foldback Current Limit 
+ETA5060 family features an internal current limit. In normal operation, the ETA5060 limits output current to 
+approximately 1400mA. When current limiting engages, the output voltage scales back linearly until the over 
+current condition ends. 
+In case output is in hard short conditions, ETA5060 also features an internal foldback limit that reduces the 
+output current limit to a lower level, then reduce power dissipation ratings of the package. 
+Stability 
+ETA5060 can be stable with very wide range of output capacitor, from 1μF to 10μF 
+Over-Temperature Protection 
+Thermal protection disables the output when the junction temperature rises to approximately 160° C, allowing 
+the device to cool down. When the junction temperature cools to approximately 130° C, the output circuitry is 
+again enabled. Depending on power dissipation, thermal resistance, and ambient temperature, the thermal 
+protection circuit may cycle on and off. This cycling limits regulator dissipation , protecting the device from 
+damage as a result of overheating. 
+APPLICATION INFORMATION 
+External Output Voltage Setting 
+In external Output Voltage Setting Version selected, the ETA5060 regulator is programmed using an external 
+resistor divider. The output voltage is calculated using below equation. 
+𝑉𝑂𝑈𝑇 = 𝑉𝑅𝐸𝐹 × (1 + 𝑅1
+𝑅2
+) 
+Resistors R1 and R2 should be chosen for approximately 40-μA divider current. Lower value resistors can be 
+used for improved noise performance, but the solution consumes more power. Higher resistors values can 
+cause accuracy issues. The recommended design procedure is to choose R2 = 20kΩ to set the divider current 
+at 40μA, then R1 is calculated using below equation. 
+𝑅1 = (𝑉𝑂𝑈𝑇
+𝑉𝑅𝐸𝐹
+− 1) × 𝑅2 
+
+--- PDF PAGE 9 ---
+ETA5060 
+ 
+www.etasolution.com 9 Empower, Transcend, Achieve! 
+AVAILABLE PART NUMBER 
+Part Description Part Number Package Mark Pcs/Reel 
+Adjustable Output SOT89-5 ETA5060V0S8F SOT89-5 SG0 1000 
+Fixed 1.5V Output SOT89-5 ETA5060V150S8F SOT89-5 SG1 1000 
+Fixed 1.8V Output SOT89-5 ETA5060V180S8F SOT89-5 SG2 1000 
+Fixed 2.5V Output SOT89-5 ETA5060V250S8F SOT89-5 SG3 1000 
+Fixed 2.8V Output SOT89-5 ETA5060V280S8F SOT89-5 SG4 1000 
+Fixed 2.85V Output SOT89-5 ETA5060V285S8F SOT89-5 SG5 1000 
+Fixed 3.0V Output SOT89-5 ETA5060V300S8F SOT89-5 SG6 1000 
+Fixed 3.3V Output SOT89-5 ETA5060V330S8F SOT89-5 SG7 1000 
+     
+Adjustable Output HFBP1.2x1.6-8 ETA5060V0HBI HFBP1.2x1.6-8 SG0 3000 
+Fixed 1.5V Output HFBP1.2x1.6-8 ETA5060V150HBI HFBP1.2x1.6-8 SG1 3000 
+Fixed 1.8V Output HFBP1.2x1.6-8 ETA5060V180HBI HFBP1.2x1.6-8 SG2 3000 
+Fixed 2.5V Output HFBP1.2x1.6-8 ETA5060V250HBI HFBP1.2x1.6-8 SG3 3000 
+Fixed 2.8V Output HFBP1.2x1.6-8 ETA5060V280HBI HFBP1.2x1.6-8 SG4 3000 
+Fixed 2.85V Output HFBP1.2x1.6-8 ETA5060V285HBI HFBP1.2x1.6-8 SG5 3000 
+Fixed 3.0V Output HFBP1.2x1.6-8 ETA5060V300HBI HFBP1.2x1.6-8 SG6 3000 
+Fixed 3.3V Output HFBP1.2x1.6-8 ETA5060V330HBI HFBP1.2x1.6-8 SG7 3000 
+     
+Adjustable Output DFN1.2x1.6-8 ETA5060V0DBI DFN1.2x1.6-8 SG0 3000 
+Fixed 1.5V Output DFN1.2x1.6-8 ETA5060V150DBI DFN1.2x1.6-8 SG1 3000 
+Fixed 1.8V Output DFN1.2x1.6-8 ETA5060V180DBI DFN1.2x1.6-8 SG2 3000 
+Fixed 2.5V Output DFN1.2x1.6-8 ETA5060V250DBI DFN1.2x1.6-8 SG3 3000 
+Fixed 2.8V Output DFN1.2x1.6-8 ETA5060V280DBI DFN1.2x1.6-8 SG4 3000 
+Fixed 2.85V Output DFN1.2x1.6-8 ETA5060V285DBI DFN1.2x1.6-8 SG5 3000 
+Fixed 3.0V Output DFN1.2x1.6-8 ETA5060V300DBI DFN1.2x1.6-8 SG6 3000 
+Fixed 3.3V Output DFN1.2x1.6-8 ETA5060V330DBI DFN1.2x1.6-8 SG7 3000 
+     
+Adjustable Output DFN2x2-6 ETA5060V0D2G DFN2x2-6 SG0 3000 
+     
+Adjustable Output DFN2x2-8 ETA5060V0D2I DFN2x2-8 SG0 3000 
+Fixed 1.5V Output DFN2x2-8 ETA5060V150D2I DFN2x2-8 SG1 3000 
+Fixed 1.8V Output DFN2x2-8 ETA5060V180D2I DFN2x2-8 SG2 3000 
+Fixed 2.5V Output DFN2x2-8 ETA5060V250D2I DFN2x2-8 SG3 3000 
+Fixed 2.8V Output DFN2x2-8 ETA5060V280D2I DFN2x2-8 SG4 3000 
+Fixed 2.85V Output DFN2x2-8 ETA5060V285D2I DFN2x2-8 SG5 3000 
+Fixed 3.0V Output DFN2x2-8 ETA5060V300D2I DFN2x2-8 SG6 3000 
+Fixed 3.3V Output DFN2x2-8 ETA5060V330D2I DFN2x2-8 SG7 3000 
+  
+
+--- PDF PAGE 10 ---
+ETA5060 
+ 
+www.etasolution.com 10 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: SOT89-5 
+ 
+ 
+ 
+RECOMMENDED LAND PATTERN 
+  
+Dimensions Value   (in mm) 
+D 1.9 
+E 4.9 
+E1 4.65 
+E2 1.05 
+e 1.5 
+b 0.8 
+b1 0.7 
+L 1.4 
+k 0.2（≥0.2） 
+
+--- PDF PAGE 11 ---
+ETA5060 
+ 
+www.etasolution.com 11 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: HFBP1.2x1.6-8 
+ 
+ 
+ 
+ 
+RECOMMENDED LAND PATTERN 
+  
+Dimensions Value (in mm) 
+D 1.85 
+D1 0.35 
+E1 1.4 
+L 0.55 
+b 0.2 
+e 0.4 
+k 0.2 
+
+--- PDF PAGE 12 ---
+ETA5060 
+ 
+www.etasolution.com 12 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: DFN1.2x1.6-8 
+From assembly house 1: 
+ 
+From assembly house 2: 
+  
+ 
+ 
+RECOMMENDED LAND PATTERN 
+Dimensions Value (in mm) 
+D 1.85 
+D1 0.35 
+E1 1.4 
+L 0.55 
+b 0.2 
+e 0.4 
+k 0.2 
+
+
+--- PDF PAGE 13 ---
+ETA5060 
+ 
+www.etasolution.com 13 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: DFN2x2-6 
+ 
+ 
+ 
+RECOMMENDED LAND PATTERN 
+  
+Dimensions Value   (in mm) 
+D 2 
+E 2 
+D1 1.6 
+E1 1 
+e 0.65 
+b 0.3 
+L 0.55 
+k 0.25 (≥0.2) 
+
+--- PDF PAGE 14 ---
+ETA5060 
+ 
+www.etasolution.com 14 Empower, Transcend, Achieve! 
+PACKAGE OUTLINE 
+Package: DFN2x2-8 
+ 
+ 
+RECOMMENDED LAND PATTERN 
+  
+Dimensions Value   (in mm) 
+D 2 
+E 2 
+D1 1 
+E1 1.7 
+D2 2.6 
+e 0.5 
+b 0.3 
+k 0.2（≥0.2） 
+L 0.6 
+
+--- PDF PAGE 15 ---
+ETA5060 
+ 
+www.etasolution.com 15 Empower, Transcend, Achieve! 
+TAPE AND REEL INFORMATION 
+ 
+ 
+ 

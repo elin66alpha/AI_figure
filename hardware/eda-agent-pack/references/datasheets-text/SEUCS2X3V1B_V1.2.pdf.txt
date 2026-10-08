@@ -1,0 +1,293 @@
+
+--- PDF PAGE 1 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  1 / 8 
+SuperESD - SEUCS2X3V1B 
+1. Description 
+The SEUCS2X3V1B is an ultra-low capacitance TVS (Transient Voltage Suppressor) designed to 
+protect high speed data interfaces. It has been specifically designed to protect sensitive electronic 
+components which are connected to data and transmission lines from over-stress caused by ESD 
+(Electrostatic Discharge). The SEUCS2X3V1B may be used to provide ESD protection up to ±15kV 
+(contact discharge) according to IEC61000-4-2, and withstand peak pulse current up to 6.5A (8/20μs) 
+according to IEC61000-4-5. 
+ 
+2. Features
+ IEC 61000-4-2 Level 4 ESD Protection  
+- ± 15kV Contact Discharge 
+- ± 15kV Air Discharge 
+ 50 W Peak pulse Power (8/20us) 
+ Low clamping voltage 
+ W orking voltage: 3.3V 
+ Low leakage current  
+ RoHS compliant 
+ Protecting one bi-directional line 
+ Low Junction capacitance: 0.14pF Typ. 
+ 
+3. A pplications
+ High-speed interfaces 
+ HDMI and USB 3.2  
+ Cellular handsets and accessories 
+ Portable Electronics and Notebooks  
+ TVs and monitors  
+ Digital cameras 
+ 
+4. Ordering Information 
+Part Number Package Marking Material Packing Quantity 
+per reel 
+Flammability 
+Rating 
+Reel 
+Size 
+SEUCS2X3V1B DFN0603-2L 3B Halogen 
+free 
+Tape & 
+Reel 
+10,000 
+PCS UL 94V-0 7 inches 
+Table-1 Ordering information 
+ 
+ 
+ 
+ 
+
+--- PDF PAGE 2 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  2 / 8 
+5. Pin Configuration and Functions 
+Pin Name Description Outline Circuit Diagram 
+1 IO Connect to IO 
+3B
+ 
+1 2
+ 2 IO Connect to IO 
+Table-2 Pin configuration 
+ 
+6. Specification 
+6.1. Absolute Maximum rating 
+Over operating free-air temperature range (unless otherwise noted) 
+Parameters Symbol Min. Max. Unit 
+Peak pulse power (tp=8/20us)@25℃ Ppk - 50 W 
+Peak pulse current (tp=8/20us)@25℃ IPP  6.5 A 
+ESD (IEC61000-4-2 air discharge) @25℃ VESD - ±15 kV 
+ESD (IEC61000-4-2 contact discharge) @25℃ VESD - ±15 kV 
+Junction temperature TJ - 150 ℃ 
+Operating temperature TOP -50 125 ℃ 
+Storage temperature TSTG -55 150 ℃ 
+Lead temperature TL - 260 ℃ 
+Table-3 Absolute Maximum rating 
+ 
+ 
+ 
+
+--- PDF PAGE 3 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  3 / 8 
+6.2. Electrical Characteristics 
+At TA = 25℃ unless otherwise noted 
+Parameter Symbol Conditions Min. Typ. Max. Units 
+Reverse Stand-off Voltage VRWM   3.3 5.0 V 
+Reverse Breakdown Voltage VBR IT=1mA 6.0 8.1  V 
+Reverse Leakage Current IR VRWM=3.3V  1 100 nA 
+Clamping Voltage VC IPP=1A; tp=8/20us  2.5  V 
+Clamping Voltage VC IPP=6.5A; tp=8/20us  5.5  V 
+Dynamic Resistance Rdyn   0.4  Ω 
+Junction Capacitance CJ VR=0V; f=1MHz  0.14 0.20 pF 
+Table-4 Electrical Characteristics 
+ 
+ 
+ 
+  
+ 
+Symbol Parameters 
+VRWM Reverse stand-off voltage 
+IR Reverse leakage current 
+VBR Reverse breakdown voltage 
+IBR Reverse breakdown current 
+VCL Clamping voltage 
+VTRIG Reverse trigger voltage 
+ITRIG Reverse trigger current 
+VHOLD Reverse holding voltage  
+IHOLD Reverse holding current 
+IPP Peak pulse current 
+
+
+--- PDF PAGE 4 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  4 / 8 
+7. Typical Characteristic 
+  
+  
+ 
+ 
+ 
+-10 -8 -6 -4 -2 0 2 4 6 8 10
+-1.0
+-0.5
+0.0
+0.5
+1.0
+Reverse Current (mA)
+Reverse Voltage (V)
+ Breaking Voltage Curve
+-4 -2 0 2 4
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+Leakage Current (nA)
+Reverse Voltage (V)
+ Leakage Current Curve
+1 2 3 4 5 6 7
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+6.5clamping voltage (V)
+surge current (A)
+ 8/20us surge curve
+-3 -2 -1 0 1 2 3
+0.10
+0.12
+0.14Junction capacitance (pF)
+Reverse voltage (V)
+ Junction capacitance curve
+-30 -20 -10 0 10 20 30
+-30
+-20
+-10
+0
+10
+20
+30
+Pulse current (A)
+Pulse voltage (V)
+ TLP curvePulse width =100ns
+
+--- PDF PAGE 5 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  5 / 8 
+ 
+IEC 61000-4-2 waveform (-15kV) 
+ 
+IEC 61000-4-2 waveform (15kV) 
+ 
+20 Gbps USB4 Eye Diagram 
+Measurement Wave According to IEC Standard 
+  
+ 
+0 10 20 30 40
+0
+20
+40
+60
+80
+100Ipp (%)
+time (us)
+8/20us pulse waveform
+IEC 61000-4-5
+100% IPP; 8us
+50% IPP; 20us
+0 10 20 30 40 50 60
+0
+20
+40
+60
+80
+100IPP (%)
+time (ns)
+ESD pulse waveform
+IEC 61000-4-2
+
+--- PDF PAGE 6 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  6 / 8 
+8. Dimension 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PDF PAGE 7 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  7 / 8 
+9. Recommended Soldering Footprint 
+0.25
+0.32
+0.52
+0.85
+0.40
+0.15
+ 
+DIMENSIONS: MILLIMETERS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PDF PAGE 8 ---
+SEUCS2X3V1B  Rev-1.2 www.elecsuper.com 
+ 
+ 
+Copyright© ElecSuper Incorporated Contact Us  8 / 8 
+DISCLAIMER 
+ELECSUPER PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES 
+(INCLUDING REFERENCE DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, SAFETY INFORMATION, AND OTHER 
+RESOURCES “AS IS” AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING 
+WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+OR NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS. 
+These resources are intended for skilled developers designing with ElecSuper products. You are solely responsible for  
+(1) selecting the appropriate ElecSuper products for your application; 
+(2) designing, validating and testing your application; 
+(3) ensuring your application meets applicable standards, and any other safety, security, or other requirements.  
+These resources are subject to change without notice. ElecSuper grants you permission to use these resources only for 
+development of an application that uses the ElecSuper products described in the resource. Other reproduction and display of 
+these resources are prohibited. No license is granted to any other ElecSuper intellectual property right or to any third party 
+intellectual property right. ElecSuper disclaims responsibility for, and you will fully indemnify ElecSuper and its representatives 
+against, any claims, damages, costs, losses, and liabilities arising out of your use of these resources. ElecSuper’s products 
+are provided subject to ElecSuper’s Terms of Sale or other applicable terms available either on www.elecsuper.com or 
+provided in conjunction with such ElecSuper products. ElecSuper’s provision of these resources does not expand or otherwise 
+alter ElecSuper’s applicable warranties or warranty disclaimers for ElecSuper products. 
+ 
+ 

@@ -1,7 +1,9 @@
 # ESP32-C3 AI Voice — Agent 工作规格 (修订版)
 
 > 本文件取代 `ESP32_C3_AI_Voice_MVP.md` 中与网络层、状态机、I2S 切换相关的部分。
-> 原文档的**硬件接线与引脚分配依然有效,不要改动**。
+> **2026-10-08 更新：当前固件已迁移至本机 ESP-IDF 6.1.0，目标是 ESP32-C3-MINI-1-H4X 定制板。**
+> 硬件以 `hardware/schematics.pdf` 和 `hardware/DESIGN_CONSTRAINTS.md` 为准；本文件旧的 Arduino、SuperMini、INMP441、MAX98357A 接线与构建说明已过时。
+> 新固件构建、引脚、电源策略和试板项目见 `firmware/ESP32C3_AI_Voice/README.md`。下文的服务器协议和会话行为继续保留。
 > 服务器侧规格见 `SERVER.md`。
 > 最后更新:2026-09-22(rev.5 — 服务器搬上公网 VPS;`wss://` + TLS-PSK 从 Stage 12 提前落地;
 > 设备侧连接超时按广域网重新标定。rev.4 的阶段定义与 Stage 6+6.5+7 合并交付仍然有效)

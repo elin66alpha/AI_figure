@@ -1,0 +1,234 @@
+
+--- PDF PAGE 1 ---
+2023 Copyright © Nsiway Technology1
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+NS4168 2.5W -I2S 数字输入单声道 D 类音频功率放大器
+1 特性
+ 输出功率 Po：2.5W(VDD=5V, RL=4Ω)
+ 工作电压范围：3.0V～5.5V
+ 0.2%THD+N（VDD=5V, RL=4Ω, Po=1W）
+ 80%的效率(VDD=5V, RL=4Ω, Po=2.5W)
+ 默认 I2S 串行数字音频输入接口
+ 支持宽范围采样速率：8kHz 至 96kHz
+ 左右声道可选，通过 CTRL 管脚电平设置
+ 输出防失真 NCN 功能
+ 无需输出滤波器的 Class D 放大器
+ 优异的“上电，掉电”噪声抑制
+ 过流保护、过热保护、欠压保护
+ 采用 ESOP8 封装
+2 应用范围
+ MP3/PMP
+ Mini 音箱
+ 数码相框
+3 说明
+NS4168 是一款支持 I2S 数字音频信号输入且输
+出具有防失真功能的单声道 D 类音频功率放大器。
+内置有数模转换器（DAC）和多级 D 类调制器，具
+备出色的音频性能。利用 NS4168 的 I2S 数字音频串
+行接口传送至放大器，可以显著降低噪声源对所传
+输音频的影响。另外还避免了 MCU 主控芯片内置音
+频解码 DAC 所带来的噪声，最终获得较高的信噪比
+以及较小失真度。其闭环数字输入设计保留了数字
+放大器的优势，同时又具有极佳的 PSRR 和音频性能。
+与其它 D 类架构相比，采用扩频脉冲密度调制可实
+现较低的 EMI 干扰和最高的音频效率。
+NS4168 采用独特的防失真功能可以有效防止
+输入信号过载、电池电压下降导致的输出信号失真，
+同时可以有效保护在大功率输出时扬声器不被损坏。
+NS4168 为单声道音频功放。左右声道选择通过
+CTRL 管脚电平可以设置。立体声产品可选用两个芯
+片，非常灵活。NS4168 内置过流保护、过热保护及
+欠压保护功能，有效地保护芯片在异常工作状况下
+不被损坏。
+4 典型应用电路
+
+
+--- PDF PAGE 2 ---
+2023 Copyright © Nsiway Technology2
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+5 管脚配置
+eSOP-8 的管脚图如下图所示：
+管脚名称 编号 管脚描述
+1 CTRL 左右通道切换控制和芯片关断控制脚
+2 LRCLK I2S 左右声道帧时钟脚
+3 BCLK I2S 位时钟脚
+4 SDATA I2S 串行数据输入脚
+5 VoN 音频功放输出负端
+6 VDD 电源输入
+7 GND 电源地
+8 VoP 音频功放输出正端
+
+--- PDF PAGE 3 ---
+2023 Copyright © Nsiway Technology3
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+6 结构框图
+7 极限工作参数
+ 电源电压范围 2.8V ~ 5.0V
+ CTRL/LRCLK/BCLK/SDATA -0.3V ~ VDD
+ ESD 电压(HBM/MM) 4000V/200V
+ 工作温度范围 -40℃ ~ +85℃
+ 存储温度范围 -65℃ ~ +150℃
+ 最大结温 +150℃
+ 焊接温度（10s 内） +220℃
+ θJC/θJA（ESOP8） 20/80oC/W
+注：超过上述极限工作参数范围可能导致芯片永久性的损坏。长时间暴露在上述任何极限条件下可能会影响芯
+片的可靠性和寿命。
+
+--- PDF PAGE 4 ---
+2023 Copyright © Nsiway Technology4
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+8 电气特性
+工作条件（除非特别说明）：T=25℃，VDD=5V，fS=48KHz，默认 I2S 格式。
+符号 参数 测试条件 最小值 标准值 最大值 单位
+VDD 电源电压 3 5. 5 V
+IDD 电源静态电流 VDD =5.0V, VIN＝0V, No load 13 mA
+ISD 关断漏电流 VCTRL =0V 1 µA
+VOS 输出失调电压 10 40 mV
+PSRR 电源抑制比
+217Hz -80 dB
+20KHz -72 dB
+CMRR 共模抑制比 -70 dB
+fSW 调制频率 VDD =3V to 5.25V 430 kHz
+η 效率 Po=2.5W, RL=4Ω, VDD=5V 80 %
+VCTRL CTRL 电压阀值
+Right Channel（右声道） 1.5 VDD
+VLeft Channel（左声道） 0.9 1.15
+Shut-down 低功耗关断 0 0.4
+TOFF CTRL 关断时间 VCTRL=0V 100 us
+tAT NCN 启动时间 VDD =3.6V 10 ms
+tRL NCN 释放时间 VDD =3.6V 1.1 s
+PO 输出功率
+VDD =3.6V, f=1KHz,
+RL=4Ω, THD+N=10%
+1.2 W
+VDD =5.0V, f=1KHz,
+RL=4Ω, THD+N=10%
+2.5 W
+THD+N 总失真度+噪声 f=1kHz, RL=4Ω, PO=1.0W 0.2 %
+SNR 信噪比 RL＝4Ω, Po＝2.0W 85 dB
+AMAX 最大衰减增益 -10 dB
+数字输入/输出
+VIH 输入电压高电平 BCLK/LRCLK/SDATA/CTRL 0.7xVDD VDD V
+VIL 输入电压低电平 BCLK/LRCLK/SDATA/CTRL -0.3 0.3VDD V
+
+--- PDF PAGE 5 ---
+2023 Copyright © Nsiway Technology5
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+9 典型特性曲线
+下列特性曲线中，除非指定条件，T=25℃。
+
+
+--- PDF PAGE 6 ---
+2023 Copyright © Nsiway Technology6
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+10 应用说明
+10.1 芯片基本结构描述
+NS4168 是一款支持 I2S 格式（BCLK 延迟一个时钟）数字音频信号输入，并利用内部桥式功率级产生 PDM
+差分开关输出。芯片内置过温和过流保护功能，是一款完全集成的数字开关音频放大器。
+10.2 I2S 数字输入串行音频接口
+10.2.1 I2S 数字音频格式
+NS4168 支持 I2S 标准数字音频信号输入。标准 I2S 有 3 个主要信号：串行时钟 BCLK， 帧时钟 LRCLK，串行
+数据 SDATA。I2S 数字音频格式如下图：
+LRCLK
+BCLK
+SDATA
+图 1 I2S Serial Audio Interface
+串行时钟 BCLK 也叫位时钟，即对应数字音频的每一位数据。
+帧时钟 LRCLK 用于切换左右声道的数据。LRCLK 为“1”表示正在传输的是右声道的数据，为“0”则表示
+正在传输的是左声道的数据，LRCLK 的频率通常设定为音频信号采样频率。
+SDATA 是串行数据，在 I2S 中以二进制补码的形式在数据线上传输。先传输最高位 MSB。先传送 MSB 是因
+为发送设备和接收设备的字长可能不同，当系统字长比数据发送端字长长的时候，数据传输就会出现截断的现
+象，即如果数据接收端接收的数据位比它规定的字长长的话，那么规定字长最低位 LSB 以后的所有位将会被忽
+略。如果接收的字长比它规定的字长短，那么空余出来的位将会以 0 填补。通过这种方式可以使音频信号的最
+高有效位得到传输，从而保证最好的听觉效果。
+10.2.2 I2S 数字音频格式中所有时序规格
+NS4168 始终作为从机，需要注意发送延迟和接受设备建立时间的裕量，所有的时序要求和时钟周期或设备
+允许的最低时钟周期有关。
+
+--- PDF PAGE 7 ---
+2023 Copyright © Nsiway Technology7
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+表 1 时序参数表
+参数 最小值 单位 描述
+tBIL 40 ns BCLK 低电平脉冲宽度
+tBIH 40 ns BCLK 高电平脉冲宽度
+tLIS 10 ns LRCLK 或 SDATA 边沿到 BCLK 上升沿的建立时间
+tLIH 10 ns BCLK 上升沿到 LRCLK 或 SDATA 边沿的保持时间
+tSIS 10 ns SDATA 到 BCLK 上升沿的建立时间
+tSIH 10 ns BCLK 上升沿到 SDATA 的保持时间
+10.2.3 左右通道 LRCLK 设置
+NS4168 为一单声道功放，而标准 I2S 协议是可以传输左右两声道信号。NS4168 通过 pin1（CTRL）管脚的
+电平设置来选择左声道或者右声道信号。LRCLK 的频率通常设定为音频信号采样频率，但不同的采样速率支持
+不同的 BCLK 速率（一般 MCLK 设置为 256fs）。NS4168 芯片内部 LRCLK 时钟应用范围 128kHz-6.144MHz（MCLK
+时钟范围为 2.048MHz-24.576MHz），所有可用选项参见表 2。
+表 2 不同采样频率支持的 BCLK 速率
+采集频率 Fs
+支持的 BCLK 速率
+16Fs 24Fs 32Fs 48Fs 64Fs
+8kHz 128kHz 192kHz 256kHz 384kHz 512kHz
+16kHz 256KHz 384kHz 512kHz 768kHz 1.024MHz
+32kHz 512KHz 768kHz 1.024MHz 1.536MHz 2.048MHz
+44.1kHz 705.6KHz 1.058MHz 1.422MHz 2.117MHz 2.822MHz
+48kHz 768KHz 1.152MHz 1.536MHz 2.304MHz 3.072MHz
+96kHz 1.536MHz 2.304MHz 3.072MHz 4.608MHz 6.144MHz
+图 2 I2S Serial Audio Interface
+
+--- PDF PAGE 8 ---
+2023 Copyright © Nsiway Technology8
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+10.2.4 输入声道选择
+NS4168 输入声道选择通过 CTRL 管脚的电平设置。CTRL 管脚电压为 0.9V-1.15V 时选择左声道；CTRL 管脚电
+压为 1.5V-VDD 时选择右声道。如下表所示：
+表 3 CTRL 电压和声道选择
+10.3 防失真（NCN）功能
+NS4168 有防失真功能。防失真功能可有效防止输入信号过载、电池电压下降导致的输出信号失真，同时可
+以有效保护在大功率输出时扬声器不被损坏。其原理是：放大器自动检测输出削顶失真，自动调整放大器的增
+益，达到防失真效果。如下图所示：
+图 1 假设不受电源电压限制时的音频输出信号
+图 2 普通工作模式下的音频输出信号
+图 3 防失真工作模式下的音频输出信号
+CTRL 管脚电压 声道选择
+1.5V-VDD 右声道
+0.9V-1.15V 左声道
+0-0.4V 芯片关断
+
+--- PDF PAGE 9 ---
+2023 Copyright © Nsiway Technology9
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+10.4 电源滤波电容的选择
+在放大器的应用中，电源的旁路设计很重要，特别是对应用方案的噪声性能及电源电压抑制性能。设计中
+要求滤波电容尽量靠近芯片电源脚。典型的电容为 100uF 的电容并上 1uF 的陶瓷电容。
+10.5 保护电路
+当芯片发生输出引脚与电源或地短路，或者输出之间的短路故障时，过流保护电路会关断芯片以防止芯片
+被损坏。短路故障消除后，NS4168 自动恢复工作。当芯片温度过高时，芯片也会被关断。 温度下降后，NS4168
+继续正常工作。当电源电压过低时，芯片同样会被关断，电源电压恢复后，芯片会再次启动。
+10.6 Layout 建议
+NS4168 属于 D 类放大器，layout 时应该考虑 EMI 干扰。应用时从以下几个方面可以最大限度降低 EMI 干扰：
+1. 功放输出到喇叭的走线，连线尽量短，尽量宽，而且输出布线，连线尽可能远离敏感信号线和电路。
+2. 功放电源脚的退耦电容尽可能靠近芯片引脚。电源线，地线最好采用星形接法。
+3. 由于空间限制等原因应用环境比较恶劣时在输出端加磁珠和电容可以有效抑制 EMI 干扰。使用时磁珠和电容
+尽可能靠近芯片引脚。以下是 NS4168 输出端加了磁珠和电容之后的应用设计参考电路：
+10.7 测试电路
+NS4168 测试电路如下图，测量 D 类模式功放时， 低通滤波器(Low PASS Filter)是必须的。可以用两个 33uH
+的电感串联在负载电阻两端以等效扬声器。如果只采用纯电阻代替扬声器负载，所测到的结果会比扬声器做负
+载时结果差，包括功率，效率，失真度等指标。
+
+
+--- PDF PAGE 10 ---
+2023 Copyright © Nsiway Technology10
+深圳市纳芯威科技有限公司
+SHENZHENNSIWAYTECHNOLOGY CO.,LTD NS4168 Apr.2023 V1.2
+11 封装信息
+11.1 ESOP-8 封装尺寸图
+12 版本修改历史
+声明：深圳市纳芯威科技有限公司保留在任何时间，并且没有通知的情况下修改产品资料和产品规格的权利，
+本手册的解释权归深圳市纳芯威科技有限公司所有，并负责最终解释。

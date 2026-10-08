@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 #include <stddef.h>
 
 // 等待音效:"咕噜咕噜"的冒泡声。Stage 11,由服务器的 {"t":"cue","name":"thinking"} 触发,

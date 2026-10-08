@@ -1,5 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include <stdint.h>
+#include <stddef.h>
 
 // 设备 ↔ 服务器控制消息的编解码。协议见 AGENT.md §5.2。
 //

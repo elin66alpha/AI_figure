@@ -1,0 +1,1933 @@
+PAGE 1
+ESP32-C3-MINI-1
+ESP32-C3-MINI-1U
+඀ ϱЧ 2.2
+ᆦӻ 2.4 GHz Wi-Fi (802. 11b/g/n)ড࿩ ® 5ཬԄժଆቆ
+ଽᇂ ESP32-C3 ༢ਙྉோđRISC-Vԩ৘ఖ
+ٿן8 MB flash
+15۱GPIO
+ϰᄛ PCBఖ
+ESP32-C3-MINI-1
+ ESP32-C3-MINI-1U
+www.espressif .com
+PAGE 2
+1ඍ
+1ඍ
+ඪૼğ
+ğ
+https://www.espressif.com/documentation/esp32-c3-mini-1_datasheet_cn.pdf
+1. 1 หྟ
+CPUோഈթԥఖ
+• ଽᇂ ESP32-C3FH4aESP32-C3FH4Xa
+ESP32-C3FH8XࠇESP32-C3FH4AZ ྉோđ
+RISC-V 32ۚ160 MHz
+• 384 KB ROM
+• 400 KB SRAMčఃᇏ 16 KB ህႨႿ cacheĎ
+• 8 KB RTC SRAM
+• ቋն 8 MBٿކash
+Wi-Fi
+• ᆦӻ IEEE 802.11 b/g/n ླྀၰ
+•ຶğ2412 ~ 2484 MHz
+• ᄝ 2.4 GHz ௔ջᆦӻ 20 MHzބ40 MHz ௔ॺ
+• ᆦӻ 1T1Rղ 150 Mbps
+•ૂุ (WMM)
+•ކTX/RX A-MPDU, TX/RX A-MSDU)
+•ॶಒಪ (Immediate Block ACK)
+•ᇗቆ (Fragmentation and
+defragmentation)
+•߶ࠏT ransmission opportunity , TXOP)
+• BeaconࡱTSFĎ
+• 4 × ྴ୅ Wi-Fi१
+•྘ຩ઎ (Infrastructure BSS)
+Station ଆൔaSoftAP ଆൔaStation + SoftAP ଆ
+ᄖଆൔ
+౨ᇿၩྉோᄝ Station ଆൔ༯ೡ૭ൈđSoftAP ྐ
+э
+• 802.11 mc FTM
+ড࿩ ®
+•ড࿩ (Bluetooth LE)ğBluetooth 5a
+Bluetooth mesh
+• ෎ੱᆦӻ 125 Kbpsa500 Kbpsa1 Mbpsa2
+Mbps
+•Ѭঔᅚ (Advertising Extensions)
+•Ѭ (Multiple Advertisement Sets)
+•࿊ᄴ (Channel Selection Algorithm #2)
+• Wi-Fi฿ཌ
+ຓഡ
+•ղ 15۱GPIO
+– 3ቔູ strapping࢖ܵ
+•SPIaUARTaI2CaI2Sຓဪ॥ (remote
+control peripheral)aLED PWM ॥ᇅఖa๙Ⴈ
+DMA ॥ᇅఖaTWAI®ಸ ISO 11898-1đ
+ࠧCANٓܿ2.0Ď aUSB Ա१/JT AG॥ᇅఖa໑
+ఖaSAR ଆ/ൈఖaु
+ൈఖ
+ඪૼğ
+*བྷ༥ྐ༏đ౨ҕॉ
+uESP32-C3඀vb
+ࡱ
+•40 MHzᆒ
+฿ཌ࿊྘
+• ESP32-C3-MINI-1ğϰᄛ PCB ฿ཌ
+• ESP32-C3-MINI-1Uຓ҆฿ཌ
+࠯2
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 3
+1ඍ
+ࡱ
+•࿢/࿢ğ3.0 ~ 3.6 V
+•ğ
+– 85 °C ϱଆቆğ ⚶40 ~ 85 °C
+– 105 °C ϱଆቆğ-40 ~ 105 °C
+ಪᆣ
+• RF࡮ᆣ඀
+•ЌಪᆣğRoHS/REACH
+ҩ൫
+• HTOL/HTSL/uHAST /TCT /ESD/Latch-up
+1.2б
+ESP32-C3-MINI-1ބESP32-C3-MINI-1U ൞๙Ⴈ྘ Wi-Fiড࿩ (Bluetooth LE)ڶپ
+ਵთb
+ESP32-C3-MINI-1 ҐႨ PCB ϰᄛ฿ཌđESP32-C3-MINI-1Uݼ
+і 1-1ބ1-2b
+і 1-1. ESP32-C3-MINI-1б1
+؇2 ଆቆԄժ3
+ݼ5 Flash4
+(°C) ଽᇂྉோϱЧ6
+(mm)
+ESP32-C3-MINI-1-N4XĎ 4 MB (Quad SPI) ⚶40 ∼ 85 v1.1
+13.2 × 16.6 × 2.4
+ESP32-C3-MINI-1-H4XĎ ⚶40 ∼ 105 v1.1
+ESP32-C3-MINI-1-H8X 8 MB (Quad SPI) ⚶40 ∼ 105 v1.1
+ESP32-C3-MINI-1-N4 (NRND)
+4 MB (Quad SPI)
+⚶40 ∼ 85 v0.4
+ESP32-C3-MINI-1-H4 (NRND) ⚶40 ∼ 105 v0.4
+ESP32-C3-MINI-1-H4-AZ (NRND) ⚶40 ∼ 105 v0.4
+1ᇿ൤ଽಸაі 1-2 ၂ᇁb
+і 1-2. ESP32-C3-MINI-1Uб
+؇2 ଆቆԄժ3
+ݼ5 Flash4, 7
+(°C) ଽᇂྉோϱЧ6
+(mm)
+ESP32-C3-MINI-1U-N4XĎ
+4 MB (Quad SPI)
+⚶40 ∼ 85 v1.1
+13.2 × 12.5 × 2.4ESP32-C3-MINI-1U-H4XĎ ⚶40 ∼ 105 v1.1
+ESP32-C3-MINI-1U-N4 (NRND) ⚶40 ∼ 85 v0.4
+ESP32-C3-MINI-1U-H4 (NRND) ⚶40 ∼ 105 v0.4
+࠯3
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 4
+1ඍ
+2b
+3ࢫ10.1ଆቆԄժb
+4 flashႿ flashࢫ6.5۬ܿb
+5ԛӌభॖഎ੣ AWS IoT ExpressLinkѓႵ o-Aሗđ
+ೂ ESP32-C3-MINI-1-N4-AbAWS IoT ExpressLinkषఓਔ flashଆቆ
+Ⴈ Joint Download BootݖUART /USBb
+6֥SRAM նཬཌྷ๝đ֌ྉோϱЧ v1.1 бྉோϱЧ v0.4ჿ 10 KB൐Ⴈbv1.1 ၇ঠႿ
+֥קESP-IDF࡮Ⴟ ESP32-C3 ྉோϱЧ v1.1ۡ܄്љđ౨ҕॉ
+uESP32-C3 ༢ਙྉோा༂іvb
+7 ଏಪ౦ঃ༯đ ଆቆSPI flashቋնൈᇒ௔ੱູ 80 MHzିb ೂླ൐Ⴈ120 MHz
+֥ashླေ flashିđ౨ ৳༢໡ૌb
+ESP32-C3-MINI-1ބESP32-C3-MINI-1U⚶40 ∼ 85 °C⚶40 ∼ 105 °C э྘đଽ
+ᇂ҂๝ྉோğ
+• ESP32-C3FH4ğྉோϱЧ v0.4đ4 MB flash
+• ESP32-C3FH4XğྉோϱЧ v1.1đ4 MB flash
+• ESP32-C3FH8XğྉோϱЧ v1.1đ8 MB flash
+ESP32-C3-MINI-1 ਸ਼஥Ⴕଽᇂ ESP32-C3FH4AZэ྘ ESP32-C3-MINI-1-H4-AZđఃଽᇂྉோໃႄԛႨႿ
+ࢤash֥SPI0/SPI1b
+ྐ༏đॖҕॉ uESP32-C3඀v֥бb
+1.3 ႋႨ
+•ं
+•߄׮
+•ࡲ
+•ሰӁ௖
+•୪ြ
+• POSࠏ
+•ఖದ
+• ၻ௔ഡС
+•ݻۿ֮IoTཌఖ
+•ݻۿ֮IoT੣ఖ
+࠯4
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 5
+ଢ੣
+ଢ੣
+1ඍ 2
+1.1 หྟ 2
+1.2б 3
+1.3 ႋႨ 4
+2ିॿ๭ 9
+3ၬ 10
+3.1҃अ 10
+3.2૭ඍ 10
+4஥ᇂཛ 12
+4.1ଆൔ॥ᇅ 13
+4.2 ROM ರᆽյႆ॥ᇅ 13
+4.3໊ 14
+5 ຓഡ 16
+5.1ඍ 16
+5.2 ຓഡ૭ඍ 16
+5.2.1१ 16
+5.2.1.1 UART ॥ᇅఖ 16
+5.2.1.2 SPI ॥ᇅఖ 16
+5.2.1.3 I2C ॥ᇅఖ 17
+5.2.1.4 I2S ॥ᇅఖ 18
+5.2.1.5 USB Ա१/JT AG॥ᇅఖ 18
+5.2.1.6१ 18
+5.2.1.7 LED PWM ॥ᇅఖ 19
+5.2.1.8ຓဪ॥ 19
+5.2.2ԩ৘ 19
+5.2.2.1 SAR ADC 19
+5.2.2.2ఖ 19
+6గหྟ 21
+6.1ᆴ 21
+6.2ࡱ21
+6.3గหྟ (3.3 V , 25 °C) 21
+6.4หྟ 22
+6.4.1 Activeݻۿ֥22
+6.4.2ݻۿ֥23
+6.5۬ܿ23
+7 ഝ௔หྟ 25
+7 .1 Wi-Fi ഝ௔ 25
+࠯5
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 6
+ଢ੣
+7 .1.1 Wi-Fiഝఖ (TX) หྟ 25
+7 .1.2 Wi-Fi൬ఖ (RX) หྟ 26
+7 .2ড࿩ഝ௔ 27
+7 .2.1ഝఖ (TX) หྟ 27
+7 .2.2൬ఖ (RX) หྟ 29
+8 ଆቆჰ৘๭ 32
+9ჰ৘๭ 34
+10۬ܿ35
+10.1 ଆቆԄժ 35
+10.2ఖԄժ 36
+11 PCBၰ 38
+11.1 PCBል๭ྙ 38
+11.2 PCB٢39
+12 Ӂ௖ԩ৘ 40
+12.1ࡱ40
+12.2׈٢׈࣡ESD) 40
+12.3౷ཌ 40
+12.4׮41
+৘ 42
+ሧჷ 43
+৥ൎ 44
+࠯6
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 7
+۬
+۬
+1-1 ESP32-C3-MINI-1б1 3
+1-2 ESP32-C3-MINI-1Uб 3
+3-1ၬ 11
+4-1 Strappingଏಪ஥ᇂ 12
+4-2 Strappingൈ྽ҕඔඪૼ 12
+4-3ଆൔ॥ᇅ 13
+4-4 UART0 ROM ರᆽյႆ॥ᇅ 14
+4-5 USB Ա१/JT AG ROMರᆽյႆ॥ᇅ 14
+4-6໊ൈ྽ҕඔඪૼ 15
+6-1ᆴ 21
+6-2ࡱ21
+6-3గหྟ (3.3 V , 25 °C) 21
+6-4 Active ଆൔ༯ Wi-Fi (2.4 GHz)หྟ 22
+6-5 Activeหྟ 22
+6-6 Modem-sleepݻۿ֥23
+6-7ݻۿ֥23
+6-8 Flash۬ܿ23
+7-1 Wi-Fi۬ܿ25
+7-2ބEVMކژ802.11ੱ 25
+7-3ഝ EVM ҩ൫1 25
+7-4؇26
+7-5௜ 27
+7-6ၝᇅ 27
+7-7۬ܿ27
+7-8ড࿩ -ഝఖหྟ - 1 Mbps 27
+7-9ড࿩ -ഝఖหྟ - 2 Mbps 28
+7-10ড࿩ -ഝఖหྟ - 125 Kbps 28
+7-11ড࿩ -ഝఖหྟ - 500 Kbps 28
+7-12ড࿩ -൬ఖหྟ - 1 Mbps 29
+7-13ড࿩ -൬ఖหྟ - 2 Mbps 29
+7-14ড࿩ -൬ఖหྟ - 125 Kbps 30
+7-15ড࿩ -൬ఖหྟ - 500 Kbps 30
+࠯7
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 8
+Ҭ๭
+Ҭ๭
+2-1 ESP32-C3-MINI-1ିॿ๭ 9
+2-2 ESP32-C3-MINI-1Uିॿ๭ 9
+3-1൪๭Ď 10
+4-1 Strappingൈ྽ҕඔ๭ 13
+4-2໊ൈ྽ҕඔ๭ 14
+8-1 ESP32-C3-MINI-1 ჰ৘๭ 32
+8-2 ESP32-C3-MINI-1U ჰ৘๭ 33
+9-1ჰ৘๭ 34
+10-1 ESP32-C3-MINI-1 Ԅժ 35
+10-2 ESP32-C3-MINI-1U Ԅժ 35
+10-3ఖԄժ๭ 36
+11-1 ESP32-C3-MINI-1ࡩPCBል๭ྙ 38
+11-2 ESP32-C3-MINI-1UࡩPCBል๭ྙ 39
+12-1౷ཌ 40
+࠯8
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 9
+2ିॿ๭
+2ିॿ๭
+SPI FlashRF Matching40 MHzCrystal3V3ESP32-C3-MINI-1ENGPIOsAntennaESP32-C3FH4SPI Flash40 MHzCrystal3V3ESP32-C3-MINI-1UENGPIOsESP32-C3FH4RF MatchingAntenna
+๭ 2-1. ESP32-C3-MINI-1ିॿ๭
+SPI FlashRF Matching40 MHzCrystal3V3ESP32-C3-MINI-1ENGPIOsAntennaESP32-C3FH4SPI Flash40 MHzCrystal3V3ESP32-C3-MINI-1UENGPIOsESP32-C3FH4RF MatchingAntenna
+๭ 2-2. ESP32-C3-MINI-1Uିॿ๭
+ඪૼğ
+ልଽ flash༢đ ౨ҕॉuESP32-C3඀v >۬ልଽ flash֥ܵ
+༢b
+࠯9
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 10
+3ၬ
+3ၬ
+3. 1҃अ
+҃अ౨ҕॉ๭ 10.1ଆቆԄժb
+Pin 49GNDGNDGNDGNDGNDGNDGNDGNDGNDPin 1Pin 2Pin 3Pin 4Pin 6Pin 5Pin 7Pin 8Pin 9Pin 10Pin 11
+Pin 53GND
+Pin 52GNDPin 12Pin 13Pin 14Pin 15Pin 16Pin 17Pin 18Pin 19Pin 20Pin 21Pin 22Pin 23Pin 24Pin 25Pin 51GNDPin 26Pin 27Pin 28Pin 29Pin 30Pin 31Pin 32Pin 33Pin 34Pin 35Pin 50GNDPin 36Pin 37Pin 38Pin 39Pin 40Pin 41Pin 42Pin 43Pin 44Pin 45Pin 46Pin 47Pin 48GNDGND3V3NCIO2IO3NCENNCNCGNDIO0IO1GNDNCIO10NCIO4IO5IO6IO7IO8IO9NCNCIO18IO19NCNCRXD0TXD0NCNCNCNCGNDGNDGNDGNDGNDGNDGNDGNDGNDGNDGNDGNDGNDKeepout Zone
+A
+๭ 3-1.൪๭Ď
+ඪૼ Ağ
+ॢ౵bESP32-C3-MINI-1U҃अა ESP32-C3-MINI-1ॢ౵b
+ྐ༏đ౨Ұु uESP32-C3ᆷଲv >ࢫׄb
+3.2૭ඍ
+Ⴕ 53і 3-1ၬb
+ࢫ5.2 ຓഡ૭ඍb
+࠯10
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 11
+3ၬ
+і 3-1.ၬ
+଀ӫݼো྘1ି
+GND 1, 2, 11, 14,
+36-53 Pֹࢤ
+3V3 3 P׈܂
+NC
+4, 7 , 9, 10,
+15, 17 , 24,
+25, 28, 29,
+32-35
+—࢖ܵ
+IO2 5 I/O/T GPIO2, ADC1_CH2, FSPIQ
+IO3 6 I/O/T GPIO3, ADC1_CH3
+EN 8 I௜ğྉோ൐ିĠ
+оĠ
+ᇿၩ҂ିಞ ENॢb
+IO0 12 I/O/T GPIO0, ADC1_CH0, XT AL_32K_P
+IO1 13 I/O/T GPIO1, ADC1_CH1, XT AL_32K_N
+IO10 16 I/O/T GPIO10, FSPICS0
+IO4 18 I/O/T GPIO4, ADC1_CH4, FSPIHD, MTMS
+IO5 19 I/O/T GPIO5, ADC2_CH0, FSPIWP , MTDI
+IO6 20 I/O/T GPIO6, FSPICLK, MTCK
+IO7 21 I/O/T GPIO7 , FSPID, MTDO
+IO8 22 I/O/T GPIO8
+IO9 23 I/O/T GPIO9
+IO18 26 I/O/T GPIO18, USB_D-
+IO19 27 I/O/T GPIO19, USB_D+
+RXD0 30 I/O/T GPIO20, U0RXD
+TXD0 31 I/O/T GPIO21, U0TXD
+1 PჷĠIğൻೆĠOğൻԛĠTቅb
+࠯11
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 12
+4஥ᇂཛ
+4஥ᇂཛ
+ඪૼğ
+ၛ༯ଽಸᅋሱ uESP32-C3඀v >ࢫ஥ᇂཛb ྉோStrapping༢đ ॖ
+ࢫ8 ଆቆჰ৘๭b
+ݖStrappingބ࢖ܵ eFuseҕ
+აğ
+•ଆൔ
+– StrappingğGPIO2aGPIO8ބGPIO9
+• ROM ರᆽյႆ
+– StrappingğGPIO8
+– eFuse ҕඔğEFUSE_UART_PRINT_CONTROLބEFUSE_USB_PRINT_CHANNEL
+ഈඍ eFuseଏಪᆴनູ 0beFuse ᆺିഎཿ၂Ցđ၂֊എཿູ 1ູ
+0എཿ eFuseྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫeFuse ॥ᇅఖb
+ഈඍ strapping௜ᆴĎ౼थႿ
+ଽ҆೐ഈঘ/ሑ෿b
+і 4-1. Strappingଏಪ஥ᇂ
+Strapping࢖ܵଏಪ஥ᇂ ᆴ
+GPIO2ॢ –
+GPIO8ॢ –
+GPIO9 ೐ഈঘ 1
+э strappingຓ҆༯ঘ/ݔESP32-C3ࠏMCUՖഡСđ
+strappingࠏMCU ॥ᇅb
+෮Ⴕ strapping໊ൈđ෭թఖҐဢѩթԥཌྷႋ strappingו
+bၹՎđstrapping౼đstrapping
+ቔູ௴๙ IO࡮uESP32-C3ඌҕॉ൭Ҩv > ᅣ
+ࢫൈᇒb
+Strappingൈ྽ླ቎࿖і 4-2๭ 4-1֥ࡗބࡗb
+і 4-2. Strappingൈ྽ҕඔඪૼ
+ҕඔ ඪૼ ቋཬᆴ (ms)
+tSU
+ࡗۚCHIP_EN֥
+ࡗ0
+tH
+ࡗࠧCHIP_ENastrappingэູ௴๙ IO࢖ܵ
+౼ strappingࡗ3
+࠯12
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 13
+4஥ᇂཛ
+Strapping pin
+VIH_nRST
+VIH
+tSU tH
+CHIP_EN
+๭ 4-1. Strappingൈ྽ҕඔ๭
+4. 1ଆൔ॥ᇅ
+đGPIO2aGPIO8ބGPIO9і 4-3ଆൔ॥ᇅb
+і 4-3.ଆൔ॥ᇅ
+ଆൔ GPIO2 2 GPIO8 GPIO9
+SPI boot ଆൔ 1 ಩ၩᆴ 1
+Joint download boot ଆൔ 3 1 1 0
+1ՙଏಪ஥ᇂb
+2 GPIO2҂॥ᇅ SPI BootބJoint Download Boot ଆൔđ
+ഈঘb
+3 Joint Download Bootൔğ
+• USB-Serial-JT AG Download Boot
+• UART Download Boot
+ᄝ SPI Boot ଆൔ༯đROMՖ SPI flash༢๤b
+ᄝ Joint Download BootݖUART0ࠇUSB༯ᄛᇀ flashࡱ
+༯ᄛᇀ SRAM ѩᄎྛ SRAMӱ྽b
+Ԣਔ SPI BootބJoint Download Boot ଆൔđESP32-C3ᆦӻ SPI Download Boot࡮
+uESP32-C3ඌҕॉ൭Ҩv >ࢫྉோ Boot ॥ᇅb
+4.2 ROM ರᆽյႆ॥ᇅ
+ӱᇏđROM ս઒ರᆽॖյႆᇀğ
+•čଏಪĎUART0ބUSB Ա१/JT AG॥ᇅఖ
+• UART0
+• USB Ա१/JT AG॥ᇅఖ
+࠯13
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 14
+4஥ᇂཛ
+EFUSE_UART_PRINT_CONTROLބGPIO8 ॥ᇅ UART0 ROM ರᆽյႆđೂі 4-4 UART0 ROM ರᆽյႆ॥ᇅ ෮
+ൕb
+і 4-4. UART0 ROM ರᆽյႆ॥ᇅ
+UART0 ROM ರᆽյႆ EFUSE_UART_PRINT_CONTROL GPIO8
+൐ି
+0੻
+1 0
+2 1
+о
+1 1
+2 0
+3੻
+1ՙଏಪ஥ᇂb
+EFUSE_USB_PRINT_CHANNEL ॥ᇅ USB Ա१/JT AG॥ᇅఖ ROM ರᆽյႆđೂі 4-5 USB Ա१/JTAG ROM ರ
+ᆽյႆ॥ᇅ ෮ൕb
+і 4-5. USB Ա१/JT AG ROMರᆽյႆ॥ᇅ
+USB Ա१/JT AG
+ROM ರᆽյႆ॥ᇅ EFUSE_DIS_USB_SERIAL_JT AG2 EFUSE_USB_PRINT_CHANNEL
+൐ି 0 0
+о 0 1
+1੻
+1ՙଏಪ஥ᇂb
+2 EFUSE_DIS_USB_SERIAL_JT AGо USB Ա१/JT AGb
+4.3໊
+࢖֥ܵCHIP_EN؟۷
+Ⴟ CHIP_EN๭ 4-2і 4-6b
+VIL_nRST
+tST BL tRST
+2.8 V
+VDDA,
+VDD3P3,
+VDD3P3_RTC,
+VDD3P3_CPU
+CHIP_EN
+๭ 4-2.໊ൈ྽ҕඔ๭
+࠯14
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 15
+4஥ᇂཛ
+і 4-6.໊ൈ྽ҕඔඪૼ
+ҕඔ ඪૼ ቋཬᆴ (µs)
+tST BL
+CHIP_ENྉோభđVDDAaVDD3P3aVDD3P3_RTC
+ބVDD3P3_CPUࡗ50
+tRST
+CHIP_ENႿ VIL_nRST čऎุඔᆴҕॉі 6-3໊ྉ
+ࡗ50
+࠯15
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 16
+5 ຓഡ
+5 ຓഡ
+5. 1ඍ
+ESP32-C3FH4ຓഡđЇও SPIaUARTaI2CaI2Sຓဪ॥ (remote control peripheral)aLED
+PWM ॥ᇅఖaTWAI® ॥ᇅఖaUSB Ա१/JT AGఖaSAR ଆ/b
+བྷ༥ྐ༏đ౨ҕॉuESP32-C3඀v >ࢫି૭ඍb
+ඪૼğ
+ၛ༯ଽಸԛሱ uESP32-C3඀v >ࢫຓഡ෮Ⴕ IOᄝଆቆഈႄԛđၹՎᆃུྐ༏҂
+ປಆൡႨႿ ESP32-C3-MINI-1ࠣESP32-C3-MINI-1Ub
+ྐ༏đॖҕॉuESP32-C3ඌҕॉ൭Ҩv >ࢫਙіb
+5.2 ຓഡ૭ඍ
+ఖb
+5.2. 1१
+१b
+5.2. 1. 1 UART ॥ᇅఖ
+ESP32-C3۱UARTࠧUART0ބUART1đᆦӻၳ҄๙ྐčRS232ބRS485ބIrDAđ๙ྐ
+֞5 MbpsbUART ᆦӻ CTSބRTSੀ॥čXONބXOFF۱UART१
+֥UHCI0१ა GDMA ཌྷ৵đनॖФ GDMAᆀ CPU໙b
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫUART ॥ᇅఖ (UART , LP_UART)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2. 1.2 SPI ॥ᇅఖ
+ESP32-C3 ऎႵၛ༯ SPI१ğ
+• SPI0܂ESP32-C3֥GDMA ॥ᇅఖა Cacheልຓ flash
+• SPI1܂CPUልຓ flash
+• SPI2đ๙Ⴈ SPIݖGDMA஥ DMA໙
+SPI0ބSPI1 หྟ
+• ᆦӻ SPIaDual SPIaQuad SPIaQPI ଆൔ
+• ൈᇒ௔ੱॖ஥ᇂđSTRॖղ 120 MHz
+•ູֆ໊
+࠯16
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 17
+5 ຓഡ
+SPI2 หྟ
+•ଆൔ
+•ݖGDMA஥ DMA໙
+• ᆦӻ SPIaDual SPIaQuad SPIaQPI ଆൔ
+•ྟ (CPOL)ཌྷ໊ (CPHA) ॖ஥ᇂ
+• ൈᇒ௔ੱॖ஥ᇂ
+•ູֆ໊
+•Ⴕ໊ི (MSB)Ⴕ໊ི (LSB) Ⴊ༵
+•ଆൔ
+–ॖղ 80 MHz
+–ॖղ 80 MHz
+–۱SPI_CS৫ SPIཌྷ৵
+– CSॖ஥ᇂ
+•ଆൔ
+–ॖղ 60 MHz
+–ॖղ 60 MHz
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫSPI ॥ᇅఖ (SPI)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2. 1.3 I2C ॥ᇅఖ
+ESP32-C3۱I2C१ॖၛႨቔ I2CଆൔbI2C१ᆦ
+ӻğ
+• ѓሙଆൔ (100 Kbit/s)
+• ॹ෎ଆൔ (400 Kbit/s)
+•ॖղ 800 Kbit/sđ֌൳ᇅႿ SCLބSDA؇
+•7ބ10 ໊࿙ᆶଆൔ
+• ච࿙ᆶଆൔ
+• 7ᆶ
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫI2C ॥ᇅఖ (I2C)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+࠯17
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 18
+5 ຓഡ
+5.2. 1.4 I2S ॥ᇅఖ
+ESP32-C3ѓሙ I2Sቔđ ѩ౏ॖФ஥
+ᇂູ I2S Աྛ 8 ໊a16 ໊a24 ໊a32ඔऌଆൔđᆦӻ௔ੱՖ 10 kHz֞40 MHz֥BCK ൈᇒb
+I2SࢤGDMA ॥ᇅఖbᆦӻ TDM PCMaTDM MSBఊaTDMބPDM ѓሙb
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫI2S ॥ᇅఖ (I2S)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2. 1.5 USB Ա१/JT AG॥ᇅఖ
+ESP32-C3۱USB Ա१/JT AG॥ᇅఖđऎႵၛ༯หྟğ
+•ݣCDC-ACMࠣJT AGି
+•ಸ USB 2.0ॖղ 12 Mbit/s॥ᇅఖ҂ᆦӻ 480 Mbit/s෎Ԯൻଆ
+ൔĎ
+•ልଽ/ልຓ flash
+•֥JT AGᆷ਷đᆦӻ CPU൫
+•ಆ෎ USB PHY
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫUSB Ա१/JTAG ॥ᇅఖ (USB_SERIAL_JTAG)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2. 1.6१
+ESP32-C3۱TWAI® ॥ᇅఖđऎႵೂ༯หྟğ
+•ಸ ISO 11898-1 ླྀၰčCANٓܿ2.0Ď
+•ൔč11 ໊ IDൔč29 ໊ IDĎ
+• бหੱՖ 1 Kbit/s֞1 Mbit/s
+•ଆൔčԮൻ໭ླಒಪĎ
+• 64൬ FIFO
+•ੲఖଆൔĎ
+•੣
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫ१b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+࠯18
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 19
+5 ຓഡ
+5.2. 1.7 LED PWM ॥ᇅఖ
+LED PWMඔሳѯྙđऎႵೂ༯หྟğ
+•ॖղ 14 ໊
+•ᇕൈᇒჷ࿊ᄴđЇও APBᆒൈᇒ
+• ॖᄝ Light-sleepቔ
+•ഒᅝॢбđॖႨႿ LED RGBളఖ
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫLED PWM ॥ᇅఖb
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2. 1.8ຓဪ॥
+ຓဪ॥ఖ (RMT)ᇕ
+۱192 × 32ѯྙb
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫຓဪ॥ (RMT)b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2.2ԩ৘
+b
+5.2.2. 1 SAR ADC
+ESP32-C3۱12 ໊ SAR ADCᆦӻ 6ൻೆb
+• ADC1 ᆦӻ 5ӌ཮ሙb
+• ADC2 ᆦӻ 1ӌ཮ሙb
+ඪૼğ
+֥ADC2࡮uESP32-C3 ༢ਙྉோा༂іvb
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫԩ৘b
+஥
+࡮uESP32-C3඀v >ࢫ஥b
+5.2.2.2ఖ
+࿢bଽ҆ ADCඔሳਈb
+࠯19
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 20
+5 ຓഡ
+ຶູ⚶40 °C֞125 °Cෛ
+ࠇIOb
+ྐ༏đ౨ҕॉ uESP32-C3ඌҕॉ൭Ҩv >ࢫԩ৘b
+࠯20
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 21
+6గหྟ
+6గหྟ
+6. 1ᆴ
+ӑԛі 6-1ᆴ༯
+ӑԛі 6-2ࡱॖ
+ौྟb
+і 6-1.ᆴ
+ݼژҕඔ ቋཬᆴ ቋնᆴ ֆ໊
+VDD33࿢ ⚶0.3 3.6 V
+6.2ࡱ
+і 6-2.ࡱ
+ݼژҕඔ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+VDD33࿢ 3.0 3.3 3.6 V
+IV DDੀ 0.5 — — A
+TA؇85 °C ϱଆቆ ⚶40 — 85 °C105 °C ϱଆቆ 105
+6.3గหྟ (3.3 V , 25 °C)
+і 6-3.గหྟ (3.3 V , 25 °C)
+ҕඔ ඪૼ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+CINಸ — 2 — pF
+VIH࿢ 0.75 × VDD 1 — VDD 1 + 0.3 V
+VIL࿢ ⚶0.3 — 0.25 × VDD 1 V
+IIHੀ — — 50 nA
+IILੀ — — 50 nA
+VOH 2࿢ 0.8 × VDD 1 — — V
+VOL 2࿢ — — 0.1 × VDD 1 V
+IOH
+ੀ (VDD 1 = 3.3 V , VOH >= 2.64 V ,
+PAD_DRIVER = 3) — 40 — mA
+IOL
+ੀ (VDD 1 = 3.3 V , VOL = 0.495 V ,
+PAD_DRIVER = 3) — 28 — mA
+RP Uቅ — 45 — kΩ
+RP Dቅ — 45 — kΩ
+VIH _nRST
+࿢čCHIP_ENٓ
+ຶĎ 0.75 × VDD 1 — VDD 1 + 0.3 V
+VIL_nRST࿢čCHIP_ENຶĎ ⚶0.3 — 0.25 × VDD 1 V
+༯်
+࠯21
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 22
+6గหྟ
+і 6-3 –ഈ်
+ҕඔ ඪૼ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+1 VDD –࿢b
+2 VOHބVOLҩ൫ᆴb
+6.4หྟ
+6.4. 1 Activeݻۿ֥
+Ⴟ 3.3 Vჷa25 °Cb
+Ⴟ 100%b
+оaCPUb
+і 6-4. Active ଆൔ༯ Wi-Fi (2.4 GHz)หྟ
+ቔଆൔ ૭ඍᆴ (mA)
+ActiveቔĎ
+TX
+802.11b, 1 Mbps, @20.5 dBm 350
+802.11g, 54 Mbps, @18 dBm 295
+802.11n, HT20, MCS7 , @17 .5 dBm 290
+802.11n, HT40, MCS7 , @17 dBm 290
+RX 802.11b/g/n, HT20 82
+802.11n, HT40 84
+і 6-5. Activeหྟ
+ቔଆൔ ഝ௔ଆൔ ૭ඍᆴ (mA)
+Active (ቔ)
+ഝčTXĎ
+ড࿩ @ 20.0 dBm 340
+ড࿩ @ 9.0 dBm 190
+ড࿩ @ 0 dBm 170
+ড࿩ @ ⚶15.0 dBm 100
+൬čRXĎড࿩ 86
+࠯22
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 23
+6గหྟ
+ඪૼğ
+ၛ༯ଽಸᅋሱ uESP32-C3඀v֥ݻۿ֥b
+6.4.2ݻۿ֥
+і 6-6. Modem-sleepݻۿ֥
+྘ᆴଆൔ CPU ௔ੱ (MHz) ૭ඍܱmA) ຓഡൈᇒಆष (mA) 1
+Modem-sleep 2,3
+160 CPUቔ 23 28
+CPU ॢ༽ 16 21
+80 CPUቔ 17 22
+CPU ॢ༽ 13 18
+1Ⴕ෮ҵၳb
+2 Modem sleep ଆൔ༯đWi-Fi ഡႵൈᇒ૊॥b
+3 Modem-sleep໙flashb ೏flash ෎ੱູ 80 Mbit/sđSPI 2 ཌଆൔ༯ flash
+ູ 10 mAb
+і 6-7.ݻۿ֥
+ଆൔ ૭ඍ྘ᆴ (µA)
+Light-sleep VDD_SPIބWi-Fiđ෮Ⴕ GPIOቅሑ෿ 130
+Deep-sleep RTCൈఖ + RTC թԥఖ 5
+о CHIP_ENоሑ෿ 1
+6.5۬ܿ
+ބ؍ࢨ࠹/ࣉ
+ྛಆ૫ҩ൫bഡСԛӌൈđթԥఖनູ҈Ԣሑ෿b
+і 6-8. Flash۬ܿ
+ҕඔ ඪૼ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+VCC࿢ (1.8 V) 1.65 1.80 2.00 V
+࿢ (3.3 V) 2.7 3.3 3.6 V
+FC ቋնൈᇒ௔ੱ 80 — — MHz
+— щӱ/҈Ԣᇛ௹ 100,000 — — Ց
+TRETࡗ20 — — ୍
+TP Pࡗ— 0.8 5 ms
+TSEࡗ4 KB) — 70 500 ms
+TBE 1ࡗ32 KB) — 0.2 2 s
+TBE 2ࡗ64 KB) — 0.3 3 s
+TCE
+ࡗ16 Mb) — 7 20 s
+ࡗ32 Mb) — 20 60 s
+༯်
+࠯23
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 24
+6గหྟ
+і 6-8 –ഈ်
+ҕඔ ඪૼ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ࡗ64 Mb) — 25 100 s
+ࡗ128 Mb) — 60 200 s
+ࡗ256 Mb) — 70 300 s
+࠯24
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 25
+7 ഝ௔หྟ
+7 ഝ௔หྟ
+ഝ௔หྟіb
+൳
+ຓ҆฿ཌऎႵ 50 Ω ቅॆb
+ຶđऎุ౨ҕ
+ॉuESP ഝ௔ҩ൫ᆷଲvb
+หљඪૼđഝ௔ҩ൫न൞ᄝ 3.3 V (±5%)ჷa25 °C༯ປӮb
+7 . 1 Wi-Fi ഝ௔
+і 7-1. Wi-Fi۬ܿ
+଀ӫ ૭ඍ
+ຶ 2412 ~ 2484 MHz
+໭ཌѓሙ IEEE 802.11b/g/n
+௔ொ ⚶15 ~ 15 ppm
+7 . 1. 1Wi-Fiഝఖ (TX) หྟ
+і 7-2.ބEVMކژ802. 11ੱ
+ቋཬᆴ྘ᆴ ቋնᆴ෎ੱ (dBm) (dBm) (dBm)
+802.11b, 1 Mbps — 20.5 —
+802.11b, 11 Mbps — 20.5 —
+802.11g, 6 Mbps — 20.0 —
+802.11g, 54 Mbps — 18.0 —
+802.11n, HT20, MCS0 — 19.0 —
+802.11n, HT20, MCS7 — 17 .5 —
+802.11n, HT40, MCS0 — 18.5 —
+802.11n, HT40, MCS7 — 17 .0 —
+і 7-3.ഝ EVM ҩ൫1
+ቋཬᆴ྘ᆴ ѓሙཋᆴ෎ੱ (dB) (dB) (dB)
+802.11b, 1 Mbps, @20.5 dBm — ⚶24.5 ⚶10
+802.11b, 11 Mbps, @20.5 dBm — ⚶25.0 ⚶10
+802.11g, 6 Mbps, @20 dBm — ⚶23.0 ⚶5
+802.11g, 54 Mbps, @18 dBm — ⚶28.0 ⚶25
+802.11n, HT20, MCS0, @19 dBm — ⚶23.5 ⚶5
+802.11n, HT20, MCS7 , @17 .5 dBm — ⚶30.5 ⚶27
+༯်
+࠯25
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 26
+7 ഝ௔หྟ
+і 7-3 –ഈ်
+ቋཬᆴ྘ᆴ ѓሙཋᆴ෎ੱ (dB) (dB) (dB)
+802.11n, HT40, MCS0, @18.5 dBm — ⚶26.5 ⚶5
+802.11n, HT40, MCS7 , @17 dBm — ⚶30.5 ⚶27
+1ഝ EVMੱູі 7-2ބEVMژ
+ކ802. 11ੱ྘ᆴb
+7 . 1.2 Wi-Fi൬ఖ (RX) หྟ
+802.11b༂Їੱ (PER)ݖ8%đ802.11g/nݖ10%b
+і 7-4.؇
+ቋཬᆴ྘ᆴ ቋնᆴ෎ੱ (dBm) (dBm) (dBm)
+802.11b, 1 Mbps — ⚶98.0 —
+802.11b, 2 Mbps — ⚶96.0 —
+802.11b, 5.5 Mbps — ⚶93.0 —
+802.11b, 11 Mbps — ⚶88.6 —
+802.11g, 6 Mbps — ⚶92.8 —
+802.11g, 9 Mbps — ⚶91.8 —
+802.11g, 12 Mbps — ⚶90.8 —
+802.11g, 18 Mbps — ⚶88.4 —
+802.11g, 24 Mbps — ⚶85.4 —
+802.11g, 36 Mbps — ⚶82.0 —
+802.11g, 48 Mbps — ⚶77 .8 —
+802.11g, 54 Mbps — ⚶76.2 —
+802.11n, HT20, MCS0 — ⚶92.6 —
+802.11n, HT20, MCS1 — ⚶90.6 —
+802.11n, HT20, MCS2 — ⚶88.0 —
+802.11n, HT20, MCS3 — ⚶84.8 —
+802.11n, HT20, MCS4 — ⚶81.6 —
+802.11n, HT20, MCS5 — ⚶77 .4 —
+802.11n, HT20, MCS6 — ⚶75.6 —
+802.11n, HT20, MCS7 — ⚶74.4 —
+802.11n, HT40, MCS0 — ⚶90.0 —
+802.11n, HT40, MCS1 — ⚶87 .6 —
+802.11n, HT40, MCS2 — ⚶84.8 —
+802.11n, HT40, MCS3 — ⚶81.8 —
+802.11n, HT40, MCS4 — ⚶78.4 —
+802.11n, HT40, MCS5 — ⚶74.2 —
+802.11n, HT40, MCS6 — ⚶72.6 —
+802.11n, HT40, MCS7 — ⚶71.2 —
+࠯26
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 27
+7 ഝ௔หྟ
+і 7-5.௜
+ቋཬᆴ྘ᆴ ቋնᆴ෎ੱ (dBm) (dBm) (dBm)
+802.11b, 1 Mbps — 5 —
+802.11b, 11 Mbps — 5 —
+802.11g, 6 Mbps — 5 —
+802.11g, 54 Mbps — 0 —
+802.11n, HT20, MCS0 — 5 —
+802.11n, HT20, MCS7 — 0 —
+802.11n, HT40, MCS0 — 5 —
+802.11n, HT40, MCS7 — 0 —
+і 7-6.ၝᇅ
+ቋཬᆴ྘ᆴ ቋնᆴ෎ੱ (dB) (dB) (dB)
+802.11b, 1 Mbps — 35 —
+802.11b, 11 Mbps — 35 —
+802.11g, 6 Mbps — 31 —
+802.11g, 54 Mbps — 14 —
+802.11n, HT20, MCS0 — 31 —
+802.11n, HT20, MCS7 — 13 —
+802.11n, HT40, MCS0 — 19 —
+802.11n, HT40, MCS7 — 8 —
+7 .2ড࿩ഝ௔
+і 7-7.۬ܿ
+଀ӫ ૭ඍ
+ຶ 2402 ~ 2480 MHz
+ຶ ⚶24.0 ~ 20.0 dBm
+7 .2. 1ഝఖ (TX) หྟ
+і 7-8.ড࿩ -ഝఖหྟ - 1 Mbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ഝ
+F = F0 ± 2 MHz — ⚶37 .62 — dBm
+F = F0 ± 3 MHz — ⚶41.95 — dBm
+F = F0 ± > 3 MHz — ⚶44.48 — dBm
+༯်
+࠯27
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 28
+7 ഝ௔หྟ
+і 7-8 –ഈ်
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ᇅหྟ
+∆ f 1avg — 245.00 — kHz
+∆ f 2max — 208.00 — kHz
+∆ f 2avg/∆ f 1avg — 0.93 — —
+ᄛѯ௔ੱொ၍ — — ⚶9.00 — kHz
+ᄛѯ௔ੱ௎၍
+|f0 − fn|n=2, 3, 4, ..k — 1.17 — kHz
+|f1 − f0| — 0.30 — kHz
+|fn − fn−5|n=6, 7, 8, ..k — 4.90 — kHz
+і 7-9.ড࿩ -ഝఖหྟ - 2 Mbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ഝ
+F = F0 ± 4 MHz — ⚶43.55 — dBm
+F = F0 ± 5 MHz — ⚶45.26 — dBm
+F = F0 ± > 5 MHz — ⚶47 .00 — dBm
+ᇅหྟ
+∆ f 1avg — 497 .00 — kHz
+∆ f 2max — 398.00 — kHz
+∆ f 2avg/∆ f 1avg — 0.95 — —
+ᄛѯ௔ੱொ၍ — — ⚶9.00 — kHz
+ᄛѯ௔ੱ௎၍
+|f0 − fn|n=2, 3, 4, ..k — 0.46 — kHz
+|f1 − f0| — 0.70 — kHz
+|fn − fn−5|n=6, 7, 8, ..k — 6.80 — kHz
+і 7-10.ড࿩ -ഝఖหྟ - 125 Kbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ഝ
+F = F0 ± 2 MHz — ⚶37 .90 — dBm
+F = F0 ± 3 MHz — ⚶41.00 — dBm
+F = F0 ± > 3 MHz — ⚶42.50 — dBm
+ᇅหྟ ∆ f 1avg — 252.00 — kHz
+∆ f 1max — 200.00 — kHz
+ᄛѯ௔ੱொ၍ — — ⚶13.70 — kHz
+ᄛѯ௔ੱ௎၍
+|f0 − fn|n=1, 2, 3, ..k — 1.52 — kHz
+|f0 − f3| — 0.65 — kHz
+|fn − fn−3|n=7, 8, 9, ..k — 0.70 — kHz
+і 7-11.ড࿩ -ഝఖหྟ - 500 Kbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ഝ
+F = F0 ± 2 MHz — ⚶37 .90 — dBm
+F = F0 ± 3 MHz — ⚶41.30 — dBm
+F = F0 ± > 3 MHz — ⚶42.80 — dBm
+༯်
+࠯28
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 29
+7 ഝ௔หྟ
+і 7-11 –ഈ်
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+ᇅหྟ
+∆ f 2avg — 220.00 — kHz
+∆ f 2max — 205.00 — kHz
+ᄛѯ௔ੱொ၍ — — ⚶11.90 — kHz
+ᄛѯ௔ੱ௎၍
+|f0 − fn|n=1, 2, 3, ..k — 1.37 — kHz
+|f0 − f3| — 1.09 — kHz
+|fn − fn−3|n=7, 8, 9, ..k — 0.51 — kHz
+7 .2.2൬ఖ (RX) หྟ
+і 7-12.ড࿩ -൬ఖหྟ - 1 Mbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+؇30.8% PER — — ⚶96 — dBm
+ݼ30.8% PER — — 10 — dBm
+ၝᇅб C/I — — 8 — dB
+࿊ᄴྟၝᇅб C/I
+F = F0 + 1 MHz — ⚶4 — dB
+F = F0 – 1 MHz — ⚶3 — dB
+F = F0 + 2 MHz — ⚶32 — dB
+F = F0 – 2 MHz — ⚶36 — dB
+F ≥ F0 + 3 MHz (1) — — — dB
+F ≤ F0 – 3 MHz — ⚶39 — dB
+ཞ௔ੱ — — ⚶29 — dB
+ಠ F = F image + 1 MHz — ⚶38 — dB
+F = F image – 1 MHz — ⚶34 — dB
+ջຓቅೖ
+30 MHz ~ 2000 MHz — ⚶9 — dBm
+2003 MHz ~ 2399 MHz — ⚶18 — dBm
+2484 MHz ~ 2997 MHz — ⚶16 — dBm
+3000 MHz ~ 12.75 GHz — ⚶6 — dBm
+ט޺— —⚶44 — dBm
+1ಠ F = F image – 1 MHzᆴb
+і 7-13.ড࿩ -൬ఖหྟ - 2 Mbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+؇30.8% PER — — ⚶93 — dBm
+ݼ30.8% PER — — 0 — dBm
+ಠ C/I — — 10 — dB
+࿊ᄴྟၝᇅб C/I
+F = F0 + 2 MHz — ⚶7 — dB
+F = F0 – 2 MHz — ⚶7 — dB
+F = F0 + 4 MHz (1) — — — dB
+F = F0 – 4 MHz — ⚶34 — dB
+༯်
+࠯29
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 30
+7 ഝ௔หྟ
+і 7-13 –ഈ်
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+F ≥ F0 + 6 MHz — ⚶39 — dB
+F ≤ F0 – 6 MHz — ⚶39 — dB
+ཞ௔ੱ — — ⚶27 — dB
+ಠ F = F image + 2 MHz — ⚶39 — dB
+F = F image – 2 MHz (2) — — — dB
+ջຓቅೖ
+30 MHz ~ 2000 MHz — ⚶17 — dBm
+2003 MHz ~ 2399 MHz — ⚶19 — dBm
+2484 MHz ~ 2997 MHz — ⚶16 — dBm
+3000 MHz ~ 12.75 GHz — ⚶22 — dBm
+ט޺— —⚶40 — dBm
+1ཞ௔ੱb
+2࿊ᄴྟၝᇅб C/I F = F0 + 2 MHzᆴb
+і 7-14.ড࿩ -൬ఖหྟ - 125 Kbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+؇30.8% PER — — ⚶104 — dBm
+ݼ30.8% PER — — 10 — dBm
+ၝᇅб C/I — — 2 — dB
+࿊ᄴྟၝᇅб C/I
+F = F0 + 1 MHz — ⚶6 — dB
+F = F0 – 1 MHz — ⚶5 — dB
+F = F0 + 2 MHz — ⚶40 — dB
+F = F0 – 2 MHz — ⚶42 — dB
+F ≥ F0 + 3 MHz (1) — — — dB
+F ≤ F0 – 3 MHz — ⚶46 — dB
+ཞ௔ੱ — — ⚶34 — dB
+ಠ F = F image + 1 MHz — ⚶44 — dB
+F = F image – 1 MHz — ⚶37 — dB
+1ಠ F = F image – 1 MHzᆴb
+і 7-15.ড࿩ -൬ఖหྟ - 500 Kbps
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+؇30.8% PER — — ⚶99 — dBm
+ݼ30.8% PER — — 10 — dBm
+ၝᇅб C/I — — 3 — dB
+࿊ᄴྟၝᇅб C/I
+F = F0 + 1 MHz — ⚶5 — dB
+F = F0 – 1 MHz — ⚶7 — dB
+F = F0 + 2 MHz — ⚶39 — dB
+F = F0 – 2 MHz — ⚶40 — dB
+F ≥ F0 + 3 MHz (1) — — — dB
+༯်
+࠯30
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 31
+7 ഝ௔หྟ
+і 7-15 –ഈ်
+ҕඔ ૭ඍ ቋཬᆴ྘ᆴ ቋնᆴ ֆ໊
+F ≤ F0 – 3 MHz — ⚶40 — dB
+ཞ௔ੱ — — ⚶34 — dB
+ಠ F = F image + 1 MHz — ⚶43 — dB
+F = F image – 1 MHz — ⚶38 — dB
+1ಠ F = F image – 1 MHzᆴb
+࠯31
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 32
+8 ଆቆჰ৘๭8 ଆቆჰ৘๭
+ਫ਼๭b
+5
+5
+4
+4
+3
+3
+2
+2
+1
+1
+D D
+C C
+B B
+A A
+The values of C8, L2 and C9
+vary with the actual PCB board.
+The values of C1 and C2 vary with
+the selection of the crystal.
+The value of R1 varies with the
+actual PCB board. R1 could be a
+resistor or inductor, the initial
+value is suggested to be 24 nH.
+ESP32-C3-MINI-1(pin-out)
+NC: No component.
+50 ohm Impedance Control
+GNDVDD33
+GND
+GND
+GNDGND GND
+GND GND
+GND
+VDD33
+GND GNDGND
+VDD33
+VDD33
+GND
+GND
+GND GND
+VDD_SPI
+VDD33
+GND
+GND
+GND
+VDD33
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1> V1.1
+ESP32-C3-MINI-1
+A4
+2 2Thursday, January 23, 2025
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1> V1.1
+ESP32-C3-MINI-1
+A4
+2 2Thursday, January 23, 2025
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1> V1.1
+ESP32-C3-MINI-1
+A4
+2 2Thursday, January 23, 2025
+U2 ESP32-C3FH4
+LNA_IN1
+VDD3P32
+VDD3P33
+XTAL_32K_P4
+XTAL_32K_N5
+GPIO26
+CHIP_EN7
+MTMS 9
+MTDI 10 
+VDD3P3_RTC 11 
+MTCK 12 
+MTDO 13 
+GPIO8 14 
+GPIO9 15 
+GPIO10 16 
+VDD3P3_CPU 17VDD_SPI 18SPIHD 19SPIWP 20SPICS0 21SPICLK 22SPID 23SPIQ 24
+U0RXD 27 U0TXD 28 XTAL_N 29 XTAL_P 30 
+GND 33 
+GPIO38
+VDDA 32 
+VDDA 31 
+GPIO19 26 
+GPIO18 25 
+ESP32-C3-MINI-1
+GND1
+3V33
+IO9 23 
+NC4
+IO25
+IO36
+NC7
+NC9
+NC10
+NC 15 
+IO10 16 
+NC 17 
+IO4 18 
+IO5 19 
+NC 32
+TXD0 31
+RXD0 30
+NC 34
+NC 33
+IO18 26
+NC 29
+NC 28
+IO19 27
+IO7 21 
+IO8 22 
+IO0 12 
+IO1 13 
+GND52
+IO6 20 
+NC 35
+NC 24 
+EPAD 49 
+GND2
+GND53
+GND 51
+GND 50
+EN8
+GND 36 GND 37 GND 38 GND 39 GND 40 GND 41 GND 42 GND 43 GND 44 GND 45 GND 46 GND 47 GND 48 
+GND 14 
+GND11 NC 25
+C6
+0.1uF
+ANT1
+PCB_ANT
+1
+2
+C8
+TBD
+U1
+40MHz(±10ppm)
+XIN 1
+GND 2XOUT 3
+GND 4
+D1
+ESD
+C5
+10uF
+C11
+1uF
+R1 0
+C7
+0.1uF
+C4
+10nF
+C2
+TBD
+L1 2.0nH
+C3
+1uF
+C10
+0.1uF
+R2 499
+L2 TBD
+C12
+0.1uF
+C9
+TBD
+C1
+TBD
+R8 10K(NC)
+GPIO19
+CHIP_EN
+GPIO4
+GPIO5
+GPIO6
+GPIO7
+GPIO8
+U0RXD
+GPIO18
+LNA_IN
+GPIO9
+GPIO10
+GPIO0
+GPIO1
+SPICS0
+GPIO2
+GPIO3
+RF_ANT
+U0TXD
+GPIO2
+GPIO3
+CHIP_EN
+GPIO1 
+GPIO0 
+GPIO10 
+GPIO6 
+GPIO7 
+GPIO8 
+GPIO9 
+GPIO18
+GPIO19
+U0RXD
+U0TXD
+GPIO4 
+GPIO5 
+๭ 8-1. ESP32-C3-MINI-1 ჰ৘๭
+࠯32
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 33
+8 ଆቆჰ৘๭
+5
+5
+4
+4
+3
+3
+2
+2
+1
+1
+D D
+C C
+B B
+A A
+The values of C8, L2 and C9
+vary with the actual PCB board.
+The values of C1 and C2 vary with
+the selection of the crystal.
+The value of R1 varies with the
+actual PCB board. R1 could be a
+resistor or inductor, the initial
+value is suggested to be 24 nH.
+ESP32-C3-MINI-1U(pin-out)
+NC: No component.
+50 ohm Impedance Control
+GNDVDD33
+GND
+GND
+GNDGND GND
+GND GND
+GND
+VDD33
+GND GND
+VDD33
+VDD33
+GND
+GND
+GND GND
+VDD_SPI
+VDD33
+GND
+GND
+GND
+GND
+VDD33
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1U> V1.2
+ESP32-C3-MINI-1U
+A4
+2 2Thursday, January 23, 2025
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1U> V1.2
+ESP32-C3-MINI-1U
+A4
+2 2Thursday, January 23, 2025
+Title
+Size Page Name Rev
+Date: Sheet
+of
+Confidential and Proprietary<02_ESP32-C3-MINI-1U> V1.2
+ESP32-C3-MINI-1U
+A4
+2 2Thursday, January 23, 2025
+C1
+TBD
+D1
+ESD
+C9
+TBD
+R8 10K(NC)
+ANT1
+CONN
+1
+4
+2
+3 ESP32-C3-MINI-1U
+GND1
+3V33
+IO9 23 
+NC4
+IO25
+IO36
+NC7
+NC9
+NC10
+NC 15 
+IO10 16 
+NC 17 
+IO4 18 
+IO5 19 
+NC 32
+TXD0 31
+RXD0 30
+NC 34
+NC 33
+IO18 26
+NC 29
+NC 28
+IO19 27
+IO7 21 
+IO8 22 
+IO0 12 
+IO1 13 
+GND52
+IO6 20 
+NC 35
+NC 24 
+EPAD 49 
+GND2
+GND53
+GND 51
+GND 50
+EN8
+GND 36 GND 37 GND 38 GND 39 GND 40 GND 41 GND 42 GND 43 GND 44 GND 45 GND 46 GND 47 GND 48 
+GND 14 
+GND11 NC 25
+R1 0
+C12
+0.1uF
+C3
+1uF
+C10
+0.1uF
+R2 499
+C8
+TBD
+C2
+TBD
+L1 2.0nH
+C6
+0.1uF
+C5
+10uF
+L2 TBD
+C7
+0.1uF
+C4
+10nF
+U2 ESP32-C3FH4
+LNA_IN1
+VDD3P32
+VDD3P33
+XTAL_32K_P4
+XTAL_32K_N5
+GPIO26
+CHIP_EN7
+MTMS 9
+MTDI 10 
+VDD3P3_RTC 11 
+MTCK 12 
+MTDO 13 
+GPIO8 14 
+GPIO9 15 
+GPIO10 16 
+VDD3P3_CPU 17VDD_SPI 18SPIHD 19SPIWP 20SPICS0 21SPICLK 22SPID 23SPIQ 24
+U0RXD 27 U0TXD 28 XTAL_N 29 XTAL_P 30 
+GND 33 
+GPIO38
+VDDA 32 
+VDDA 31 
+GPIO19 26 
+GPIO18 25 
+C11
+1uF
+U1
+40MHz(±10ppm)
+XIN 1
+GND 2XOUT 3
+GND 4
+GPIO19
+CHIP_EN
+GPIO4
+GPIO5
+GPIO6
+GPIO7
+GPIO8
+U0RXD
+GPIO18
+LNA_IN
+GPIO9
+GPIO10
+GPIO0
+GPIO1
+SPICS0
+GPIO2
+GPIO3
+RF_ANT
+U0TXD
+GPIO2
+GPIO3
+CHIP_EN
+GPIO1 
+GPIO0 
+GPIO10 
+GPIO6 
+GPIO7 
+GPIO8 
+GPIO9 
+GPIO18
+GPIO19
+U0RXD
+U0TXD
+GPIO4 
+GPIO5 
+๭ 8-2. ESP32-C3-MINI-1U ჰ৘๭
+࠯33
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 34
+9ჰ৘๭
+9ჰ৘๭
+໊ο୦aJT AG१aUARTਫ਼๭b
+5
+5
+4
+4
+3
+3
+2
+2
+1
+1
+D D
+C C
+B B
+A A
+NC: No component. 
+ESP32-C3-MINI-1 
+ESP32-C3-MINI-1U 
+IO4 
+IO5 
+IO6 
+IO7 
+IO8 
+IO2
+IO3
+EN
+IO9 
+IO0 
+IO1 
+IO10 
+RXD0
+TXD0
+EN
+TMS
+TDI
+TCK
+TDO
+IO19
+IO18 USB_D-
+USB_D+
+GND
+VDD33
+GND
+GND
+GND GND
+GND
+VDD33GND
+GND
+GNDGND
+VDD33
+GND
+C3
+TBD
+R7 NC 
+C6
+TBD
+C4 0.1uF
+R2 0
+R9 10K
+JP2
+Boot Option
+11
+22
+U1
+GND1
+3V33
+IO9 23 
+NC4
+IO25
+IO36
+NC7
+NC9
+NC10
+NC 15 
+IO10 16 
+NC 17 
+IO4 18 
+IO5 19 
+NC 32
+TXD0 31
+RXD0 30
+NC 34
+NC 33
+IO18 26
+NC 29
+NC 28
+IO19 27
+IO7 21 
+IO8 22 
+IO0 12 
+IO1 13 
+GND52
+IO6 20 
+NC 35
+NC 24 
+EPAD 49 
+GND2
+GND53
+GND 51
+GND 50
+EN8
+GND 36 GND 37 GND 38 GND 39 GND 40 GND 41 GND 42 GND 43 GND 44 GND 45 GND 46 GND 47 GND 48 
+GND 14 
+GND11 NC 25
+R6 0
+JP3
+USB
+11
+22
+C1
+10uF
+C8 12pF(NC)
+C2
+0.1uF
+C7 12pF(NC)
+SW1
+JP4
+UART
+11
+22
+33
+44
+X1
+32.768kHz(NC)
+1 2
+JP1
+JTAG
+1 1
+2 2
+3 3
+4 4
+R6 0(NC)
+R8 10KR5 0(NC)
+R1
+TBD
+R4 0
+C5
+TBD
+0 1 2 3 4 5 6 7 8 9 100
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Reset
+๭ 9-1.ჰ৘๭
+• EPAD֥GNDࡼEPADָ֞ࢤݯ
+b
+• ູಒЌ ESP32-C3ᆞӈđENࡆRCਫ਼bRCၰູ R = 10 k Ωđ
+C = 1 µFᆜbESP32-C3֥
+ࢫ4.3໊b
+• ౨ᇿၩ UART0ൻԛರᆽđ൐Ⴈ A T৚஥ᇂਔ UART֥GPIOၰ൐Ⴈ
+ଏಪ஥ᇂđ౨ҕॉ uESP32-C3 ESP-A Tᆷଲv >ࢫࢤb
+࠯34
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 35
+10۬ܿ
+10۬ܿ
+10. 1 ଆቆԄժ
+5.4
+16.6±0.150.813.2±0.15
+Top viewSide viewBottom view2.4±0.15
+11.20.61.451.458.49.21011.212.66.87.68.4910.60.620.6211.959.950.65.49.211Ø0.5Unit: mm
+๭ 10-1. ESP32-C3-MINI-1 Ԅժ
+5.4
+12.5±0.150.813.2±0.15Top viewSide viewBottom view0.61.451.458.49.21011.212.66.87.68.4910.612.250.65.49.211Unit: mm
+1.551.78.70.470.489.1811.552.4±0.150.85
+5.6
+๭ 10-2. ESP32-C3-MINI-1U Ԅժ
+ඪૼğ
+ྐ༏đ౨ҕᄇ uESP32-C3 ଆቆЇልྐ༏vb
+࠯35
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 36
+10۬ܿ
+10.2ఖԄժ
+ESP32-C3-MINI-1U ҐႨ๭ 10-3ఖԄժ๭ಸğ
+•᜜ (Hirose)֥W .FLఖ
+• I-PEX֥MHF IIIఖ
+•୶ (Amphenol)֥AMMCఖ
+SECTION: A-ASCALE: 1:1
+A1.7
+1.7
+0.85
+2.05±0.101.40
+A
+0.10
+0.57
+INSULATION RESISTANCE: 500MOHM Min.DIELECTRIC WITHSTANDING VOLTAGE: 200V AC FOR 1MINUTE;
+CONTACT MATERIAL: COPPER ALLOY, GOLD PLATED ALL OVER;PERFORMANCE:CONTACT RESISTANCE: 20mOHM Max.
+HOUSING MATERIAL: THERMOPLASTIC, WHITE, UL 94V-0;SHELL MATERIAL: COPPER ALLOY, GOLD PLATED ALL OVER;
+CONTACT
+GROUND CONTACT
+2.00±0.10
+Unit: mmTolerance: +/-0.1 mm
+HOUSINGCONTACT
+SHELL
+๭ 10-3.ఖԄժ๭
+ESP32-C3-MINI-1Uູ
+TFPD08H10060011b
+ຓ҆฿ཌb
+฿ཌğ
+࠯36
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 37
+10۬ܿ
+•2.4 GHz؍
+•50 Ω ቅॆ
+•ᄹၭ 2.33 dbi
+•१௄஥đҕॉ๭ 10-3ఖԄժ๭
+ඪૼğ
+ྛЇওEMCຓҩ൫đ
+b
+࠯37
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 38
+11 PCBၰ
+11 PCBၰ
+11. 1 PCBል๭ྙ
+ଢ଼ҕॉğ
+•ࡩPCBል๭đѓႵ PCB๭ 11-1 ESP32-C3-MINI-1ࡩPCBል๭ྙބ
+๭ 11-2 ESP32-C3-MINI-1UࡩPCBል๭ྙb
+•ࡩPCBđႨႿҩਈ๭ 11-1ބ11-2Ԅժbଢ଼ॖႨ Autodesk Viewer Ұु
+ESP32-C3-MINI-1ބESP32-C3-MINI-1Ub
+• ESP32-C3-MINI-1ބESP32-C3-MINI-1U֥3D֥3D ଆ྘ູ.STEPᛍফఖ
+ࡆ߶txtሗb
+1.6Antenna AreaPin 111.20.69.95.411.91.613.216.61.455.41.450.611.89.8Unit: mmPad48 x 0.448 x 0.84 x 0.74 x 0.70.8Via for thermal pad
+๭ 11-1. ESP32-C3-MINI-1ࡩPCBል๭ྙ
+࠯38
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 39
+11 PCBၰ
+1.6Pin 112.50.69.95.411.91.613.21.455.41.450.611.89.848 x 0.448 x 0.84 x 0.74 x 0.70.85.6Unit: mmPadVia for thermal pad
+๭ 11-2. ESP32-C3-MINI-1UࡩPCBል๭ྙ
+11.2 PCB٢
+ྛ on-boardଆቆ PCB ฿ཌ
+႕ཙb
+Ⴟ PCBྐ༏đ౨ҕॉ uESP32-C3ᆷଲv >ࢫ࠹
+ׄb
+࠯39
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 40
+12 Ӂ௖ԩ৘
+12 Ӂ௖ԩ৘
+12. 1ࡱ
+Ӗտ (MBB)Ӂ௖ႋԥթᄝ < 40 °C/90%RHᇏb
+ࠩ֩؇ۋMSL ູ 3b
+đ ᄝ25±5 °Ca60%RH ༯đ сྶᄝ168Ցഈཌb
+12.2׈٢׈࣡ESD)
+•ଆൔ (HBM)ğ±2000 V
+•ଆൔ (CDM)ğ±500 V
+12.3౷ཌ
+b
+50 1000
+150
+200
+250
+200
+100
+50
+150 250
+   
+217
+25
+180
+230
+升温区
+25 – 150 °C
+60 – 90 s
+1 – 3 °C/s
+预热区
+150 – 200 °C
+60 – 120 s
+焊接区
+＞ 217 °C
+60 – 90 s
+冷却区
+＜ 180 °C
+–5 ~ –1 °C/s
+温度 (°C)
+时间 (s)
+峰值温度：235 – 250 °C
+峰值时间：30 – 70 s
+焊接时间：＞ 30 s
+焊料：锡银铜合⾦⽆铅焊料 (SAC/three.case/zero.case/five.case)
+๭ 12-1.౷ཌ
+࠯40
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 41
+12 Ӂ௖ԩ৘
+12.4׮
+ॖିაଆቆ
+ᅰമᇀാਲđ߄b
+࠯41
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 42
+৘
+৘
+඀ϱЧ ሑ෿ ඣႆၬ
+v0.1 ~ v0.5č҂
+Їও v0.5Ď۠Confidentialđ
+đඖ҂ਸ਼ྛ๙ᆩb
+v0.5 ~ v1.0č҂
+Їও v1.0Ď
+Ԛ҄
+҃ Preliminary
+ႋӁ௖ԩႿဒᆣ
+੣ᄝ
+৥ൎᇏb
+v1.0ϱЧ ᆞൔ
+҃ —
+ႋӁ௖ၘਈӁđӁ
+ݖ
+๙ᆩ (PCN)ྛ๙ᆩb
+಩ၩϱЧ —࠹NRND)1Ⴈ
+b
+಩ၩϱЧ — ๔Ӂ (EOL)2ႋӁ௖ၘ๔Ӂb
+1ඣႆb
+2ඣႆb
+࠯42
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 43
+ሧჷ
+ሧჷ
+֖
+•uESP32-C3඀v-܂ESP32-C3b
+• uESP32-C3ඌҕॉ൭Ҩv –܂ESP32-C3བྷ༥൐Ⴈඪૼb
+• uESP32-C3ᆷଲv –Ⴟ ESP32-C3b
+• uESP32-C3 ༢ਙྉோा༂іv – ૭ඍ ESP32-C3ၘᆩհ༂b
+• ᆣ඀
+https:/ / espressif .com/zh-hans/support/ documents/ certificates
+• ESP32-C3 Ӂ௖/๙ᆩ (PCN)
+https:/ / espressif .com/zh-hans/support/ documents/pcns?keys=ESP32-C3
+• ESP32-C3ۡ܄– νಆabugྐ༏
+https:/ / espressif .com/zh-hans/support/ documents/advisories?keys=ESP32-C3
+•ᄇ๙ᆩ
+https:/ / espressif .com/zh-hans/support/ download/ documents
+ᆀഠ౵
+• uESP32-C3 ESP-IDF щӱᆷଲv – ESP-IDFᇏྏb
+• ESP-IDFࠣGitHubࡏ
+https:/ / github.com/ espressif
+• ESP32 ંฆ –ӱഽ (E2E)b
+https:/ / esp32.com/
+• ESP-FAQ –b
+https:/ / espressif .com/projects/ esp-faq/zh_CN/latest/index.html
+• The ESP Journal –ቔෛгb
+https:/ /blog.espressif .com/
+• SDKဆൕaAppऎaA T༯ᄛሧჷ
+https:/ / espressif .com/zh-hans/support/ download/sdks-demos
+Ӂ௖
+• ESP32-C3 ༢ਙྉோ – ESP32-C3 ಆ༢ਙྉோb
+https:/ / espressif .com/zh-hans/products/socs?id=ESP32-C3
+• ESP32-C3 ༢ਙଆቆ – ESP32-C3 ಆ༢ਙଆቆb
+https:/ / espressif .com/zh-hans/products/modules?id=ESP32-C3
+• ESP32-C3ϰ – ESP32-C3ϰb
+https:/ / espressif .com/zh-hans/products/ devkits?id=ESP32-C3
+• ESP Product SelectorऎĎ–Ӂ௖b
+https:/ /products.espressif .com/#/product-selector?language=zh
+৳༢໡ૌ
+•ਫ਼ჰ৘๭ & PCBၰ
+https:/ / espressif .com/zh-hans/ contact-us/sales-questions
+࠯43
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 44
+৥ൎ
+৥ൎ
+ರ௹ ϱЧ҃ඪૼ
+2026-05-06 v2.2
+• ྍᄹ ESP32-C3-MINI-1-H8X
+• і 1-1 ESP32-C3-MINI-1б1і 1-2 ESP32-C3-MINI-
+1Uбp
+2025-07 -14 v2.1
+•ࢫ4.3໊
+•ࢫ6.5۬ܿ
+•ࢫ9ჰ৘๭ğྍᄹ A T๙ྐ൐Ⴈ UART0ඪૼ
+•ࢫ10.2ఖԄժğྍᄹຓ҆฿ཌಪᆣྐ༏
+• ྍᄹ৘
+2025-04-14 v2.0ऌႿ ESP32-C3 ྉோϱЧ v1.1ۡ܄ྍі ESP32-C3-
+MINI-1Uб ඪૼ 6֥SRAM նཬ
+2025-01-24 v1.9 ESP32-C3-MINI-1-N4ބESP32-C3-MINI-1U-N4ଽᇂྉோႮ ESP32-
+C3FN4ྍູ ESP32-C3FH4
+2024-11-20 v1.8
+• і 1-1 ESP32-C3-MINI-1б1ބ1-2 ESP32-C3-MINI-1U
+бğ
+– ྍᄹ ESP32-C3-MINI-1-N4XaESP32-C3-MINI-1U-N4XބESP32-C3-
+MINI-1U-H4X э྘
+–ࡼESP32-C3-MINI-1U-N4ބESP32-C3-MINI-1U-H4 э྘ѓᇿູ҂
+࠹NRND)
+• ྍᄹі 6-5 Activeหྟ
+2024-09-19 v1.7
+• і 1-2 ESP32-C3-MINI-1Uбྍ flash щӱ҈Ԣ
+čᇿ൤ 4ቋնൈᇒ௔ੱčᇿ൤ 7Ď
+•ğ
+–oStrappingpѩᇗଁ଀ູ஥ᇂཛ
+–ࢫ5 ຓഡ
+–ྍіoWi-Fi ഝ௔ѓሙpѩᇗଁ଀ູoWi-Fip
+–ࢫ11.2 PCB٢
+–๭ 12-1౷ཌ
+2024-07 -29 v1.6 ᄝі ESP32-C3-MINI-1UбࡆႿ ESP32-C3
+ྉோϱЧ v1.1ۡ܄
+2024-06-05 v1.5
+• ྍᄹ ESP32-C3-MINI-1-H4X э྘
+•ࡼESP32-C3-MINI-1-N4aESP32-C3-MINI-1-H4ބESP32-C3-MINI-1-H4-
+AZ࠹NRND)
+༯်
+࠯44
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 45
+৥ൎ
+ഈ်
+ರ௹ ϱЧ҃ඪૼ
+2024-05-15 v1.4
+•ྍі ESP32-C3-MINI-1б1і ESP32-C3-MINI-1U
+бᇿ൤ 5
+•ࢫ4஥ᇂཛൔ
+•і۬ܿྍູ 20
+dBm
+•ࢫ9ჰ৘๭ඪૼ
+•ࢫ11.1PCBል๭ྙ।ѓᇿ
+2022-11-08 v1.3
+• ྍᄹ ESP32-C3-MINI-1-H4-AZ э྘
+•іྐ༏ྍູі ESP32-C3-MINI-1б 1і
+ESP32-C3-MINI-1Uб
+•ࢫ6.4หྟඔऌ
+•ྍі۬ܿຶp
+•ࢫ11.1PCBል๭ྙ ྍᄹ૭ඍ
+2022-06-30 v1.2ࢫ12.4׮
+2022-05-16 v1.1
+• ᄝіྐ༏ᇿ൤
+•ࢫ8 ଆቆჰ৘๭
+2021-06-21 v1.0
+•ଆቆ૭ඍ
+•ࢫ”֖”
+•ࢫ1.1 หྟܒࢲ
+•ᄝіྐ༏ս઒
+•ࢫ10.2ఖԄժ ྍᄹ૭ඍ
+•଀ູሧჷ
+2021-04-16 v0.7ࡆESP32-C3-MINI-1Uྐ༏
+2021-02-22 v0.6ࢫ8 ଆቆჰ৘๭ࡼC7ྍູ 0.1 µF
+2021-02-05 v0.5҃
+࠯45
+࡮
+ESP32-C3-MINI-1 & MINI-1U඀ v2.2
+PAGE 46
+ۡ܄
+֥URLđඖ҂ਸ਼ྛ๙ᆩb
+Ќᆣb
+ဢ
+Ќᆣb
+֖
+൞πൕྸॖb
+Wi-Fi݂Wi-Fi ৳ૐ෮Ⴕbড࿩ѓᆽ൞ Bluetooth SIGᇿҨഅѓb
+ҍӁđหՎലૼb
+݂© 2026ඳbЌ਽෮Ⴕಃ০b
+www.espressif .com

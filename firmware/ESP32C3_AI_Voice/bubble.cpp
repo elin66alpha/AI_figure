@@ -1,3 +1,4 @@
+#include "platform.h"
 #include "bubble.h"
 #include "config.h"
 #include "cue.h"
@@ -76,7 +77,7 @@ static void scheduleGap() {
 
 // ---------------------------------------------------------------- 对外
 void bubbleStart() {
-  s_rng ^= millis() | 1u;             // 每次听起来不一样
+  s_rng ^= appMillis() | 1u;             // 每次听起来不一样
   s_active    = true;
   s_len       = 0;
   s_burstLeft = BUBBLE_PER_BURST_MIN + rndSpan(BUBBLE_PER_BURST_SPAN);
