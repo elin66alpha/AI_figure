@@ -1,7 +1,16 @@
 #include "net_wifi.h"
 #include "config.h"
 #include "secrets.h"
+#include <Preferences.h>
 #include <WiFi.h>
+
+// 凭据优先读 NVS(BLE 配网写进去的),读不到才用 secrets.h 里的 —— 那只是开发板的兜底。
+// 量产固件把 WIFI_SSID 留空(或删掉),没配过网的设备就会自己进配网模式。
+#ifndef WIFI_SSID
+#define WIFI_SSID ""
+#define WIFI_PASS ""
+#endif
+#define NVS_NS "net"
 
 enum class WState : uint8_t { DOWN, CONNECTING, UP };
 
@@ -10,10 +19,24 @@ static uint32_t s_backoff  = WIFI_RETRY_MIN_MS;
 static uint32_t s_retryAt  = 0;
 static uint32_t s_attemptStart = 0;
 static uint32_t s_disconnects = 0;
+static char     s_ssid[33], s_pass[65];      // 802.11 上限:SSID 32 字节,密码 64 字符
+
+// 返回凭据来源,只给日志用
+static const char *loadCreds() {
+  Preferences p;
+  p.begin(NVS_NS, false);          // 读写模式打开:命名空间不存在时,只读模式会报一行 NOT_FOUND
+  p.getString("ssid", s_ssid, sizeof s_ssid);
+  p.getString("pass", s_pass, sizeof s_pass);
+  p.end();
+  if (s_ssid[0]) return "NVS";
+  strlcpy(s_ssid, WIFI_SSID, sizeof s_ssid);
+  strlcpy(s_pass, WIFI_PASS, sizeof s_pass);
+  return "secrets.h";
+}
 
 static void startAttempt() {
-  Serial.printf("[WIFI] 连接 \"%s\" ...\n", WIFI_SSID);
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  Serial.printf("[WIFI] 连接 \"%s\" ...\n", s_ssid);
+  WiFi.begin(s_ssid, s_pass);
   s_attemptStart = millis();
   s_state = WState::CONNECTING;
 }
@@ -26,7 +49,21 @@ static void scheduleRetry() {
   s_state = WState::DOWN;
 }
 
+bool netWifiHasCreds() {
+  loadCreds();
+  return s_ssid[0] != 0;
+}
+
+void netWifiSaveCreds(const char *ssid, const char *pass) {
+  Preferences p;
+  p.begin(NVS_NS, false);
+  p.putString("ssid", ssid);
+  p.putString("pass", pass);
+  p.end();
+}
+
 void netWifiBegin() {
+  Serial.printf("[WIFI] 凭据来自 %s\n", loadCreds());
   WiFi.persistent(false);          // 别把凭据反复写进 NVS,省 flash 寿命
   WiFi.mode(WIFI_STA);
   WiFi.setAutoReconnect(false);    // 重连由本文件负责,见头文件说明

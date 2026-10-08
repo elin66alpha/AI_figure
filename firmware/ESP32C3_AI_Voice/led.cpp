@@ -27,6 +27,7 @@ void ledUpdate() {
     case LedMode::HEARTBEAT:  on = (t % 3000) < 60;          break;
     case LedMode::BLINK_SLOW: on = (t % 1000) < 500;         break;
     case LedMode::BLINK_FAST: on = (t %  240) < 120;         break;
+    case LedMode::DOUBLE:     { uint32_t k = t % 1500; on = k < 80 || (k >= 240 && k < 320); } break;
   }
 
   digitalWrite(PIN_STATUS_LED, on ? LED_ON_LEVEL : !LED_ON_LEVEL);

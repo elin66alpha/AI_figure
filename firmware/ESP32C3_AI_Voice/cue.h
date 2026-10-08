@@ -30,3 +30,4 @@ void cueBoot();       // 上电:升调两声
 void cueLinkUp();     // 收到 ready:单声高音
 void cueLinkDown();   // 掉线:降调两声
 void cueError();      // 致命错误 / 即将软复位:低音三连
+void cueProv();       // 进入 BLE 配网模式:上行三声

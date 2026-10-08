@@ -8,6 +8,10 @@
 // 不用 SDK 自带的自动重连(已显式关掉),否则两套重连逻辑会互相打架,
 // 表现是退避时间对不上、日志里看到莫名其妙的状态跳变。
 
+// 凭据存 NVS 命名空间 "net"(BLE 配网写入),为空时回落到 secrets.h 的 WIFI_SSID/WIFI_PASS。
+bool      netWifiHasCreds();     // NVS 或 secrets.h 里有没有 SSID
+void      netWifiSaveCreds(const char *ssid, const char *pass);   // 只由配网调用
+
 void      netWifiBegin();
 void      netWifiUpdate();       // 每次 loop 都调一次
 bool      netWifiIsUp();
