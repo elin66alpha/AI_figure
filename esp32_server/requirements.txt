@@ -1,4 +1,0 @@
-# websockets:设备 WS 服务端 + 百炼/火山的 ASR/TTS 客户端
-websockets>=14.0
-# aiohttp:LLM(DeepSeek / 百炼 Qwen)流式 HTTP,连接池常驻(SERVER.md §3.4)
-aiohttp>=3.9

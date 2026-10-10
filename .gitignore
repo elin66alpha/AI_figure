@@ -30,3 +30,10 @@ psk.secrets
 
 # 部署用 SSH 私钥
 assets/ssh/
+
+# mechanic: only model files (STEP / STL / SolidWorks) are versioned
+mechanic/scripts/
+mechanic/renders/
+mechanic/*.md
+# SolidWorks lock files while a document is open
+~$*

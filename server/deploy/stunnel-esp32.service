@@ -1,0 +1,40 @@
+# systemd unit —— stunnel,给回声服务器做 TLS-PSK 终结(443 -> 127.0.0.1:8765)
+#
+#     sudo cp stunnel-esp32.service /etc/systemd/system/
+#     sudo systemctl daemon-reload && sudo systemctl enable --now stunnel-esp32
+#
+# 看日志:  journalctl -u stunnel-esp32 -f
+#
+# 为什么不用 Debian 打包的 stunnel4 服务:那个的 Type 和 /etc/default/stunnel4
+# 里的 ENABLED 开关在各版本间不一致,和配置里的 foreground=yes 容易打架。
+# 自带一个 Type=simple 的 unit,行为是确定的。
+#
+# ⚠️ 如果你**同时**启用了打包的 stunnel4 服务,它会把 /etc/stunnel/*.conf 全都读一遍,
+#    于是两个进程抢 443。Debian 默认 ENABLED=0 所以一般不会撞上;撞上了就
+#    `systemctl disable --now stunnel4`。
+
+[Unit]
+Description=stunnel — ESP32 语音链路的 TLS-PSK 终结
+Documentation=https://github.com/elin66alpha/AI_figure
+After=network-online.target esp32-server.service
+Wants=network-online.target
+# 后端没起来时 stunnel 起着也没用,但也不必强绑 —— 后端重启时 stunnel 不用跟着重启。
+
+[Service]
+Type=simple
+# Debian/Ubuntu 的 stunnel4 包装的是 /usr/bin/stunnel4,/usr/bin/stunnel 是它的符号链接。
+# 其他发行版通常只有 /usr/bin/stunnel —— 那就把下面这行改掉。
+ExecStart=/usr/bin/stunnel4 /etc/stunnel/esp32.conf
+ExecReload=/bin/kill -HUP $MAINPID
+
+# 以 root 启动才能绑 443;绑完 stunnel 按配置里的 setuid 自己降权到 stunnel4。
+User=root
+
+Restart=always
+RestartSec=2
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
