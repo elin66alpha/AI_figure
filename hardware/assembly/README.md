@@ -18,7 +18,7 @@ pwsh hardware/eda-agent-pack/assembly-guide/run_all.ps1 -Config hardware/assembl
 
 ## 采购清单 vs 设计 BOM
 
-[`purchase.csv`](purchase.csv) 由立创下单截图（本地 `hardware/BOM/c3bfd9e86d0bf8306d8e2dab7f3f90c9.png`，含价格，未上传）转录，27 行与设计 BOM 27 行一一对应，单套用量全部相同，购买数量都够。4 处换料，均按立创官方参数核对等效：
+[`purchase.csv`](purchase.csv) 由 [`../BOM/c3bfd9e86d0bf8306d8e2dab7f3f90c9.png`](../BOM/c3bfd9e86d0bf8306d8e2dab7f3f90c9.png)（立创下单截图）转录，27 行与设计 BOM 27 行一一对应，单套用量全部相同，购买数量都够。4 处换料，均按立创官方参数核对等效：
 
 | 位号 | 设计 | 实购 | 核对结果 |
 |---|---|---|---|
