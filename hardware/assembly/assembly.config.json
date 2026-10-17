@@ -1,0 +1,64 @@
+{
+  "project": "AI_figure 主板",
+  "easyeda": {"project": "8c5d0d86032348a0a6c85102fe97607e", "pcbDoc": "f39f5125c569691f"},
+  "inputs": {
+    "epro2": "../ProPrj_AI_figure_2026-10-08.epro2",
+    "step": "../../mechanic/export/PCB.step",
+    "board": "data/board.json",
+    "extract": "data/extract.json",
+    "mesh3d": "data/mesh3d.json",
+    "bom": "../BOM/BOM_30x50_2026-10-07.csv",
+    "purchase": "purchase.csv",
+    "lcsc": "data/lcsc_parts.json"
+  },
+  "output": {
+    "data": "data/guide_data.json",
+    "html": "AI_figure_装配指南.html"
+  },
+
+  "sideOrder": ["top", "bottom"],
+  "views": {
+    "top": {"name": "正面", "hint": "模组面朝上，天线在上"},
+    "bottom": {"name": "背面", "hint": "左右翻过来，三个大方焊盘在左上"}
+  },
+
+  "orderRank": [
+    {"match": "WIFIM", "rank": 0},
+    {"match": "^R0402|^C0402|DFN0603", "rank": 10},
+    {"match": "LED0603", "rank": 20},
+    {"match": "C0805|C1206|F1206|SOD-123", "rank": 30},
+    {"match": "SOT-23|SOT-89", "rank": 40},
+    {"match": "ESOP", "rank": 50},
+    {"match": "IND-SMD", "rank": 60},
+    {"match": "MIC-SMD", "rank": 90},
+    {"match": "USB-C", "rank": 999}
+  ],
+
+  "notFitted": {
+    "J2": {"action": "wire", "name": "电池线", "note": "+ 接红线，− 接黑线"},
+    "J3": {"action": "wire", "name": "喇叭线", "note": "P、N 各接一根"},
+    "J4": {"action": "wire", "name": "按键线", "note": "两根线不分方向"},
+    "TP1": {"action": "none", "name": "测试点 EN", "note": "不焊东西"},
+    "TP2": {"action": "none", "name": "测试点 GND", "note": "不焊东西"},
+    "TP3": {"action": "none", "name": "测试点 BOOT", "note": "不焊东西"}
+  },
+
+  "partNotes": {
+    "U1": {"name": "Wi-Fi/蓝牙模组", "orient": "天线一端朝板子上边"},
+    "U2": {"name": "锂电池充电芯片", "orient": "芯片圆点 = 1 脚"},
+    "U3": {"name": "3.3V 稳压芯片", "orient": "芯片圆点 = 1 脚"},
+    "U4": {"name": "PDM 数字麦克风", "orient": "声孔朝上；底面切角的焊盘 = 1 脚"},
+    "U5": {"name": "D 类功放芯片", "orient": "芯片圆点 = 1 脚"},
+    "U7": {"name": "3.3V 稳压芯片", "orient": "芯片圆点 = 1 脚"},
+    "D1": {"name": "ESD 保护管（无方向）"},
+    "D2": {"name": "ESD 保护管（无方向）"},
+    "D3": {"name": "红色 LED", "orient": "丝印切角那端 = K（负极）"},
+    "D4": {"name": "TVS 保护管", "orient": "管身色带 = K（负极）"},
+    "F1": {"name": "自恢复保险丝 1A"},
+    "L1": {"name": "功率电感"},
+    "J1": {"name": "USB-C 母座", "polar": false},
+    "J2": {"padLabels": {"1": "+", "2": "−"}},
+    "J3": {"padLabels": {"1": "P", "2": "N"}},
+    "J4": {"polar": false}
+  }
+}

@@ -37,3 +37,6 @@ mechanic/renders/
 mechanic/*.md
 # SolidWorks lock files while a document is open
 ~$*
+
+# EDA 自动化工具包：只留在本地，不上传 GitHub
+hardware/eda-agent-pack/

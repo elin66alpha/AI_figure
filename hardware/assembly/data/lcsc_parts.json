@@ -1,0 +1,537 @@
+{
+ "C19103847": {
+  "productModel": "HGC0805R5106K250NSLJ",
+  "brand": "Chinocera",
+  "package": "0805",
+  "category": "Ceramic Capacitors",
+  "intro": "10uF ±10% 25V Ceramic Capacitor X5R 0805",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/3025399970486160f9625970e5fd5973.pdf?productCode=C19103847",
+  "params": {
+   "Capacitance": "10uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±10%",
+   "Voltage Rating": "25V"
+  }
+ },
+ "C52923": {
+  "productModel": "CL05A105KA5NQNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "category": "Ceramic Capacitors",
+  "intro": "1uF ±10% 25V Ceramic Capacitor X5R 0402",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C52923",
+  "params": {
+   "Capacitance": "1uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±10%",
+   "Voltage Rating": "25V"
+  }
+ },
+ "C1525": {
+  "productModel": "CL05B104KO5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "category": "Ceramic Capacitors",
+  "intro": "100nF ±10% 16V Ceramic Capacitor X7R 0402",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C1525",
+  "params": {
+   "Capacitance": "100nF",
+   "Temperature Coefficient": "X7R",
+   "Tolerance": "±10%",
+   "Voltage Rating": "16V"
+  }
+ },
+ "C307418": {
+  "productModel": "CL05A225KA5NUNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "category": "Ceramic Capacitors",
+  "intro": "2.2uF ±10% 25V Ceramic Capacitor X5R 0402",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/d53cb66ec345874bab62dc9fa7d4322e.pdf?productCode=C307418",
+  "params": {
+   "Capacitance": "2.2uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±10%",
+   "Voltage Rating": "25V"
+  }
+ },
+ "C15008": {
+  "productModel": "CL31A107MQHNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "category": "Ceramic Capacitors",
+  "intro": "100uF ±20% 6.3V Ceramic Capacitor X5R 1206",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C15008",
+  "params": {
+   "Capacitance": "100uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±20%",
+   "Voltage Rating": "6.3V"
+  }
+ },
+ "C503482": {
+  "productModel": "0805X226M100NT",
+  "brand": "FH",
+  "package": "0805",
+  "category": "Ceramic Capacitors",
+  "intro": "22uF ±20% 10V Ceramic Capacitor X5R 0805",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/09fe2daf22580a99fa7fea93ccb20fb7.pdf?productCode=C503482",
+  "params": {
+   "Capacitance": "22uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±20%",
+   "Voltage Rating": "10V"
+  }
+ },
+ "C42400191": {
+  "productModel": "SEUCS2X3V1B",
+  "brand": "ElecSuper",
+  "package": "DFN0603-2L",
+  "category": "TVS Diodes",
+  "intro": "5.5VC Clamp 6.5A Ipp ESD DIODE DFN0603-2L",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/6d1e1664702518f57be0f3b05a92a780.pdf?productCode=C42400191",
+  "params": {
+   "Clamping Voltage": "5.5V",
+   "Operating Temperature": "-50℃~+125℃",
+   "Peak Pulse Current (Ipp)": "6.5A",
+   "Peak Pulse Power Dissipation (Ppp)": "50W",
+   "Number of Channels": "1",
+   "Voltage - Breakdown": "8.1V",
+   "type": "ESD",
+   "Polarity": "Bidirectional",
+   "Reverse Leakage Current (Ir)": "100nA",
+   "Reverse Stand-Off Voltage (Vrwm)": "5V"
+  }
+ },
+ "C2986060": {
+  "productModel": "19-217/R6C-AL1M2VY/6T",
+  "brand": "EVERLIGHT",
+  "package": "0603",
+  "category": "LED Indication - Discrete",
+  "intro": "Red 632nm LED Indication - Discrete 2.2V 0603",
+  "datasheet": "https://www.everlighteurope.com/custom/files/datasheets/DSE-0014128.pdf",
+  "params": {
+   "Installation method": "-",
+   "Color Temperature": "-",
+   "Peak Wavelength": "632nm",
+   "Lens Color": "Water Clear",
+   "Viewing Angle": "120°",
+   "Luminous Intensity": "28.5mcd",
+   "Forward Current": "5mA",
+   "Illumination Color": "Red",
+   "Operating Temperature": "-40℃~+85℃",
+   "Voltage - Forward(Vf)": "2.2V",
+   "Lamp Holder Type": "-",
+   "Wavelength": "617.5nm~633.5nm",
+   "Diode Configuration": "Discrete Diode"
+  }
+ },
+ "C2857263": {
+  "productModel": "SMF5.0A",
+  "brand": "JSMSEMI",
+  "package": "SOD-123FL",
+  "category": "TVS Diodes",
+  "intro": "9.2VC Clamp 21.7A Ipp TVS DIODE SOD-123FL",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/246002a601f06f3a603d5b1c4526461e.pdf?productCode=C2857263",
+  "params": {
+   "Clamping Voltage": "9.2V",
+   "Operating Temperature": "-55℃~+150℃",
+   "Peak Pulse Current (Ipp)": "21.7A",
+   "Peak Pulse Power Dissipation (Ppp)": "200W@10/1000us",
+   "Number of Channels": "1",
+   "Voltage - Breakdown": "6.4V",
+   "type": "TVS",
+   "Polarity": "Unidirectional",
+   "Reverse Leakage Current (Ir)": "200uA",
+   "Reverse Stand-Off Voltage (Vrwm)": "5V"
+  }
+ },
+ "C910830": {
+  "productModel": "BSMD1206-100-24V",
+  "brand": "BHFUSE",
+  "package": "1206",
+  "category": "PTC Resettable Fuses",
+  "intro": "Polymeric PTC Resettable Fuse 24V 1A Surface Mount 1206",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/536516336d784fb8e1d4d3f7dabf668c.pdf?productCode=C910830",
+  "params": {
+   "Operating Temperature": "-40℃~+85℃",
+   "Voltage - Max": "24V",
+   "Hold Current": "1A",
+   "Current - Max": "40A",
+   "Power Dissipation": "1W",
+   "Trip Current": "1.8A",
+   "Pitch": "-",
+   "Height": "1.4mm",
+   "Length": "3.6mm",
+   "Width": "1.9mm",
+   "Time to Trip(Max)": "300ms",
+   "Resistance @ 25℃": "50mΩ",
+   "Resistance - Post Trip (R1) (Max)": "300mΩ"
+  }
+ },
+ "C3151748": {
+  "productModel": "TYPE-C 16PLT-H6.5",
+  "brand": "SHOU HAN",
+  "package": "SMD",
+  "category": "USB, DVI, HDMI Connector Assemblies",
+  "intro": "USB-C (USB TYPE-C) Receptacle Connector 16 Position Surface Mount",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/d8fbe03f5f59781eae7f399bb52f8971.pdf?productCode=C3151748",
+  "params": {
+   "Protocol Standard": "USB 3.1",
+   "Number of Ports": "1",
+   "Supplementary Features": "-",
+   "Number of Contacts": "16P",
+   "Connector Type": "Type-C",
+   "Center Height": "-",
+   "Voltage Rating": "20V",
+   "Operating Temperature": "-30℃~+80℃",
+   "Length": "6.5mm",
+   "Mounting Type": "Surface Mount,Vertical",
+   "Gender": "Female"
+  }
+ },
+ "C167206": {
+  "productModel": "FXL0420-2R2-M",
+  "brand": "cjiang",
+  "package": "SMD,4.4x4.2mm",
+  "category": "Fixed Inductors",
+  "intro": "4.5A 2.2uH ±20% 5A 58mΩ Molded inductor SMD,4.4x4.2mm Fixed Inductors RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/40dfb6cb4606b2ccaa4e89438a42f563.pdf?productCode=C167206",
+  "params": {
+   "Current Rating": "4.5A",
+   "Inductance": "2.2uH",
+   "Tolerance": "±20%",
+   "Current - Saturation(Isat)": "5A",
+   "DC Resistance(DCR)": "58mΩ",
+   "Type": "Molded inductor"
+  }
+ },
+ "C25741": {
+  "productModel": "0402WGF1003TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "100kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C25741",
+  "params": {
+   "Resistance": "100kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C36871": {
+  "productModel": "0402WGF6802TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "68kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C36871",
+  "params": {
+   "Resistance": "68kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C25784": {
+  "productModel": "0402WGF3001TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "3kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C25784",
+  "params": {
+   "Resistance": "3kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C25905": {
+  "productModel": "0402WGF5101TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "5.1kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C25905",
+  "params": {
+   "Resistance": "5.1kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C138002": {
+  "productModel": "RC0402FR-0733RL",
+  "brand": "YAGEO",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "62.5mW 33Ω 50V Thick Film Resistor ±100ppm/℃ ±1% 0402 Chip Resistor - Surface Mount RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C138002",
+  "params": {
+   "Power(Watts)": "62.5mW",
+   "Resistance": "33Ω",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C17168": {
+  "productModel": "0402WGF0000TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "0Ω ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C17168",
+  "params": {
+   "Resistance": "0Ω",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±800ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C25744": {
+  "productModel": "0402WGF1002TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "10kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C25744",
+  "params": {
+   "Resistance": "10kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C25104": {
+  "productModel": "0402WGF3300TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "330Ω ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C25104",
+  "params": {
+   "Power(Watts)": "62.5mW",
+   "Resistance": "330Ω",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C26083": {
+  "productModel": "0402WGF1004TCE",
+  "brand": "UNI-ROYAL",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "1MΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C26083",
+  "params": {
+   "Power(Watts)": "62.5mW",
+   "Resistance": "1MΩ",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C41349510": {
+  "productModel": "ESP32-C3-MINI-1-H4X",
+  "brand": "ESPRESSIF",
+  "package": "SMD,16.6x13.2mm",
+  "category": "RF Transceiver Modules and Modems",
+  "intro": "2.4GHz ESP32-C3FH4 On-board PCB Antenna -104dBm SMD,16.6x13.2mm RF Transceiver Modules and Modems RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/3492e3f6e9f7bf454418031240b114a4.pdf?productCode=C41349510",
+  "params": {
+   "Frequency Range": "2.4GHz",
+   "Voltage - Supply": "3V~3.6V",
+   "Utilized IC / Part": "ESP32-C3FH4",
+   "Output Power": "20.5dBm",
+   "Antenna Type": "On-board PCB Antenna",
+   "Sensitivity": "-104dBm",
+   "Receive  Current": "82mA",
+   "Features": "Integrated Bluetooth function",
+   "Interface": "GPIO;SPI;UART;I2C;I2S;USB",
+   "Current Of Transmitting": "350mA",
+   "Operating Temperature": "-40℃~+105℃"
+  }
+ },
+ "C7436031": {
+  "productModel": "ETA6002E8A",
+  "brand": "etasolution",
+  "package": "ESOP-8",
+  "category": "Battery Management",
+  "intro": "Lithium Battery 2.5A ESOP-8 Battery Management RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/8efad5a1e38bfd1767a78dc3ee3fef7c.pdf?productCode=C7436031",
+  "params": {
+   "Operating Temperature": "-40℃~+85℃",
+   "Interface": "-",
+   "Quiescent Current": "70uA",
+   "0V Battery Charge": "Support",
+   "Type of Battery": "Lithium Battery",
+   "Operating Voltage": "4.4V~5.5V",
+   "Features": "Trickle charging;Constant current charging;Constant voltage charging;Automatic recharge;Charge termination;Programmable charging current;Battery temperature monitoring;Under-voltage lockout",
+   "The Chip Type": "Charging IC",
+   "Balance Current": "-",
+   "Charge Current - Max": "2.5A"
+  }
+ },
+ "C7465551": {
+  "productModel": "ETA5060V330S8F",
+  "brand": "etasolution",
+  "package": "SOT89-5",
+  "category": "Voltage Regulators - Linear, Low Drop Out (LDO) Regulators",
+  "intro": "3.3V Positive Fixed SOT89-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/f06e40bfaf9d0ccdda290ccd8eaa059b.pdf?productCode=C7465551",
+  "params": {
+   "Output Voltage": "3.3V",
+   "Number of Outputs": "1",
+   "Operating Temperature": "-40℃~+150℃",
+   "Supply Current (Iq)": "20uA",
+   "Output Configuration": "Positive",
+   "Operating Voltage": "5.5V",
+   "Output Current": "1A",
+   "Output Type": "Fixed",
+   "Features": "Enable control;Built-in soft-start;Over Current Protection;Short Circuit Protection;Thermal shutdown"
+  }
+ },
+ "C5373237": {
+  "productModel": null,
+  "brand": null,
+  "package": null,
+  "category": null,
+  "intro": null,
+  "datasheet": null,
+  "params": {}
+ },
+ "C910588": {
+  "productModel": "NS4168",
+  "brand": "Shenzhen Nsiway Tech",
+  "package": "ESOP-8-EP(3.9x4.9x1.27)",
+  "category": "Audio Amplifiers",
+  "intro": "13mA 3V~5.5V 1-Channel 2.5Wx1@4Ω Class D ESOP-8-EP(3.9x4.9x1.27) Audio Amplifiers ",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/d3e8c6e77860e1345ae29923805289c4.pdf?productCode=C910588",
+  "params": {
+   "Quiescent Current": "13mA",
+   "Voltage - Supply": "3V~5.5V",
+   "Features": "Filterless architecture;Built-in audio processing;Enable/shutdown function;Automatic mute/no-noise switch",
+   "Total Harmonic Distortion + Noise (THD+N)": "0.2%",
+   "Operating Temperature": "-",
+   "Number of Inputs": "-",
+   "Signal-to-Noise Ratio": "85dB",
+   "Speaker Channels": "1-Channel",
+   "Efficiency": "80%",
+   "Output Power": "2.5Wx1@4Ω",
+   "Class": "Class D",
+   "Power Supply Rejection Ratio (PSRR)": "-80dB"
+  }
+ },
+ "C485517": {
+  "productModel": "TLV75733PDBVR",
+  "brand": "TI",
+  "package": "SOT-23-5",
+  "category": "Voltage Regulators - Linear, Low Drop Out (LDO) Regulators",
+  "intro": "3.3V Positive Fixed SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/edd4724bddb84d5511fcf6af443cafd0.pdf?productCode=C485517",
+  "params": {
+   "Output Voltage": "3.3V",
+   "Number of Outputs": "1",
+   "Operating Temperature": "-40℃~+125℃@(Tj)",
+   "Supply Current (Iq)": "40uA",
+   "Output Configuration": "Positive",
+   "Operating Voltage": "5.5V",
+   "Output Current": "1A",
+   "Features": "Enable control;Built-in soft-start;Output discharge;Input under-voltage protection;Thermal shutdown;Over Current Protection;Short Circuit Protection",
+   "Output Type": "Fixed"
+  }
+ },
+ "C77009": {
+  "productModel": "GRM155R61E105KA12D",
+  "brand": "muRata",
+  "package": "0402",
+  "category": "Ceramic Capacitors",
+  "intro": "1uF ±10% 25V Ceramic Capacitor X5R 0402",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/dcb579c82ccf6dfabd6a7a77528ca855.pdf?productCode=C77009",
+  "params": {
+   "Capacitance": "1uF",
+   "Temperature Coefficient": "X5R",
+   "Tolerance": "±10%",
+   "Voltage Rating": "25V"
+  }
+ },
+ "C2909355": {
+  "productModel": "FRC0402F3001TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "3kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/106fb934f95f063b695dad1b31b1eab8.pdf?productCode=C2909355",
+  "params": {
+   "Power(Watts)": "62.5mW",
+   "Resistance": "3kΩ",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C2906858": {
+  "productModel": "FRC0402F0000TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "62.5mW 0Ω 50V Thick Film Resistor ±400ppm/℃ ±1% 0402 Chip Resistor - Surface Mount ",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/106fb934f95f063b695dad1b31b1eab8.pdf?productCode=C2906858",
+  "params": {
+   "Power(Watts)": "62.5mW",
+   "Resistance": "0Ω",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±400ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ },
+ "C2906861": {
+  "productModel": "FRC0402F1002TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "category": "Chip Resistor - Surface Mount",
+  "intro": "10kΩ ±1% 62.5mW 0402 Thick Film Resistor",
+  "datasheet": "https://datasheet.lcsc.com/datasheet/pdf/106fb934f95f063b695dad1b31b1eab8.pdf?productCode=C2906861",
+  "params": {
+   "Resistance": "10kΩ",
+   "Power(Watts)": "62.5mW",
+   "Voltage Rating": "50V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "±100ppm/℃",
+   "Tolerance": "±1%",
+   "Operating Temperature": "-55℃~+155℃"
+  }
+ }
+}

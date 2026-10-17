@@ -1,0 +1,256 @@
+{
+ "ok": true,
+ "problems": [],
+ "components": [
+  {
+   "designator": "C1",
+   "pads": 2,
+   "maxPadErrMil": 0.057
+  },
+  {
+   "designator": "C13",
+   "pads": 2,
+   "maxPadErrMil": 0.03
+  },
+  {
+   "designator": "C15",
+   "pads": 2,
+   "maxPadErrMil": 0.028
+  },
+  {
+   "designator": "C16",
+   "pads": 2,
+   "maxPadErrMil": 0.051
+  },
+  {
+   "designator": "C19",
+   "pads": 2,
+   "maxPadErrMil": 0.064
+  },
+  {
+   "designator": "C2",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "C23",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "C3",
+   "pads": 2,
+   "maxPadErrMil": 0.054
+  },
+  {
+   "designator": "C4",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "C5",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "C6",
+   "pads": 2,
+   "maxPadErrMil": 0.05
+  },
+  {
+   "designator": "C7",
+   "pads": 2,
+   "maxPadErrMil": 0.05
+  },
+  {
+   "designator": "C8",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "D1",
+   "pads": 2,
+   "maxPadErrMil": 0.064
+  },
+  {
+   "designator": "D2",
+   "pads": 2,
+   "maxPadErrMil": 0.042
+  },
+  {
+   "designator": "D3",
+   "pads": 2,
+   "maxPadErrMil": 0.017
+  },
+  {
+   "designator": "D4",
+   "pads": 2,
+   "maxPadErrMil": 0.051
+  },
+  {
+   "designator": "F1",
+   "pads": 2,
+   "maxPadErrMil": 0.042
+  },
+  {
+   "designator": "J1",
+   "pads": 20,
+   "maxPadErrMil": 0.053
+  },
+  {
+   "designator": "J2",
+   "pads": 2,
+   "maxPadErrMil": 0.04
+  },
+  {
+   "designator": "J3",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "J4",
+   "pads": 2,
+   "maxPadErrMil": 0.02
+  },
+  {
+   "designator": "L1",
+   "pads": 2,
+   "maxPadErrMil": 0.057
+  },
+  {
+   "designator": "R1",
+   "pads": 2,
+   "maxPadErrMil": 0.041
+  },
+  {
+   "designator": "R10",
+   "pads": 2,
+   "maxPadErrMil": 0.071
+  },
+  {
+   "designator": "R11",
+   "pads": 2,
+   "maxPadErrMil": 0.064
+  },
+  {
+   "designator": "R12",
+   "pads": 2,
+   "maxPadErrMil": 0.05
+  },
+  {
+   "designator": "R13",
+   "pads": 2,
+   "maxPadErrMil": 0.054
+  },
+  {
+   "designator": "R14",
+   "pads": 2,
+   "maxPadErrMil": 0.051
+  },
+  {
+   "designator": "R15",
+   "pads": 2,
+   "maxPadErrMil": 0.032
+  },
+  {
+   "designator": "R16",
+   "pads": 2,
+   "maxPadErrMil": 0.04
+  },
+  {
+   "designator": "R17",
+   "pads": 2,
+   "maxPadErrMil": 0.04
+  },
+  {
+   "designator": "R18",
+   "pads": 2,
+   "maxPadErrMil": 0.058
+  },
+  {
+   "designator": "R2",
+   "pads": 2,
+   "maxPadErrMil": 0.04
+  },
+  {
+   "designator": "R3",
+   "pads": 2,
+   "maxPadErrMil": 0.05
+  },
+  {
+   "designator": "R4",
+   "pads": 2,
+   "maxPadErrMil": 0.014
+  },
+  {
+   "designator": "R5",
+   "pads": 2,
+   "maxPadErrMil": 0.051
+  },
+  {
+   "designator": "R6",
+   "pads": 2,
+   "maxPadErrMil": 0.04
+  },
+  {
+   "designator": "R7",
+   "pads": 2,
+   "maxPadErrMil": 0.043
+  },
+  {
+   "designator": "R8",
+   "pads": 2,
+   "maxPadErrMil": 0.045
+  },
+  {
+   "designator": "R9",
+   "pads": 2,
+   "maxPadErrMil": 0.022
+  },
+  {
+   "designator": "TP1",
+   "pads": 1,
+   "maxPadErrMil": 0.05
+  },
+  {
+   "designator": "TP2",
+   "pads": 1,
+   "maxPadErrMil": 0.036
+  },
+  {
+   "designator": "TP3",
+   "pads": 1,
+   "maxPadErrMil": 0.032
+  },
+  {
+   "designator": "U1",
+   "pads": 61,
+   "maxPadErrMil": 0.058
+  },
+  {
+   "designator": "U2",
+   "pads": 9,
+   "maxPadErrMil": 0.062
+  },
+  {
+   "designator": "U3",
+   "pads": 5,
+   "maxPadErrMil": 0.051
+  },
+  {
+   "designator": "U4",
+   "pads": 6,
+   "maxPadErrMil": 0.057
+  },
+  {
+   "designator": "U5",
+   "pads": 9,
+   "maxPadErrMil": 0.041
+  },
+  {
+   "designator": "U7",
+   "pads": 5,
+   "maxPadErrMil": 0.045
+  }
+ ]
+}
