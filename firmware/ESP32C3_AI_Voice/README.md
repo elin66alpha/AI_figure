@@ -69,4 +69,4 @@ cl /nologo /std:c++17 /EHsc /O2 /utf-8 /Fe:host_tests.exe tests/host_tests.cpp p
 host_tests.exe
 ```
 
-尚待实板验证：PDM 时钟/数据边沿和 DMA 位序、录音声压与增益、NS4168 播放及打断、BLE 配网/WSS 长连接、ADC 对万用表误差、负载压降下的低电压阈值、按键深睡唤醒与整板深睡电流。确认 USB 插入不会唤醒，20 分钟无活动会再次深睡。
+尚待实板验证：PDM 时钟/数据边沿和 DMA 位序、录音声压与增益、NS4168 播放及打断、BLE 配网/WSS 长连接、负载压降下的低电压阈值、按键深睡唤醒与整板深睡电流。确认 USB 插入不会唤醒，20 分钟无活动会再次深睡。

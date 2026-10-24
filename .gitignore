@@ -40,3 +40,9 @@ mechanic/*.md
 
 # EDA 自动化工具包：只留在本地，不上传 GitHub
 hardware/eda-agent-pack/
+
+# 自检包：esptool 是第三方发行版（约 66 MB，按 hardware/bringup/README.md 下载），
+# 结果文件是现场回传的数据
+hardware/bringup/自检包/esptool-windows-amd64/
+hardware/bringup/自检包/诊断结果_*.txt
+hardware/bringup/自检包/自检结果_*.txt
