@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-"""Stage 6.5 — 回声服务器入口。
+"""服务器入口。
 
     python main.py
 
-rev.5 起默认按**公网 VPS + stunnel(TLS-PSK)**部署:
+默认按**公网 VPS + stunnel(TLS-PSK)**部署:
 
     设备 --wss://域名:443--> stunnel --明文--> 本进程 127.0.0.1:8765
 
 所以这个进程默认只监听环回口。能走到这里的连接**都已经过了 PSK 握手**
-(AGENT.md §7.4:密钥即身份),本层不再做鉴权。
+(AGENT.md §7:密钥即身份),本层不再做鉴权。
 部署步骤见 deploy/README.md。
 
-局域网直连的老玩法还在,加一个环境变量就行:
+局域网直连调试时加一个环境变量:
 
     ESP32_SERVER_HOST=0.0.0.0 python main.py
 
-Stage 8~10 往 session.py 里加 ASR/LLM/TTS,这个文件基本不用动。
+ASR/LLM/TTS 都在 session.py 里,这个文件基本不用动。
 """
 import asyncio
 import logging
@@ -95,7 +95,7 @@ async def main():
         datefmt="%H:%M:%S",
     )
 
-    log.info("Stage 6.5 回声服务器 —— 协议级回声,不依赖任何云厂商")
+    log.info("语音服务器启动,REPLY_MODE=%s", config.REPLY_MODE)
     log.info("监听 ws://%s:%d%s", config.HOST, config.PORT, config.WS_PATH)
     log.info("音频 %d Hz / PCM16LE / 单声道,下行每包 %d B(%d ms),首包突发 %d ms",
              config.SAMPLE_RATE, config.CHUNK_BYTES, config.CHUNK_MS, config.BURST_MS)

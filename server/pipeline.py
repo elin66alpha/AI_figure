@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Stage 10 句级流水线:LLM 切句 -> TTS -> 下行。规格见 ../SERVER.md §3.1 / §3.2 / §6.3。
+"""句级流水线:LLM 切句 -> TTS -> 下行。规格见 ../SERVER.md §3.1 / §3.2。
 
     source = pipeline.chat_audio(user_text, chat, tts_session, on_sentence=..., stats=...)
     await session._reply(source, "chat")        # 和回声、say 走同一条下行

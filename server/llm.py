@@ -9,7 +9,7 @@
 
     chat = llm.Chat()                          # 每台设备一个,里面存对话历史
     async for sentence in chat.reply("你好"):   # 边生成边切句,切出一句给一句
-        ...                                    # Stage 10:每句立刻送 TTS
+        ...                                    # 每句立刻送 TTS
 
 单独自测(多个参数 = 多轮,验对话历史):
 

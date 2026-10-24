@@ -35,7 +35,7 @@
 #define MIC_PDM_WORDS_PER_PCM (MIC_CIC_DECIMATION * 2 / 16)
 #define MIC_RAW_DMA_WORDS    1024
 #define MIC_RAW_DMA_DESC_NUM 8    // 64 ms at 2.048 MHz, 16 KB DMA
-#define MIC_GAIN_Q8          256  // Unity; old INMP441 MIC_SHIFT calibration does not apply.
+#define MIC_GAIN_Q8          256  // Unity.
 #define DC_BLOCKER_ON        true
 
 #define BUTTON_DEBOUNCE_MS   25

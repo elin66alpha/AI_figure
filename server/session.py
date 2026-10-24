@@ -1,24 +1,20 @@
 # -*- coding: utf-8 -*-
-"""每条设备连接一个 Session。Stage 6.5 = **协议级回声**。
-
-"协议级"的意思是:它说全套 AGENT.md §5.2 的话,而不是把字节原样弹回去。
+"""每条设备连接一个 Session。说全套 AGENT.md §3.2 的话:
     hello       -> ready
     turn_start  -> 开始收集 PCM
     binary      -> 攒进本回合缓冲
     turn_end    -> seq++ -> audio_begin(seq) -> 按 pacer 整形回送 -> audio_end(seq)
     abort       -> seq++ -> 立刻取消在途音频,不发 audio_end
-    say         -> (Stage 8 调试入口,设备不发)文本 -> TTS(tts.py 分派厂商)-> 同一套下行
+    say         -> (调试入口,设备不发)文本 -> TTS(tts.py 分派厂商)-> 同一套下行
 
 回合结束后回什么由 REPLY_MODE 决定(config.py),pc_client 可在 turn_start 里带 mode 临时覆盖:
-    echo  原样送回(Stage 7)
+    echo  原样送回
     asr   turn_start 就开 ASR 流、边收边转发;turn_end 拿最终文本 -> {"t":"asr","text"}
-          -> TTS 念"我听到的是:…"(Stage 9)。设备会静默忽略 {"t":"asr"}(AGENT.md §5.2)
-    chat  同上拿到文本 -> LLM 边生成边切句 -> 每句 {"t":"reply","text"} + TTS -> 下行(Stage 10)
+          -> TTS 念"我听到的是:…"。设备会静默忽略 {"t":"asr"}(AGENT.md §3.2)
+    chat  同上拿到文本 -> LLM 边生成边切句 -> 每句 {"t":"reply","text"} + TTS -> 下行
           流水线见 pipeline.py。对话历史按设备 ID 存,断线重连后还在
 
-这样设备侧 Stage 7 写的就是**最终代码**,Stage 11 传输层一行不用改;
-服务器侧 Stage 8~10 只是把下面 `_echo_turn()` 里"原样送回"换成
-"ASR -> LLM -> TTS",这个外壳同样不动。
+三种模式共用同一套协议外壳,切换模式不用改固件。
 """
 import asyncio
 import json
@@ -53,7 +49,7 @@ class EchoSession:
         self.ws = ws
         self.sid = sid
         self.dev = "?"           # 设备自报的 ID,仅用于日志
-        self.seq = 0             # 回合号。AGENT.md §5.3(a)
+        self.seq = 0             # 回合号。AGENT.md §3.3(a)
         self.recording = False
         self.buf = bytearray()   # 本回合录音,只有 echo 模式要攒(要原样送回)
         self.nbytes = 0          # 本回合收到的音频字节数,所有模式都记
@@ -62,7 +58,7 @@ class EchoSession:
         self.first_frame_logged = False
         self.mode = config.REPLY_MODE
         self.asr = None          # 本回合的 ASR 流(asr 模式下 turn_start 就开)
-        self.tts_pre = None      # 本回合预热的 TTS 会话(chat 模式下 turn_start 就开,Stage 11)
+        self.tts_pre = None      # 本回合预热的 TTS 会话(chat 模式下 turn_start 就开)
 
     # ------------------------------------------------------------ 出口
     async def send_json(self, **obj):
@@ -91,7 +87,7 @@ class EchoSession:
             return
 
         if not self.first_frame_logged:
-            # AGENT.md §9.2 排查表第 3 行:第一帧的尺寸对不对,一眼就能定位上行打包问题。
+            # AGENT.md §3.4 排查表第 3 行:第一帧的尺寸对不对,一眼就能定位上行打包问题。
             self.first_frame_logged = True
             mark = "ok" if len(data) == config.CHUNK_BYTES else "!! 期望 %d" % config.CHUNK_BYTES
             log.info("[%s] 首个音频帧 %d 字节 (%s)", self.sid, len(data), mark)
@@ -168,15 +164,15 @@ class EchoSession:
                 self.task = asyncio.create_task(self._echo_turn(bytes(self.buf)))
 
         elif t == "abort":
-            # AGENT.md §5.3(c):打断不掐连接。seq++ 让设备丢弃在途的残帧。
+            # AGENT.md §3.3(c):打断不掐连接。seq++ 让设备丢弃在途的残帧。
             self.recording = False
             self.seq += 1
             await self._cancel_turn("abort")
             log.info("[%s] abort -> seq=%d", self.sid, self.seq)
 
         elif t == "say" and config.ALLOW_SAY:
-            # Stage 8:tools/pc_client.py 发文本,服务器 TTS 后按正常回合下发。
-            # 走的是和回声**同一条**下行路径,Stage 11 换成真回复时这条已经验过了。
+            # tools/pc_client.py 发文本,服务器 TTS 后按正常回合下发。
+            # 走的是和正常回复**同一条**下行路径。
             text = str(m.get("text", "")).strip()[:config.MAX_SAY_CHARS]
             if not text:
                 await self.send_json(t="error", code="empty_say", msg="text 为空")
@@ -191,7 +187,7 @@ class EchoSession:
 
     # ------------------------------------------------------------ 下行
     async def _echo_turn(self, pcm: bytes):
-        """Stage 8~10 要替换的就是这里:把"原样送回"换成 ASR -> LLM -> TTS。"""
+        """按 REPLY_MODE 生成本回合的回复。"""
         async def once():
             yield pcm
         await self._reply(once(), "回声")
@@ -199,9 +195,9 @@ class EchoSession:
     async def _asr_turn(self, stream, ts=None):
         """ASR 最终文本 -> {"t":"asr"} -> 按 mode 回复。
 
-        asr   念"我听到的是:…"(Stage 9)
-        chat  LLM -> 切句 -> TTS(Stage 10)。ts 是 turn_start 时预热好的 TTS 会话
-              (Stage 11);没开预热就在这里开,和 ASR 收尾 / LLM 首句并行
+        asr   念"我听到的是:…"
+        chat  LLM -> 切句 -> TTS。ts 是 turn_start 时预热好的 TTS 会话;
+              没开预热就在这里开,和 ASR 收尾 / LLM 首句并行
         """
         mode = self.mode
         if mode == "chat" and ts is None:

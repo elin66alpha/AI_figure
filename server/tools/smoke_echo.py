@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Stage 6.5 自测:不用 ESP32,先确认服务器自己是对的。
+"""服务器自测:不用 ESP32,先确认服务器自己是对的(要求 REPLY_MODE=echo)。
 
     python main.py                  # 另一个终端
     python tools/smoke_echo.py
 
-它按 AGENT.md §5.2 冒充设备跑三件事:
+它按 AGENT.md §3.2 冒充设备跑三件事:
   1. hello/ready 握手
   2. 一个完整回合:turn_start -> N 个 100ms 帧 -> turn_end,核对回来的字节数
      和速率(必须是 1x 实时,且服务器超前不超过 BURST_MS + 一包)
   3. abort:发一半就打断,确认服务器立刻停、且**不发** audio_end
 
-Stage 7 联调时设备那边不通,先跑这个 —— 通了就说明锅在设备侧,
-不通就说明锅在服务器或防火墙。这是 AGENT.md §9.2 排查表的第一把刀。
+设备连不通时先跑这个 —— 通了就说明锅在设备侧,
+不通就说明锅在服务器或防火墙。这是 AGENT.md §3.4 排查表的第一把刀。
 """
 import asyncio
 import json
@@ -119,7 +119,7 @@ async def case_abort(ws):
                 raise AssertionError("abort 之后不该再收到 %s" % msg)
     except asyncio.TimeoutError:
         pass
-    print("   abort 后又收到 %d 字节的在途残帧(设备靠 seq 丢弃,AGENT.md §5.3a)" % tail)
+    print("   abort 后又收到 %d 字节的在途残帧(设备靠 seq 丢弃,AGENT.md §3.3a)" % tail)
     assert tail <= config.CHUNK_BYTES * 3, "abort 之后还在猛发,取消没生效"
     print("   ✓ 服务器已停,且没有发 audio_end")
 
@@ -136,7 +136,7 @@ async def main():
         await case_full_turn(ws)
         await case_abort(ws)
 
-    print("\n全部通过 —— 服务器侧是好的。Stage 7 连不上就去查设备侧/防火墙。")
+    print("\n全部通过 —— 服务器侧是好的。设备连不上就去查设备侧/防火墙。")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-"""服务器配置。规格见 ../SERVER.md,设备侧协议见 ../AGENT.md §5。
+"""服务器配置。规格见 ../SERVER.md,设备侧协议见 ../AGENT.md §3。
 
-Stage 6.5 只用得到监听地址和音频参数;厂商密钥等 Stage 8 再加。
 """
 import os
 
@@ -9,15 +8,15 @@ import os
 #
 # **默认 127.0.0.1,这是故意的。**
 #
-# rev.5 起部署形态是公网 VPS,TLS 由前面的 stunnel 终结(SERVER.md §7.3):
+# 部署形态是公网 VPS,TLS 由前面的 stunnel 终结(SERVER.md §7.1):
 #
 #     设备 --wss/TLS-PSK--> stunnel :443 --明文--> 本进程 127.0.0.1:8765
 #
 # 这个进程**不应该**自己暴露在公网上 —— 它没有任何鉴权,鉴权全靠 PSK 握手
-# (AGENT.md §7.4:握不上手的连 WS 层都到不了)。绑 0.0.0.0 等于把裸端口
-# 开给全网,Stage 8 接上火山和 DeepSeek 之后那就是别人在烧你的额度。
+# (AGENT.md §7:握不上手的连 WS 层都到不了)。绑 0.0.0.0 等于把裸端口
+# 开给全网,别人就能用你的厂商额度。
 #
-# 局域网直连调试(老的 Stage 6.5 玩法)才需要 0.0.0.0:
+# 局域网直连调试才需要 0.0.0.0:
 #     ESP32_SERVER_HOST=0.0.0.0 python main.py
 HOST = os.getenv("ESP32_SERVER_HOST", "127.0.0.1")
 PORT = int(os.getenv("ESP32_SERVER_PORT", "8765"))
@@ -28,12 +27,12 @@ WS_PATH = os.getenv("ESP32_SERVER_PATH", "/ws")
 STRICT_PATH = os.getenv("ESP32_SERVER_STRICT_PATH", "1") == "1"
 
 # ---------------------------------------------------------------- 音频
-# 双向恒定 16 kHz / PCM16LE / 单声道。AGENT.md §4 "前提条件" —— 设备侧不做格式协商,
-# 全双工共享时钟要求收发采样率相同,这个值不能改。
+# 双向恒定 16 kHz / PCM16LE / 单声道。AGENT.md §4 —— 设备侧不做格式协商,
+# 这个值不能改。
 SAMPLE_RATE = 16000
 BYTES_PER_SAMPLE = 2
 
-# 下行每包 100 ms。设备上行也是 100 ms/3200 B(AGENT.md §5.2)。
+# 下行每包 100 ms。设备上行也是 100 ms/3200 B(AGENT.md §3.2)。
 CHUNK_MS = 100
 CHUNK_BYTES = SAMPLE_RATE * BYTES_PER_SAMPLE * CHUNK_MS // 1000   # 3200
 
@@ -46,7 +45,7 @@ CHUNK_BYTES = SAMPLE_RATE * BYTES_PER_SAMPLE * CHUNK_MS // 1000   # 3200
 BURST_MS = int(os.getenv("ESP32_SERVER_BURST_MS", "300"))
 
 # ---------------------------------------------------------------- 保活
-# 设备侧自己也会 30 s 发一次 ping(AGENT.md §5.1)。两个方向都开着没坏处,
+# 设备侧自己也会 30 s 发一次 ping(AGENT.md §3.1)。两个方向都开着没坏处,
 # 但设备**必须**回应服务器的 ping,否则会被这里判死。
 #
 # 公网上 NAT/防火墙会回收空闲连接,保活比局域网更重要 —— PTT 设备大部分时间是
@@ -66,7 +65,7 @@ MAX_WS_FRAME = 16384
 # 真的爬到这个数说明要么 PSK 泄了,要么有 bug 在疯狂重连。
 MAX_CONNECTIONS = int(os.getenv("ESP32_SERVER_MAX_CONN", "8"))
 
-# ---------------------------------------------------------------- 开关(Stage 11)
+# ---------------------------------------------------------------- 开关
 # 收到 turn_end 立刻下发 {"t":"cue","name":"thinking"},设备在 WAITING 期间
 # 循环播"咕噜咕噜"的等待音效,直到回复的音频接上(固件 bubble.*,fw >= 0.3)。
 # 老固件(0.2)收到会打一行日志然后忽略,所以默认开着没有副作用。
@@ -82,16 +81,16 @@ TTS_PREWARM = os.getenv("TTS_PREWARM", "1") == "1"
 #   ASR:ali = 百炼 qwen-audio-3.1-asr-flash-streaming(默认) / volc = 火山流式识别
 #   TTS:ali = 百炼 qwen3-tts-flash-realtime(默认)          / volc = 火山语音合成
 #   LLM:qwen = 百炼 Qwen(默认)                             / deepseek = DeepSeek
-# 2026-09-22 默认全换到百炼:免费额度够调通 Stage 8~10。
+# 默认全走百炼。
 ASR_PROVIDER = os.getenv("ASR_PROVIDER", "ali")
 TTS_PROVIDER = os.getenv("TTS_PROVIDER", "ali")
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "qwen")
 
 # 回合结束后服务器回什么。设备不带 mode,用这个默认值;pc_client 可以在
 # turn_start 里带 "mode" 临时覆盖(调试用)。
-#   echo  把录音原样送回(Stage 7)
-#   asr   ASR 出文字 -> 下发 {"t":"asr"} -> TTS 念"我听到的是:…"(Stage 9,设备上也能听出识别对不对)
-#   chat  ASR -> LLM 切句 -> TTS,真正的对话(Stage 10)。Stage 11 起改成默认
+#   echo  把录音原样送回
+#   asr   ASR 出文字 -> 下发 {"t":"asr"} -> TTS 念"我听到的是:…"(设备上也能听出识别对不对)
+#   chat  ASR -> LLM 切句 -> TTS,真正的对话
 REPLY_MODE = os.getenv("REPLY_MODE", "echo")
 
 # chat 模式的兜底台词。出声总比让设备干等到 WAITING 超时(8 s)好。
@@ -99,7 +98,7 @@ NOT_HEARD_TEXT = os.getenv("NOT_HEARD_TEXT", "没听清,能再说一遍吗?")
 LLM_FAIL_TEXT = os.getenv("LLM_FAIL_TEXT", "我脑子有点卡住了,等一下再问我吧。")
 
 # ---------------------------------------------------------------- 阿里云百炼
-# 规格见 SERVER.md §4.6。密钥只从环境变量读,不进 git。
+# 规格见 SERVER.md §4.1。密钥只从环境变量读,不进 git。
 DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
 # ⚠️ 地域和 API Key 是绑定的:北京控制台的 key 只能连北京,国际站(新加坡)同理,
 # 连错了握手就 401。下面三个 URL 都由它推出来,单独设环境变量可以逐个覆盖。
@@ -122,11 +121,11 @@ ALI_TTS_TIMEOUT_S = float(os.getenv("ALI_TTS_TIMEOUT_S", "15"))
 VOLC_ASR_URL = os.getenv(
     "VOLC_ASR_URL", "wss://openspeech.bytedance.com/api/v3/sauc/bigmodel_async")
 # 流式语音识别 2.0 小时版。按并发买的填 volc.seedasr.sauc.concurrent;
-# 1.0 是 volc.bigasr.sauc.duration。⚠️ 和 TTS 的 Resource-Id 不同(SERVER.md §4.5)
+# 1.0 是 volc.bigasr.sauc.duration。⚠️ 和 TTS 的 Resource-Id 不同(SERVER.md §4.3)
 VOLC_ASR_RESOURCE_ID = os.getenv("VOLC_ASR_RESOURCE_ID", "volc.seedasr.sauc.duration")
 
 # ---------------------------------------------------------------- 火山 TTS(备选)
-# 规格见 SERVER.md §4.2。密钥**只从环境变量读**,不进 git。
+# 规格见 SERVER.md §4.3。密钥**只从环境变量读**,不进 git。
 # VPS 上放 /etc/esp32-server.env(600),由 systemd 的 EnvironmentFile 注入;
 # 本机调试直接 export。模板见 env.example。
 #
@@ -139,7 +138,7 @@ VOLC_ACCESS_KEY = os.getenv("VOLC_ACCESS_KEY", "")
 
 VOLC_TTS_URL = os.getenv(
     "VOLC_TTS_URL", "wss://openspeech.bytedance.com/api/v3/tts/unidirectional/stream")
-# ⚠️ 和 ASR 的 Resource-Id **不同**(SERVER.md §4.5)。
+# ⚠️ 和 ASR 的 Resource-Id **不同**(SERVER.md §4.3)。
 # seed-tts-2.0 = 豆包语音合成模型 2.0(控制台开通的就是这个);1.0 填 seed-tts-1.0。
 VOLC_TTS_RESOURCE_ID = os.getenv("VOLC_TTS_RESOURCE_ID", "seed-tts-2.0")
 # 发音人。必须是 Resource-Id 对应模型下有权限的音色,否则报 45000xxx。
@@ -151,7 +150,7 @@ VOLC_TTS_TIMEOUT_S = float(os.getenv("VOLC_TTS_TIMEOUT_S", "15"))
 
 # ---------------------------------------------------------------- 调试消息
 # {"t":"say","text":"..."} —— 让服务器把一段文本 TTS 后按正常回合下发。
-# 设备从来不发这条,它是 tools/pc_client.py 的 Stage 8 入口。
+# 设备从来不发这条,它是 tools/pc_client.py 的调试入口。
 # 能走到这里的连接都过了 PSK(见上面"监听"),所以默认开着;
 # 但它会花 TTS 额度,不放心就关掉。
 ALLOW_SAY = os.getenv("ESP32_SERVER_ALLOW_SAY", "1") == "1"
@@ -161,7 +160,7 @@ MAX_SAY_CHARS = 300
 # turn_end 之后等最终文本的上限。实测百炼 ~0.6 s(美国 VPS -> 新加坡)。
 ASR_FINISH_TIMEOUT_S = float(os.getenv("ASR_FINISH_TIMEOUT_S", "8"))
 
-# ---------------------------------------------------------------- LLM(Stage 10 接入回合)
+# ---------------------------------------------------------------- LLM
 # 两家都是 OpenAI 兼容的 /chat/completions,llm.py 一套代码,只换地址/密钥/模型。
 QWEN_API_KEY = os.getenv("QWEN_API_KEY", "") or DASHSCOPE_API_KEY    # 默认和 ASR/TTS 共用
 QWEN_MODEL = os.getenv("QWEN_MODEL", "qwen3.5-flash-2026-02-23")  # 也可 qwen-flash / qwen-turbo / qwen-plus

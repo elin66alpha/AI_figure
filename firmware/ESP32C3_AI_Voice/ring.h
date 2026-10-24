@@ -3,12 +3,11 @@
 #include <stddef.h>
 #include <stddef.h>
 
-// 播放环形缓冲。**静态数组,绝不 malloc**(AGENT.md §7 第 1 条)。
+// 播放环形缓冲。**静态数组,绝不 malloc**(AGENT.md §6 第 1 条)。
 //
 //   RING_BYTES = 16384 B = 8192 样本 = 512 ms
 //
-// 尺寸是 AGENT.md §5.6 定的:PSK-TLS 下 mbedTLS 要吃掉钉死的 32 KB,
-// 从 rev.3 的 24 KB 降到 16 KB 换回来的余量就是给它的。
+// 尺寸要给 mbedTLS 的收发缓冲(AGENT.md §7)留出堆余量。
 //
 // 单生产者(net_ws 的接收路径)、单消费者(session 的播放路径),而且两者都在
 // **同一个 loop 线程**里 —— 没有中断、没有 FreeRTOS 任务碰它,所以不需要

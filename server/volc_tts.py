@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""火山 TTS —— WebSocket 单向流式 V3。规格见 ../SERVER.md §4.2。
+"""火山 TTS —— WebSocket 单向流式 V3。规格见 ../SERVER.md §4.3。
 
     async for pcm in synthesize("你好"):
         ...                      # 裸 PCM16LE / 16 kHz / 单声道,直接喂 pacer
@@ -40,7 +40,7 @@ def _request(text: str, uid: str) -> dict:
         "req_params": {
             "text": text,
             "speaker": config.VOLC_TTS_SPEAKER,
-            # 必须 16k PCM:设备 I2S 全双工共享时钟,服务器不做重采样(AGENT.md §4)
+            # 必须 16k PCM:设备只按 16 kHz 解释下行音频,服务器不做重采样(AGENT.md §4)
             "audio_params": {
                 "format": "pcm",
                 "sample_rate": config.SAMPLE_RATE,

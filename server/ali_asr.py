@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""阿里云百炼流式识别(qwen-audio-3.1-asr-flash-streaming)。规格见 ../SERVER.md §4.7。
+"""阿里云百炼流式识别(qwen-audio-3.1-asr-flash-streaming)。规格见 ../SERVER.md §4.2。
 
 协议是 DashScope 的 inference WS(和 TTS 的 realtime WS 不是一套):
 

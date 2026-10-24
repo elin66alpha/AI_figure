@@ -205,8 +205,7 @@ bool wsConnect() {
   // 读响应头到空行。只认状态行里的 101。
   //
   // **故意不校验 Sec-WebSocket-Accept。** 校验它要拉 SHA1 + base64,
-  // 防的是中间代理串线。rev.4 之前的理由是"设备连的是自己局域网里自己的服务器";
-  // rev.5 搬到公网之后这个理由换成了更强的一条:**TLS-PSK 是双向认证的**,
+  // 防的是中间代理串线。不需要它的理由是:**TLS-PSK 是双向认证的**,
   // 只有握着同一把预共享密钥的对端才能建起这条连接,中间人连 WS 层都到不了。
   // 省下的是代码和堆。这是决定,不是遗漏。
   char line[128];
@@ -276,7 +275,7 @@ void wsPoll() {
   if (!s_up) return;
   if (!transportConnected()) { wsClose("TCP 断了"); return; }
 
-  // 保活。AGENT.md §5.1:30 s 一次 ping,连续两次无 pong 视为断线。
+  // 保活。AGENT.md §3.1:30 s 一次 ping,连续两次无 pong 视为断线。
   const uint32_t now = appMillis();
   if (now - s_lastPingSent >= WS_PING_INTERVAL_MS) {
     s_lastPingSent = now;
@@ -345,7 +344,7 @@ void wsPoll() {
     size_t   room;
     bool     keep = true;
     if (isBin && s_acceptAudio) {
-      // 背压:ring 没地方就**别读**,让 TCP 窗口顶回去(AGENT.md §5.3b)。
+      // 背压:ring 没地方就**别读**,让 TCP 窗口顶回去(AGENT.md §3.3b)。
       if (ringFree() < 64) return;
       room = ringWriteSpan(&dst);                 // 绕回点前面那一段,下一圈从头接着写
     } else if (isCtl && s_ctlLen < sizeof(s_ctl)) {

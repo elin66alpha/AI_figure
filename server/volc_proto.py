@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""火山(豆包语音)二进制帧的编解码。ASR/TTS 共用。规格见 ../SERVER.md §4。
+"""火山(豆包语音)二进制帧的编解码。ASR/TTS 共用。规格见 ../SERVER.md §4.3。
 
 帧布局:
 
@@ -155,7 +155,7 @@ def decode(data: bytes) -> Frame:
 
 
 def auth_headers(resource_id: str) -> dict:
-    """火山 WS 握手头。ASR 和 TTS 共用,只有 Resource-Id 不同(SERVER.md §4.5)。
+    """火山 WS 握手头。ASR 和 TTS 共用,只有 Resource-Id 不同(SERVER.md §4.3)。
 
     控制台新旧版两种鉴权,填其一:
       新版 VOLC_API_KEY                   -> X-Api-Key

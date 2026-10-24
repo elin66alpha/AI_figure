@@ -21,12 +21,12 @@ static uint32_t s_helloAt    = 0;
 static uint32_t s_wsRetryAt  = 0;
 static uint32_t s_wsBackoff  = WS_RETRY_MIN_MS;
 
-static int32_t  s_seq        = -1;      // 当前回合号(AGENT.md §5.3a)
+static int32_t  s_seq        = -1;      // 当前回合号(AGENT.md §3.3a)
 static bool     s_audioEnded = false;   // 本回合的 audio_end 到了吗
 static bool     s_playStarted = false;  // 预缓冲攒够、功放已开
 static uint32_t s_waitStart  = 0;
 
-// Stage 11:服务器驱动的等待音效。onText 在 wsPoll 的回调里,不能在那里开播放
+// 服务器驱动的等待音效。onText 在 wsPoll 的回调里,不能在那里开播放
 // (audioStartPlayback 要推静音、等功放唤醒,会阻塞)—— 攒个标记,回到 doWaiting 再开。
 static bool     s_bubbleReq  = false;   // 收到 cue thinking,该开始冒泡了
 static bool     s_waitFail   = false;   // WAITING 时服务器报错:不用干等 8 s 超时
@@ -129,7 +129,7 @@ static void onText(const char *json, size_t len) {
       break;
 
     default:
-      // 必须静默忽略未知消息,好让服务器先行升级(AGENT.md §5.2 末句)
+      // 必须静默忽略未知消息,好让服务器先行升级(AGENT.md §3.2)
       break;
   }
 }
@@ -171,7 +171,7 @@ static void startRecording() {
   printf("%s\n", "[SESS] turn_start —— 录音中");
 }
 
-// 打断。AGENT.md §8:**先发 abort 再关功放** ——
+// 打断。AGENT.md §5:**先发 abort 再关功放** ——
 // abort 是上行,不受下行缓冲拥塞影响,越早发服务器越早停止烧 token。
 // 功放直接掐(cut),不等被打断的回复播完尾巴:紧接着就要开麦,用户已经在说话了。
 static void bargeIn() {
@@ -190,7 +190,7 @@ static bool flushUplink() {
   if (ok) { s_upDropStreak = 0; return true; }
 
   // 整帧丢弃而不是发半帧 —— WS 帧发一半会破坏帧边界。
-  // ASR 丢 100 ms 比整条链路卡死强(AGENT.md §9.2)。
+  // ASR 丢 100 ms 比整条链路卡死强(AGENT.md §3.4)。
   s_upDrops++;
   if (++s_upDropStreak >= WS_UPLINK_DROP_LIMIT) {
     printf("[SESS] 连续丢了 %u 个上行帧,链路不行了\n", (unsigned)s_upDropStreak);
@@ -237,7 +237,7 @@ static void doWaiting() {
     return;
   }
 
-  // ---- 等待音效(Stage 11)----
+  // ---- 等待音效----
   if (s_bubbleReq && !bubbleActive()) {
     s_bubbleReq = false;
     if (audioStartPlayback()) bubbleStart();
@@ -328,7 +328,7 @@ void sessionUpdate() {
   if (!netWifiIsUp()) {
     enterError("WiFi 未连接");
     ledSet(LedMode::BLINK_SLOW);
-    if (s_btn.tookPress()) netWifiForceRetry();      // AGENT.md §8
+    if (s_btn.tookPress()) netWifiForceRetry();      // AGENT.md §5
     s_btn.clearEvents();
     return;
   }
@@ -375,7 +375,7 @@ void sessionUpdate() {
     return;
   }
 
-  // ---- 打断:任意非 IDLE 状态按下按钮(AGENT.md §8) ----
+  // ---- 打断:任意非 IDLE 状态按下按钮(AGENT.md §5) ----
   if (s_btn.tookPress()) {
     if (s_st == VoiceState::IDLE) {
       startRecording();

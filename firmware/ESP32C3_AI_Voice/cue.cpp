@@ -7,8 +7,7 @@
 #define CUE_LUT_LEN   256
 #define CUE_RAMP      64      // 4 ms 的进出包络。不做的话每个音头尾都"啪"一声
 
-// Stage 2 实测:幅度 0.6 FS * 增益 100/256 ≈ 0.055 W,离 brownout 很远。
-// 这里的 160/255 ≈ 0.63 FS,和那次验证过的电平基本一致,别往上加。
+// 160/255 ≈ 0.63 FS,是实板上验证过的提示音电平,别往上加。
 #define CUE_AMP       160
 
 static int16_t s_lut[CUE_LUT_LEN];

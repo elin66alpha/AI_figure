@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""阿里云百炼 Qwen-TTS-Realtime(qwen3-tts-flash-realtime)。规格见 ../SERVER.md §4.6。
+"""阿里云百炼 Qwen-TTS-Realtime(qwen3-tts-flash-realtime)。规格见 ../SERVER.md §4.1。
 
     async for pcm in synthesize("你好"):          # 一次性:连 -> 合成 -> 关
         ...                      # 裸 PCM16LE / 16 kHz / 单声道,直接喂 pacer
 
-    s = AliTtsSession(); s.start()              # Stage 10:一条连接念多句
+    s = AliTtsSession(); s.start()              # 一条连接念多句
     async for pcm in s.synth("第一句。"): ...
     async for pcm in s.synth("第二句。"): ...
     s.close()
@@ -30,7 +30,7 @@
 
 **一条连接可以 commit 多次**(2026-09-22 真连实测):每次 commit 各自出一轮
 response.created ... response.done,顺序不乱;每句 commit -> 首包 ~0.35 s。
-Stage 10 的句级流水线就是每切出一句 append + commit 一次,省掉每句 ~1 s 的建连。
+句级流水线就是每切出一句 append + commit 一次,省掉每句 ~1 s 的建连。
 
 单独自测(不经过 main.py,只验密钥/音色/网络):
 
@@ -79,7 +79,7 @@ async def _expect(ws, typ, deadline):
 class AliTtsSession:
     """一条到百炼的 TTS 连接,可以顺序合成多句。
 
-    start() 立刻在后台建连(Stage 10:turn_end 一到就建,和 ASR 收尾 / LLM 首 token 并行)。
+    start() 立刻在后台建连(一开回合就建,和 ASR 收尾 / LLM 首 token 并行)。
     synth(text) 会先等连接就绪。同一时刻只能有一个 synth 在跑 —— 调用方负责按句顺序调。
     close() 在后台关,不挡下行。
     """
@@ -111,7 +111,7 @@ class AliTtsSession:
                 "session": {
                     "mode": "commit",
                     "voice": config.ALI_TTS_VOICE,
-                    # 必须 16k PCM:设备 I2S 全双工共享时钟,服务器不做重采样(AGENT.md §4)。
+                    # 必须 16k PCM:设备只按 16 kHz 解释下行音频,服务器不做重采样(AGENT.md §4)。
                     # 百炼默认是 24000,不写这一行就会快放、变调。
                     "response_format": "pcm",
                     "sample_rate": config.SAMPLE_RATE,
@@ -205,7 +205,7 @@ class AliTtsSession:
 
 
 async def synthesize(text: str, *, uid: str = "esp32"):
-    """一次性合成一段文本(Stage 8 的 say 用)。"""
+    """一次性合成一段文本(调试消息 say 用)。"""
     s = AliTtsSession(uid).start()
     try:
         async for pcm in s.synth(text):

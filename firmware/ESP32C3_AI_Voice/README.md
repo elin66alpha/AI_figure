@@ -1,6 +1,6 @@
 # AI Figure 固件 · ESP-IDF 6.1.0
 
-面向 2026-10-08 的 ESP32-C3-MINI-1-H4X 定制板，对照 `../../hardware/schematics.pdf`。入口为 `main.cpp / app_main()`，不再依赖 Arduino SDK。WiFi、BLE 配网、NVS、TLS-PSK、GPIO、ADC 和 I2S 均使用原生 ESP-IDF 接口。
+面向 2026-10-08 的 ESP32-C3-MINI-1-H4X 定制板，对照 `../../hardware/schematics.pdf`。入口为 `main.cpp / app_main()`。WiFi、BLE 配网、NVS、TLS-PSK、GPIO、ADC 和 I2S 均使用原生 ESP-IDF 接口。
 
 ## 接线
 
@@ -32,7 +32,7 @@
 
 ESP32-C3 支持原始 PDM 接收，没有硬件 PDM→PCM 转换。I2S0 的 RX 与 TX 分开申请：RX 原始 PDM 时钟 2.048 MHz，CIC3 /64 后用 63 抽头 FIR /2 转为 16 kHz PCM；TX 在播放时使用独立 I2S 时钟。停止录音和播放时停止相应时钟。
 
-服务器协议仍是 16 kHz、单声道、PCM16，每 100 ms 一包；保留播放预缓冲、打断、等待音效和重连逻辑。麦克风增益 `MIC_GAIN_Q8=256` 是未做实板标定的初值，不能沿用旧 INMP441 的移位增益。
+服务器协议是 16 kHz、单声道、PCM16，每 100 ms 一包，见 `../../AGENT.md` §3；播放预缓冲、打断、等待音效和重连逻辑见 `../../AGENT.md` §4、§5。麦克风增益 `MIC_GAIN_Q8=256` 是未做实板标定的初值。
 
 BLE 配网使用 `espressif/network_provisioning 1.3.1`，保持原服务 UUID、设备名和 Security 1 / 无 PoP，与现有微信小程序对应。无凭据或冷启动按住键 3 秒进入配网。配网成功将凭据保存到原 NVS `net/ssid`、`net/pass` 后重启。TLS-PSK 配置仍从本地 `secrets.h` 读取。
 
@@ -56,7 +56,7 @@ BLE 配网使用 `espressif/network_provisioning 1.3.1`，保持原服务 UUID�
 & 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' -m esptool --chip esp32c3 -p COMx -b 460800 --before default-reset --after hard-reset write-flash '@flash_args'
 ```
 
-4 MB Flash 使用自定义双 OTA 分区，每槽 0x1E0000。NVS 从 0x9000 开始；程序不会自动擦除 NVS。由 Arduino 分区迁移时需要同时烧录本工程的引导程序和分区表。
+4 MB Flash 使用自定义双 OTA 分区，每槽 0x1E0000。NVS 从 0x9000 开始；程序不会自动擦除 NVS。
 
 ## 验证与试板
 
@@ -69,4 +69,4 @@ cl /nologo /std:c++17 /EHsc /O2 /utf-8 /Fe:host_tests.exe tests/host_tests.cpp p
 host_tests.exe
 ```
 
-尚待实板验证：PDM 时钟/数据边沿和 DMA 位序、录音声压与增益、NS4168 播放及打断、BLE 配网/WSS 长连接、负载压降下的低电压阈值、按键深睡唤醒与整板深睡电流。确认 USB 插入不会唤醒，20 分钟无活动会再次深睡。
+尚待实板验证：录音声压与增益、播放打断、BLE 配网/WSS 长连接、负载压降下的低电压阈值、按键深睡唤醒与整板深睡电流。确认 USB 插入不会唤醒，20 分钟无活动会再次深睡。

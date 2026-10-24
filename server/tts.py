@@ -5,8 +5,8 @@
     volc  火山豆包语音合成                              volc_tts.py
 
 两边接口一致:
-    synthesize(text, uid=)     一次性合成一段,异步逐块产出 16 kHz PCM16LE(Stage 8 的 say)
-    open_session(uid)          一条连接顺序念多句:.start() / .synth(text) / .close()(Stage 10)
+    synthesize(text, uid=)     一次性合成一段,异步逐块产出 16 kHz PCM16LE(调试消息 say 用)
+    open_session(uid)          一条连接顺序念多句:.start() / .synth(text) / .close()
 """
 import config
 

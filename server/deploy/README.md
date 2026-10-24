@@ -54,7 +54,7 @@ sudo -u esp32 /opt/esp32_server/.venv/bin/python /opt/esp32_server/tools/smoke_e
 ```
 
 这一步通了说明服务器逻辑是好的。不通就别往下做 —— 后面全是网络层,
-逻辑锅和网络锅混在一起最难查(这是 AGENT.md §9.2 排查表的第一把刀)。
+逻辑锅和网络锅混在一起最难查(这是 AGENT.md §3.4 排查表的第一把刀)。
 
 ## 2. VPS:装 stunnel
 
@@ -176,7 +176,7 @@ python tools/smoke_echo.py                       # 另一个终端
 [WS] 握手成功
 ```
 
-卡在哪一行就查哪一段,对照 `../../SERVER.md` §7.5 的排查表。
+卡在哪一行就查哪一段,对照 `../../SERVER.md` §7.4 的排查表。
 
 ---
 
@@ -204,5 +204,5 @@ rsync -av --delete --exclude '__pycache__' --exclude '.venv' \
   esp32_server/ root@172.245.226.201:/opt/esp32_server/
 ```
 
-Stage 8 之后改一行 prompt 就走这条路重启,**不用重烧固件** ——
+改一行 prompt 就走这条路重启,**不用重烧固件** ——
 这正是加服务器那一层的收益之一。

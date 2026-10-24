@@ -1,7 +1,7 @@
 # AI 玩偶配网小程序
 
 用微信小程序通过 BLE 把家里 WiFi 的名称和密码发给 ESP32-C3 玩偶。协议就是乐鑫自带的
-protocomm / network_provisioning(固件用 Arduino 核心的 `WiFiProv`),**Security 1、没有 PoP**:
+protocomm / network_provisioning(固件用 ESP-IDF 的 `network_provisioning` 组件),**Security 1、没有 PoP**:
 X25519 密钥交换 + AES-256-CTR,WiFi 密码在空中是加密的。
 
 纯 JavaScript,没有 npm、没有构建步骤、没有 UI 框架。加密库是本目录里自带的两个小文件。

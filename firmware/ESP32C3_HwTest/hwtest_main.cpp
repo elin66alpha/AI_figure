@@ -39,7 +39,7 @@ static void say(const char *fmt, ...) {
   fflush(stdout);
 }
 
-// Integer square root; the C3 has no FPU (AGENT.md §9.1).
+// Integer square root; the C3 has no FPU (AGENT.md §6).
 static uint32_t isqrt64(uint64_t v) {
   uint64_t r = 0, bit = 1ULL << 62;
   while (bit > v) bit >>= 2;

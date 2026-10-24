@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-"""PC 端假设备。说 AGENT.md §5 那套 WS 协议。规格见 SERVER.md §6。
+"""PC 端假设备。说 AGENT.md §3 那套 WS 协议。规格见 SERVER.md §6。
 
-Stage 8~10 全部用它调通,ESP32 一次都不用烧。设备侧实现有歧义时以它的行为为准。
+改服务器代码后用它测,ESP32 一次都不用烧。设备侧实现有歧义时以它的行为为准。
 
-    # Stage 8:文本 -> 服务器 TTS -> 存 wav
+    # 文本 -> 服务器 TTS -> 存 wav
     python tools/pc_client.py say "你好,今天天气怎么样?" -o reply.wav
 
-    # Stage 7:wav -> 按 100 ms 切片走完整回合 -> 存回复(默认用服务器的 REPLY_MODE)
+    # wav -> 按 100 ms 切片走完整回合 -> 存回复(默认用服务器的 REPLY_MODE)
     python tools/pc_client.py turn input.wav -o reply.wav
 
-    # Stage 9:同上,但让服务器走 ASR,打印识别文本,回复是"我听到的是:…"
+    # 同上,但让服务器走 ASR,打印识别文本,回复是"我听到的是:…"
     python tools/pc_client.py turn input.wav --mode asr
 
-    # Stage 10:真正的对话,打印识别文本和每一句回复。多跑几次 = 多轮(历史按 --dev 存)
+    # 真正的对话,打印识别文本和每一句回复。多跑几次 = 多轮(历史按 --dev 存)
     python tools/pc_client.py turn question.wav --mode chat
     python tools/pc_client.py turn input.wav --abort-after 500     # 收到 500 ms 就打断
 
@@ -179,7 +179,7 @@ def main():
     ap.add_argument("--dev", default="pc")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
-    p = sub.add_parser("say", help="文本 -> TTS(Stage 8)")
+    p = sub.add_parser("say", help="文本 -> TTS(调试)")
     p.add_argument("text")
 
     p = sub.add_parser("turn", help="wav -> 完整回合")
